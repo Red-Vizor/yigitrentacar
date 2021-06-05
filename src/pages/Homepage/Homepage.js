@@ -54,10 +54,9 @@ export default function Homepage() {
 
 
             <div className="container-fluid bg-black p-5">
-                <div className="container popular-cars p-3">
+                <div className="container popular-cars p-3 my-4">
                     <div className="content-area bg-black pt-4 px-1">
                         <Head headPosition="start" head="POPÜLER ARAÇLAR" hrSize={9} />
-
                         <div id="carouselExampleDark" className="carousel carousel-light slide" data-bs-ride="carousel">
                             <div className="carousel-indicators">
                                 <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active slide-button" aria-current="true" aria-label="Slide 1"><div className="circle-active m-auto"></div></button>
@@ -101,7 +100,7 @@ export default function Homepage() {
             </div>
 
             <div className="container-fluid p-5">
-                <div className="container campaigns">
+                <div className="container campaigns my-4">
                     <div className="content-area pt-4 ">
                         <Head headPosition="start" head="KAMPANYALAR" hrSize={9} />
                     </div>
@@ -109,7 +108,7 @@ export default function Homepage() {
             </div>
 
             <div className="container-fluid p-5">
-                <div className="container campaigns">
+                <div className="container campaigns my-4">
                     <div className="content-area pt-4 ">
                         <Head headPosition="end" head="POPÜLER LOKASYONLAR" hrSize={8} />
                     </div>
