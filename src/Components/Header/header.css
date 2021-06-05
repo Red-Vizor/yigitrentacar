@@ -1,0 +1,24 @@
+.header-top .container{
+    padding: 0 9%;
+    font-size: 0.82rem !important;
+}
+
+.header-top .lab {
+    font-size: 30px;
+    margin-left: 15px;
+}
+
+.header a{
+    font-weight: bold;
+}
+
+.search-button i{
+    font-size:1.4rem;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+}
+.menu-button{
+    font-size:1.3rem;
+}
