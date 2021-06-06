@@ -1,0 +1,10 @@
+<svg id="icon_arrow_arrow-right" data-name="icon / arrow / arrow-right" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54.094" height="24.473" viewBox="0 0 54.094 24.473">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="icon_arrow-right" data-name="icon / arrow-right" d="M11.154,24.024a1.529,1.529,0,0,1,0-2.163l8.1-8.1H1.529a1.529,1.529,0,0,1,0-3.059H19.25l-8.1-8.1A1.53,1.53,0,0,1,13.318.447l10.7,10.7a1.529,1.529,0,0,1,0,2.177l-10.7,10.7a1.53,1.53,0,0,1-2.164,0Z" transform="translate(0 0)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="Group_195" data-name="Group 195" transform="translate(0 0)">
+    <path id="icon_arrow-right-2" data-name="icon / arrow-right" d="M40.776,24.025a1.529,1.529,0,0,1,0-2.163l8.1-8.1H1.53a1.529,1.529,0,1,1,0-3.059H48.872l-8.1-8.1A1.529,1.529,0,0,1,42.939.448L53.645,11.155l.027.027,0,0,.023.025.005.006.019.021.008.009.015.018.01.013.012.015a1.52,1.52,0,0,1,.19.313l0,0,.012.028,0,.011.009.021.007.019L54,11.7l.009.025,0,.008.009.028,0,.005.01.031v0l.009.033v0l.009.034h0l.008.034v0l.006.031v.006l.005.028,0,.01,0,.024,0,.025v.009a1.527,1.527,0,0,1-.4,1.234l0,0-.02.021-.009.009-.009.009L42.939,24.025a1.529,1.529,0,0,1-2.163,0Z" transform="translate(0 0)" fill="#fff"/>
+  </g>
+</svg>

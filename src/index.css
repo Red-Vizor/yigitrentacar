@@ -53,9 +53,29 @@ p, h1,h2,h3,h4,h5,h6 {
   color: var(--orange)
 }
 
+.bg-image{
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
 /* Buttons */
 .btn-orange{
   background-color: var(--orange);
   border-color: var(--orange);
+  border-radius: 18px;
+}
+.btn-orange-outline{
+  background-color: var(--white);
+  color: var(--orange);
+  border: 3px solid var(--orange);
+  border-radius: 18px;
+}
+
+.btn-orange-outline:hover{
+  background-color: var(--orange);
+  color: var(--white);
+  opacity: 1;
+  border: 3px solid var(--orange);
   border-radius: 18px;
 }

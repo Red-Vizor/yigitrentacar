@@ -41,3 +41,36 @@
     background-color: var(--orange);
 }
 
+.list-card .bg-image{
+    border-radius: 30px;
+}
+.list-card .card-body{
+    margin-top: -20px;
+    border-radius: 30px;
+}
+
+.list-card:hover > .hr{
+    background-color: var(--orange) !important;
+}
+
+.list-card .card-body .border-title{
+    border-radius: 12px;
+}
+.list-card .card-body .btn{
+    width: 60%;
+    font-size:0.9rem;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%,-50%);
+}
+.list-card .hr {
+    height:5px;
+    background-color: var(--white);
+    top: 0;
+    left: 50%;
+    transition: background-color .3s;
+    transform: translateX(-50%);
+}
+.la-long-arrow-alt-right{
+    font-size:2rem;
+}

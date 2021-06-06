@@ -3,6 +3,8 @@ import './homepage.css'
 
 import Head from '../../Components/ContentHead'
 import Car from '../../Components/CarSlider'
+import ListCard from '../../Components/ListCard'
+
 export default function Homepage() {
     return (
         <div className="homepage">
@@ -99,18 +101,68 @@ export default function Homepage() {
                 </div>
             </div>
 
-            <div className="container-fluid p-5">
-                <div className="container campaigns my-4">
+            <div className="container-fluid py-5">
+                <div className="container campaigns">
                     <div className="content-area pt-4 ">
                         <Head headPosition="start" head="KAMPANYALAR" hrSize={9} />
+                        <div class="owl-carousel owl-theme my-4">
+                            <div class="item">
+                                <ListCard 
+                                type="campaign" 
+                                imageUrl="./assets/images/car1.jpg" 
+                                title="YAZA MERHABA KAMPANYASI!"
+                                btnText="REZERVASYON YAP"
+                                content="Yiğit Rent A Car yaza merhaba kampanyası! Tüm Araç Gruplarında %10 indirim."  />
+                            </div>
+                            <div class="item">
+                                <ListCard 
+                                type="campaign" 
+                                imageUrl="./assets/images/car2.jpg" 
+                                title="YAZA MERHABA KAMPANYASI!" 
+                                btnText="REZERVASYON YAP" 
+                                content="Yiğit Rent A Car yaza merhaba kampanyası! Tüm Araç Gruplarında %10 indirim." />
+                            </div>
+                            <div class="item">
+                                <ListCard 
+                                type="campaign" 
+                                imageUrl="./assets/images/car3.jpg" 
+                                title="YAZA MERHABA KAMPANYASI!"
+                                btnText="REZERVASYON YAP"
+                                content="Yiğit Rent A Car yaza merhaba kampanyası! Tüm Araç Gruplarında %10 indirim."  />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div className="container-fluid p-5">
+            <div className="container-fluid py-5 bg-image"  style={{ backgroundImage: "linear-gradient(rgb(250, 250, 250,0.7), rgb(250, 250, 250,0.7)), url('./assets/images/road.png')" }}>
                 <div className="container campaigns my-4">
                     <div className="content-area pt-4 ">
                         <Head headPosition="end" head="POPÜLER LOKASYONLAR" hrSize={8} />
+
+                        <div class="owl-carousel owl-theme my-4">
+                            <div class="item">
+                                <ListCard type="location" 
+                                imageUrl="./assets/images/city1.jpg" 
+                                title="İSTANBUL" 
+                                btnText="İSTANBUL LOKASYONLAR"
+                                content="İstanbul' da mutlaka görmeniz gereken yerler." />
+                            </div>
+                            <div class="item">
+                                <ListCard type="location" 
+                                imageUrl="./assets/images/city2.jpg" 
+                                title="İZMİR" 
+                                btnText="İZMİR LOKASYONLAR"
+                                content="İzmir' de mutlaka görmeniz gereken yerler."/>
+                            </div>
+                            <div class="item">
+                                <ListCard type="location" 
+                                imageUrl="./assets/images/city3.jpg" 
+                                title="BODRUM" 
+                                btnText="BODRUM LOKASYONLAR"
+                                content="Bodrum' da mutlaka görmeniz gereken yerler."/>
+                            </div>
+                        </div>  
                     </div>
                 </div>
             </div>
