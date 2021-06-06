@@ -2,10 +2,15 @@
   --orange: #E8551E;
   --dark:#000000;
   --white: #ffffff;
+  --gray: #595757;
 }
 
 *{
   font-family: 'Open Sans', sans-serif;
+}
+
+.c-padding{
+  padding: 0 9%;
 }
 
 .header-top{
@@ -37,6 +42,9 @@ p, h1,h2,h3,h4,h5,h6 {
 }
 .bg-orange{
   background-color: var(--orange);
+}
+.bg-gray{
+  background-color: var(--gray);
 }
 
 .extra-bold{

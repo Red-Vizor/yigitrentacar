@@ -1,0 +1,10 @@
+.copyright p{
+    opacity: .7;
+}
+
+.footer-menu a{
+    opacity: .7 !important;
+}
+.footer-menu a:hover{
+    opacity: 1 !important;
+}
