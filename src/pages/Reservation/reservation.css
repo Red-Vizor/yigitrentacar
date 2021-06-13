@@ -1,0 +1,16 @@
+.MuiAppBar-colorPrimary{
+    background-color: #F9F9F9F9 !important;
+    box-shadow: none !important;
+    color: #000000 !important;
+}
+
+.MuiTab-root{
+    width:20% !important;
+    max-width: 20% !important;
+}
+.MuiTabs-root{
+    width:100% !important;
+}
+.MuiTab-wrapper{
+    align-items: left !important;
+}
