@@ -105,8 +105,8 @@ export default function Homepage() {
                 <div className="container campaigns">
                     <div className="content-area pt-4 ">
                         <Head headPosition="start" head="KAMPANYALAR" hrSize={9} />
-                        <div class="owl-carousel owl-theme my-4">
-                            <div class="item">
+                        <div className="owl-carousel owl-theme my-4">
+                            <div className="item">
                                 <ListCard 
                                 type="campaign" 
                                 imageUrl="./assets/images/car1.jpg" 
@@ -114,7 +114,7 @@ export default function Homepage() {
                                 btnText="REZERVASYON YAP"
                                 content="Yiğit Rent A Car yaza merhaba kampanyası! Tüm Araç Gruplarında %10 indirim."  />
                             </div>
-                            <div class="item">
+                            <div className="item">
                                 <ListCard 
                                 type="campaign" 
                                 imageUrl="./assets/images/car2.jpg" 
@@ -122,7 +122,7 @@ export default function Homepage() {
                                 btnText="REZERVASYON YAP" 
                                 content="Yiğit Rent A Car yaza merhaba kampanyası! Tüm Araç Gruplarında %10 indirim." />
                             </div>
-                            <div class="item">
+                            <div className="item">
                                 <ListCard 
                                 type="campaign" 
                                 imageUrl="./assets/images/car3.jpg" 
@@ -140,22 +140,22 @@ export default function Homepage() {
                     <div className="content-area pt-4 ">
                         <Head headPosition="end" head="POPÜLER LOKASYONLAR" hrSize={8} />
 
-                        <div class="owl-carousel owl-theme my-4">
-                            <div class="item">
+                        <div className="owl-carousel owl-theme my-4">
+                            <div className="item">
                                 <ListCard type="location" 
                                 imageUrl="./assets/images/city1.jpg" 
                                 title="İSTANBUL" 
                                 btnText="İSTANBUL LOKASYONLAR"
                                 content="İstanbul' da mutlaka görmeniz gereken yerler." />
                             </div>
-                            <div class="item">
+                            <div className="item">
                                 <ListCard type="location" 
                                 imageUrl="./assets/images/city2.jpg" 
                                 title="İZMİR" 
                                 btnText="İZMİR LOKASYONLAR"
                                 content="İzmir' de mutlaka görmeniz gereken yerler."/>
                             </div>
-                            <div class="item">
+                            <div className="item">
                                 <ListCard type="location" 
                                 imageUrl="./assets/images/city3.jpg" 
                                 title="BODRUM" 
