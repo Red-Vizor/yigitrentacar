@@ -1,6 +1,7 @@
 :root{
     --green-check:rgb(88, 214, 140,0.20);
     --green-check-1:rgb(88, 214, 140);
+    --orange-white: rgb(255, 246, 242,0.6);
     
 }
 
@@ -37,3 +38,26 @@
     background-color: var(--green-check) !important;
 }
 
+.package .package-body .title{
+    border: 2px solid #000000;
+}
+.package .package-body .table-titles{
+    border-bottom: 2px solid #000000;
+}
+.package .accordion-button{
+    font-size: 0.8rem;
+}
+.package .accordion-button:after{
+    display: none !important;
+}
+.package .accordion-button:not(.collapsed){
+    background-color:var(--orange-white);
+    color: #000000;
+}
+
+.package .accordion-body{
+    background-color:var(--orange-white);
+}
+.package .btn-add {
+    padding: 8px 15px !important;
+}
