@@ -1,6 +1,7 @@
 import React from 'react'
 import './reservation.css'
 import ReservationHead from '../../Components/Header/ReservationHead'
+import Cars from './Cars'
 
 import PropTypes from 'prop-types'
 import Tabs from '@material-ui/core/Tabs'
@@ -98,7 +99,7 @@ export default function Reservation() {
 
 
                 <TabPanel value={value} index={0}>
-                    Item One
+                    <Cars />
                 </TabPanel>
                 <TabPanel value={value} index={1}>
                     Item Two
