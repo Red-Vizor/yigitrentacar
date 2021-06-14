@@ -1,9 +1,17 @@
+:root{
+    --green-check:rgb(88, 214, 140,0.20);
+    --green-check-1:rgb(88, 214, 140);
+    
+}
+
 .MuiAppBar-colorPrimary{
     background-color: #F9F9F9F9 !important;
     box-shadow: none !important;
     color: #000000 !important;
 }
-
+.MuiBox-root-8 {
+    padding:0 !important;
+}
 .MuiTab-root{
     width:20% !important;
     max-width: 20% !important;
@@ -13,5 +21,19 @@
 }
 .MuiTab-wrapper{
     align-items: left !important;
+}
+
+.reservation-tab-area .check{
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.reservation-tab-area .checked-link{
+    color: var(--green-check-1);
+    right:10px;
+    top: 62%;
+}
+.checked-reserve{
+    background-color: var(--green-check) !important;
 }
 

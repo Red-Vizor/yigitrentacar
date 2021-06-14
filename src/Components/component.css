@@ -1,6 +1,7 @@
 
 :root {
     --orange: #e8541e;
+    --orange2: #FF710F;
     --dark:#000000;
     --white: #ffffff;
     --white2: #FAFAFA;
@@ -75,15 +76,40 @@
     font-size:2rem;
 }
 
-
+.shadow-light{
+    -webkit-box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.16); 
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.16);
+}
 /* Reservation */
+.ccard .colors{
+    border-radius:0px 0px  35px  35px;
+    font-size: 0.66rem; 
+}
+.ccard .colors input{
+    margin-left: 6px;
+    border: none;
+}
+.ccard .colors input.bg-white{
+    margin-left: 6px;
+    border: 1px solid #000000;
+}
 .car-card{
     border-radius:35px ;
 }
 .car-card .card-bottom{
-    background-color: var(--orange);
+    background-color: var(--orange2);
+    font-size: 0.75rem;
     border-radius:0px 0px  35px  35px  ;
 }
+.car-card .card-bottom .icon{
+    height:70% !important;
+}
 .car-card .images{
-    left: -20%;
+    bottom: 50%;
+    transform:translateY(50%);
+    left: -19%;
+    width: 70%;
+}
+.car-card .btn{
+    color: var(--orange2);
 }

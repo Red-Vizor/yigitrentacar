@@ -1,6 +1,8 @@
 :root {
   --orange: #E8551E;
   --dark:#000000;
+  --pink:#FD1C67;
+  --pink-powder: #FFF0E8;
   --white: #ffffff;
   --gray: #595757;
 }
@@ -46,6 +48,28 @@ p, h1,h2,h3,h4,h5,h6 {
 .bg-gray{
   background-color: var(--gray);
 }
+.bg-pink{
+  background-color: var(--pink);
+}
+.bg-pink-powder{
+  background-color: var(--pink-powder);
+}
+.bg-orange:checked{
+  background-color: var(--orange);
+}
+.bg-pink:checked{
+  background-color: var(--pink);
+}
+.bg-black:checked{
+  background-color: var(--dark) !important;
+}
+.bg-orange:checked{
+  background-color: var(--orange);
+}
+.bg-gray:checked{
+  background-color: var(--gray);
+}
+
 
 .extra-bold{
   font-weight: 800;
