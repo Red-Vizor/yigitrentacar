@@ -38,9 +38,6 @@
     background-color: var(--green-check) !important;
 }
 
-.package .package-body .title{
-    border: 2px solid #000000;
-}
 .package .package-body .table-titles{
     border-bottom: 2px solid #000000;
 }

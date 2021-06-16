@@ -3,6 +3,7 @@ import './reservation.css'
 import ReservationHead from '../../Components/Header/ReservationHead'
 import Cars from './Cars'
 import Package from './Package'
+import ReservationForm from './ReservationForm'
 
 import PropTypes from 'prop-types'
 import Tabs from '@material-ui/core/Tabs'
@@ -111,7 +112,7 @@ export default function Reservation() {
                 <Package />
             </TabPanel>
             <TabPanel value={value} index={4}>
-                <Package />
+                <ReservationForm />
             </TabPanel>
 
 

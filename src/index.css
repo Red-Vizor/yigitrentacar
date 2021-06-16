@@ -5,6 +5,8 @@
   --pink-powder: #FFF0E8;
   --white: #ffffff;
   --gray: #595757;
+  --green-check:rgb(88, 214, 140,0.20);
+  --green-check-1:rgb(88, 214, 140);
 }
 
 *{
@@ -88,6 +90,14 @@ p, h1,h2,h3,h4,h5,h6 {
 .bg-image{
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.title-border{
+  border: 2px solid var(--dark);
+}
+.title-border-green{
+  border: 2px solid var(--green-check-1);
+  color: var(--green-check-1) ;
 }
 
 
