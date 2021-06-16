@@ -58,3 +58,24 @@
 .package .btn-add {
     padding: 8px 15px !important;
 }
+
+.rezervasyon-uyari {
+    height: 62px;
+    background-color: #3BC712;
+    color: #fff;
+    font-weight: 700;
+}
+
+.rezervasyon-form h2{
+    font-weight: 700;
+}
+
+.kisisel-bilgiler{
+    font-weight: 700;
+}
+
+.fatura-bilgileri {
+    height: 630px;
+    background-color: #FFF8F5;
+    font-weight: 700;
+}
