@@ -1,0 +1,50 @@
+
+.campaigns-jumbotron h1{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #FFF;
+    padding-top: 9rem;
+}
+
+.campaign-card {
+    text-align: center;
+    
+    padding: 3.75rem 1.1rem 2.5rem;
+    font-weight: 700;
+}
+
+.campaign-card h5{
+    font-weight: 700;
+    padding: 0.95rem 3.1rem 0.3rem;
+}
+
+.campaigns-header {
+    background-color: #E8551E;
+    color: #FFF;
+    margin: 2rem auto 4rem;
+}
+
+.campaigns-header h4{
+    padding: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.campaign-single-area h4{
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    padding: 0 7rem 2rem;
+}
+
+.campaign-single-area p{
+    font-weight: 700;
+    padding: 0 2.2rem 1.5rem 3.5rem;
+    font-size: 1rem;
+}
+
+.campaign-single-dropdown {
+    padding: 0 2.2rem 7rem 3.5rem;
+}
+

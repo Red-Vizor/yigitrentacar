@@ -1,0 +1,37 @@
+
+.locations-card .card-body {
+    text-align: center;
+    font-weight: 700;
+     
+}
+
+.locations-card .btn-orange-outline{
+    border: 1px solid #E8551E !important;
+    border-radius: 10px !important;
+  }
+
+.locations-card h5{
+    font-weight: 700;
+    padding: 0.95rem 3.1rem 0.3rem;
+}
+
+.locations-img {
+    width: 100%;
+    height: 270px;
+    border: 15px solid #fff;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.locations-img .image-title {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    color: #FFF;
+    font-weight: 600;
+    border: 1px solid #fff;
+    padding:3px 15px;
+    font-size: 0.8rem;
+}
