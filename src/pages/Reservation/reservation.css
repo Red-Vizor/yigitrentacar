@@ -69,13 +69,37 @@
 .rezervasyon-form h2{
     font-weight: 700;
 }
+.reservation-form input, .reservation-form select{
+    padding: 20px 0 20px 10px;
+    background-color:#F5F5F5 !important;
+    border: 0 !important;
+}
+.reservation-form .input-group-text:before{
+    display: block;
+    position:absolute;
+    content:" ";
+    width: 0;
+    height: 50%;
+    border-left: 1px solid #D0D0D0 !important;
+    top: 50%;
+    left:95%;
+    transform: translateY(-50%);
+}
+.reservation-form label{
+    width:100% !important; 
+}
 
+.reservation-form .input-group-text{
+    position: relative;
+    border: 0 !important;
+    margin-right:1px !important;
+    background-color:#F5F5F5 !important;
+}
 .kisisel-bilgiler{
     font-weight: 700;
 }
 
 .fatura-bilgileri {
-    height: 630px;
     background-color: #FFF8F5;
     font-weight: 700;
 }
