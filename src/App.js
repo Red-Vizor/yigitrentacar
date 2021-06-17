@@ -10,6 +10,7 @@ import Campaigns from './pages/Campaigns/Campaigns'
 import CampaignsSingle from './pages/Campaigns/CampaignsSingle'
 import PopularLocations from './pages/PopularLocations/PopularLocations'
 import PopularLocationSingle from './pages/PopularLocations/PopularLocationSingle'
+import Policies from './pages/Policies/Policies'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/campaign" component={CampaignsSingle}></Route>
             <Route path="/popularlocations" component={PopularLocations}></Route>
             <Route path="/popularlocation" component={PopularLocationSingle}></Route>
+            <Route path="/policies" component={Policies}></Route>
           </Switch>
        <Footer />
     </Router>
