@@ -12,24 +12,24 @@ function CampaignsSingle() {
 
             </div>
 
-            <div class="campaign-single-area container">
-                <div class="row">
-                    <div class="col">
-                        <img src="./assets/images/campaign-car.png" class="card-img-top" alt="..." />
+            <div className="campaign-single-area container">
+                <div className="row">
+                    <div className="col">
+                        <img src="./assets/images/campaign-car.png" className="card-img-top" alt="..." />
                     </div>
-                    <div class="col">
+                    <div className="col">
                         <h4>Yiğit Oto Kiralama Ofislerinde %15 İNDİRİM!</h4>
                         <p>Yiğit oto kiralama edindiği deneyim ve uzmanlık ile müşteri-lerine kısa ve uzun süreli araç kiralama hizmeti vermektedir. Yiğit oto kiralama, tüm gerçek kişilerin ve tüzel işletmelerin a-raç kiralama hizmeti ile karşılamanın yanı sıra, periyodik bakım ve  onarım, hızlı hasar yönetimi, ikame araç hizmeti ve lastik yenileme gibi müşterilerini rahat ve konfor sağlayıcı ek hizmet-lerde Sunmaktadır.</p>
 
 
-                        <div class="dropdown campaign-single-dropdown">
-                            <button class="btn btn-orange-outline bold px-4 dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div className="dropdown campaign-single-dropdown">
+                            <button className="btn btn-orange-outline bold px-4 dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
                                 Kampanya Katılım ve Araç Kiralama Koşulları
                             </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <li><button class="dropdown-item" type="button">Action</button></li>
-                                <li><button class="dropdown-item" type="button">Another action</button></li>
-                                <li><button class="dropdown-item" type="button">Something else here</button></li>
+                            <ul className="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <li><button className="dropdown-item" type="button">Action</button></li>
+                                <li><button className="dropdown-item" type="button">Another action</button></li>
+                                <li><button className="dropdown-item" type="button">Something else here</button></li>
                             </ul>
                         </div>
 

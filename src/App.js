@@ -9,6 +9,8 @@ import Reservation from './pages/Reservation/Reservation'
 import Campaigns from './pages/Campaigns/Campaigns'
 import CampaignsSingle from './pages/Campaigns/CampaignsSingle'
 import PopularLocations from './pages/PopularLocations/PopularLocations'
+import PopularLocationSingle from './pages/PopularLocations/PopularLocationSingle'
+
 function App() {
   return (
     <Router>
@@ -19,6 +21,7 @@ function App() {
             <Route path="/campaigns" component={Campaigns}></Route>
             <Route path="/campaign" component={CampaignsSingle}></Route>
             <Route path="/popularlocations" component={PopularLocations}></Route>
+            <Route path="/popularlocation" component={PopularLocationSingle}></Route>
           </Switch>
        <Footer />
     </Router>

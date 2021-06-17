@@ -19,12 +19,12 @@ function Campaigns() {
 
             <div className="container" >
 
-                <div class="row">
-                    <div class="col">
-                        <CampaignsCard />
+                <div className="row">
+                    <div className="col">
+                        <CampaignsCard imageUrl="./assets/images/campaign-car.png" />
                     </div>
-                    <div class="col">
-                        <CampaignsCard />
+                    <div className="col">
+                        <CampaignsCard imageUrl="./assets/images/campaign-car.png"/>
                     </div>
                 </div>
 

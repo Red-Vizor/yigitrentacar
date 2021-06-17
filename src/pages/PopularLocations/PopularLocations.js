@@ -1,6 +1,7 @@
 import React from 'react'
 import './popularlocations.css'
 import PopularLocationsCard from './PopularLocationsCard'
+import PopularLocationSingle from './PopularLocationSingle'
 
 
 function PopularLocations() {
@@ -18,11 +19,11 @@ function PopularLocations() {
 
             <div className="container my-4">
 
-                <div class="row">
-                    <div class="col">
+                <div className="row">
+                    <div className="col">
                         <PopularLocationsCard imageUrl="./assets/images/location1.png"/>
                     </div>
-                    <div class="col">
+                    <div className="col">
                         <PopularLocationsCard imageUrl="./assets/images/location2.png"/>
                     </div>
                 </div>

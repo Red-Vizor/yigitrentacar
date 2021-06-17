@@ -14,10 +14,23 @@
     font-weight: 700;
 }
 
+.campaign-img {
+    width: 100%;
+    height: 270px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
 .campaign-card h5{
     font-weight: 700;
     padding: 0.95rem 3.1rem 0.3rem;
 }
+
+.campaign-card .btn-orange-outline{
+    border: 1px solid #E8551E !important;
+    border-radius: 10px !important;
+  }
 
 .campaigns-header {
     background-color: #E8551E;
