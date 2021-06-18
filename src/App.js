@@ -14,6 +14,7 @@ import Policies from './pages/Policies/Policies'
 import Cars from './pages/Cars/Cars'
 import Offices from './pages/Offices/Offices'
 import About from './pages/About/About'
+import Services from './pages/Services/Services'
 function App() {
   return (
     <Router>
@@ -29,6 +30,7 @@ function App() {
             <Route path="/cars" component={Cars}></Route>
             <Route path="/offices" component={Offices}></Route>
             <Route path="/about" component={About}></Route>
+            <Route path="/services" component={Services}></Route>
           </Switch>
        <Footer />
     </Router>
