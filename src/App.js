@@ -11,7 +11,8 @@ import CampaignsSingle from './pages/Campaigns/CampaignsSingle'
 import PopularLocations from './pages/PopularLocations/PopularLocations'
 import PopularLocationSingle from './pages/PopularLocations/PopularLocationSingle'
 import Policies from './pages/Policies/Policies'
-
+import Cars from './pages/Cars/Cars'
+import Offices from './pages/Offices/Offices'
 function App() {
   return (
     <Router>
@@ -24,6 +25,8 @@ function App() {
             <Route path="/popularlocations" component={PopularLocations}></Route>
             <Route path="/popularlocation" component={PopularLocationSingle}></Route>
             <Route path="/policies" component={Policies}></Route>
+            <Route path="/cars" component={Cars}></Route>
+            <Route path="/offices" component={Offices}></Route>
           </Switch>
        <Footer />
     </Router>

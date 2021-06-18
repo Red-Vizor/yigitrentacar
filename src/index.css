@@ -121,3 +121,67 @@ p, h1,h2,h3,h4,h5,h6 {
   border: 3px solid var(--orange);
   border-radius: 18px;
 }
+
+
+
+ .campaigns .tab-bar{
+  width:60% !important;
+  left: 50% !important;
+  transform: translate(-50%, 50%);
+  font-weight: 700 !important;
+  background-color: var(--white);
+  color: var(--orange);
+  position: absolute;
+  bottom:0;
+}
+
+.campaigns .tab-bar .MuiTab-root{
+  min-width: 300px !important;
+}
+
+.policies .tab-bar{
+  width:70% !important;
+  left: 50% !important;
+  transform: translate(-50%, 0);
+  font-weight: 700 !important;
+  background-color: var(--white);
+  color: var(--orange);
+  position: absolute;
+  bottom:0;
+}
+
+
+.cars .tab-bar{
+  width:100% !important;
+  left: 50% !important;
+  font-weight: 700 !important;
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.cars .tab-bar .MuiTab-root{
+  min-width: 50px !important;
+  width: 200px !important;
+}
+.cars .tab-bar .MuiTab-textColorInherit.Mui-selected {
+  background-color: #FF710F !important;
+  color: var(--white) !important;
+}
+.popular-location-area .tab-bar .MuiTab-textColorInherit.Mui-selected , .campaigns .tab-bar .MuiTab-textColorInherit.Mui-selected, 
+.policies .tab-bar .MuiTab-textColorInherit.Mui-selected {
+  background-color: var(--orange) !important;
+  color: var(--white) !important;
+}
+.popular-location-area .tab-bar{
+  width:70% !important;
+  left: 50% !important;
+  transform: translate(-50%, 50%);
+  font-weight: 700 !important;
+  background-color: var(--white);
+  color: var(--orange);
+  position: absolute;
+  bottom:0;
+}
+.popular-location-area .tab-bar .MuiTab-wrapper, .campaigns .tab-bar .MuiTab-wrapper, .policies .tab-bar .MuiTab-wrapper{
+  font-weight: 700 !important;
+}

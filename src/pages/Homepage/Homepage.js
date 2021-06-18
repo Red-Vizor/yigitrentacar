@@ -105,7 +105,7 @@ export default function Homepage() {
                 <div className="container campaigns">
                     <div className="content-area pt-4 ">
                         <Head headPosition="start" head="KAMPANYALAR" hrSize={9} />
-                        <div className="owl-carousel owl-theme my-4">
+                        <div className="owl-carousel owl-carousel-home owl-theme my-4">
                             <div className="item">
                                 <ListCard 
                                 type="campaign" 
@@ -140,7 +140,7 @@ export default function Homepage() {
                     <div className="content-area pt-4 ">
                         <Head headPosition="end" head="POPÜLER LOKASYONLAR" hrSize={8} />
 
-                        <div className="owl-carousel owl-theme my-4">
+                        <div className="owl-carousel owl-carousel-home owl-theme my-4">
                             <div className="item">
                                 <ListCard type="location" 
                                 imageUrl="./assets/images/city1.jpg" 

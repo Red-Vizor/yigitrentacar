@@ -24,15 +24,15 @@ function PopularLocationsSingle() {
                         </p>
                     </div>
                 </div>
-                <div className="row continue-text">
-                    <div className="col">
+                <div className="row continue-text my-5">
+                    <div className="col border-end">
                         <p>Eminönü, Üsküdar, Kadıköy ve Bakırköy İskelelerimizden tarifeli olarak yaptığımız ve herkesin katılımına açık  olan, İstanbul Boğazının görsel zenginliği eşliğinde zamanın keyifle geçtiği tarifeli boğaz turlarımıza her zaman katılabilirsiniz.
                             <br /><br />
                             TURSAB ile yapılan Protokol ile belgelendirilen gemilerimizle, TURSAB bünyesinde bulunan turizm acenteleri tarafından İstanbul’a getirilen turist grupları yaklaşık %90’ı için, Boğaz Turları ve  Ada Turları düzenlenerek ülkemizin tanıtımına katkı sağlamaktayız.
                         </p>
 
                     </div>
-                    <div className="col">
+                    <div className="col ps-5">
                         <p>Eminönü, Üsküdar, Kadıköy ve Bakırköy İskelelerimizden tarifeli olarak yaptığımız ve herkesin katılımına açık  olan, İstanbul Boğazının görsel zenginliği eşliğinde zamanın keyifle geçtiği tarifeli boğaz turlarımıza her zaman katılabilirsiniz.
                             <br /><br />
                             TURSAB ile yapılan Protokol ile belgelendirilen gemilerimizle, TURSAB bünyesinde bulunan turizm acenteleri tarafından İstanbul’a getirilen turist grupları yaklaşık %90’ı için, Boğaz Turları ve  Ada Turları düzenlenerek ülkemizin tanıtımına katkı sağlamaktayız.
@@ -41,6 +41,21 @@ function PopularLocationsSingle() {
                 </div>
             </div>
 
+
+            <div className="owl-carousel owl-carousel-popular owl-theme my-5">
+                <div className="item">
+                    <div className="location-owl-image bg-image" style={{ backgroundImage: "url(./assets/images/location-carousel1.png)" }}></div>
+                </div>
+                <div className="item">
+                    <div className="location-owl-image bg-image" style={{ backgroundImage: "url(./assets/images/location-carousel2.png)" }}></div>
+                </div>
+                <div className="item">
+                    <div className="location-owl-image bg-image" style={{ backgroundImage: "url(./assets/images/location-carousel3.png)" }}></div>
+                </div>
+                <div className="item">
+                    <div className="location-owl-image bg-image" style={{ backgroundImage: "url(./assets/images/location-carousel4.png)" }}></div>
+                </div>
+            </div>
         </div>
     )
 }

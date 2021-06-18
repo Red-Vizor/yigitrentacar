@@ -113,3 +113,34 @@
 .car-card .btn{
     color: var(--orange2);
 }
+
+
+.offices .offices-contact{
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    background-color: #3D3D3D;
+}
+.office-card{
+    background-color: #505050 !important;
+    border-radius: 40px;
+    padding: 15px 35px 15px 20px;
+}
+.office-card .btn{
+    width:90% !important;
+}
+.office-card input,.office-card textarea {
+   border-radius: 0 !important;
+   border: 0;
+   color: #fff;
+   background-color: #6A6A6A;
+}
+.office-card input::placeholder { 
+    color: #fff;
+  }
+.office-card .maps{
+    height:300px ;
+}
+.office a{
+    font-size:0.8rem;
+    color: #CCCCCC !important;
+}

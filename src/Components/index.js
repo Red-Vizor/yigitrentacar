@@ -1,3 +1,3 @@
 import CarCard from './Carcard';
-
-export {CarCard}
+import OfficesCard from './OfficesCard'
+export {CarCard, OfficesCard}

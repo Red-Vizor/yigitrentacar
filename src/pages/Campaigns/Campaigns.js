@@ -2,31 +2,102 @@ import React from 'react'
 import './campaigns.css'
 import CampaignsCard from './CampaignsCard'
 import CampaignsSingle from './CampaignsSingle'
+import PropTypes from 'prop-types'
+import Tabs from '@material-ui/core/Tabs'
+import Tab from '@material-ui/core/Tab'
+import Typography from '@material-ui/core/Typography'
+import Box from '@material-ui/core/Box'
+
+function TabPanel(props) {
+    const { children, value, index, ...other } = props;
+
+    return (
+        <div
+            role="tabpanel"
+            hidden={value !== index}
+            id={`simple-tabpanel-${index}`}
+            aria-labelledby={`simple-tab-${index}`}
+            {...other}
+        >
+            {value === index && (
+                <Box p={3}>
+                    <Typography>{children}</Typography>
+                </Box>
+            )}
+        </div>
+    );
+}
+
+TabPanel.propTypes = {
+    children: PropTypes.node,
+    index: PropTypes.any.isRequired,
+    value: PropTypes.any.isRequired,
+};
+
+function changeProps(index) {
+    return {
+        id: `simple-tab-${index}`,
+        'aria-controls': `simple-tabpanel-${index}`,
+    };
+}
 
 
 function Campaigns() {
+    const [value, setValue] = React.useState(0);
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
+
     return (
         <div className="campaigns">
             <div className="menu-bar container pt-3" style={{ height: "55px", fontWeight: "bold" }}>
                 <p>Anasayfa / Kampanyalar</p>
             </div>
-            <div className="campaigns-jumbotron"
+            <div className="campaigns-jumbotron position-relative mb-5 "
                 style={{ height: "346px", backgroundImage: "linear-gradient(rgb(232, 84, 30,0.4), rgb(232, 84, 30,0.4)), url('./assets/images/jumbotron/compaigns-jumbotron.png')" }}>
                 <h1>KAMPANYALAR</h1>
 
+                <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className="tab-bar shadow-light" centered >
+                    <Tab label="YİĞİT KAMPANYALARI" {...changeProps(0)} />
+                    <Tab label="YİĞİT İŞ BİRLİĞİ KAMPANYALARI" {...changeProps(1)} />
+                    <Tab label="YİĞİT KURUMSAL KAMPANYALARI" {...changeProps(2)} />
+                </Tabs>
             </div>
 
 
             <div className="container" >
-
-                <div className="row">
-                    <div className="col">
-                        <CampaignsCard imageUrl="./assets/images/campaign-car.png" />
+                <TabPanel value={value} index={0}>
+                    <div className="row">
+                        <div className="col">
+                            <CampaignsCard imageUrl="./assets/images/campaign-car.png" />
+                        </div>
+                        <div className="col">
+                            <CampaignsCard imageUrl="./assets/images/campaign-car.png" />
+                        </div>
                     </div>
-                    <div className="col">
-                        <CampaignsCard imageUrl="./assets/images/campaign-car.png"/>
+                </TabPanel>
+                <TabPanel value={value} index={1}>
+                    <div className="row">
+                        <div className="col">
+                            <CampaignsCard imageUrl="./assets/images/campaign-car.png" />
+                        </div>
+                        <div className="col">
+                            <CampaignsCard imageUrl="./assets/images/campaign-car.png" />
+                        </div>
                     </div>
-                </div>
+                </TabPanel>
+                <TabPanel value={value} index={2}>
+                    <div className="row">
+                        <div className="col">
+                            <CampaignsCard imageUrl="./assets/images/campaign-car.png" />
+                        </div>
+                        <div className="col">
+                            <CampaignsCard imageUrl="./assets/images/campaign-car.png" />
+                        </div>
+                    </div>
+                </TabPanel>
 
             </div>
 
