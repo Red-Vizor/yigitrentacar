@@ -226,6 +226,14 @@ p, h1,h2,h3,h4,h5,h6 {
   width:100% !important; 
 }
 
+.general-form-1 .form-control{
+  margin-right: 2rem !important; 
+}
+
+.general-form-1 .form-label{
+  margin-left: 3rem !important; 
+}
+
 .general-form-1 .input-group-text{
   position: relative;
   border: 0 !important;

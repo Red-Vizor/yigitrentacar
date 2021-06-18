@@ -68,7 +68,7 @@ function Services() {
                 </Tabs>
             </div>
 
-            <section className="container policy-area my-4 ">
+            <section className="policy-area my-4 ">
                 <TabPanel value={value} index={0}>
                    <PersonalServices />
                 </TabPanel>
