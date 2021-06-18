@@ -61,8 +61,8 @@ function Services() {
             <div className="policies-jumbotron text-center position-relative pb-5" style={{  backgroundColor: "#CCCCCC" }}>
                 <h4 className="py-5 bold">HİZMETLER</h4>
                 <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className="tab-bar shadow-light" centered >
-                    <Tab label="GİZLİLİK POLİTİKASI" {...changeProps(0)} />
-                    <Tab label="KİRALAMA KOŞULLARI" {...changeProps(1)} />
+                    <Tab label="BİREYSEL KİRALAMA" {...changeProps(0)} />
+                    <Tab label="KURUMSAL KİRALAMA" {...changeProps(1)} />
                     <Tab label="ŞÖFÖRLÜ ARAÇ KİRALAMA & TRANSFER" {...changeProps(2)} />
                    
                 </Tabs>

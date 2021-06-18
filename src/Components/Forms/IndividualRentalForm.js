@@ -70,7 +70,7 @@ function IndividualRental() {
 
                         </div>
 
-                        <a href="#" className="btn btn-orange-outline bold px-4 py-2 " style={{width:"20%"}}>
+                        <a href="#" className="btn btn-orange-outline bold px-4 py-2" style={{ width: "20%" }}>
                             <span className="m-auto">FORMU GÖNDER</span>
                         </a>
 

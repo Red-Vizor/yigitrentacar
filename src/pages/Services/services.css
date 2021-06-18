@@ -7,7 +7,7 @@
 .personal-header h5{
     text-align: left !important;
     color: #fff;
-    padding: 1.5rem 0 0 2.2rem;
+    padding: 1.5rem 3rem 0 3rem;
 }
 
 .individual-rental-form .btn-orange-outline{
@@ -18,3 +18,27 @@
     bottom: 3rem;
     left: 40%;
   }
+.corporate-rental-form .btn-orange-outline{
+    border: 1px solid #E8551E !important;
+    border-radius: 10px !important;
+    margin-top: 1.2rem !important;
+    position: relative !important;
+    top: 0.7rem;
+    bottom: 3rem;
+    left: 40%;
+  }
+
+.corporate-header {
+    margin-top: 1.5rem;
+    
+}
+
+.corporate-header h5{
+    text-align: left !important;
+    color: #fff;
+    padding: 1.5rem 3rem 0 3rem;
+}
+
+.corporate-text p{
+    padding-right: 4rem;
+}
