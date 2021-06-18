@@ -74,10 +74,10 @@ p, h1,h2,h3,h4,h5,h6 {
 
 
 .extra-bold{
-  font-weight: 800;
+  font-weight: 800 !important;
 }
 .semi-bold{
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 .bold{
   font-weight:700 !important;
@@ -162,7 +162,7 @@ p, h1,h2,h3,h4,h5,h6 {
 }
 
 .services .tab-bar .MuiButtonBase-root{
-  min-width: 500x !important;
+  min-width: 33.3% !important;
   width: 500px !important;
 }
 
@@ -201,4 +201,34 @@ p, h1,h2,h3,h4,h5,h6 {
 .popular-location-area .tab-bar .MuiTab-wrapper, .campaigns .tab-bar .MuiTab-wrapper, 
 .policies .tab-bar .MuiTab-wrapper, .services .tab-bar .MuiTab-wrapper{
   font-weight: 700 !important;
+}
+
+.rezervasyon-form h2{
+  font-weight: 700;
+}
+.general-form-1 input, .general-form-1 select, .general-form-1 textarea{
+  padding: 20px 0 20px 10px;
+  background-color:#F5F5F5 !important;
+  border: 0 !important;
+}
+.general-form-1 .input-group-text:before{
+  display: block;
+  position:absolute;
+  content:" ";
+  width: 0;
+  height: 50%;
+  border-left: 1px solid #D0D0D0 !important;
+  top: 50%;
+  left:95%;
+  transform: translateY(-50%);
+}
+.general-form-1 label{
+  width:100% !important; 
+}
+
+.general-form-1 .input-group-text{
+  position: relative;
+  border: 0 !important;
+  margin-right:1px !important;
+  background-color:#F5F5F5 !important;
 }
