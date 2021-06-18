@@ -13,6 +13,7 @@ import PopularLocationSingle from './pages/PopularLocations/PopularLocationSingl
 import Policies from './pages/Policies/Policies'
 import Cars from './pages/Cars/Cars'
 import Offices from './pages/Offices/Offices'
+import About from './pages/About/About'
 function App() {
   return (
     <Router>
@@ -27,6 +28,7 @@ function App() {
             <Route path="/policies" component={Policies}></Route>
             <Route path="/cars" component={Cars}></Route>
             <Route path="/offices" component={Offices}></Route>
+            <Route path="/about" component={About}></Route>
           </Switch>
        <Footer />
     </Router>
