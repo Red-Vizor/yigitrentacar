@@ -4,5 +4,7 @@ import PersonalForm from './Forms/PersonalForm'
 import CorporateForm from './Forms/CorporateForm'
 import IndividualRentalForm from './Forms/IndividualRentalForm'
 import CorporateRentalForm from './Forms/CorporateRentalForm'
+import ContactForm from './Forms/ContactForm'
+import Menues from './Menues/Menues'
 
-export {CarCard, OfficesCard, PersonalForm, CorporateForm, IndividualRentalForm, CorporateRentalForm}
+export {CarCard, OfficesCard, PersonalForm, CorporateForm, IndividualRentalForm, CorporateRentalForm , Menues, ContactForm}

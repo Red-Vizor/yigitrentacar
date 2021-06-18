@@ -4,7 +4,7 @@ export default function CorporateForm(props) {
     return (
         <div className="general-form-1">
 
-            <div className="fatura-bilgileri p-5">
+            <div className={"fatura-bilgileri p-5 bg-" + props.bgColor}>
                 <div className="container px-5">
                     <h2 className="text-center mt-3 mb-5 bold">FATURA BİLGİLERİ</h2>
                     <form class="row g-3 px-5">

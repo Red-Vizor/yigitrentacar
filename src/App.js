@@ -15,6 +15,10 @@ import Cars from './pages/Cars/Cars'
 import Offices from './pages/Offices/Offices'
 import About from './pages/About/About'
 import Services from './pages/Services/Services'
+import Login from './pages/Crud/Login'
+import Register from './pages/Crud/Register'
+import Contact from './pages/Contact/Contact'
+
 function App() {
   return (
     <Router>
@@ -31,6 +35,9 @@ function App() {
             <Route path="/offices" component={Offices}></Route>
             <Route path="/about" component={About}></Route>
             <Route path="/services" component={Services}></Route>
+            <Route path="/login" component={Login}></Route>
+            <Route path="/register" component={Register}></Route>
+            <Route path="/contact" component={Contact}></Route>
           </Switch>
        <Footer />
     </Router>

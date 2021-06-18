@@ -1,0 +1,50 @@
+.menue{
+    width: 100% !important;
+    height: 100vh !important;
+    z-index: 9999999;
+    position: absolute;
+    background-color: rgb(0, 0, 0, 0.95);
+    transition: all 0.5s ease;
+}
+.menue .menues-area{
+    position: absolute;
+    width: 80%;
+    height:80vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+
+}
+.menue .menues-area .nav a{
+
+    color: #fff;
+    font-size:1.6rem;
+
+}
+
+.menue .menues-area .menu-close-button{
+    position: absolute;
+    right: 20px;
+    border-bottom: 2px solid #fff;
+    transition: opacity 0.3s ease;
+}
+
+.menue .menues-area .menu-close-button:hover{
+    opacity: .4;
+    cursor: pointer;
+}
+.menue .nav .nav-link span{  
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.menue .nav .nav-link:hover > span{  
+    opacity: 1;
+}
+
+.menue .menues-area .menu-close-button span, .menue .nav a span{  vertical-align: middle;}
+
+.menue .rigth-text{
+    right: 20px;
+    bottom: 50%;
+    transform: translateX(50%) rotate(-90deg);
+}
