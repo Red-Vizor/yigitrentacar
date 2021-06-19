@@ -22,3 +22,8 @@
 .menu-button{
     font-size:1.3rem;
 }
+
+.header-bottom .logo:hover{
+    cursor: pointer;
+    opacity: 1;
+}

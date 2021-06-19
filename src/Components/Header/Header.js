@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import './header.css'
+import {  Link } from "react-router-dom"
 import { useLocation } from 'react-router-dom'
 import { updatePage } from '../../store/general/pageSlice'
 import { toogle } from '../../store/menues/menuesSlice'
@@ -76,7 +77,7 @@ export default function Header() {
                                 </div>
                             </div>
                             <div className="col-lg-4 d-flex justify-items-center px-5">
-                                <img src="./assets/images/logo.png" className="w-100 mx-auto" />
+                                <a href="/" className="logo"><img src="./assets/images/logo.png" className="w-100 mx-auto " /></a>
                             </div>
                             <div className="col-lg-4 d-flex justify-content-end">
                                 <button type="button" class="btn btn-outline-light rounded-0 my-auto">Üye Girişi <i class="las la-user" ></i> <i class="las la-angle-down"></i></button>
