@@ -103,6 +103,9 @@ export default function Reservation() {
             </div>
 
             <TabPanel value={value} index={1}>
+                <p>buraya son sayfayı ekle</p>
+            </TabPanel>
+            <TabPanel value={value} index={1}>
                 <Cars />
             </TabPanel>
             <TabPanel value={value} index={2}>
