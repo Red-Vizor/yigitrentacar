@@ -22,7 +22,7 @@ export default function Header() {
                 <div className="container-fluid header-top">
                     <div className="container">
                         <div className="row py-2">
-                            <div className="col-lg-3 border-end px-4 social-media">
+                            <div className="col-lg-3 border-end px-4 social-media my-auto">
                                 <div className="d-flex-inline text-center">
                                     <a href="#" className="my-auto " >
                                         <img src="./assets/icons/youtube.svg" height="100%" className="my-auto me-3" />
