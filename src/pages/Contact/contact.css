@@ -1,0 +1,9 @@
+.contact-page .phone-mail-area{
+    border-radius: 20px;
+}
+
+.contact-page .phone-mail-area a{
+    color: #E8551E !important;
+    font-size:1.2rem !important;
+    font-weight: 600;
+}

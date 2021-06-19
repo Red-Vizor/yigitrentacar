@@ -1,5 +1,6 @@
 import React from 'react'
-import { OfficesCard , ContactForm} from '../../Components'
+import './contact.css'
+import { OfficesCard, ContactForm } from '../../Components'
 
 export default function Contact() {
     return (
@@ -28,7 +29,16 @@ export default function Contact() {
                 </div>
             </div>
             <div className="container">
-                <div className="mx-auto w-75 shadow-light py-3">
+                <div className="phone-mail-area mx-auto mt-5 w-50 shadow-light py-3 text-center">
+                    <a href="#" className="my-auto" >
+                        <img src="./assets/icons/phone-orange.svg" height="100%" className="my-auto me-2" />
+                        +90 850 840 09 48
+                    </a>
+                    <a href="#" className="my-auto ms-3" >
+                        <img src="./assets/icons/email-orange.svg" height="100%" className="my-auto me-2" />
+                        info@yigitotokiralama.com
+                    </a>
+
 
                 </div>
                 <ContactForm />
