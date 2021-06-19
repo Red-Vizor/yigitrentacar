@@ -7,7 +7,7 @@ export default function Menues() {
     const fade = useSelector((state) => state.menues.value)
     const dispatch = useDispatch()
     return (
-        <section className={"menue position-fixed  " + (fade === true ? 'd-block' : 'd-none')} >
+        <section className={"menue position-fixed " + (fade === true ? 'fadeIn' : 'fadeOut')} >
             <div className="menues-area bg-black border ">
                 <div className="position-relative w-100 h-100">
                     <span className="py-2 menu-close-button text-white" onClick={() => { dispatch(toogle(false)) }}>

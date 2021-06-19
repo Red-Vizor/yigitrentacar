@@ -48,3 +48,17 @@
     bottom: 50%;
     transform: translateX(50%) rotate(-90deg);
 }
+
+.menue.fadeOut{
+    opacity:0;
+    width: 0px !important;
+    height:0px !important;
+    transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
+    z-index: -100;
+}
+.menue.fadeIn{
+    opacity:1;
+    width: 100% !important;
+    height: 100vh !important;
+     transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
+}
