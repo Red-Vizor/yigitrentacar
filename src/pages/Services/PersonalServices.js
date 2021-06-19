@@ -1,6 +1,7 @@
 import React from 'react'
 import { IndividualRentalForm } from '../../Components'
 
+
 export default function PersonalServices() {
     return (
         <div className="personal-services  extra-bold">
@@ -36,7 +37,8 @@ export default function PersonalServices() {
                 </p>
 
             </div>
-
+            
+           
         </div>
     )
 }

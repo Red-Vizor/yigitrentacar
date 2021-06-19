@@ -243,7 +243,7 @@ p, h1,h2,h3,h4,h5,h6 {
 .rezervasyon-form h2{
   font-weight: 700;
 }
-.general-form-1 input, .general-form-1 select, .general-form-1 textarea{
+.general-form-1 .form-control, .general-form-1 select, .general-form-1 textarea{
   padding: 20px 0 20px 10px;
   background-color:#F5F5F5 !important;
   border: 0 !important;
@@ -272,4 +272,13 @@ p, h1,h2,h3,h4,h5,h6 {
   border: 0 !important;
   margin-right:1px !important;
   background-color:#F5F5F5 !important;
+}
+
+.form-check-input {
+  background-color: #fff !important;
+  border-color: #595757 !important;
+}
+
+.form-check-input:checked[type=checkbox] {
+  background-color: #FF710F !important;
 }

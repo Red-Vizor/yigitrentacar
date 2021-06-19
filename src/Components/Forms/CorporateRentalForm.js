@@ -4,34 +4,42 @@ function CorporateRental() {
     return (
         <div className="corporate-rental-form general-form-1 " style={{ width: "100%" }}>
 
-            <div className="rezervasyon-form px-5 container" >
+            <div className="px-5 container" >
                 <div className=" mt-5 mb-5 px-5 kisisel-bilgiler">
 
                     <form class="g-3">
                         <div class="input-group mb-3">
                             <label for="inputEmail4" class="form-label">Firma Adı</label>
-                            <span class="input-group-text" id="basic-addon1">@</span>
+                            <span class="input-group-text" id="basic-addon1">
+                                <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
+                            </span>
                             <input type="email" class="form-control" id="inputEmail4" placeholder="Firma Adını Giriniz" />
                         </div>
                         <div className="row">
                             <div class="col-md-6">
                                 <div class="input-group mb-3">
                                     <label for="inputEmail4" class="form-label">Vergi Numarası*</label>
-                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
+                                    </span>
                                     <input type="email" class="form-control" id="inputEmail4" placeholder="Vergi Numarası*" />
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="input-group mb-3">
                                     <label for="inputPassword4" class="form-label">Araç Sayısı*</label>
-                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <img src="./assets/icons/one.svg" height="45%" className="my-auto px-2" />
+                                    </span>
                                     <input type="password" class="form-control" id="inputPassword4" placeholder="Araç Sayısı*" />
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="input-group mb-3">
                                     <label for="inputState" class="form-label">İL</label>
-                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <img src="./assets/icons/location.svg" height="50%" className="my-auto px-3" />
+                                    </span>
                                     <select id="inputState" class="form-control">
                                         <option selected>İL</option>
                                         <option>...</option>
@@ -41,7 +49,9 @@ function CorporateRental() {
                             <div class="col-md-6">
                                 <div class="input-group mb-3">
                                     <label for="inputState" class="form-label">İlçe</label>
-                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <img src="./assets/icons/location.svg" height="50%" className="my-auto px-3" />
+                                    </span>
                                     <select id="inputState" class="form-control">
                                         <option selected>İlçe Seçiniz</option>
                                         <option>...</option>
@@ -51,28 +61,36 @@ function CorporateRental() {
                             <div class="col-md-6">
                                 <div class="input-group mb-3">
                                     <label for="inputEmail4" class="form-label">ADINIZ</label>
-                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
+                                    </span>
                                     <input type="email" class="form-control" id="inputEmail4" placeholder="Yetkili Kişinin Adı" />
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="input-group mb-3">
                                     <label for="inputPassword4" class="form-label">SOYADINIZ</label>
-                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
+                                    </span>
                                     <input type="password" class="form-control" id="inputPassword4" placeholder="Yetkili Kişinin Soyadı" />
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="input-group mb-3">
                                     <label for="inputEmail4" class="form-label">TELEFONUNUZ</label>
-                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <img src="./assets/icons/phone-gray.svg" height="45%" className="my-auto px-2" />
+                                    </span>
                                     <input type="email" class="form-control" id="inputEmail4" placeholder="Telefon Numarası" />
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="input-group mb-3">
                                     <label for="inputPassword4" class="form-label">MAİL ADRESİNİZ</label>
-                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <img src="./assets/icons/@.svg" height="50%" className="my-auto px-2" />
+                                    </span>
                                     <input type="password" class="form-control" id="inputPassword4" placeholder="Mail Adresiniz" />
                                 </div>
                             </div>

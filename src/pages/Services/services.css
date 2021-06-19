@@ -27,6 +27,19 @@
     bottom: 3rem;
     left: 40%;
   }
+  
+  .personal-form .btn-orange-outline{
+    border: 1px solid #E8551E !important;
+    border-radius: 10px !important;
+    position: relative !important;
+    bottom: 3rem;
+    left: 40%;
+  }
+
+  .member-login-button {
+    border: 1px solid #E8551E !important;
+    border-radius: 10px !important;
+  }
 
 .corporate-header {
     margin-top: 1.5rem;

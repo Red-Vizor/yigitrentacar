@@ -1,5 +1,6 @@
 import React from 'react'
 import { CorporateRentalForm } from '../../Components'
+import { Accordion } from '../../Components'
 
 export default function CorporateServices() {
     return (
@@ -25,16 +26,21 @@ export default function CorporateServices() {
                 <div class="row px-5">
                     <div class="col px-4" >
                         <p className="bold ps-4 pt-5">Lütfen aşağıdaki bilgileri eksiksiz doldurunuz.</p>
-                        
+
                     </div>
                     <div class="col pe-3" >
                         <h5 className="bold mt-2 mb-3 ps-3" style={{ color: "#FF710F" }}>Kurumsal Üye Girişi</h5>
                         <p className="bold px-3 pe-5">Yiğit rent a car ile kurumsal kısa dönem araç kiralama ile aracını kiralamak için şirket yöneticinden sana özel şifeni almayı unutma! E-posta adresin ve şifren ile dilediğin yerden, dilediğin zaman kurumsal hesabınla kiralama yapabilirsin.</p>
+                        <a href="#" className="btn btn-orange-outline bold px-4 py-2 ms-3 member-login-button" style={{ width: "45%" }}>
+                            <span className="m-auto">Giriş Yap</span>
+                        </a>
+
                     </div>
                 </div>
             </div>
 
             <CorporateRentalForm />
+            <Accordion/>
 
         </div>
     )
