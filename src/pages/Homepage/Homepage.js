@@ -21,9 +21,31 @@ export default function Homepage() {
                                 <p className="h5 semi-bold mb-3 ">Alış Yeri</p>
                                 <form>
                                     <div className="input-group ">
-                                        <input type="text" className="form-control py-3 text-center" placeholder="" />
-                                        <div className="input-group-append">
-                                            <span className="input-group-text border-0 bg-white h-100"><i className="las la-map-marker"></i></span>
+                                        <div className="dropdown">
+                                            <a className="dropdown-toggle w-100 d-flex  bg-white  rounded py-3 semi-bold " href="#" style={{ color: "gray" }}>
+                                                <span className="my-auto mx-auto">İstanbul, İzmir, Bodrum</span>
+                                                <img src="./assets/icons/location.svg" className="my-auto ms-auto me-4" />
+                                            </a>
+                                            <ul className="dropdown-menu w-100 bg-light position-absolute rounded" role="menu" aria-labelledby="dLabel">
+                                                <li className="rounded py-2 text-center semi-bold position-relative">
+                                                    <a>
+                                                        İstanbul
+                                                        <img src="./assets/icons/location.svg" className="my-auto ms-auto me-4" />
+                                                    </a>
+                                                </li>
+                                                <li className="rounded py-2 text-center semi-bold position-relative">
+                                                    <a>
+                                                        İzmir
+                                                        <img src="./assets/icons/location.svg" className="my-auto ms-auto me-4" />
+                                                    </a>
+                                                </li>
+                                                <li className="rounded py-2 text-center semi-bold position-relative">
+                                                    <a>
+                                                        Bodrum
+                                                        <img src="./assets/icons/location.svg" className="my-auto ms-auto me-4" />
+                                                    </a>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                     <div className="row text-start mt-3">
@@ -107,62 +129,62 @@ export default function Homepage() {
                         <Head headPosition="start" head="KAMPANYALAR" hrSize={9} />
                         <div className="owl-carousel owl-carousel-home owl-theme my-4">
                             <div className="item">
-                                <ListCard 
-                                type="campaign" 
-                                imageUrl="./assets/images/car1.jpg" 
-                                title="YAZA MERHABA KAMPANYASI!"
-                                btnText="REZERVASYON YAP"
-                                content="Yiğit Rent A Car yaza merhaba kampanyası! Tüm Araç Gruplarında %10 indirim."  />
+                                <ListCard
+                                    type="campaign"
+                                    imageUrl="./assets/images/car1.jpg"
+                                    title="YAZA MERHABA KAMPANYASI!"
+                                    btnText="REZERVASYON YAP"
+                                    content="Yiğit Rent A Car yaza merhaba kampanyası! Tüm Araç Gruplarında %10 indirim." />
                             </div>
                             <div className="item">
-                                <ListCard 
-                                type="campaign" 
-                                imageUrl="./assets/images/car2.jpg" 
-                                title="YAZA MERHABA KAMPANYASI!" 
-                                btnText="REZERVASYON YAP" 
-                                content="Yiğit Rent A Car yaza merhaba kampanyası! Tüm Araç Gruplarında %10 indirim." />
+                                <ListCard
+                                    type="campaign"
+                                    imageUrl="./assets/images/car2.jpg"
+                                    title="YAZA MERHABA KAMPANYASI!"
+                                    btnText="REZERVASYON YAP"
+                                    content="Yiğit Rent A Car yaza merhaba kampanyası! Tüm Araç Gruplarında %10 indirim." />
                             </div>
                             <div className="item">
-                                <ListCard 
-                                type="campaign" 
-                                imageUrl="./assets/images/car3.jpg" 
-                                title="YAZA MERHABA KAMPANYASI!"
-                                btnText="REZERVASYON YAP"
-                                content="Yiğit Rent A Car yaza merhaba kampanyası! Tüm Araç Gruplarında %10 indirim."  />
+                                <ListCard
+                                    type="campaign"
+                                    imageUrl="./assets/images/car3.jpg"
+                                    title="YAZA MERHABA KAMPANYASI!"
+                                    btnText="REZERVASYON YAP"
+                                    content="Yiğit Rent A Car yaza merhaba kampanyası! Tüm Araç Gruplarında %10 indirim." />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="container-fluid py-5 bg-image"  style={{ backgroundImage: "linear-gradient(rgb(250, 250, 250,0.7), rgb(250, 250, 250,0.7)), url('./assets/images/road.png')" }}>
+            <div className="container-fluid py-5 bg-image" style={{ backgroundImage: "linear-gradient(rgb(250, 250, 250,0.7), rgb(250, 250, 250,0.7)), url('./assets/images/road.png')" }}>
                 <div className="container campaigns my-4">
                     <div className="content-area pt-4 ">
                         <Head headPosition="end" head="POPÜLER LOKASYONLAR" hrSize={8} />
 
                         <div className="owl-carousel owl-carousel-home owl-theme my-4">
                             <div className="item">
-                                <ListCard type="location" 
-                                imageUrl="./assets/images/city1.jpg" 
-                                title="İSTANBUL" 
-                                btnText="İSTANBUL LOKASYONLAR"
-                                content="İstanbul' da mutlaka görmeniz gereken yerler." />
+                                <ListCard type="location"
+                                    imageUrl="./assets/images/city1.jpg"
+                                    title="İSTANBUL"
+                                    btnText="İSTANBUL LOKASYONLAR"
+                                    content="İstanbul' da mutlaka görmeniz gereken yerler." />
                             </div>
                             <div className="item">
-                                <ListCard type="location" 
-                                imageUrl="./assets/images/city2.jpg" 
-                                title="İZMİR" 
-                                btnText="İZMİR LOKASYONLAR"
-                                content="İzmir' de mutlaka görmeniz gereken yerler."/>
+                                <ListCard type="location"
+                                    imageUrl="./assets/images/city2.jpg"
+                                    title="İZMİR"
+                                    btnText="İZMİR LOKASYONLAR"
+                                    content="İzmir' de mutlaka görmeniz gereken yerler." />
                             </div>
                             <div className="item">
-                                <ListCard type="location" 
-                                imageUrl="./assets/images/city3.jpg" 
-                                title="BODRUM" 
-                                btnText="BODRUM LOKASYONLAR"
-                                content="Bodrum' da mutlaka görmeniz gereken yerler."/>
+                                <ListCard type="location"
+                                    imageUrl="./assets/images/city3.jpg"
+                                    title="BODRUM"
+                                    btnText="BODRUM LOKASYONLAR"
+                                    content="Bodrum' da mutlaka görmeniz gereken yerler." />
                             </div>
-                        </div>  
+                        </div>
                     </div>
                 </div>
             </div>

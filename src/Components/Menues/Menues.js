@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { toogle } from '../../store/menues/menuesSlice'
 import './menues.css'
-import {  Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 export default function Menues() {
     const fade = useSelector((state) => state.menues.value)
@@ -59,18 +59,19 @@ export default function Menues() {
                         </div>
                         <div className="col-4 my-auto d-flex">
                             <ul className="nav flex-column mx-auto">
+
                                 <li className="nav-item">
-                                    <li class="nav-item dropdown">
-                                        <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" >Araçlar</a>
-                                        <ul className="dropdown-menu">
-                                            <li><a className="dropdown-item" href="#">Tüm Araçlar</a></li>
-                                            <li><a className="dropdown-item" href="#">Premium Araçlar</a></li>
-                                            <li><a className="dropdown-item" href="#">Prestij Araçlar</a></li>
-                                            <li><a className="dropdown-item" href="#">Business Araçlar</a></li>
-                                            <li><a className="dropdown-item" href="#">Plus Araçlar</a></li>
-                                            <li><a className="dropdown-item" href="#">Ekonomik Araçlar</a></li>
+                                    <div className="dropdown ms-3">
+                                        <a className="dropdown-toggle " data-toggle="dropdown" href="#">Araçlar</a>
+                                        <ul className="dropdown-menu  bg-black ms-4" role="menu" aria-labelledby="dLabel">
+                                            <li><Link to="/cars" onClick={() => { closeMenu() }}>Tüm Araçlar</Link></li>
+                                            <li><Link to="/cars" onClick={() => { closeMenu() }}>Premium Araçlar</Link></li>
+                                            <li><Link to="/cars" onClick={() => { closeMenu() }}>Prestij Araçlar</Link></li>
+                                            <li><Link to="/cars" onClick={() => { closeMenu() }}>Business Araçlar</Link></li>
+                                            <li><Link to="/cars" onClick={() => { closeMenu() }}>Ekonomik Araçlar</Link></li>
+                                            <li className="divider"></li>
                                         </ul>
-                                    </li>
+                                    </div>
                                 </li>
                                 <li className="nav-item">
                                     <Link to="/offices" className="nav-link" href="#" onClick={() => { closeMenu() }}>Ofisler</Link>
