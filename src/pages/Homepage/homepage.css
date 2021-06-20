@@ -5,6 +5,9 @@
     --white: #ffffff;
   }
   
+  .btn:hover{
+      opacity: 1;
+  }
 
 .homepage .date-slide{
     height: 83.5vh;
@@ -57,4 +60,20 @@
     color: var(--white);
     cursor: pointer;
     opacity: 1;
+}
+.date-slide .date-inputs-area .clock:hover , .date-slide .date-inputs-area .date:hover {
+    cursor: pointer;
+}
+.date-slide .date-inputs-area .clock .text, .date-slide .date-inputs-area .date .text{
+    color: gray;
+    font-weight: 600;
+    margin-left: 10px;
+}
+.date-slide .date-inputs-area img{ 
+    height:40%;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    opacity: 0.7!important
 }

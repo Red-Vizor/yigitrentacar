@@ -7,5 +7,6 @@ import CorporateRentalForm from './Forms/CorporateRentalForm'
 import ContactForm from './Forms/ContactForm'
 import Accordion from './Accordion/Accordion'
 import Menues from './Menues/Menues'
-
-export {CarCard, OfficesCard, PersonalForm, CorporateForm, IndividualRentalForm, CorporateRentalForm , Menues, ContactForm, Accordion}
+import PackageModal from './PackageModal'
+import CarModal from './CarModal'
+export { CarCard, CarModal, OfficesCard, PersonalForm, CorporateForm, IndividualRentalForm, CorporateRentalForm, Menues, ContactForm, Accordion, PackageModal }

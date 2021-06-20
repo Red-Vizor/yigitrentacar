@@ -7,7 +7,7 @@ export default function ReservationHead() {
                 <div className="container py-3">
                     <div className="row">
                         <div className="col-lg-4 d-flex justify-items-center px-5">
-                            <img src="./assets/images/logo.png" className="w-100 mx-auto" />
+                            <a href="/"><img src="./assets/images/logo.png" className="w-100 mx-auto" /></a>
                         </div>
                         <div className="col-lg-8 d-flex py-2">
                             <button type="button" class="btn btn-outline-light rounded-0 my-auto py-2 ms-auto">KİRALAMA KOŞULLARINI GÖRÜNTÜLE</button>

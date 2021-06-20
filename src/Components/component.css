@@ -144,3 +144,15 @@
     font-size:0.8rem;
     color: #CCCCCC !important;
 }
+
+.modal .btn-add{
+    transform: rotate(45deg);
+}
+.car-modal {
+    width: 30% !important;
+}
+
+.car-modal .modal-header{
+    background-color: var(--orange);
+    border-radius: 25px 25px  0px 0px;
+}

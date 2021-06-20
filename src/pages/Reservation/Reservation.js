@@ -4,7 +4,7 @@ import ReservationHead from '../../Components/Header/ReservationHead'
 import Cars from './Cars'
 import Package from './Package'
 import ReservationForm from './ReservationForm'
-
+import {PackageModal} from '../../Components'
 import PropTypes from 'prop-types'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
@@ -55,9 +55,6 @@ export default function Reservation() {
     return (
         <div className="reservation-page">
             <ReservationHead />
-
-
-
             <div className="container-fluid reservation-tab-area">
                 <div className="d-flex flex-row">
                     <button type="button" className="btn border-bottom border-right py-3 px-3 fs-3">x</button>
@@ -88,21 +85,21 @@ export default function Reservation() {
                             <div className="tab-button text-start py-2">
                                 <span className="h6 bold">4. EK ÜRÜNLER </span>
                                 <p className="h7">Bodrum, Yalıkavak <img src="./assets/icons/rightic.svg" className="my-auto ms-5 h-25" /></p>
-                                <p className="h7">21.06.2021 <img src="./assets/icons/arrow-circle.svg" className="my-auto ms-1 h-50" /> 21.06.2021</p>
+                                <a className="h7 text-dark" data-bs-toggle="modal" data-bs-target="#packageModal">Tümünü göster</a>
                             </div>
                         } {...changeProps(3)} />
                         <Tab label={
                             <div className="tab-button text-start py-2">
                                 <span className="h6 bold">5. REZERVASYON </span>
                                 <p className="h7">Bodrum, Yalıkavak</p>
-                                <p className="h7">21.06.2021 <img src="./assets/icons/arrow-circle.svg" className="my-auto ms-1 h-50" /> 21.06.2021</p>
+                                <a className="h7 text-dark" data-bs-toggle="modal" data-bs-target="#packageModal">Tümünü göster</a>
                             </div>
                         } {...changeProps(4)} />
                     </Tabs>
                 </div>
             </div>
 
-            <TabPanel value={value} index={1}>
+            <TabPanel value={value} index={0}>
                 <p>buraya son sayfayı ekle</p>
             </TabPanel>
             <TabPanel value={value} index={1}>
@@ -118,7 +115,7 @@ export default function Reservation() {
                 <ReservationForm />
             </TabPanel>
 
-
+            <PackageModal />
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import {CarCard} from '../../Components'
+import { CarCard, CarModal } from '../../Components'
 
 export default function Cars() {
     return (
@@ -12,18 +12,20 @@ export default function Cars() {
                     <CarCard />
                 </div>
                 <div className="col-lg-4">
-                    <CarCard/>
+                    <CarCard />
                 </div>
                 <div className="col-lg-4">
-                    <CarCard/>
+                    <CarCard />
                 </div>
                 <div className="col-lg-4">
-                    <CarCard/>
+                    <CarCard />
                 </div>
                 <div className="col-lg-4">
-                    <CarCard/>
+                    <CarCard />
                 </div>
             </div>
+
+            <CarModal />
         </div>
     )
 }

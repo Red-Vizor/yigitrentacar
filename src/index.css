@@ -282,3 +282,10 @@ p, h1,h2,h3,h4,h5,h6 {
 .form-check-input:checked[type=checkbox] {
   background-color: #FF710F !important;
 }
+
+.modal-dialog{
+  max-width: 100% !important;
+}
+.modal-dialog .modal-content{
+  border-radius: 30px !important;
+}

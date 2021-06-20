@@ -39,7 +39,7 @@ export default function Carcard() {
                         <img src="./assets/icons/carcard/expand.svg" className="icon my-auto ms-2" />
                         <span className="my-auto ms-1">4 Kişi</span>
 
-                        <a href="#" className="ms-auto"> Tüm Özellikler</a>
+                        <a href="#" className="ms-auto" data-bs-toggle="modal" data-bs-target="#carModal"> Tüm Özellikler</a>
                     </span>
                 </div>
                 <img src="./assets/images/s3.png" className="images position-absolute" />
@@ -58,6 +58,8 @@ export default function Carcard() {
                     </div>
                 </div>
             </div>
+
         </div>
+
     )
 }

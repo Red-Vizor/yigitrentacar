@@ -1,5 +1,6 @@
 import React from 'react'
 import './homepage.css'
+import { Link } from "react-router-dom"
 
 import Head from '../../Components/ContentHead'
 import Car from '../../Components/CarSlider'
@@ -48,27 +49,46 @@ export default function Homepage() {
                                             </ul>
                                         </div>
                                     </div>
-                                    <div className="row text-start mt-3">
-                                        <div className="col-lg-3">
+                                    <div className="row text-start date-inputs-area mt-3" >
+                                        <div className="col-lg-3 date">
                                             <p className="semi-bold ms-1 mb-1">Alış Tarihi</p>
-                                            <input type="date" id="birthday" className="form-control py-3 text-center" name="birthday"></input>
+                                            <div className="w-100 bg-white py-3 d-flex rounded position-relative">
+                                                <span className="text">
+                                                    10.06.2021
+                                                </span>
+                                                <img src="./assets/icons/date.svg" className="my-auto ms-auto me-1" />
+                                            </div>
                                         </div>
-                                        <div className="col-lg-3">
+                                        <div className="col-lg-3 clock">
                                             <p className="semi-bold ms-1 mb-1">Alış Saati</p>
-                                            <input type="date" id="birthday" className="form-control py-3 text-center" name="birthday"></input>
-
+                                            <div className="w-100 bg-white py-3 d-flex rounded position-relative">
+                                                <span className="text">
+                                                    10.30
+                                                </span>
+                                                <img src="./assets/icons/clock.svg" className="my-auto ms-auto me-1" />
+                                            </div>
                                         </div>
-                                        <div className="col-lg-3">
-                                            <p className="semi-bold ms-1 mb-1">Dönüş Tarihi</p>
-                                            <input type="date" id="birthday" className="form-control py-3 text-center" name="birthday"></input>
+                                        <div className="col-lg-3 date">
+                                            <p className="semi-bold ms-1 mb-1">İade Tarihi</p>
+                                            <div className="w-100 bg-white py-3 d-flex rounded position-relative">
+                                                <span className="text">
+                                                    10.06.2021
+                                                </span>
+                                                <img src="./assets/icons/date.svg" className="my-auto ms-auto me-1" />
+                                            </div>
                                         </div>
-                                        <div className="col-lg-3">
+                                        <div className="col-lg-3 clock">
                                             <p className="semi-bold ms-1 mb-1">İade Saati</p>
-                                            <input type="date" id="birthday" className="form-control py-3 text-center" name="birthday"></input>
+                                            <div className="w-100 bg-white py-3 d-flex rounded position-relative">
+                                                <span className="text">
+                                                    10.30
+                                                </span>
+                                                <img src="./assets/icons/clock.svg" className="my-auto ms-auto me-1" />
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <button type="button" className="btn btn-dark btn-orange position-absolute py-2 px-5">Araçları Listele <img src="./assets/icons/rightlong.svg" width="40px" className="ms-3 my-auto" /></button>
+                                    <Link to="/reservation" type="button" className="btn btn-dark btn-orange position-absolute py-2 px-5">Araçları Listele <img src="./assets/icons/rightlong.svg" width="40px" className="ms-3 my-auto" /></Link>
                                 </form>
                             </div>
                         </div>

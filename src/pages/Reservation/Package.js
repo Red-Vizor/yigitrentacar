@@ -239,6 +239,7 @@ export default function Package() {
                 </div>
             </div>
 
+
             <div className="container d-flex py-4">
                 <button type="button" className="btn btn-dark btn-orange my-auto ms-auto px-4 py-3"> <span className="bold">REZERVASYONA DEVAM ET</span> <img src="./assets/icons/rightlong.svg" width="40px" className="ms-3 my-auto" /></button>
             </div>
