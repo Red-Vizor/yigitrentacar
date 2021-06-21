@@ -14,7 +14,7 @@ function PopularLocationsCard(props) {
                 <h5 className="card-title">Boğazın Serin Sularında Huzur Dolu Bir Tur</h5>
              </div>
              <div className="col">
-                <a href="#" className="btn btn-orange-outline bold px-4 py-2 d-flex">
+                <a href="/popularlocation" className="btn btn-orange-outline bold px-4 py-2 d-flex">
                     <span className="m-auto">DETAYLARI İNCELE</span>
                 </a>
             </div>                   

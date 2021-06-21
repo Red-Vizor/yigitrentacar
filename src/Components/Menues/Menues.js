@@ -83,6 +83,9 @@ export default function Menues() {
                                     <Link to="/campaigns" className="nav-link" href="#" onClick={() => { closeMenu() }}>Kampanyalar</Link>
                                 </li>
                                 <li className="nav-item">
+                                    <Link to="/popularlocations" className="nav-link" href="#" onClick={() => { closeMenu() }}>Lokasyonlar</Link>
+                                </li>
+                                <li className="nav-item">
                                     <Link to="/policies" className="nav-link" href="#" onClick={() => { closeMenu() }}>Kiralama Koşulları</Link>
                                 </li>
                                 <li className="nav-item">
