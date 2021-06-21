@@ -67,7 +67,7 @@ export default function Reservation() {
                                 <img src="./assets/icons/check-green.svg" className="check position-absolute" />
                                 <a href="#" className="checked-link position-absolute">Düzenle</a>
                             </div>
-                        } {...changeProps(0)} />
+                        } {...changeProps(1)} />
                         <Tab label={
                             <div className="tab-button text-start py-2">
                                 <span className="h6 bold">2.ARACINIZ </span>
@@ -99,9 +99,6 @@ export default function Reservation() {
                 </div>
             </div>
 
-            <TabPanel value={value} index={0}>
-                <p>buraya son sayfayı ekle</p>
-            </TabPanel>
             <TabPanel value={value} index={1}>
                 <Cars />
             </TabPanel>

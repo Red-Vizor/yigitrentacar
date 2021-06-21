@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import './header.css'
-import {  Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { useLocation } from 'react-router-dom'
 import { updatePage } from '../../store/general/pageSlice'
 import { toogle } from '../../store/menues/menuesSlice'
 import { Menues } from '../'
+import Login from '../../pages/Crud/Login'
 export default function Header() {
 
     const location = useLocation()
@@ -18,7 +19,7 @@ export default function Header() {
     if (page !== "/reservation") {
         return (
             <div className="header">
-                 <Menues/>
+                <Menues />
                 <div className="container-fluid header-top">
                     <div className="container">
                         <div className="row py-2">
@@ -80,15 +81,24 @@ export default function Header() {
                                 <a href="/" className="logo"><img src="./assets/images/logo.png" className="w-100 mx-auto " /></a>
                             </div>
                             <div className="col-lg-4 d-flex justify-content-end">
-                                <button type="button" class="btn btn-outline-light rounded-0 my-auto">Üye Girişi <i class="las la-user" ></i> <i class="las la-angle-down"></i></button>
+                                <div className="login-drop my-auto">
+                                    <a className="dropdown-toggle login-dropdown btn btn-outline-light rounded-0 my-auto" href="#" >
+                                    Üye Girişi <i class="las la-user" ></i> <i class="las la-angle-down"></i>
+                                    </a>
+                                   
+                                </div>
+                                <div className="login-dropdown-menu dropdown-menu bg-light position-absolute rounded" role="menu" aria-labelledby="dLabel">
+                                        <Login formWidth="100"/>
+                                </div>
+                                
                                 <button type="button" class="btn btn-outline-light border-0 my-auto search-button ms-3"><i class="las la-search"></i></button>
-                                <button type="button" class="btn btn-outline-light border-0 my-auto menu-button ms-2" onClick={() => {dispatch(toogle(true))}}><i class="las la-bars"></i> Menü</button>
+                                <button type="button" class="btn btn-outline-light border-0 my-auto menu-button ms-2" onClick={() => { dispatch(toogle(true)) }}><i class="las la-bars"></i> Menü</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-               
+
 
             </div>
         )

@@ -1,158 +1,246 @@
-
 :root {
     --orange: #e8541e;
     --orange2: #FF710F;
-    --dark:#000000;
+    --dark: #000000;
     --white: #ffffff;
     --white2: #FAFAFA;
 }
 
-
-
-.head-content{
+.head-content {
     padding: 0 9%;
 }
-.head-content .hr{
-    height:4px ;
+
+.head-content .hr {
+    height: 4px;
 }
 
-.car-slider{
+.car-slider {
     padding: 5% 12%;
 }
+
 .popular-cars .carousel-indicators .slide-button:first-child {
     margin-left: 0 !important;
 }
+
 .popular-cars .carousel-indicators .slide-button {
-    width:15px !important;
-    height:15px !important;
+    width: 15px !important;
+    height: 15px !important;
     padding: 3px;
     margin-left: 14px;
     border: 1px solid var(--white2);
     border-radius: 100%;
     background-color: transparent;
 }
+
 .popular-cars .carousel-indicators .slide-button.active {
     border: 1px solid var(--orange);
 }
 
-.popular-cars .carousel-indicators .slide-button.active > .circle-active  {
-    width:12px;
-    height:12px;
+.popular-cars .carousel-indicators .slide-button.active>.circle-active {
+    width: 12px;
+    height: 12px;
     border-radius: 100%;
     background-color: var(--orange);
 }
 
-.list-card .bg-image{
+.list-card .bg-image {
     border-radius: 30px;
 }
-.list-card .card-body{
+
+.list-card .card-body {
     margin-top: -20px;
     border-radius: 30px;
 }
 
-.list-card:hover > .hr{
+.list-card:hover>.hr {
     background-color: var(--orange) !important;
 }
 
-.list-card .card-body .border-title{
+.list-card .card-body .border-title {
     border-radius: 12px;
 }
-.list-card .card-body .btn{
+
+.list-card .card-body .btn {
     width: 60%;
-    font-size:0.9rem;
+    font-size: 0.9rem;
     left: 50%;
     top: 100%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
+
 .list-card .hr {
-    height:5px;
+    height: 5px;
     background-color: var(--white);
     top: 0;
     left: 50%;
     transition: background-color .3s;
     transform: translateX(-50%);
 }
-.la-long-arrow-alt-right{
-    font-size:2rem;
+
+.la-long-arrow-alt-right {
+    font-size: 2rem;
 }
 
-.shadow-light{
-    -webkit-box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.16); 
+.shadow-light {
+    -webkit-box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.16);
     box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.16);
 }
+
 /* Reservation */
-.ccard .colors{
-    border-radius:0px 0px  35px  35px;
-    font-size: 0.66rem; 
+
+.ccard .colors {
+    border-radius: 0px 0px 35px 35px;
+    font-size: 0.66rem;
 }
-.ccard .colors input{
+
+.ccard .colors input {
     margin-left: 6px;
     border: none;
 }
-.ccard .colors input.bg-white{
+
+.ccard .colors input.bg-white {
     margin-left: 6px;
     border: 1px solid #000000;
 }
-.car-card{
-    border-radius:35px ;
+
+.car-card {
+    border-radius: 35px;
 }
-.car-card .card-bottom{
+
+.car-card .card-bottom {
     background-color: var(--orange2);
     font-size: 0.75rem;
-    border-radius:0px 0px  35px  35px  ;
+    border-radius: 0px 0px 35px 35px;
 }
-.car-card .card-bottom .icon{
-    height:70% !important;
+
+.car-card .card-bottom .icon {
+    height: 70% !important;
 }
-.car-card .images{
+
+.car-card .images {
     bottom: 50%;
-    transform:translateY(50%);
+    transform: translateY(50%);
     left: -19%;
     width: 70%;
 }
-.car-card .btn{
+
+.car-card .btn {
     color: var(--orange2);
 }
 
-
-.offices .offices-contact{
+.offices .offices-contact {
     border-top-right-radius: 50px;
     border-top-left-radius: 50px;
     background-color: #3D3D3D;
 }
-.office-card{
+
+.office-card {
     background-color: #505050 !important;
     border-radius: 40px;
     padding: 15px 35px 15px 20px;
 }
-.office-card .btn{
-    width:90% !important;
+
+.office-card .btn {
+    width: 90% !important;
 }
-.office-card input,.office-card textarea {
-   border-radius: 0 !important;
-   border: 0;
-   color: #fff;
-   background-color: #6A6A6A;
-}
-.office-card input::placeholder { 
+
+.office-card input, .office-card textarea {
+    border-radius: 0 !important;
+    border: 0;
     color: #fff;
-  }
-.office-card .maps{
-    height:300px ;
+    background-color: #6A6A6A;
 }
-.office a{
-    font-size:0.8rem;
+
+.office-card input::placeholder {
+    color: #fff;
+}
+
+.office-card .maps {
+    height: 300px;
+}
+
+.office a {
+    font-size: 0.8rem;
     color: #CCCCCC !important;
 }
 
-.modal .btn-add{
+.modal .btn-add {
     transform: rotate(45deg);
 }
+
 .car-modal {
     width: 30% !important;
 }
 
-.car-modal .modal-header{
+.car-modal .modal-header {
     background-color: var(--orange);
-    border-radius: 25px 25px  0px 0px;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.car-modal .buttons {
+    background-color: var(--orange2);
+    position: absolute;
+    border-radius: 22px !important;
+    top: 0;
+    right: 2px;
+}
+
+.car-modal .carousel-inner {
+    width: 110% !important;
+    transform: translateX(-5%);
+    border-radius: 30px !important;
+}
+.car-modal .modal-content, .car-modal .modal-dialog{
+    border-radius: 30px !important;
+}
+.car-modal .carousel-control-next-icon, .car-modal .carousel-control-prev-icon {}
+
+.car-modal .carousel-control-next, .car-modal .carousel-control-prev {
+    width: 20px;
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0 16px;
+    background-color: #fff;
+    border-radius: 100px !important;
+}
+
+.car-modal .carousel-indicators {
+    top: 100%;
+    z-index: 10;
+    width: 110% !important;
+    left: -50%;
+    transform: translateX(27%)
+}
+
+.car-modal .carousel-indicators .indicator-car {
+    width: 20% !important;
+    height: 70px !important;
+    border-radius:30px;
+    opacity: 1;
+    max-width: 100% !important;
+}
+
+.car-modal .carousel-control-next {
+    margin-left: 12px;
+}
+.car-modal .area-1{
+    background-color: var(--orange2);
+    border-radius: 30px 30px 0 0;
+}
+.car-modal .area-1 .preferences .preference{
+    width: 120px !important;
+    padding: 5px 15px;
+    margin: -10px 5px;
+    border: 1px solid #ffffff;
+}
+
+.car-modal .area-2{
+    background-color: var(--white);
+    border-radius: 30px 30px 0 0;
+    margin-top: -30px;
+}
+.car-modal .area-3{
+    background-color: var(--orange);
+    border-radius: 30px 30px 30px 30px;
 }

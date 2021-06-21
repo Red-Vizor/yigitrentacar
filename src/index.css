@@ -42,34 +42,34 @@ p, h1,h2,h3,h4,h5,h6 {
 }
 
 .bg-black{
-  background-color: var(--dark);
+  background-color: var(--dark) !important;
 }
 .bg-orange{
-  background-color: var(--orange);
+  background-color: var(--orange) !important;
 }
 .bg-gray{
-  background-color: var(--gray);
+  background-color: var(--gray) !important;
 }
 .bg-pink{
-  background-color: var(--pink);
+  background-color: var(--pink) !important;
 }
 .bg-pink-powder{
-  background-color: var(--pink-powder);
+  background-color: var(--pink-powder) !important;
 }
 .bg-orange:checked{
-  background-color: var(--orange);
+  background-color: var(--orange) !important;
 }
 .bg-pink:checked{
-  background-color: var(--pink);
+  background-color: var(--pink) !important;
 }
 .bg-black:checked{
   background-color: var(--dark) !important;
 }
 .bg-orange:checked{
-  background-color: var(--orange);
+  background-color: var(--orange) !important;
 }
 .bg-gray:checked{
-  background-color: var(--gray);
+  background-color: var(--gray) !important;
 }
 
 
@@ -103,8 +103,8 @@ p, h1,h2,h3,h4,h5,h6 {
 
 /* Buttons */
 .btn-orange{
-  background-color: var(--orange);
-  border-color: var(--orange);
+  background-color: var(--orange) !important;
+  border-color: var(--orange) !important;
   border-radius: 18px;
 }
 .btn-orange-outline{
@@ -274,7 +274,7 @@ p, h1,h2,h3,h4,h5,h6 {
   background-color:#F5F5F5 !important;
 }
 
-.form-check-input {
+form .form-check-input {
   background-color: #fff !important;
   border-color: #595757 !important;
 }
@@ -288,4 +288,9 @@ p, h1,h2,h3,h4,h5,h6 {
 }
 .modal-dialog .modal-content{
   border-radius: 30px !important;
+}
+
+.login-page .register-text a {
+    color: var(--orange) !important;
+
 }

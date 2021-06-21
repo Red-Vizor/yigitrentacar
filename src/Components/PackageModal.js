@@ -3,13 +3,13 @@ import './component.css'
 
 export default function PackageModal() {
     return (
-        <div class="modal fade" id="packageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered w-75 rounded ">
-                    <div class="modal-content px-4 ">
-                        <div class="modal-header w-100 border-0">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div className="modal fade" id="packageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-dialog-centered w-75 rounded ">
+                    <div className="modal-content px-4 ">
+                        <div className="modal-header w-100 border-0">
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body w-100">
+                        <div className="modal-body w-100">
                             <div className="package-body container py-4">
                                 <div className="table-package">
                                     <div className="row table-titles  mt-4 pb-2 mx-1">

@@ -27,3 +27,11 @@
     cursor: pointer;
     opacity: 1;
 }
+
+.login-dropdown-menu{
+    width: 420px;
+    border: 0 !important;
+    border-radius:0 !important; 
+    top: 125px;
+    right: 25%;
+}
