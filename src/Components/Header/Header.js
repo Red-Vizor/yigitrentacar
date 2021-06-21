@@ -23,7 +23,7 @@ export default function Header() {
                 <div className="container-fluid header-top">
                     <div className="container">
                         <div className="row py-2">
-                            <div className="col-lg-3 border-end px-4 social-media my-auto">
+                            <div className="col-lg-4 col-md-4  px-1 social-media my-auto">
                                 <div className="d-flex-inline text-center">
                                     <a href="#" className="my-auto " >
                                         <img src="./assets/icons/youtube.svg" height="100%" className="my-auto me-3" />
@@ -39,7 +39,7 @@ export default function Header() {
                                     </a>
                                 </div>
                             </div>
-                            <div className="col-lg-4 d-flex border-end px-1">
+                            <div className="col-lg-4 col-md-4 d-flex px-1">
                                 <div className="d-flex-inline mx-auto">
                                     <a href="#" className="my-auto" >
                                         <img src="./assets/icons/slack.svg" height="100%" className="my-auto me-2" />
@@ -47,22 +47,15 @@ export default function Header() {
                                     </a>
                                 </div>
                             </div>
-                            <div className="col-lg-5 px-4">
-                                <div className="d-flex-inline text-center">
-                                    <div className="contact-area d-inline">
-                                        <a href="#" className="my-auto" >
-                                            <img src="./assets/icons/phone.svg" height="100%" className="my-auto me-2" />
-                                            +90 850 840 09 48
-                                        </a>
-                                    </div>
-                                    <div className="contact-area d-inline ms-3">
-                                        <a href="#" className="my-auto" >
-                                            <img src="./assets/icons/email.svg" height="100%" className="my-auto me-2" />
-                                            info@yigitotokiralama.com
-                                        </a>
-                                    </div>
+                            <div className="col-lg-4 col-md-4 d-flex px-1">
+                                <div className="d-flex-inline mx-auto">
+                                    <a href="#" className="my-auto" >
+                                        <img src="./assets/icons/email.svg" height="80%" className="my-auto me-2" />
+                                        info@yigitotokiralama.com
+                                    </a>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -70,17 +63,17 @@ export default function Header() {
                 <div className="container-fluid  header-bottom">
                     <div className="container py-3">
                         <div className="row">
-                            <div className="col-lg-4 d-flex">
+                            <div className="col-lg-4 col-md-4 d-flex call-line">
                                 <img src="./assets/icons/phone.svg" className="my-auto me-2 h-50" />
                                 <div className=" my-auto">
                                     <p>7/24 ÇAĞRI HATTI </p>
                                     <a href="#"> +90 850 840 09 48 </a>
                                 </div>
                             </div>
-                            <div className="col-lg-4 d-flex justify-items-center px-5">
-                                <a href="/" className="logo"><img src="./assets/images/logo.png" className="w-100 mx-auto " /></a>
+                            <div className="col-lg-4 col-md-4 d-flex justify-items-center px-5 my-auto">
+                                <a href="/" className="logo"><img src="./assets/images/logo.png" className="w-100 mx-auto my-auto" /></a>
                             </div>
-                            <div className="col-lg-4 d-flex justify-content-end">
+                            <div className="col-lg-4 col-md-4 d-flex justify-content-end">
                                 <div className="login-drop my-auto">
                                     <a className="dropdown-toggle login-dropdown btn btn-outline-light rounded-0 my-auto" href="#" >
                                     Üye Girişi <i class="las la-user" ></i> <i class="las la-angle-down"></i>

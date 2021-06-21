@@ -35,3 +35,32 @@
     top: 125px;
     right: 25%;
 }
+
+@media screen and (min-width: 992px) and (max-width: 1600px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .call-line img {
+        width: 17% !important;
+    }
+
+    .call-line p {
+        font-size: 0.7rem !important;
+    }
+
+    .call-line a {
+        font-size: 0.85rem !important;
+    }
+
+    .header-bottom .logo {
+        width: 70% !important;
+    }
+    .header-bottom .login-drop {
+        width: 65% !important;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+    
+}

@@ -50,7 +50,7 @@ export default function Homepage() {
                                         </div>
                                     </div>
                                     <div className="row text-start date-inputs-area mt-3" >
-                                        <div className="col-lg-3 date">
+                                        <div className="col-lg-3 col-md-6 date">
                                             <p className="semi-bold ms-1 mb-1">Alış Tarihi</p>
                                             <div className="w-100 bg-white py-3 d-flex rounded position-relative">
                                                 <span className="text">
@@ -59,7 +59,7 @@ export default function Homepage() {
                                                 <img src="./assets/icons/date.svg" className="my-auto ms-auto me-1" />
                                             </div>
                                         </div>
-                                        <div className="col-lg-3 clock">
+                                        <div className="col-lg-3 col-md-6 col-sm-12 clock">
                                             <p className="semi-bold ms-1 mb-1">Alış Saati</p>
                                             <div className="w-100 bg-white py-3 d-flex rounded position-relative">
                                                 <span className="text">
@@ -68,7 +68,7 @@ export default function Homepage() {
                                                 <img src="./assets/icons/clock.svg" className="my-auto ms-auto me-1" />
                                             </div>
                                         </div>
-                                        <div className="col-lg-3 date">
+                                        <div className="col-lg-3 col-md-6 col-sm-12 date">
                                             <p className="semi-bold ms-1 mb-1">İade Tarihi</p>
                                             <div className="w-100 bg-white py-3 d-flex rounded position-relative">
                                                 <span className="text">
@@ -77,7 +77,7 @@ export default function Homepage() {
                                                 <img src="./assets/icons/date.svg" className="my-auto ms-auto me-1" />
                                             </div>
                                         </div>
-                                        <div className="col-lg-3 clock">
+                                        <div className="col-lg-3 col-md-6 col-sm-12 clock">
                                             <p className="semi-bold ms-1 mb-1">İade Saati</p>
                                             <div className="w-100 bg-white py-3 d-flex rounded position-relative">
                                                 <span className="text">
@@ -88,7 +88,7 @@ export default function Homepage() {
                                         </div>
                                     </div>
 
-                                    <Link to="/reservation" type="button" className="btn btn-dark btn-orange position-absolute py-2 px-5">Araçları Listele <img src="./assets/icons/rightlong.svg" width="40px" className="ms-3 my-auto" /></Link>
+                                    <Link to="/reservation" type="button" className="btn btn-dark btn-orange position-absolute py-2 px-5 bold">ARAÇLARI LİSTELE<img src="./assets/icons/rightlong.svg" width="40px" className="ms-3 my-auto" /></Link>
                                 </form>
                             </div>
                         </div>
