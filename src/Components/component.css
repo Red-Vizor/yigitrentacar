@@ -50,6 +50,7 @@
 .list-card .card-body {
     margin-top: -20px;
     border-radius: 30px;
+    background-color: #fff !important;
 }
 
 .list-card:hover>.hr {
@@ -67,6 +68,8 @@
     top: 100%;
     transform: translate(-50%, -50%);
 }
+
+
 
 .list-card .hr {
     height: 5px;
@@ -250,9 +253,36 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-   
+    .list-card .bg-image {
+        border-radius: 50px !important;
+        height: 120px !important;
+    }
     
-   
+    .list-card .card-body {
+        font-size: 0.6rem !important;
+    }
+    
+    .list-card .card-body .campaign-button {
+        width: 70% !important;
+        font-size: 0.6rem;
+        padding:  0 !important;
+    }
+
+    .list-card .card-title {
+        font-size: 0.75rem !important;
+        border-radius: 50px !important; 
+    }
+
+    .head-content p {
+        text-align: center;
+    }
+
+    .list-card .card-body .location-button {
+        width: 95% !important;
+        font-size: 0.6rem;
+        padding:  0 !important;
+        
+    }
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
