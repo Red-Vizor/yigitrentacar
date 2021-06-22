@@ -1,4 +1,5 @@
 import React from 'react'
+import './crud.css'
 
 import PropTypes from 'prop-types'
 import Tabs from '@material-ui/core/Tabs'
@@ -48,7 +49,9 @@ export default function Login() {
     };
 
     return (
-        <section className="register-page login-page container py-3 text-center ">
+        <section className="register-page login-page container py-5 text-center ">
+            <div className="container  ">
+
             <h4 className="bold">
                 Giriş Yapın
             </h4>
@@ -57,16 +60,23 @@ export default function Login() {
                 <Tab label="KURUMSAL" {...changeProps(1)} />
             </Tabs>
 
+            <div className=" container c-padding">
             <TabPanel value={value} index={0}>
                 <LoginForm title="Bireysel Giriş" />
             </TabPanel>
             <TabPanel value={value} index={1}>
                 <LoginForm title="Kurumsal Giriş" />
             </TabPanel>
+            </div>
 
             <div className="register-text">
                 <a>Hesabınız yok mu ?</a> <br />
                 <span>Yiğit Oto Kiralamaya <a href="/register">Üye Olun</a></span>
+            </div>
+
+
+
+
             </div>
         </section>
     )

@@ -1,4 +1,5 @@
 import React from 'react'
+import './crud.css'
 
 import PropTypes from 'prop-types'
 import Tabs from '@material-ui/core/Tabs'

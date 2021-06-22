@@ -1,11 +1,26 @@
 
+.login-page .container {
+    padding: 0 15% !important;
+}
+
+.login-form .btn-orange{
+    width: 93% !important;
+    position: relative !important;
+    left: 3%;
+    border-radius: 10px;
+    padding: 1rem 0 !important;
+}
 
 @media screen and (min-width: 992px) and (max-width: 1600px) {
 
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-   
+    
+    
+    .login-page .container {
+        padding: 0 10% !important;
+    }
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {

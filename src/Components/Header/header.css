@@ -73,6 +73,14 @@
     .login-dropdown .la-angle-down{
         display: none !important;
     }
+    .total-payment {
+        font-size: 1rem !important;
+    }
+
+    .reservation-head .btn-outline-light{
+        font-size: 0.8rem !important;
+       
+    }
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
@@ -104,7 +112,6 @@
     .login-dropdown span {
         font-size: 0.5rem !important;
     }
-
+    
    
-
 }

@@ -3,8 +3,8 @@ import React from 'react'
 export default function PersonalForm() {
     return (
         <div className="general-form-1 personal-form">
-            <div className="rezervasyon-form container px-5 ">
-                <div className="container mt-5 mb-5 px-5 kisisel-bilgiler">
+            <div className="rezervasyon-form container px-lg-5 ">
+                <div className="container mt-5 mb-5 px-lg-5 kisisel-bilgiler">
                     <h4 className="text-center mb-5 bold">Bireysel Üyelik Bilgileri</h4>
                     <form class="row g-3">
                         <div class="col-md-6">
@@ -86,7 +86,7 @@ export default function PersonalForm() {
                         </div>
 
                         <div className="form-policy py-5 container ">
-                            <p className="pb-5"> Kişisel verilerinizin korunması ve işlenmesine ilişkin aydınlatma metni için tıklayınız.</p>
+                            <p className="pb-5 "> Kişisel verilerinizin korunması ve işlenmesine ilişkin aydınlatma metni için tıklayınız.</p>
                             <div class="form-check mb-4">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                                 <label class="form-check-label" for="flexCheckDefault">
@@ -109,7 +109,7 @@ export default function PersonalForm() {
                             </div>
                         </div>
                         <a href="#" className="btn btn-orange-outline bold px-4 py-2" style={{ width: "20%" }}>
-                            <span className="m-auto">FORMU GÖNDER</span>
+                            <span className="m-auto">ÜYE OL</span>
                         </a>
                     </form>
                 </div>

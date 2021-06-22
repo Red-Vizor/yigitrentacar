@@ -55,3 +55,45 @@
 .corporate-text p{
     padding-right: 4rem;
 }
+
+@media screen and (min-width: 992px) and (max-width: 1600px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+ 
+  .personal-form .btn-orange-outline{
+    width: 30% !important;
+    position: relative !important;
+    left: 35%;
+  }
+
+  .corporate-rental-form .btn-orange-outline{
+    width: 30% !important;
+    position: relative !important;
+    left: 35%;
+  }
+
+  
+
+  .corporate-text h4 {
+    font-size: 1rem !important;
+  }
+
+  .corporate-text h5 {
+    font-size: 1rem !important;
+  }
+ 
+  .corporate-text p{
+    padding-right: 0.7rem !important;
+  }
+  .corporate-img {
+    width: 100% !important;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+    
+   
+
+}

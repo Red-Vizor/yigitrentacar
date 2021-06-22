@@ -291,6 +291,29 @@ form .form-check-input {
 }
 
 .login-page .register-text a {
-    color: var(--orange) !important;
+  color: var(--orange) !important;
+
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1600px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+ 
+  .MuiTypography-body1 {
+    font-size: 0.9rem !important;
+  }
+  input::placeholder {
+    font-size: 0.8rem;
+  } 
+ 
+  
+}
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+    
+   
 
 }
