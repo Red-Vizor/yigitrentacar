@@ -84,11 +84,15 @@
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
     .form-card-date .btn-orange{
-        width: 65% !important;
+        width: 60% !important;
         font-size: 1.1rem;
-        padding: 1.3rem 0 !important;
+        padding: 1.2rem 0 !important;
     }
-   
+    .card-date {
+        width: 85% !important;
+    }
+
+    
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
