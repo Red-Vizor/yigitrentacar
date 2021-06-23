@@ -131,6 +131,10 @@
     color: var(--orange2);
 }
 
+.car-card .border {
+    border: 1.5px solid #000000 !important;
+}
+
 .offices .offices-contact {
     border-top-right-radius: 50px;
     border-top-left-radius: 50px;
@@ -281,8 +285,31 @@
         width: 95% !important;
         font-size: 0.6rem;
         padding:  0 !important;
-        
     }
+
+    .car-card .card-title {
+        font-size: 1rem;
+    }
+
+    .car-card-text span {
+        font-size: 0.6rem;
+    }
+
+    .card-bottom img {
+        width: 5% !important;
+    }
+
+    .card-bottom span {
+        font-size: 0.6rem;
+    }
+
+    .car-card .images {
+        left: -10%;
+        width: 60%;
+    }
+
+    
+
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {

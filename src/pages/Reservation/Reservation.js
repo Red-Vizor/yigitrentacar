@@ -62,29 +62,29 @@ export default function Reservation() {
                         <Tab className="checked-reserve" label={
                             <div className="tab-button text-start py-2 ">
                                 <span className="h6 bold">1.KİRALAMA | ALIŞ & İADE </span>
-                                <p className="h7">Bodrum, Yalıkavak </p>
+                                <p className="">Bodrum, Yalıkavak </p>
                                 <p className="h7">21.06.2021 <img src="./assets/icons/arrow-circle.svg" className="my-auto ms-1 h-50" /> 21.06.2021</p>
-                                <img src="./assets/icons/check-green.svg" className="check position-absolute" />
-                                <a href="#" className="checked-link position-absolute">Düzenle</a>
+                                
+                                <a href="#" className="checked-link position-absolute mt-lg-3">Düzenle <span><img src="./assets/icons/check-green.svg" className="check arrow-icon mt-1 ms-1" /></span></a>
                             </div>
                         } {...changeProps(1)} />
                         <Tab label={
                             <div className="tab-button text-start py-2">
                                 <span className="h6 bold">2.ARACINIZ </span>
-                                <p className="h7">Mercedes E200 AMG  <span className="bold ms-2">340,37₺ <img src="./assets/icons/rightic.svg" className="my-auto ms-3 h-25" /> </span>  </p>
+                                <p className="h7">Mercedes E200 AMG  <img src="./assets/icons/rightic.svg" className="my-auto ms-lg-3  h-25 right-tick-icon" /> <span className="bold ms-lg-1">340,37₺ </span>  </p>
                                 <p className="h7">Dizel Otomatik</p>
                             </div>
                         } {...changeProps(1)} />
                         <Tab label={
                             <div className="tab-button text-start py-2">
                                 <span className="h6 bold">3. GÜVENCE PAKETLERİ </span>
-                                <p className="h7">PAKET DETAYLARINI <img src="./assets/icons/rightic.svg" className="my-auto ms-5 h-25" /> <br /> SEÇİN</p>
+                                <p className="h7">PAKET DETAYLARINI <img src="./assets/icons/rightic.svg" className="my-auto ms-5 h-25 right-tick-icon" /> <br /> SEÇİN</p>
                             </div>
                         } {...changeProps(2)} />
                         <Tab label={
                             <div className="tab-button text-start py-2">
                                 <span className="h6 bold">4. EK ÜRÜNLER </span>
-                                <p className="h7">Bodrum, Yalıkavak <img src="./assets/icons/rightic.svg" className="my-auto ms-5 h-25" /></p>
+                                <p className="h7">Bodrum, Yalıkavak <img src="./assets/icons/rightic.svg" className="my-auto ms-5 h-25 right-tick-icon" /></p>
                                 <a className="h7 text-dark" data-bs-toggle="modal" data-bs-target="#packageModal">Tümünü göster</a>
                             </div>
                         } {...changeProps(3)} />

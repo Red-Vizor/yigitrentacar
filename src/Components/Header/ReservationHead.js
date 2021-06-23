@@ -13,7 +13,7 @@ export default function ReservationHead() {
                         <div className="col-lg-8 col-md-8 d-flex py-lg-2 ">
                             <button type="button" class="btn btn-outline-light rounded-0 my-auto py-lg-2 ms-auto">KİRALAMA KOŞULLARINI GÖRÜNTÜLE</button>
                             <div className="bg-gray d-flex text-white ms-4 px-lg-5">
-                                <p className="h5 total-payment m-auto">
+                                <p className="h5 total-payment m-auto bold px-md-3">
                                     Toplam: 99 TL
                                 </p>
                             </div>

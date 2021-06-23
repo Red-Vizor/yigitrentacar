@@ -31,8 +31,8 @@
 }
 .reservation-tab-area .checked-link{
     color: var(--green-check-1);
-    right:10px;
-    top: 62%;
+    right:36px;
+    top: 65%;
 }
 .checked-reserve{
     background-color: var(--green-check) !important;
@@ -82,8 +82,59 @@
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
  
-  
-  
+    .reservation-tab-area span {
+        font-size: 0.6rem !important;
+    }
+
+    .reservation-tab-area .right-tick-icon {
+        width: 10% !important;
+        margin-left: 15px !important;
+    }
+
+    .reservation-tab-area .arrow-icon {
+        width: 10% !important;
+    }
+
+    .reservation-tab-area .checked-link {
+        position:absolute;
+        right: 1px !important;
+        margin-top: 0.7rem !important;
+    }
+
+    .package-header .package-car-image {
+        width: 25%;
+    }
+    .package-header span {
+        font-size: 1rem !important;
+    }
+
+
+    .package-header .btn-orange span{
+        font-size: 0.7rem !important;
+    }
+    
+    .package-header .btn-orange img{
+        width: 10% !important;
+    }
+
+    .table-package span {
+        font-size: 1rem !important;
+    }
+    .accordion span {
+        font-size: 0.8rem !important;
+    }
+
+    .accordion .accordion-body {
+        font-size: 0.8rem !important;
+    }
+
+    .package .btn-orange img{
+        width: 10% !important;
+    }
+
+    .package .btn-orange span{
+        font-size: 0.7rem !important;
+    }
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
