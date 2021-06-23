@@ -55,7 +55,7 @@ function Policies() {
             </div>
 
             <div className="policies-jumbotron text-center position-relative pb-5" style={{  backgroundColor: "#CCCCCC" }}>
-                <h4 className="py-5 bold">KOŞULLAR, ŞARTLAR ve POLİTİKALAR</h4>
+                <h5 className="py-5 bold">KOŞULLAR, ŞARTLAR ve POLİTİKALAR</h5>
                 <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className="tab-bar shadow-light" centered >
                     <Tab label="GİZLİLİK POLİTİKASI" {...changeProps(0)} />
                     <Tab label="KİRALAMA KOŞULLARI" {...changeProps(1)} />
@@ -67,7 +67,7 @@ function Policies() {
 
             <section className="container policy-area my-4 ">
                 <TabPanel value={value} index={0}>
-                    <h4 className="text-center my-5 extra-bold">GİZLİLİK POLİTİKASI</h4>
+                    <h5 className="text-center my-5 extra-bold">GİZLİLİK POLİTİKASI</h5>
                     <div className="text-area px-5">
                         <p>Yinelenen bir sayfa içeriğinin okuyucunun dikkatini dağıttığı bilinen bir gerçektir. Lorem Ipsum kullanmanın amacı, sürekli 'buraya metin gelecek, buraya metin gelecek' yazmaya kıyasla daha dengeli bir harf dağılımı sağlayarak okunurluğu artırmasıdır. Şu anda birçok masaüstü yayıncılık paketi ve web sayfa düzenleyicisi, varsayılan mıgır metinler olarak Lorem Ipsum kullanmaktadır. Ayrıca arama motorlarında 'lorem ipsum' anahtar sözcükleri ile arama yapıldığında henüz tasarım aşamasında olan çok sayıda site listelenir. Yıllar içinde, bazen kazara, bazen bilinçli olarak (örneğin mizah katılarak), çeşitli sürümleri geliştirilmiştir.
                         </p>
@@ -82,7 +82,7 @@ function Policies() {
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-                    <h4 className="text-center my-5 extra-bold">GİZLİLİK POLİTİKASI 1</h4>
+                    <h5 className="text-center my-5 extra-bold">GİZLİLİK POLİTİKASI 1</h5>
                     <div className="text-area px-5">
                         <p>Yinelenen bir sayfa içeriğinin okuyucunun dikkatini dağıttığı bilinen bir gerçektir. Lorem Ipsum kullanmanın amacı, sürekli 'buraya metin gelecek, buraya metin gelecek' yazmaya kıyasla daha dengeli bir harf dağılımı sağlayarak okunurluğu artırmasıdır. Şu anda birçok masaüstü yayıncılık paketi ve web sayfa düzenleyicisi, varsayılan mıgır metinler olarak Lorem Ipsum kullanmaktadır. Ayrıca arama motorlarında 'lorem ipsum' anahtar sözcükleri ile arama yapıldığında henüz tasarım aşamasında olan çok sayıda site listelenir. Yıllar içinde, bazen kazara, bazen bilinçli olarak (örneğin mizah katılarak), çeşitli sürümleri geliştirilmiştir.
                         </p>
@@ -97,7 +97,7 @@ function Policies() {
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={2}>
-                    <h4 className="text-center my-5 extra-bold">GİZLİLİK POLİTİKASI 2</h4>
+                    <h5 className="text-center my-5 extra-bold">GİZLİLİK POLİTİKASI 2</h5>
                     <div className="text-area px-5">
                         <p>Yinelenen bir sayfa içeriğinin okuyucunun dikkatini dağıttığı bilinen bir gerçektir. Lorem Ipsum kullanmanın amacı, sürekli 'buraya metin gelecek, buraya metin gelecek' yazmaya kıyasla daha dengeli bir harf dağılımı sağlayarak okunurluğu artırmasıdır. Şu anda birçok masaüstü yayıncılık paketi ve web sayfa düzenleyicisi, varsayılan mıgır metinler olarak Lorem Ipsum kullanmaktadır. Ayrıca arama motorlarında 'lorem ipsum' anahtar sözcükleri ile arama yapıldığında henüz tasarım aşamasında olan çok sayıda site listelenir. Yıllar içinde, bazen kazara, bazen bilinçli olarak (örneğin mizah katılarak), çeşitli sürümleri geliştirilmiştir.
                         </p>
@@ -112,7 +112,7 @@ function Policies() {
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={3}>
-                    <h4 className="text-center my-5 extra-bold">GİZLİLİK POLİTİKASI 3</h4>
+                    <h5 className="text-center my-5 extra-bold">GİZLİLİK POLİTİKASI 3</h5>
                     <div className="text-area px-5">
                         <p>Yinelenen bir sayfa içeriğinin okuyucunun dikkatini dağıttığı bilinen bir gerçektir. Lorem Ipsum kullanmanın amacı, sürekli 'buraya metin gelecek, buraya metin gelecek' yazmaya kıyasla daha dengeli bir harf dağılımı sağlayarak okunurluğu artırmasıdır. Şu anda birçok masaüstü yayıncılık paketi ve web sayfa düzenleyicisi, varsayılan mıgır metinler olarak Lorem Ipsum kullanmaktadır. Ayrıca arama motorlarında 'lorem ipsum' anahtar sözcükleri ile arama yapıldığında henüz tasarım aşamasında olan çok sayıda site listelenir. Yıllar içinde, bazen kazara, bazen bilinçli olarak (örneğin mizah katılarak), çeşitli sürümleri geliştirilmiştir.
                         </p>
@@ -127,7 +127,7 @@ function Policies() {
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={4}>
-                    <h4 className="text-center my-5 extra-bold">GİZLİLİK POLİTİKASI 4</h4>
+                    <h5 className="text-center my-5 extra-bold">GİZLİLİK POLİTİKASI 4</h5>
                     <div className="text-area px-5">
                         <p>Yinelenen bir sayfa içeriğinin okuyucunun dikkatini dağıttığı bilinen bir gerçektir. Lorem Ipsum kullanmanın amacı, sürekli 'buraya metin gelecek, buraya metin gelecek' yazmaya kıyasla daha dengeli bir harf dağılımı sağlayarak okunurluğu artırmasıdır. Şu anda birçok masaüstü yayıncılık paketi ve web sayfa düzenleyicisi, varsayılan mıgır metinler olarak Lorem Ipsum kullanmaktadır. Ayrıca arama motorlarında 'lorem ipsum' anahtar sözcükleri ile arama yapıldığında henüz tasarım aşamasında olan çok sayıda site listelenir. Yıllar içinde, bazen kazara, bazen bilinçli olarak (örneğin mizah katılarak), çeşitli sürümleri geliştirilmiştir.
                         </p>

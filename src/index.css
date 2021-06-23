@@ -308,8 +308,10 @@ form .form-check-input {
   input::placeholder {
     font-size: 0.8rem;
   } 
- 
   
+  .policies .tab-bar {
+    width: 100% !important;
+  }
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {

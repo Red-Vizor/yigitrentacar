@@ -5,7 +5,7 @@ function CorporateRental() {
         <div className="corporate-rental-form general-form-1 " style={{ width: "100%" }}>
 
             <div className="px-5 container" >
-                <div className=" mt-5 mb-5 px-5 kisisel-bilgiler">
+                <div className=" mt-5 mb-5 px-lg-5 kisisel-bilgiler">
 
                     <form class="g-3">
                         <div class="input-group mb-3">
@@ -109,7 +109,7 @@ function CorporateRental() {
 
 
                             <div className="form-policy py-5 container ">
-                                <p className="pb-5"> Kişisel verilerinizin korunması ve işlenmesine ilişkin aydınlatma metni için tıklayınız.</p>
+                                <p className="pb-lg-5 pb-md-3"> Kişisel verilerinizin korunması ve işlenmesine ilişkin aydınlatma metni için tıklayınız.</p>
                                 <div class="form-check mb-4">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                                     <label class="form-check-label" for="flexCheckDefault">

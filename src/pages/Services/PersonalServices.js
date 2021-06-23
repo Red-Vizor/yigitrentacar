@@ -4,7 +4,7 @@ import { IndividualRentalForm } from '../../Components'
 
 export default function PersonalServices() {
     return (
-        <div className="personal-services  extra-bold">
+        <div className="personal-services bold">
             <h4 className="bold text-center">BİREYSEL KİRALAMA</h4>
 
             <div className="container personal-header" style={{ backgroundColor: "#FF710F", height: "90px", width: "75%" }}>

@@ -67,38 +67,39 @@ function Campaigns() {
             </div>
 
 
+            <div className="campaigns-cardpage" >
             <div className="container" >
                 <TabPanel value={value} index={0}>
                     <div className="row">
-                        <div className="col">
+                        <div className="col-lg-6">
                             <CampaignsCard imageUrl="./assets/images/campaign-car.png" />
                         </div>
-                        <div className="col">
+                        <div className="col-lg-6">
                             <CampaignsCard imageUrl="./assets/images/campaign-car.png" />
                         </div>
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={1}>
                     <div className="row">
-                        <div className="col">
+                        <div className="col-lg-6">
                             <CampaignsCard imageUrl="./assets/images/campaign-car.png" />
                         </div>
-                        <div className="col">
+                        <div className="col-lg-6">
                             <CampaignsCard imageUrl="./assets/images/campaign-car.png" />
                         </div>
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={2}>
                     <div className="row">
-                        <div className="col">
+                        <div className="col-lg-6">
                             <CampaignsCard imageUrl="./assets/images/campaign-car.png" />
                         </div>
-                        <div className="col">
+                        <div className="col-lg-6">
                             <CampaignsCard imageUrl="./assets/images/campaign-car.png" />
                         </div>
                     </div>
                 </TabPanel>
-
+            </div>
             </div>
 
 

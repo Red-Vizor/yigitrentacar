@@ -7,3 +7,46 @@
     font-size:1.2rem !important;
     font-weight: 600;
 }
+
+.contact-form .btn-orange-outline{
+    border: 1px solid #E8551E !important;
+    width: 20% !important;
+    border-radius: 10px !important;
+    margin-top: 1.2rem !important;
+    position: relative !important;
+    top: 0.7rem;
+    bottom: 3rem;
+    left: 40%;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1600px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+   .phone-mail-area {
+       width: 90% !important;
+   }
+
+   .phone-mail-area span {
+        font-size: 1rem !important;
+}
+    
+    .phone-mail-area img {
+        width: 4% !important;
+    }
+
+    .contact-form .btn-orange-outline{
+        width: 30% !important;
+        margin-top: 0.5rem !important;
+        left: 35%;
+    }
+    
+  
+}
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+    
+   
+
+}

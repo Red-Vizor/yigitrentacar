@@ -71,44 +71,44 @@ function PopularLocations() {
 
 
 
-
+            <div className="popular-location-cardpage ">
             <div className="container my-5">
                 <TabPanel value={value} index={0}>
-                    <div className="row">
-                        <div className="col">
+                    <div className="row ">
+                        <div className="col-lg-6">
                             <PopularLocationsCard imageUrl="./assets/images/location1.png" />
                         </div>
-                        <div className="col">
+                        <div className="col-lg-6">
                             <PopularLocationsCard imageUrl="./assets/images/location2.png" />
                         </div>
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={1}>
                     <div className="row">
-                        <div className="col">
+                        <div className="col-lg-6">
                             <PopularLocationsCard imageUrl="./assets/images/location2.png" />
                         </div>
-                        <div className="col">
+                        <div className="col-lg-6">
                             <PopularLocationsCard imageUrl="./assets/images/location1.png" />
                         </div>
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={2}>
                     <div className="row">
-                        <div className="col">
+                        <div className="col-lg-6">
                             <PopularLocationsCard imageUrl="./assets/images/location1.png" />
                         </div>
-                        <div className="col">
+                        <div className="col-lg-6">
                             <PopularLocationsCard imageUrl="./assets/images/location2.png" />
                         </div>
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={3}>
                     <div className="row">
-                        <div className="col">
+                        <div className="col-lg-6">
                             <PopularLocationsCard imageUrl="./assets/images/location1.png" />
                         </div>
-                        <div className="col">
+                        <div className="col-lg-6">
                             <PopularLocationsCard imageUrl="./assets/images/location2.png" />
                         </div>
                     </div>
@@ -116,7 +116,7 @@ function PopularLocations() {
 
 
             </div>
-
+            </div>
 
         </div>
     )

@@ -40,13 +40,9 @@
 
 .campaigns-header h4{
     padding: 1.25rem;
-    font-weight: 700;
-    text-align: center;
 }
 
 .campaign-single-area h4{
-    text-align: center;
-    font-weight: 700;
     font-size: 1.25rem;
     padding: 0 7rem 2rem;
 }
@@ -61,3 +57,66 @@
     padding: 0 2.2rem 7rem 3.5rem;
 }
 
+@media screen and (min-width: 992px) and (max-width: 1600px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .campaigns .tab-bar {
+        width: 100% !important;
+        position: absolute;
+        bottom: 24px;
+    }
+
+    .campaigns h1 {
+        font-size: 3rem !important;
+    }
+
+    .campaigns span {
+        font-size: 0.7rem !important;
+    }
+
+    .campaigns-cardpage .container {
+        padding: 0 100px !important;
+    }
+
+    .campaign-card {
+        padding: 1rem 0 !important;
+    }
+
+    .campaign-card .btn-orange-outline{
+        width: 40% !important;
+    }
+
+    .campaigns-header {
+        width: 550px !important;
+    }
+
+    .campaigns-header h4{
+        font-size: 1.2rem !important;
+    }
+
+    .campaign-single-area .container {
+        padding: 0 40px !important;
+    }
+    
+
+     .campaign-single-area p {
+        font-size: 0.8rem;
+        padding: 0 2rem 1.5rem ;
+    }
+
+    .campaign-single-dropdown .btn-orange-outline {
+        width: 65% !important;
+        position: absolute !important;
+        left: 110px !important;
+    }
+    
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+    
+   
+
+}

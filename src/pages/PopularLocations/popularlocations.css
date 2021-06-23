@@ -49,8 +49,6 @@
 }
 
 .location-single-area h4{
-    text-align: center;
-    font-weight: 700;
     font-size: 1.25rem;
     padding: 0 7rem 2rem;
 }
@@ -58,14 +56,75 @@
     width: 100%;
     height: 300px;
 }
-.first-text p{
-    font-weight: 700;
-    font-size: 1rem;
-    padding: 0.5rem 2rem 0.5rem 1rem;
+.location-single-area p{
+    font-size: 1rem;  
 }
 
-.continue-text p {
-    font-weight: 700;
-    font-size: 1rem;
-    padding: 0.5rem 2rem 3rem 0;
+
+@media screen and (min-width: 992px) and (max-width: 1600px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    
+
+    .popular-location-area .tab-bar {
+        width: 83% !important;
+        position: absolute;
+        bottom: 24px !important;
+    }
+
+    .popular-location-area h1 {
+        font-size: 3rem !important;
+    }
+
+    .popular-location-area span {
+        font-size: 0.7rem !important;
+    }
+
+    .popular-location-cardpage .container {
+        padding: 10px 100px !important;
+    }
+
+    .locations-card h5 {
+        font-size: 1rem !important;
+    }
+
+    .locations-card .btn-orange-outline {
+        width: 26% !important;
+        position: absolute !important;
+        right: 125px !important;
+    }
+
+    .location-header {
+        width: 550px !important;
+    }
+
+    .location-header h4{
+       font-size: 1.2rem !important;
+    }
+
+    .location-single-area .container {
+        padding: 0 50px !important;
+    }
+
+    .location-single-area p {
+        font-size: 0.8rem;
+        padding: 0 !important;
+        
+    }
+    
+    .location-single-area h4 {
+       padding: 1rem 0 2rem !important 
+    }
+
+    .text-continue .border-end {
+        border-right: none !important;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+    
+   
+
 }

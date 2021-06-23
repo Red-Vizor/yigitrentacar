@@ -1,4 +1,5 @@
 import React from 'react'
+import './cars.css'
 import PropTypes from 'prop-types'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
@@ -54,7 +55,7 @@ export default function Car() {
                 <p>Anasayfa  /  Tüm Araçlar </p>
             </div>
 
-            <div className="container">
+            <div className="container cars-tab-menu">
                 <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className="tab-bar shadow-light mb-5" centered>
                     <Tab label="Tüm Araçlar" {...changeProps(0)} />
                     <Tab label="Ekonomik" {...changeProps(1)} />
@@ -68,132 +69,132 @@ export default function Car() {
             <div className="car-areas ms-5 mb-5">
                 <TabPanel value={value} index={0}>
                     <div className="row">
-                        <div className="col-lg-4">
+                        <div className="col-lg-4  col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4  col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4  col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4  col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4  col-md-6">
                             <CarCard />
                         </div>
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={1}>
                     <div className="row">
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={2}>
                     <div className="row">
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={3}>
                     <div className="row">
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={4}>
                     <div className="row">
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={5}>
                     <div className="row">
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6">
                             <CarCard />
                         </div>
                     </div>

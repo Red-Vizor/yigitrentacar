@@ -1,4 +1,5 @@
 import React from 'react'
+import './popularlocations.css'
 
 function PopularLocationsCard(props) {
     return (

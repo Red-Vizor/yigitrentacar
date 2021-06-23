@@ -5,7 +5,7 @@ function IndividualRental() {
         <div className="individual-rental-form general-form-1 " style={{ backgroundColor: "#FFF5F1", width: "100%" }}>
 
             <div className="px-5 container" >
-                <div className=" mt-5 mb-5 px-5 kisisel-bilgiler">
+                <div className=" mt-5 mb-5 px-lg-5 kisisel-bilgiler">
                     <h4 className="bold mb-5 pt-5">Formu Doldurun, Sizi Arayalım</h4>
                     <form class="row g-3">
                         <div class="col-md-6">

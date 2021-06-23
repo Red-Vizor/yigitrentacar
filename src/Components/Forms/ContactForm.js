@@ -3,8 +3,8 @@ import React from 'react'
 export default function ContactForm() {
     return (
         <div className="general-form-1">
-            <div className="contact-form container px-5 ">
-                <div className="container mt-5 mb-5 px-5 kisisel-bilgiler">
+            <div className="contact-form container px-lg-5 ">
+                <div className="container mt-5 mb-5 px-lg-5 kisisel-bilgiler">
                     <h2 className="text-center mb-5">İletişim Formunu Doldurun</h2>
                     <p className="text-center mb-5">Her türlü soru, görüş ve önerinizi iletişim formu ile bize gönderebilirsiniz.</p>
                     <form class="row g-3">
@@ -44,11 +44,15 @@ export default function ContactForm() {
                                 <input type="password" class="form-control" id="inputPassword4" placeholder="Mail Adresiniz" />
                             </div>
                         </div>
-                      
+
                         <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label">MESAJINIZ</label>
                             <textarea class="form-control px-5" id="exampleFormControlTextarea1" placeholder="İLETMEK İSTEDİĞİNİZ MESAJINIZI BURAYA YAZABİLİRSİNİZ." rows="3"></textarea>
                         </div>
+
+                        <a href="#" className="btn btn-orange-outline bold px-4 py-2 " style={{ width: "20%" }}>
+                            <span className="m-auto">FORMU GÖNDER</span>
+                        </a>
                     </form>
                 </div>
             </div>
