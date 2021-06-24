@@ -95,7 +95,7 @@ function CorporateRental() {
                                 </div>
                             </div>
 
-                            <div class="form-check mt-4">
+                            <div class="form-check mt-4 driver-policy">
                                 <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault" />
                                 <label class="form-check-label" for="flexCheckDefault">
                                     Şoförlü kiralama ve transfer hizmeti teklifi de almak istiyorum.

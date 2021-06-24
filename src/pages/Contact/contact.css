@@ -46,6 +46,31 @@
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
+
+    .contact-page .container-fluid {
+        padding: 0 !important;
+    }
+    
+    .office h4 {
+        margin-top: 2rem !important;
+    }
+    .phone-mail-area {
+       width: 90% !important;
+   }
+
+   .phone-mail-area span {
+        font-size: 1rem !important;
+    }
+    
+    .phone-mail-area img {
+        width: 4% !important;
+    }
+
+    .contact-form .btn-orange-outline{
+        width: 55% !important;
+        margin-top: 0.5rem !important;
+        left: 22%;
+    }
     
    
 

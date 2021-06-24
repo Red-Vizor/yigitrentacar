@@ -55,8 +55,8 @@ function Services() {
 
     return (
         <div className="services">
-            <div className="menu-bar container pt-3" style={{ height: "55px", fontWeight: "bold" }}>
-                <p>Anasayfa /  Hizmetler</p>
+            <div className="menu-bar container pt-3 my-auto" style={{ height: "55px", fontWeight: "bold" }}>
+                <p >Anasayfa /  Hizmetler</p>
             </div>
 
             <div className="policies-jumbotron text-center position-relative pb-5" style={{  backgroundColor: "#CCCCCC" }}>

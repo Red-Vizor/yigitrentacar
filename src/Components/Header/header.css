@@ -47,6 +47,7 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
+
     .call-line img {
         width: 17% !important;
     }
@@ -91,27 +92,74 @@
     .search-button {
         display: none !important;
     }
+
+    .header-bottom .call-line {
+        padding-left: 1.5rem !important;
+        line-height: 0.5rem !important;
+    }
     .call-line img {
-        width: 10% !important;
+        width: 15% !important;
     }
 
     .call-line p {
-        font-size: 0.5rem !important;
+        font-size: 0.3rem !important;
     }
-    .call-line a {
-        font-size: 0.7rem !important;
+    .call-line a{     
+        font-size: 0.4rem !important;
+ 
     }
 
     .login-dropdown .la-angle-down{
         display: none !important;
     }
-    .menu-button span {
+    
+    .header-bottom .btn-outline-light {
         font-size: 0.6rem !important;
+        padding: 5px 5px !important;
+        margin-right: 0.5rem !important;
     }
 
-    .login-dropdown span {
-        font-size: 0.5rem !important;
+    .menu-button{
+        background-color: #FFF;
+        color: #000 !important;
+        border-radius: 0 !important;
+        padding: 0.7rem 0.4rem 0 !important;
+        
     }
-    
+
+    .header-bottom .logo {
+        width: 100% !important;
+        margin: 1rem 0!important;
+        padding-right: 0.8rem !important;
+    }
+
+    .header .container-fluid {
+        padding: 0 !important;
+    }
+
+    .header .container {
+        padding: 0 !important;
+    }
+
+    .total-payment {
+        font-size: 1rem !important;
+        padding: 0.6rem 2.75rem !important;
+        position: absolute;
+        top: 0!important;
+        right: 0px !important;
+        background-color: #3D3D3D;
+    }
+
+    .reservation-head .btn-outline-light{
+        font-size: 0.55rem !important;
+        position: absolute;
+        padding: 0.53rem 1.03rem !important;
+        top: 35px !important;
+        right: 0px !important;
+        background-color: #5F5F5F;
+        border: none !important;
+        font-weight: bold !important;
+       
+    }
    
 }

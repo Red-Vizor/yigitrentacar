@@ -18,7 +18,7 @@ export default function PersonalServices() {
 
             <IndividualRentalForm />
             
-            <div className="container mt-4 mb-5 bold" style={{ width: "80%" }}> 
+            <div className="container mt-4 mb-5 bold personal-bottom-text" style={{ width: "80%" }}> 
                 <h4 className="mt-5 mb-4 bold">Günlük Araç Kiralama</h4>
                 <p>Araç kiralama seçeneklerinden biri de günlük araç kiralamadır. Günlük araba kiralama işleminde dikkat edilmesi gereken nokta, araç kiralama şartlarını dikkatli bir şekilde incelemektir. 
                     Rent a car firmalarının çoğunda minimum 3 gün araba kiralama şartı koşulur. Bu araçlar için günlük araç kiralama seçeneği mümkün değildir. Günlük oto kiralama işlemi, teslim alınan tarih 

@@ -103,6 +103,7 @@
     font-size: 1rem !important;
   }
 
+
   .individual-rental-form  .btn-orange-outline{
     width: 30% !important;
     position: relative !important;
@@ -131,7 +132,133 @@
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
+
+  .menu-bar {
+    font-size: 0.8rem !important;
+    height: 35px !important;
+    padding: 0.6rem 0 0 1rem !important;
+  }
+
+  
+  .services span {
+    font-size: 0.5rem !important;
+  }
     
-   
+  .personal-form .btn-orange-outline{
+    width: 30% !important;
+    position: relative !important;
+    left: 35%;
+  }
+
+  
+  .personal-services h5 {
+    font-size: 0.8rem !important;
+    padding: 1.3rem 0.6rem !important;
+  }
+
+  .personal-header {
+    height: 70px !important;
+    width: 100% !important;
+  }
+
+  .personal-services h4 {
+    font-size: 0.9rem !important;
+  }
+
+  .personal-text {
+    font-size: 0.8rem !important;
+    width: 90% !important;
+  }
+
+  .form-policy label {
+    font-size: 0.8rem !important;
+  }
+
+  .form-policy p{
+    font-size: 0.8rem !important;
+  }
+
+  .individual-rental-form  .btn-orange-outline{
+    width: 40% !important;
+    position: relative !important;
+    left: 29%;
+  }
+
+  .personal-bottom-text {
+    font-size: 0.8rem !important;
+    width: 90% !important;
+  }
+
+  .corporate-services h4 {
+    font-size: 0.9rem !important;
+  }
+
+  .corporate-header {
+    width: 100% !important;
+  }
+
+  .corporate-header h5{
+    padding: 0.9rem 1rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  .corporate-text {
+    font-size: 0.8rem !important;
+    width: 92% !important;
+  }
+
+  .corporate-rental-form .btn-orange-outline{
+    width: 40% !important;
+    position: relative !important;
+    left: 29%;
+    margin-top: 0 !important;
+  }
+  
+  .corporate-text h5 {
+    font-size: 0.8rem !important;
+  }
+ 
+  .corporate-text p{
+    padding-right: 0 !important;
+  }
+  .corporate-img {
+    width: 100% !important;
+    margin-top: 0 !important;
+  }
+
+  .driver-policy label {
+    font-size: 0.8rem !important;
+  }
+
+  .corporate-services .member-login-button {
+    width: 40% !important;
+    position: relative !important;
+    left: 28%;
+    margin-top: 0 !important;
+  }
+  
+
+  .driver-services h5 {
+    font-size: 0.8rem !important;
+  }
+
+  .driver-services h4 {
+    font-size: 0.9rem !important;
+  }
+
+  .corporate-header {
+    width: 100% !important;
+    height: 70px !important;
+  }
+
+  .driver-header h5{
+    padding: 0.9rem 3rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  .driver-services-text {
+    font-size: 0.8rem !important;
+    width: 90% !important;
+  }
 
 }

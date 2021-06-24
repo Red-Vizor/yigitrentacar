@@ -1,5 +1,5 @@
 import React from 'react'
-import { PersonalForm, CorporateForm } from '../../Components'
+import { PersonalForm, CorporateForm, ContactForm } from '../../Components'
 
 
 export default function ReservationForm() {
@@ -14,11 +14,11 @@ export default function ReservationForm() {
                 </div>
                 <div className="header-content d-flex justify-content-center">
                     <div className="row">
-                        <div className="col-lg-4 col-md-4 mx-auto d-flex">
+                        <div className="col-lg-4 col-md-4 col-12 mx-auto d-flex">
                             <img src="./assets/images/s3.png"  className="mx-auto reservation-car-image w-50" />
                         </div>
 
-                        <div className="col-lg-5 col-md-5 d-flex">
+                        <div className="col-lg-5 col-md-5 col-12 d-flex">
                             <div className="car-detail mx-auto my-auto ">
                                 <span className="h4 bold">2021 MERCEDES CLA 180</span>
                                 <div className="row ">
@@ -40,8 +40,8 @@ export default function ReservationForm() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-md-3 car-detail d-flex my-auto">
-                            <div className="my-auto ps-lg-5">
+                        <div className="col-lg-3 col-md-3 col-12 car-detail d-flex my-auto">
+                            <div className="my-auto ps-lg-5 reservation-date-detail">
                                 <span className="bold h5">REZERVASYON TARİHİ</span>
                                 <div className="mt-lg-3 mt-md-2">
                                 <span >Bodrum, Yalıkavak</span>
@@ -62,7 +62,6 @@ export default function ReservationForm() {
             </div>
 
             <PersonalForm />
-            <CorporateForm />
 
 
         </section>

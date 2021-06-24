@@ -15,11 +15,22 @@
 
  .policies h5 {
     font-size: 1.2rem !important;
-}
+ }
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
+    .policies span {
+        font-size: 0.5rem !important;
+    }
     
-   
+    .policies h5 {
+        font-size: 1rem !important;
+    }
+
+    .policy-area .text-area {
+        width: 100% !important;
+        padding: 0 1.5rem !important;
+    }
+
 
 }

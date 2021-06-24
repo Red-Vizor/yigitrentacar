@@ -5,33 +5,38 @@ import SideMenu from './SideMenu'
 export default function Footer() {
     return (
         <footer className="footer  bg-black">
-            <div className="container-fluid c-padding py-4 ">
+            <div className="container c-padding py-4 ">
                 <div className="logo row">
-                    <div className="col-lg-6 col-sm-6 d-flex px-lg-5">
-                        <img src="./assets/images/logo.png" className="w-50 ms-auto logo" />
+                    <div className="col-lg-4 col-md-4  col-12  d-flex ">
+                        <img src="./assets/images/logo.png" className="w-100 ms-auto logo" />
                     </div>
-                    <div className="col-lg-6 col-sm-6 px-lg-5 d-flex mx-auto">
+                    <div className="col-lg-4 col-md-4 col-12  d-flex pt-4">
                         <div className="contact-area my-auto mx-auto">
-                            <div className="w-100">
+                            <div className="w-100 ">
                                 <a href="#" className="bold h6">
-                                    <img src="./assets/icons/phone.svg" width="30px" className="my-auto me-2" />
+                                    <img src="./assets/icons/phone.svg" width="30px" className="my-auto me-3 me-md-1" />
                                     <span>+90 850 840 09 48</span>
                                 </a>
                             </div>
-                            <div className="w-100 mt-2">
-                                <a href="#" className="bold h6">
-                                    <img src="./assets/icons/email.svg" width="30px" className="my-auto me-2" />
+                        </div>
+                    </div>
+                    <div className="col-lg-4 col-md-4 col-12  d-flex pt-4 " >
+                        <div className="contact-area my-auto pt-md-1 mx-auto">
+                            <div className="w-100">
+                                <a href="#" className="bold h6 d-flex">
+                                    <img src="./assets/icons/email.svg" width="30px" className="my-auto me-3 me-md-1" />
                                     <span>info@yigitotokiralama.com</span>
                                 </a>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
 
             <div className="container-fluid bg-orange c-padding py-4">
                 <div className="row">
-                    <div className="col-lg-6 col-sm-6 border-end px-lg-4 social-media-footer">
+                    <div className="col-lg-6 col-sm-6 col-12 border-end px-lg-4 social-media-footer">
                         <div className="d-flex me-auto h-100 text-white">
                             <div className="ms-auto py-auto d-flex">
                                 <span className="h5 me-4 my-auto text-center">Bizi Takip Edin</span>
@@ -50,7 +55,7 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-6 col-sm-6 d-flex px-1">
+                    <div className="col-lg-6 col-sm-6 col-12 d-flex px-1">
                         <div className="d-flex me-auto ps-lg-5 ps-md-3 footer-mail mx-auto">
                             <a href="#" className="my-auto " >
                                 <img src="./assets/icons/slack.svg" height="70%" className="my-auto me-2 mail-img" />
@@ -63,25 +68,56 @@ export default function Footer() {
             </div>
 
             <div className="container-fluid c-padding py-4  footer-menu">
-                <div className="d-flex justify-content-evenly px-lg-5 ">
-                    <a href="#">Araçlar</a>
-                    <a href="#">Kampanyalar</a>
-                    <a href="#">Ofisler</a>
-                    <a href="#">Hizmetler</a>
-                    <a href="#">Hakkımızda</a>
-                    <a href="#">Kiralama Koşulları</a>
-                    <a href="#">İletişim</a> 
+                <div className="row px-lg-5">
+                    <div className="col-lg col-md col footer-mini-menu ">
+                        <a href="#">Araçlar</a>
+                    </div>
+                    <div className="col-lg col-md col footer-mini-menu">
+                        <a href="#">Kampanyalar</a>
+                    </div>
+                    <div className="col-lg col-md col footer-mini-menu">
+                        <a href="#">Ofisler</a>
+                    </div>
+                    <div className="col-lg col-md col footer-mini-menu">
+                        <a href="#">Hizmetler</a>
+                    </div>
+                    <div className="col-lg col-md col-4 footer-mini-menu">
+                        <a href="#">Hakkımızda</a>
+                    </div>
+                    <div className="col-lg col-md col-4 footer-mini-menu">
+                        <a href="#">Kiralama Koşulları</a>
+                    </div>
+                    <div className="col-lg col-md col-4 footer-mini-menu">
+                        <a href="#">İletişim</a>
+                    </div>
                 </div>
-                <hr className="bg-orange mt-lg-5 mt-md-4 " style={{ margin:"0 10%" , backgroundColor:"#EAEAEA" }} />
+
+                <hr className="bg-orange mt-4" style={{ margin: "0 10%", backgroundColor: "#EAEAEA" }} />
             </div>
 
             <div className="container-fluid c-padding py-lg-4 py-md-3 mb-4 footer-menu">
-                <div className="d-flex justify-content-evenly px-lg-5 ">
-                    <SideMenu menuTitle="MENÜ" menues={["Araçlar","Kampanyalar","Ofisler"]} />
-                    <SideMenu menuTitle="ARAÇ SINIFI" menues={["Lüx","Prime","Business"]} />
-                    <SideMenu menuTitle="OFİSLER" menues={["İSTANBUL","İZMİR","BODRUM"]} />
-                    <SideMenu menuTitle="KAMPANYALAR" menues={["Yaz Kampanyası","Ağustos Ayı Kampanyası","Enterprise Fırsatları"]} />
-                    <SideMenu menuTitle="POPÜLER LOKASYONLAR" menues={["İSTANBUL REHBERİ","İZMİR REHBERİ","BODRUM REHBERİ"]} />
+                <div className="row px-lg-5">
+                    <div className="col-lg col-md col-4 ">
+                        <SideMenu menuTitle="MENÜ" menues={["Araçlar", "Kampanyalar", "Ofisler"]} />
+                    </div>
+                    <div className="col-lg col-md col-4">
+                        <SideMenu menuTitle="ARAÇ SINIFI" menues={["Lüx", "Prime", "Business"]} />
+                    </div>
+                    <div className="col-lg col-md col-4">
+                        <SideMenu menuTitle="OFİSLER" menues={["İSTANBUL", "İZMİR", "BODRUM"]} />
+                    </div>
+                    <div className="col-lg col-md col-12 mobile-footer-menu">
+                        <SideMenu menuTitle="KAMPANYALAR" menues={["Yaz Kampanyası", "Ağustos Ayı Kampanyası", "Enterprise Fırsatları"]} />
+                    </div>
+                    <div className="col-lg col-md col-12 mobile-footer-menu">
+                        <SideMenu menuTitle="POPÜLER LOKASYONLAR" menues={["İSTANBUL REHBERİ", "İZMİR REHBERİ", "BODRUM REHBERİ"]} />
+                    </div>
+
+
+
+
+
+
                 </div>
             </div>
 

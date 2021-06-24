@@ -116,7 +116,68 @@
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
+    .campaigns .tab-bar {
+        width: 100% !important;
+        position: absolute;
+        bottom: 24px;
+    }
+
+    .campaigns h1 {
+        font-size: 1.8rem !important;
+    }
+
+    .campaigns span {
+        font-size: 0.5rem !important;
+    }
+
+    .campaign-card {
+        padding: 0.2rem 0.5rem 0.8rem !important;
+    }
+
+    .campaign-card h5 {
+        font-size: 0.9rem !important;
+    }
+
+    .campaign-card .btn-orange-outline{
+        width: 50% !important;
+    }
+
+    .campaign-card .btn-orange-outline span {
+        font-size: 0.7rem !important;
+    }
+
+    .campaigns-header {
+        width: 100% !important;
+        margin: 0 0 2rem !important;
+    }
+
+    .campaigns-header h4{
+        font-size: 0.9rem !important;
+        padding: 1.5rem 0 !important;
+    }
+
+    .campaign-single-area .container {
+        padding: 0 20px !important;
+    }
     
+     .campaign-single-area p {
+        font-size: 0.8rem;
+        padding: 0 20px!important;
+    }
+
+    .campaign-single-area h4 {
+        font-size: 1rem;
+        padding: 1rem 2rem !important;
+    }
+
+    .campaign-single-dropdown .btn-orange-outline {
+        width: 90% !important;
+        height: 50px !important;
+        position: absolute !important;
+        left: 17px !important;
+        top: 25px !important;
+        font-size: 0.8rem;
+    }
    
 
 }

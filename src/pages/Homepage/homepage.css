@@ -97,11 +97,42 @@
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
     .form-card-date .btn-orange{
-        width: 75% !important;
+        width: 65% !important;
         font-size: 1.1rem;
-        padding: 1rem 0 !important;
+        padding: 0.8rem 0 !important;
     }
+
     .card-date {
         width: 100% !important;
     }
+
+    .homepage .date-slide{
+        height: 125vh !important;
+       
+    }
+
+    .card-head .title{
+        font-size: 1.2rem;
+    }
+
+    .card-head .text{
+        font-size: 0.65rem;
+    }
+
+    .form-card-date img {
+        width: 8% !important;
+    }
+
+    .form-card-date p {
+        font-size: 0.85rem;
+        padding-top: 1rem !important;
+        text-align: center !important;
+    }
+
+    .form-card-date span {
+        font-size: 0.8rem;
+        text-align:center !important;
+    }
+
+
 }

@@ -313,5 +313,8 @@
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
-    
+    .car-card .images {
+        left: -10%;
+        width: 60%;
+    }
 }

@@ -3,7 +3,7 @@ import React from 'react'
 export default function CorporateForm(props) {
     return (
 
-        <div className=" general-form-1 " style={{ width: "100%" }}>
+        <div className=" general-form-1 reservation-corporate-form " style={{ width: "100%" }}>
 
             <div className="container" >
                 <h5 className="bold text-center mt-5">FİRMA BİLGİLERİNİZİ DOLDURUNUZ</h5>

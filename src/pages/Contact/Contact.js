@@ -14,7 +14,7 @@ export default function Contact() {
             </div>
             <div className="container-fluid w-100 bg-image contact-map" style={{ height: "370px", backgroundImage: "url(./assets/images/contact.png)" }}> </div>
             <div className="py-5 px-5 bg-black container-fluid" >
-                <div className="offices-list px-5 py-4 mx-4 mx-md-5">
+                <div className="offices-list px-lg-5 px-md-5 py-4 mx-lg-4 mx-md-5">
                     <div className="row mx-auto w-100">
                         <div className="col-lg-4 mb-md-5 ">
                             <OfficesCard />

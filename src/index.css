@@ -316,6 +316,21 @@ form .form-check-input {
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
     
-   
+  .services .tab-bar {
+    width: 100% !important;
+  }
 
+  input::placeholder {
+    font-size: 0.75rem;
+  } 
+
+  .MuiTypography-body1 {
+    font-size: 0.85rem !important;
+  }
+
+  .policies .tab-bar {
+    width: 100% !important;
+  }
+
+  
 }

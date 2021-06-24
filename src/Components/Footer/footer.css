@@ -4,7 +4,13 @@
 
 .footer-menu a{
     opacity: .7 !important;
+    font-size: 0.8rem !important;
 }
+
+.footer-menu p{
+    font-size: 0.9rem !important;
+}
+
 .footer-menu a:hover{
     opacity: 1 !important;
 }
@@ -46,7 +52,7 @@
     }
 
     .footer-menu p {
-        font-size: 0.9rem !important;
+        font-size: 0.8rem !important;
     }
 
     .footer-bottom-text p {
@@ -56,7 +62,68 @@
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
-    
-   
+    .footer .logo {
+        width: 100% !important;
+        margin-bottom: 5px !important;
+    }
+
+    .contact-area span {
+        font-size: 0.9rem !important;
+    }
+    .contact-area img {
+        width: 15% !important;
+    }
+
+    .footer .border-end {
+        border-right: none !important;
+    }
+    .social-media-footer img {
+        margin-bottom: 4rem !important;
+        margin-top: 1.5rem !important;
+        width: 45%;
+    }
+    .social-media-footer span {
+        font-size: 1.5rem !important;
+        position: absolute !important;
+        left: 32%;
+        font-weight: bold !important;
+        
+    }
+
+    .footer-mail .master-img {
+        width: 50% !important;
+    }
+
+    .footer-mail span {
+        font-size: 0.8rem !important;
+        margin-right: 2.6rem !important;
+    }
+
+    .footer-menu a {
+        font-size: 0.7rem !important;
+    }
+
+    .footer-mini-menu {
+        text-align: center !important;
+    }
+
+
+    .footer-menu .mobile-footer-menu {
+        text-align: center !important;  
+    }
+
+    .mobile-footer-menu p{
+        text-align: center !important; 
+        margin-top: 2rem !important; 
+    }
+
+    .footer-menu p {
+        font-size: 0.8rem !important; 
+    }
+
+    .footer-bottom-text p {
+        font-size: 0.5rem !important;
+    }
+
 
 }

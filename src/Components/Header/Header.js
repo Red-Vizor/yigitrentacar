@@ -39,7 +39,7 @@ export default function Header() {
                                     </a>
                                 </div>
                             </div>
-                            <div className="col-lg-4 col-md-4 d-flex px-1">
+                            <div className="col-lg-4 col-md-4  d-flex px-1">
                                 <div className="d-flex-inline mx-auto">
                                     <a href="#" className="my-auto" >
                                         <img src="./assets/icons/slack.svg" height="100%" className="my-auto me-2" />
@@ -47,7 +47,7 @@ export default function Header() {
                                     </a>
                                 </div>
                             </div>
-                            <div className="col-lg-4 col-md-4 d-flex px-1">
+                            <div className="col-lg-4 col-md-4  d-flex px-1">
                                 <div className="d-flex-inline mx-auto">
                                     <a href="#" className="my-auto" >
                                         <img src="./assets/icons/email.svg" height="80%" className="my-auto me-2" />
@@ -63,19 +63,19 @@ export default function Header() {
                 <div className="container-fluid  header-bottom">
                     <div className="container py-3">
                         <div className="row">
-                            <div className="col-lg-3 col-md-3  d-flex call-line">
+                            <div className="col-lg-3 col-md-3 col-3 d-flex call-line">
                                 <img src="./assets/icons/phone.svg" className="my-auto me-2 h-50" />
-                                <div className=" my-auto">
-                                    <p>7/24 ÇAĞRI HATTI </p>
-                                    <a href="#"> +90 850 840 09 48 </a>
+                                <div className="my-auto">
+                                    <p >7/24 ÇAĞRI HATTI </p>
+                                    <a href="#">+90 850 840 09 48</a>
                                 </div>
                             </div>
 
-                            <div className="col-lg-5 col-md-4  d-flex justify-items-center px-lg-5  my-auto">
+                            <div className="col-lg-5 col-md-4  col-5 d-flex justify-items-center px-lg-5  my-auto">
                                 <a href="/" className="logo"><img src="./assets/images/logo.png" className="w-100 mx-auto my-auto" /></a>
                             </div>
 
-                            <div className="col-lg-4 col-md-5  d-flex justify-content-end">
+                            <div className="col-lg-4 col-md-5  col-4 d-flex justify-content-end">
                                 <div className="login-drop my-auto">
                                     <a className="dropdown-toggle login-dropdown btn btn-outline-light rounded-0  m-auto" href="#" >
                                         <span>Üye Girişi</span> <i class="las la-user" ></i> <i class="las la-angle-down"></i>
@@ -87,7 +87,9 @@ export default function Header() {
                                 </div>
 
                                 <button type="button" class="btn btn-outline-light border-0 my-auto search-button "><i class="las la-search"></i></button>
+                                <div class="menu-button">
                                 <button type="button" class="btn btn-outline-light border-0 my-auto menu-button " onClick={() => { dispatch(toogle(true)) }}><i class="las la-bars"></i><span className="ps-1">Menü</span></button>
+                                </div>
                             </div>
                         </div>
                     </div>

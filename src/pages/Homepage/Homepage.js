@@ -13,8 +13,8 @@ export default function Homepage() {
                 <div className="container h-100 d-flex">
                     <div className="card-date my-auto mx-auto text-center w-75 text-white">
                         <div className="card-head mb-5">
-                            <p className="h2 extra-bold">KURUMSAL & BİREYSEL KİRALAMA</p>
-                            <p className="h6 bold">*İstanbul, İzmir & Bodrum Ofislerimizden Kiralanabilir.</p>
+                            <p className="h2 extra-bold title">KURUMSAL & BİREYSEL KİRALAMA</p>
+                            <p className="h6 bold text">*İstanbul, İzmir & Bodrum Ofislerimizden Kiralanabilir.</p>
                         </div>
 
                         <div className="form-card-date p-4 position-relative">
