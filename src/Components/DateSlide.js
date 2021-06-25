@@ -2,8 +2,11 @@ import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom"
 import { TimePicker } from './'
 import { DateRange } from 'react-date-range'
-
+import * as locales from 'react-date-range/dist/locale';
+import Moment from 'moment';
 export default function DateSlide() {
+    Moment.locale('tr')
+    const [city, setCity] = useState("İstanbul, İzmir, Bodrum")
     const [state, setState] = useState([
         {
             startDate: new Date(),
@@ -11,10 +14,13 @@ export default function DateSlide() {
             key: 'selection'
         }
     ]);
+    var startRentDate = Moment(state[0].startDate).format('DD MM yyy');
+
+    var endRentDate = Moment(state[0].endDate).format('DD.MM.yyy');
     return (
         <div className="home-slide-area">
 
-            {console.log(state)}
+            {console.log(startRentDate)}
             <div className="container-fluid date-slide" style={{ backgroundImage: "linear-gradient(rgb(232, 84, 30,0.4), rgb(232, 84, 30,0.4)), url('./assets/images/homepagebanner.png')" }}>
                 <div className="container h-100 d-flex">
                     <div className="card-date my-auto mx-auto text-center w-75 text-white">
@@ -30,23 +36,23 @@ export default function DateSlide() {
                                     <div className="input-group ">
                                         <div className="dropdown">
                                             <a className="dropdown-toggle w-100 d-flex  bg-white  rounded py-3 semi-bold " href="#" style={{ color: "gray" }}>
-                                                <span className="my-auto mx-auto">İstanbul, İzmir, Bodrum</span>
+                                                <span className="my-auto mx-auto">{ city }</span>
                                                 <img src="./assets/icons/location.svg" className="my-auto ms-auto me-4" />
                                             </a>
                                             <ul className="dropdown-menu w-100 bg-light position-absolute rounded" role="menu" aria-labelledby="dLabel">
-                                                <li className="rounded py-2 text-center semi-bold position-relative">
+                                                <li onClick={() => {setCity("İstanbul")}} className="rounded py-2 text-center semi-bold position-relative">
                                                     <a>
                                                         İstanbul
                                                         <img src="./assets/icons/location.svg" className="my-auto ms-auto me-4" />
                                                     </a>
                                                 </li>
-                                                <li className="rounded py-2 text-center semi-bold position-relative">
+                                                <li  onClick={() => {setCity("İzmir")}} className="rounded py-2 text-center semi-bold position-relative">
                                                     <a>
                                                         İzmir
                                                         <img src="./assets/icons/location.svg" className="my-auto ms-auto me-4" />
                                                     </a>
                                                 </li>
-                                                <li className="rounded py-2 text-center semi-bold position-relative">
+                                                <li  onClick={() => {setCity("Bodrum")}} className="rounded py-2 text-center semi-bold position-relative">
                                                     <a>
                                                         Bodrum
                                                         <img src="./assets/icons/location.svg" className="my-auto ms-auto me-4" />
@@ -61,7 +67,7 @@ export default function DateSlide() {
                                             <p className="semi-bold ms-1 mb-1">Alış Tarihi</p>
                                             <div className="w-100 bg-white py-3 d-flex rounded position-relative">
                                                 <span className="text">
-                                                    10.06.2021
+                                                    {startRentDate}
                                                 </span>
                                                 <img src="./assets/icons/date.svg" className="my-auto ms-auto me-1" />
                                             </div>
@@ -79,7 +85,7 @@ export default function DateSlide() {
                                             <p className="semi-bold ms-1 mb-1">İade Tarihi</p>
                                             <div className="w-100 bg-white py-3 d-flex rounded position-relative">
                                                 <span className="text">
-                                                    10.06.2021
+                                                    {endRentDate}
                                                 </span>
                                                 <img src="./assets/icons/date.svg" className="my-auto ms-auto me-1" />
                                             </div>
@@ -114,6 +120,8 @@ export default function DateSlide() {
                                 editableDateInputs={true}
                                 onChange={item => setState([item.selection])} 
                                 moveRangeOnFirstSelection={false}
+                                dateDisplayFormat={"dd mm yyyy"}
+                                locale={locales["tr"]}
                                 ranges={state}
                             />
                             
