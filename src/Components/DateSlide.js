@@ -13,6 +13,8 @@ export default function DateSlide() {
     ]);
     return (
         <div className="home-slide-area">
+
+            {console.log(state)}
             <div className="container-fluid date-slide" style={{ backgroundImage: "linear-gradient(rgb(232, 84, 30,0.4), rgb(232, 84, 30,0.4)), url('./assets/images/homepagebanner.png')" }}>
                 <div className="container h-100 d-flex">
                     <div className="card-date my-auto mx-auto text-center w-75 text-white">
@@ -110,7 +112,7 @@ export default function DateSlide() {
                             <DateRange
                                 className="mx-auto"
                                 editableDateInputs={true}
-                                onChange={item => setState([item.selection])}
+                                onChange={item => setState([item.selection])} 
                                 moveRangeOnFirstSelection={false}
                                 ranges={state}
                             />
