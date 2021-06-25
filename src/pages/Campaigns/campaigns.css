@@ -179,5 +179,9 @@
         font-size: 0.8rem;
     }
    
-
+    .campaigns .tab-bar .MuiTab-root {
+        min-width: 140px !important;
+    }
+    
+    
 }

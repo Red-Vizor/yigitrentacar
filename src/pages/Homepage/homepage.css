@@ -134,5 +134,9 @@
         text-align:center !important;
     }
 
+    .popular-cars .carousel-indicators .slide-button {
+        width: 20px !important;
+        height: 10px !important;
+    }
 
 }

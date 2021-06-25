@@ -24,7 +24,14 @@
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
-    
+    .login-dropdown-menu {
+        width: 95%;
+        border: 0 !important;
+        border-radius: 0 !important;
+        top: 46%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
    
 
 }

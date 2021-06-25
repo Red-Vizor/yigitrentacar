@@ -11,116 +11,134 @@
   --gren-check-text: #3BC712;
 }
 
-
-*{
+* {
   font-family: 'Open Sans', sans-serif;
 }
 
-.c-padding{
+.c-padding {
   padding: 0 9%;
 }
 
-.header-top{
+.header-top {
   background-color: var(--orange);
   color: var(--white);
 }
-.header-bottom{
+
+.header-bottom {
   background-color: var(--dark);
   color: var(--white);
 }
 
-a{
-  text-decoration:none;
+a {
+  text-decoration: none;
   color: var(--white);
-  transition:opacity .2s;
+  transition: opacity .2s;
 }
-a:hover{
+
+a:hover {
   color: var(--white);
   opacity: 0.3;
 }
 
-p, h1,h2,h3,h4,h5,h6 {
-  padding:0;
+p, h1, h2, h3, h4, h5, h6 {
+  padding: 0;
   margin: 0;
 }
-.green-text-color{
+
+.green-text-color {
   color: var(--gren-check-text) !important;
 }
-.bg-black{
+
+.bg-black {
   background-color: var(--dark) !important;
 }
-.bg-orange{
+
+.bg-orange {
   background-color: var(--orange) !important;
 }
-.bg-gray{
+
+.bg-gray {
   background-color: var(--gray) !important;
 }
-.bg-pink{
+
+.bg-pink {
   background-color: var(--pink) !important;
 }
-.bg-pink-powder{
+
+.bg-pink-powder {
   background-color: var(--pink-powder) !important;
 }
-.bg-orange:checked{
+
+.bg-orange:checked {
   background-color: var(--orange) !important;
 }
-.bg-pink:checked{
+
+.bg-pink:checked {
   background-color: var(--pink) !important;
 }
-.bg-black:checked{
+
+.bg-black:checked {
   background-color: var(--dark) !important;
 }
-.bg-orange:checked{
+
+.bg-orange:checked {
   background-color: var(--orange) !important;
 }
-.bg-gray:checked{
+
+.bg-gray:checked {
   background-color: var(--gray) !important;
 }
+
 .bg-success-green {
   background-color: var(--green-check-2);
 }
-.extra-bold{
+
+.extra-bold {
   font-weight: 800 !important;
 }
-.semi-bold{
+
+.semi-bold {
   font-weight: 600 !important;
 }
-.bold{
-  font-weight:700 !important;
+
+.bold {
+  font-weight: 700 !important;
 }
 
-.text-orange{
+.text-orange {
   color: var(--orange)
 }
 
-.bg-image{
+.bg-image {
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.title-border{
+.title-border {
   border: 2px solid var(--dark);
 }
-.title-border-green{
+
+.title-border-green {
   border: 2px solid var(--green-check-1);
-  color: var(--green-check-1) ;
+  color: var(--green-check-1);
 }
 
-
 /* Buttons */
-.btn-orange{
+
+.btn-orange {
   background-color: var(--orange) !important;
   border-color: var(--orange) !important;
   border-radius: 18px;
 }
-.btn-orange-outline{
+
+.btn-orange-outline {
   background-color: var(--white);
   color: var(--orange);
   border: 3px solid var(--orange);
   border-radius: 18px;
 }
 
-.btn-orange-outline:hover{
+.btn-orange-outline:hover {
   background-color: var(--orange);
   color: var(--white);
   opacity: 1;
@@ -128,156 +146,159 @@ p, h1,h2,h3,h4,h5,h6 {
   border-radius: 18px;
 }
 
-
-
-
-.tab-bar .MuiTabs-indicator{
+.tab-bar .MuiTabs-indicator {
   display: none !important;
 }
 
- .campaigns .tab-bar{
-  width:60% !important;
+.campaigns .tab-bar {
+  width: 60% !important;
   left: 50% !important;
   transform: translate(-50%, 50%);
   font-weight: 700 !important;
   background-color: var(--white);
   color: var(--orange);
   position: absolute;
-  bottom:0;
+  bottom: 0;
 }
 
-.campaigns .tab-bar .MuiTab-root{
+.campaigns .tab-bar .MuiTab-root {
   min-width: 300px !important;
 }
 
-.policies .tab-bar{
-  width:70% !important;
+.policies .tab-bar {
+  width: 70% !important;
   left: 50% !important;
   transform: translate(-50%, 0);
   font-weight: 700 !important;
   background-color: var(--white);
   color: var(--orange);
   position: absolute;
-  bottom:0;
+  bottom: 0;
 }
 
-.services .tab-bar{
-  width:70% !important;
+.services .tab-bar {
+  width: 70% !important;
   left: 50% !important;
   transform: translate(-50%, 0);
   font-weight: 700 !important;
   background-color: var(--white);
   color: var(--orange);
   position: absolute;
-  bottom:0;
+  bottom: 0;
 }
 
-.services .tab-bar .MuiButtonBase-root{
+.services .tab-bar .MuiButtonBase-root {
   min-width: 33.3% !important;
   width: 500px !important;
 }
 
-
-.cars .tab-bar{
-  width:100% !important;
+.cars .tab-bar {
+  width: 100% !important;
   left: 50% !important;
   font-weight: 700 !important;
   background-color: var(--orange);
   color: var(--white);
 }
 
-.cars .tab-bar .MuiTab-root{
+.cars .tab-bar .MuiTab-root {
   min-width: 50px !important;
   width: 200px !important;
 }
+
 .cars .tab-bar .MuiTab-textColorInherit.Mui-selected {
   background-color: #FF710F !important;
   color: var(--white) !important;
 }
-.popular-location-area .tab-bar .MuiTab-textColorInherit.Mui-selected , .campaigns .tab-bar .MuiTab-textColorInherit.Mui-selected, 
-.policies .tab-bar .MuiTab-textColorInherit.Mui-selected, .services .tab-bar .MuiTab-textColorInherit.Mui-selected {
+
+.popular-location-area .tab-bar .MuiTab-textColorInherit.Mui-selected, .campaigns .tab-bar .MuiTab-textColorInherit.Mui-selected, .policies .tab-bar .MuiTab-textColorInherit.Mui-selected, .services .tab-bar .MuiTab-textColorInherit.Mui-selected {
   background-color: var(--orange) !important;
   color: var(--white) !important;
 }
-.popular-location-area .tab-bar{
-  width:70% !important;
+
+.popular-location-area .tab-bar {
+  width: 70% !important;
   left: 50% !important;
   transform: translate(-50%, 50%);
   font-weight: 700 !important;
   background-color: var(--white);
   color: var(--orange);
   position: absolute;
-  bottom:0;
+  bottom: 0;
 }
 
-.register-page .tab-bar{
+.register-page .tab-bar {
   font-weight: 700 !important;
   background-color: transparent !important;
   color: var(--orange);
 }
+
 .register-page .tab-bar .MuiTab-textColorInherit:first-child:not(.Mui-selected) {
   border-radius: 15px;
   opacity: 1;
-  border-radius:  15px 0px 0px 15px;
+  border-radius: 15px 0px 0px 15px;
   background-color: #000000 !important;
   color: var(--white) !important;
 }
+
 .register-page .tab-bar .MuiTab-textColorInherit:last-child:not(.Mui-selected) {
   border-radius: 15px;
   opacity: 1;
-  border-radius:  0px 15px 15px 0px;
+  border-radius: 0px 15px 15px 0px;
   background-color: #000000 !important;
   color: var(--white) !important;
 }
+
 .register-page .tab-bar .MuiTab-textColorInherit:first-child.Mui-selected {
-  border-radius:  15px 0px 0px 15px;
+  border-radius: 15px 0px 0px 15px;
   background-color: var(--orange) !important;
   color: var(--white) !important;
 }
+
 .register-page .tab-bar .MuiTab-textColorInherit:last-child.Mui-selected {
-  border-radius:  0px 15px 15px 0px;
+  border-radius: 0px 15px 15px 0px;
   background-color: var(--orange) !important;
   color: var(--white) !important;
 }
 
-
-.popular-location-area .tab-bar .MuiTab-wrapper, .campaigns .tab-bar .MuiTab-wrapper, 
-.policies .tab-bar .MuiTab-wrapper, .services .tab-bar .MuiTab-wrapper, .register-page .tab-bar .MuiTab-wrapper{
+.popular-location-area .tab-bar .MuiTab-wrapper, .campaigns .tab-bar .MuiTab-wrapper, .policies .tab-bar .MuiTab-wrapper, .services .tab-bar .MuiTab-wrapper, .register-page .tab-bar .MuiTab-wrapper {
   font-weight: 700 !important;
 }
 
-.rezervasyon-form h2{
+.rezervasyon-form h2 {
   font-weight: 700;
 }
-.general-form-1 .form-control, .general-form-1 select, .general-form-1 textarea{
+
+.general-form-1 .form-control, .general-form-1 select, .general-form-1 textarea {
   padding: 20px 0 20px 10px;
-  background-color:#F5F5F5 !important;
+  background-color: #F5F5F5 !important;
   border: 0 !important;
 }
-.general-form-1 .input-group-text:before{
+
+.general-form-1 .input-group-text:before {
   display: block;
-  position:absolute;
-  content:" ";
+  position: absolute;
+  content: " ";
   width: 0;
   height: 50%;
   border-left: 1px solid #D0D0D0 !important;
   top: 50%;
-  left:95%;
+  left: 95%;
   transform: translateY(-50%);
 }
-.general-form-1 label{
-  width:100% !important; 
+
+.general-form-1 label {
+  width: 100% !important;
 }
 
-.general-form-1 .form-label{
-  margin-left: 3rem !important; 
+.general-form-1 .form-label {
+  margin-left: 3rem !important;
 }
 
-.general-form-1 .input-group-text{
+.general-form-1 .input-group-text {
   position: relative;
   border: 0 !important;
-  margin-right:1px !important;
-  background-color:#F5F5F5 !important;
+  margin-right: 1px !important;
+  background-color: #F5F5F5 !important;
 }
 
 form .form-check-input {
@@ -289,18 +310,17 @@ form .form-check-input {
   background-color: #FF710F !important;
 }
 
-.modal-dialog{
+.modal-dialog {
   max-width: 100% !important;
 }
-.modal-dialog .modal-content{
+
+.modal-dialog .modal-content {
   border-radius: 30px !important;
 }
 
 .login-page .register-text a {
   color: var(--orange) !important;
-
 }
-
 
 form .form-check-input {
   background-color: #fff !important;
@@ -410,88 +430,100 @@ form .form-check-input {
   opacity: 0.7!important
 }
 
-.end-reservation .total{
-  border-color:  #000000 !important;
+.end-reservation .total {
+  border-color: #000000 !important;
 }
 
-.end-reservation .home-button{
-  border-color:  #000000 !important;
-  border-radius:20px !important;
+.end-reservation .home-button {
+  border-color: #000000 !important;
+  border-radius: 20px !important;
   cursor: pointer;
 }
 
-.menue.mobile .menues-area{
-  width:90%;
-  height:90vh;
-  left:50%;
-  transform: translate(-51.5%,-50%) !important;
+.menue.mobile .menues-area {
+  width: 90%;
+  height: 90vh;
+  left: 50%;
+  transform: translate(-51.5%, -50%) !important;
 }
-.menue.mobile .menues-area .nav-item a{
-  font-size:1rem !important;
+
+.menue.mobile .menues-area .nav-item a {
+  font-size: 1rem !important;
 }
-.datePicker .modal-content{
-  width:25% !important;
+
+.datePicker .modal-content {
+  width: 25% !important;
 }
+
+.popular-cars .carousel-indicators .slide-button.active>.circle-active {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 100%;
+  background-color: var(--orange);
+}
+
 @media screen and (min-width: 992px) and (max-width: 1600px) {
-  .datePicker .modal-content{
-    width:50% !important;
+  .datePicker .modal-content {
+    width: 50% !important;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
- 
   .MuiTypography-body1 {
     font-size: 0.9rem !important;
   }
   input::placeholder {
     font-size: 0.8rem;
-  } 
-  
+  }
   .policies .tab-bar {
     width: 100% !important;
   }
-
-  .datePicker .modal-content{
-    width:50% !important;
+  .datePicker .modal-content {
+    width: 50% !important;
   }
-  #carouselExampleDark .btn-orange{
+  #carouselExampleDark .btn-orange {
     margin-bottom: 20px !important;
     margin-top: 20px !important;
   }
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
-    
   .services .tab-bar {
     width: 100% !important;
   }
-
   input::placeholder {
     font-size: 0.75rem;
-  } 
-
+  }
   .MuiTypography-body1 {
     font-size: 0.85rem !important;
   }
-
   .policies .tab-bar {
     width: 100% !important;
   }
-  .datePicker .modal-content{
-    width:100% !important;
+  .datePicker .modal-content {
+    width: 100% !important;
   }
   .date-slide .dropdown img {
     right: -10px !important;
   }
-  #carouselExampleDark .btn-orange{
-    font-size: 0.75rem !important;
-    width: 100% !important;
-    margin-bottom: 20px !important;
-    margin-top: 20px !important;
+  #carouselExampleDark {
+    text-align: center !important;
   }
-  .container.cars-tab-menu  {
+  .popular-cars .carousel-indicators .slide-button.active>.circle-active {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 100%;
+    background-color: var(--orange);
+  }
+  #carouselExampleDark .btn-orange {
+    font-size: 0.75rem !important;
+    width: 120% !important;
+    margin-left: -9% !important;
+    margin-bottom: 40px !important;
+    margin-top: 30px !important;
+  }
+  .container.cars-tab-menu {
     padding: 0 !important;
-    margin: 0 5px !important;
   }
   .cars .tab-bar .MuiTab-root {
     padding: 0 10px !important;
@@ -499,5 +531,4 @@ form .form-check-input {
     max-width: 18% !important;
     width: 18% !important;
   }
-  
 }
