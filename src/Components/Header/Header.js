@@ -6,7 +6,10 @@ import { useLocation } from 'react-router-dom'
 import { updatePage } from '../../store/general/pageSlice'
 import { toogle } from '../../store/menues/menuesSlice'
 import { Menues } from '../'
-import Login from '../../pages/Crud/Login'
+import LoginPopup from '../../pages/Crud/LoginPopup'
+import $ from 'jquery';
+window.jQuery = $;
+
 export default function Header() {
 
     const location = useLocation()
@@ -15,6 +18,25 @@ export default function Header() {
     dispatch(updatePage(location.pathname))
     const page = useSelector((state) => state.page.value)
 
+
+    const $menu = $('.login-dropdown-menu');
+    const $toogleMenu = $('.dropdown-menu');
+    $(document).mouseup(e => {
+        if (!$menu.is(e.target) // if the target of the click isn't the container...
+            && $menu.has(e.target).length === 0) // ... nor a descendant of the container
+        {
+            $menu.slideUp();
+        }
+    });
+
+    $(document).mouseup(e => {
+        if (!$toogleMenu.is(e.target) // if the target of the click isn't the container...
+            && $toogleMenu.has(e.target).length === 0) // ... nor a descendant of the container
+        {
+            $toogleMenu.slideUp();
+        }
+    });
+    
 
     if (page !== "/reservation") {
         return (
@@ -83,12 +105,12 @@ export default function Header() {
 
                                 </div>
                                 <div className="login-dropdown-menu dropdown-menu bg-light position-absolute rounded" role="menu" aria-labelledby="dLabel">
-                                    <Login formWidth="100" />
+                                    <LoginPopup formWidth="100" />
                                 </div>
 
                                 <button type="button" class="btn btn-outline-light border-0 my-auto search-button "><i class="las la-search"></i></button>
-                                <div class="menu-button">
-                                <button type="button" class="btn btn-outline-light border-0 my-auto menu-button " onClick={() => { dispatch(toogle(true)) }}><i class="las la-bars"></i><span className="ps-1">Menü</span></button>
+                                <div class="menu-button my-auto">
+                                    <button type="button" class="btn btn-outline-light border-0  menu-button " onClick={() => { dispatch(toogle(true)) }}><i class="las la-bars"></i><span className="ps-1">Menü</span></button>
                                 </div>
                             </div>
                         </div>

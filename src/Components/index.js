@@ -10,4 +10,5 @@ import Accordion from './Accordion/Accordion'
 import Menues from './Menues/Menues'
 import PackageModal from './PackageModal'
 import CarModal from './CarModal'
-export { CarCard, CarModal, OfficesCard, PersonalForm, CorporateForm, IndividualRentalForm, CorporateRentalForm, Menues, ContactForm, Accordion, PackageModal, LoginForm }
+import TimePicker from './PickerModal/TimePicker';
+export { TimePicker, CarCard, CarModal, OfficesCard, PersonalForm, CorporateForm, IndividualRentalForm, CorporateRentalForm, Menues, ContactForm, Accordion, PackageModal, LoginForm }

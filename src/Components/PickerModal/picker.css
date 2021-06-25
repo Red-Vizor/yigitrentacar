@@ -1,0 +1,50 @@
+.timePicker{
+    border-radius:25px !important;
+    height: 200px !important;   
+}
+.timePicker .row{
+    margin-left: 10px;
+}
+.timePicker .hide-scroll-rigth{
+    position: absolute;
+    width:50px;
+    height:75%;
+    top: 49.5%;
+    right: -30px;
+    transform: translateY(-50%);
+    border-radius: 0 20px 20px 0;
+    background-color: white !important;
+}
+.timePicker .hide-scroll-left{
+    position: absolute;
+    width:50px;
+    height:75%;
+    top: 49.5%;
+    left: -35px;
+    transform: translateY(-50%);
+    border-radius: 20px 0 0 20px;
+    background-color: white !important;
+}
+.timePicker .form-select{
+    position:absolute;
+    border: none !important;    
+}
+
+.timePicker select option:checked {
+    background: #e8541e linear-gradient(0deg, #e8541e 0%, #e8541e 100%);
+    border-radius: 15px;
+}
+.timePicker select:focus option:checked {
+    background: #e8541e linear-gradient(0deg, #e8541e 0%, #e8541e 100%);
+    border-radius: 15px;
+    color: #ffffff !important;
+}
+.timePicker .minutes{
+    left:-5px;
+    border-radius: 0 20px 0 0px;
+}
+.timePicker .form-select:focus{
+    outline: none !important;
+    border: none !important;
+    box-shadow: none;
+}
