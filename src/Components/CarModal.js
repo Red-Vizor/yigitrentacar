@@ -1,7 +1,13 @@
 import React from 'react'
 import './component.css'
+import { useDispatch } from 'react-redux'
+import { changePage } from '../store/reservation/reservationPageChangeSlice'
 
+import $ from 'jquery';
+window.jQuery = $;
 export default function CarModal() {
+
+    const dispatch = useDispatch()
     return (
         <div className="modal fade" id="carModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div className="modal-dialog modal-dialog-centered car-modal rounded ">
@@ -121,11 +127,9 @@ export default function CarModal() {
                                         </div>
                                     </div>
                                     <div className="col-6 d-flex">
-                                        <a className="btn float-end my-auto  text-white"><span className="h6 bold">SEÇ</span> <img src="./assets/icons/carcard/buttonright.svg" className="my-auto ms-1" width="40px" /> </a>
+                                        <button className="btn float-end my-auto  text-white" onClick={() => { dispatch(changePage(2)) }} data-bs-dismiss="modal" aria-label="Close" ><span className="h6 bold">SEÇ</span> <img src="./assets/icons/carcard/buttonright.svg" className="my-auto ms-1" width="40px" /> </button>
                                     </div>
-
                                 </div>
-
                             </div>
                         </div>
                     </div>

@@ -1,7 +1,10 @@
 import React from 'react'
 import './component.css'
+import {  useDispatch } from 'react-redux'
+import { changePage } from '../store/reservation/reservationPageChangeSlice'
 
 export default function Carcard() {
+    const dispatch = useDispatch()
     return (
         <div className="ccard  mx-lg-5 mx-md-2 my-4">
             <div class="card car-card bg-white border-0 shadow-light">
@@ -25,7 +28,7 @@ export default function Carcard() {
                                 <span>₺  <span className="bold">3450</span>,00</span>
                             </div>
                         </div>
-                        <a className="btn float-end"><span className="h6 bold">SEÇ</span> <img src="./assets/icons/carcard/buttonright.svg" className="my-auto ms-1 w-50" /> </a>
+                        <a className="btn float-end" onClick={()=> {dispatch(changePage(2))}}><span className="h6 bold">SEÇ</span> <img src="./assets/icons/carcard/buttonright.svg" className="my-auto ms-1 w-50" /> </a>
                     </div>
                 </div>
                 <div className="card-bottom d-flex py-3 px-lg-4">
@@ -58,7 +61,6 @@ export default function Carcard() {
                     </div>
                 </div>
             </div>
-
         </div>
 
     )

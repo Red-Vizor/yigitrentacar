@@ -1,7 +1,13 @@
 import React from 'react'
 import './reservation.css'
+import { useSelector, useDispatch } from 'react-redux'
+import { changePage } from '../../store/reservation/reservationPageChangeSlice'
 
 export default function Package() {
+
+    const dispatch = useDispatch()
+    const page = useSelector((state) => state.reservationChange.value);
+
     return (
         <section className="package">
             <div className="package-header header-area py-4 bg-pink-powder d-flex justify-content-center">
@@ -12,7 +18,7 @@ export default function Package() {
                     <p className="bold">21.06.2021 <img src="./assets/icons/arrow-circle.svg" className="my-auto ms-1 h-50 " /> 21.06.2021</p>
                     <p className="bold">340,37₺</p>
                 </div>
-                <button type="button" className="btn btn-dark btn-orange my-auto ms-4 px-lg-4 py-lg-3"> <span className="bold">REZERVASYONA DEVAM ET</span> <img src="./assets/icons/rightlong.svg" width="40px" className="ms--lg3 my-auto" /></button>
+                <button type="button" className="btn btn-dark btn-orange my-auto ms-4 px-lg-4 py-lg-3" onClick={() => {dispatch(changePage(page+1))}}> <span className="bold">REZERVASYONA DEVAM ET</span> <img src="./assets/icons/rightlong.svg" width="40px" className="ms--lg3 my-auto" /></button>
             </div>
             <div className="package-body container py-4">
                 <div className="d-flex my-4">
@@ -242,7 +248,7 @@ export default function Package() {
 
 
             <div className="container d-flex py-4">
-                <button type="button" className="btn btn-dark btn-orange my-auto ms-auto px-lg-4 py-lg-3"> <span className="bold">REZERVASYONA DEVAM ET</span> <img src="./assets/icons/rightlong.svg" width="40px" className="ms-3 my-auto" /></button>
+                <button type="button" className="btn btn-dark btn-orange my-auto ms-auto px-lg-4 py-lg-3" onClick={() => {dispatch(changePage(page+1))}}> <span className="bold">REZERVASYONA DEVAM ET</span> <img src="./assets/icons/rightlong.svg" width="40px" className="ms-3 my-auto" /></button>
             </div>
         </section>
     )

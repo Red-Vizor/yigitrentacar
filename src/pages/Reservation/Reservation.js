@@ -1,15 +1,19 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './reservation.css'
 import ReservationHead from '../../Components/Header/ReservationHead'
 import Cars from './Cars'
 import Package from './Package'
+import EndDate from './EndDate'
 import ReservationForm from './ReservationForm'
-import {PackageModal} from '../../Components'
+import { PackageModal } from '../../Components'
 import PropTypes from 'prop-types'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
+import DateSlide from '../../Components/DateSlide'
+import { useSelector, useDispatch } from 'react-redux'
+import { changePage } from '../../store/reservation/reservationPageChangeSlice'
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -47,11 +51,21 @@ function changeProps(index) {
 
 
 export default function Reservation() {
-    const [value, setValue] = React.useState(0);
+    const [value, setValue] = React.useState(1);
 
+    const dispatch = useDispatch()
     const handleChange = (event, newValue) => {
         setValue(newValue);
+        dispatch(changePage(newValue));
     };
+
+    const page = useSelector((state) => state.reservationChange.value);
+
+
+    useEffect(() => {
+        setValue(page)
+    }, [page]);
+
     return (
         <div className="reservation-page">
             <ReservationHead />
@@ -64,7 +78,7 @@ export default function Reservation() {
                                 <span className="h6 bold">1.KİRALAMA | ALIŞ & İADE </span>
                                 <p className="">Bodrum, Yalıkavak </p>
                                 <p className="h7">21.06.2021 <img src="./assets/icons/arrow-circle.svg" className="my-auto ms-1 h-50" /> 21.06.2021</p>
-                                
+
                                 <a href="#" className="checked-link position-absolute mt-lg-3">Düzenle <span><img src="./assets/icons/check-green.svg" className="check arrow-icon mt-1 ms-1" /></span></a>
                             </div>
                         } {...changeProps(1)} />
@@ -99,8 +113,13 @@ export default function Reservation() {
                 </div>
             </div>
 
+            <TabPanel value={value} index={0}>
+                <DateSlide />
+            </TabPanel>
             <TabPanel value={value} index={1}>
-                <Cars />
+                <div className="container-fluid">
+                    <Cars />
+                </div>
             </TabPanel>
             <TabPanel value={value} index={2}>
                 <Package />
@@ -110,6 +129,9 @@ export default function Reservation() {
             </TabPanel>
             <TabPanel value={value} index={4}>
                 <ReservationForm />
+            </TabPanel>
+            <TabPanel value={value} index={5}>
+                <EndDate />
             </TabPanel>
 
             <PackageModal />

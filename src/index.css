@@ -296,6 +296,125 @@ form .form-check-input {
 }
 
 
+form .form-check-input {
+  background-color: #fff !important;
+  border-color: #595757 !important;
+}
+
+.form-check-input:checked[type=checkbox] {
+  background-color: #FF710F !important;
+}
+
+.modal-dialog {
+  max-width: 100% !important;
+}
+
+.modal-dialog .modal-content {
+  border-radius: 30px !important;
+}
+
+.login-page .register-text a {
+  color: var(--orange) !important;
+}
+
+.rdrSelected, .rdrInRange, .rdrStartEdge, .rdrEndEdge {
+  background-color: var(--orange) !important;
+  color: #FFFFFF;
+}
+
+.datePicker .modal-dialog .modal-content {
+  background-color: rgb(255, 255, 255, 0.9) !important;
+}
+
+.login-dropdown:after {
+  display: none !important;
+}
+
+.date-slide {
+  height: 83.5vh;
+  background-size: cover;
+}
+
+.card-date .form-card-date {
+  background-color: rgb(255, 255, 255, 0.5);
+}
+
+.card-date .filter-date {
+  background-color: #000000;
+  border-bottom: 15px solid var(--orange);
+}
+
+.form-card-date select {
+  text-align-last: center;
+}
+
+.form-card-date .btn-orange {
+  font-size: 1.3rem;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.date-slide .dropdown {
+  width: 100% !important;
+}
+
+.date-slide .dropdown .dropdown-toggle::after {
+  display: none !important;
+}
+
+.date-slide .dropdown a.dropdown-toggle:hover {
+  background-color: var(--orange) !important;
+  color: var(--white) !important;
+  opacity: 1;
+}
+
+.date-slide .dropdown img {
+  height: 70%;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  opacity: 0.7!important
+}
+
+.date-slide .dropdown .dropdown-menu li:hover {
+  background-color: var(--orange) !important;
+  color: var(--white);
+  cursor: pointer;
+  opacity: 1;
+}
+
+.date-slide .date-inputs-area .clock:hover, .date-slide .date-inputs-area .date:hover {
+  cursor: pointer;
+}
+
+.date-slide .date-inputs-area .clock .text, .date-slide .date-inputs-area .date .text {
+  color: gray;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.date-slide .date-inputs-area img {
+  height: 40%;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  opacity: 0.7!important
+}
+
+.end-reservation .total{
+  border-color:  #000000 !important;
+}
+
+.end-reservation .home-button{
+  border-color:  #000000 !important;
+  border-radius:20px !important;
+  cursor: pointer;
+}
+
+
 @media screen and (min-width: 992px) and (max-width: 1600px) {
 
 }
