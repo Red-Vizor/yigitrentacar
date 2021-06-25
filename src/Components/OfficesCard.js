@@ -32,8 +32,6 @@ export default function OfficesCard() {
                                 <button type="button" className="btn btn-dark btn-orange mx-auto mt-2 py-2 px-5my-2">Mesajı Gönder</button>
                             </div>
                         </form>
-
-
                     </div>
                     <div className="col maps bg-image " style={{ backgroundImage: "url(./assets/images/istanbul.png" }}>
                     </div>

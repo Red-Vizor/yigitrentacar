@@ -8,24 +8,23 @@ import Box from '@material-ui/core/Box'
 import { CarCard } from '../../Components/'
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
-
+  
     return (
-        <div
-            role="tabpanel"
-            hidden={value !== index}
-            id={`simple-tabpanel-${index}`}
-            aria-labelledby={`simple-tab-${index}`}
-            {...other}
-        >
-            {value === index && (
-                <Box p={3}>
-                    <Typography>{children}</Typography>
-                </Box>
-            )}
-        </div>
+      <div
+        role="tabpanel"
+        hidden={value !== index}
+        id={`scrollable-auto-tabpanel-${index}`}
+        aria-labelledby={`scrollable-auto-tab-${index}`}
+        {...other}
+      >
+        {value === index && (
+          <Box p={3}>
+            <Typography>{children}</Typography>
+          </Box>
+        )}
+      </div>
     );
-}
-
+  }
 TabPanel.propTypes = {
     children: PropTypes.node,
     index: PropTypes.any.isRequired,
@@ -56,7 +55,8 @@ export default function Car() {
             </div>
 
             <div className="container cars-tab-menu">
-                <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className="tab-bar shadow-light mb-5" centered>
+                <Tabs value={value} onChange={handleChange} aria-label="simple tabs example"
+                    scrollButtons="auto" className="tab-bar shadow-light mb-5" centered>
                     <Tab label="Tüm Araçlar" {...changeProps(0)} />
                     <Tab label="Ekonomik" {...changeProps(1)} />
                     <Tab label="Orta" {...changeProps(2)} />

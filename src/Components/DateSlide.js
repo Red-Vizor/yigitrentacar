@@ -114,11 +114,11 @@ export default function DateSlide() {
                                 moveRangeOnFirstSelection={false}
                                 ranges={state}
                             />
-
+                            
                         </div>
                         <div className="container px-5 d-flex justify-content-between">
-                            <button type="button" className="btn btn-dark btn-orange-outline w-25  py-2 ">Bugün</button>
-                            <button type="button" className="btn btn-dark btn-orange w-25  py-2 ">Seç</button>
+                            <button type="button" className="btn btn-dark btn-orange-outline w-25  py-2 " data-bs-dismiss="modal" aria-label="Close">Bugün</button>
+                            <button type="button" className="btn btn-dark btn-orange w-25  py-2 " data-bs-dismiss="modal" aria-label="Close">Seç</button>
                         </div>
                     </div>
                 </div>
@@ -130,8 +130,8 @@ export default function DateSlide() {
                             <TimePicker />
                         </div>
                         <div className="container px-5 d-flex justify-content-between">
-                            <button type="button" className="btn btn-dark btn-orange-outline w-25  py-2 ">Bugün</button>
-                            <button type="button" className="btn btn-dark btn-orange w-25  py-2 ">Seç</button>
+                            <button type="button" className="btn btn-dark btn-orange-outline w-25  py-2 " data-bs-dismiss="modal" aria-label="Close">Bugün</button>
+                            <button type="button" className="btn btn-dark btn-orange w-25  py-2 " data-bs-dismiss="modal" aria-label="Close">Seç</button>
                         </div>
                     </div>
                 </div>
@@ -143,8 +143,8 @@ export default function DateSlide() {
                             <TimePicker />
                         </div>
                         <div className="container px-5 d-flex justify-content-between">
-                            <button type="button" className="btn btn-dark btn-orange-outline w-25  py-2 ">Bugün</button>
-                            <button type="button" className="btn btn-dark btn-orange w-25  py-2 ">Seç</button>
+                            <button type="button" className="btn btn-dark btn-orange-outline w-25  py-2 " data-bs-dismiss="modal" aria-label="Close">Bugün</button>
+                            <button type="button" className="btn btn-dark btn-orange w-25  py-2 " data-bs-dismiss="modal" aria-label="Close">Seç</button>
                         </div>
                     </div>
                 </div>
