@@ -16,13 +16,13 @@ export default function ListCard(props) {
                 )}
                 <p class="card-text mb-4">{props.content}</p>
                 {props.type == "campaign" && (
-                    <a href="#" class="btn btn-orange-outline campaign-button extra-bold position-absolute px-4 py-1 d-flex">
+                    <a href={"/"+ props.adress} class="btn btn-orange-outline campaign-button extra-bold position-absolute px-4 py-1 d-flex">
                         <span class="m-auto">{props.btnText}</span>
                         <i class="las la-long-arrow-alt-right my-auto ms-1"></i>
                     </a>
                 )}
                 {props.type == "location" && (
-                    <a href="#" class="btn btn-orange-outline location-button extra-bold position-absolute px-4 py-2 d-flex">
+                    <a href={"/"+ props.adress} class="btn btn-orange-outline location-button extra-bold position-absolute px-4 py-2 d-flex">
                         <span class="m-auto">{props.btnText}</span>
                         <i class="las la-long-arrow-alt-right my-auto ms-1"></i>
                     </a>

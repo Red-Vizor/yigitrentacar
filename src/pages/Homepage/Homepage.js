@@ -69,6 +69,7 @@ export default function Homepage() {
                                     imageUrl="./assets/images/car1.jpg"
                                     title="YAZA MERHABA KAMPANYASI!"
                                     btnText="REZERVASYON YAP"
+                                    adress="campaign"
                                     content="Yiğit Rent A Car yaza merhaba kampanyası! Tüm Araç Gruplarında %10 indirim." />
                             </div>
                             <div className="item">
@@ -77,6 +78,7 @@ export default function Homepage() {
                                     imageUrl="./assets/images/car2.jpg"
                                     title="YAZA MERHABA KAMPANYASI!"
                                     btnText="REZERVASYON YAP"
+                                    adress="campaign"
                                     content="Yiğit Rent A Car yaza merhaba kampanyası! Tüm Araç Gruplarında %10 indirim." />
                             </div>
                             <div className="item">
@@ -85,6 +87,7 @@ export default function Homepage() {
                                     imageUrl="./assets/images/car3.jpg"
                                     title="YAZA MERHABA KAMPANYASI!"
                                     btnText="REZERVASYON YAP"
+                                    adress="campaign"
                                     content="Yiğit Rent A Car yaza merhaba kampanyası! Tüm Araç Gruplarında %10 indirim." />
                             </div>
                         </div>
@@ -103,6 +106,7 @@ export default function Homepage() {
                                     imageUrl="./assets/images/city1.jpg"
                                     title="İSTANBUL"
                                     btnText="İSTANBUL LOKASYONLAR"
+                                    adress="popularlocation"
                                     content="İstanbul' da mutlaka görmeniz gereken yerler." />
                             </div>
                             <div className="item">
@@ -110,6 +114,7 @@ export default function Homepage() {
                                     imageUrl="./assets/images/city2.jpg"
                                     title="İZMİR"
                                     btnText="İZMİR LOKASYONLAR"
+                                    adress="popularlocation"
                                     content="İzmir' de mutlaka görmeniz gereken yerler." />
                             </div>
                             <div className="item">
@@ -117,6 +122,7 @@ export default function Homepage() {
                                     imageUrl="./assets/images/city3.jpg"
                                     title="BODRUM"
                                     btnText="BODRUM LOKASYONLAR"
+                                    adress="popularlocation"
                                     content="Bodrum' da mutlaka görmeniz gereken yerler." />
                             </div>
                         </div>

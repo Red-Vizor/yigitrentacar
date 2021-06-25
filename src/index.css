@@ -1,13 +1,16 @@
 :root {
   --orange: #E8551E;
-  --dark:#000000;
-  --pink:#FD1C67;
+  --dark: #000000;
+  --pink: #FD1C67;
   --pink-powder: #FFF0E8;
   --white: #ffffff;
   --gray: #595757;
-  --green-check:rgb(88, 214, 140,0.20);
-  --green-check-1:rgb(88, 214, 140);
+  --green-check: rgb(88, 214, 140, 0.20);
+  --green-check-2: rgb(88, 214, 140, 0.30);
+  --green-check-1: rgb(88, 214, 140);
+  --gren-check-text: #3BC712;
 }
+
 
 *{
   font-family: 'Open Sans', sans-serif;
@@ -40,7 +43,9 @@ p, h1,h2,h3,h4,h5,h6 {
   padding:0;
   margin: 0;
 }
-
+.green-text-color{
+  color: var(--gren-check-text) !important;
+}
 .bg-black{
   background-color: var(--dark) !important;
 }
@@ -71,8 +76,9 @@ p, h1,h2,h3,h4,h5,h6 {
 .bg-gray:checked{
   background-color: var(--gray) !important;
 }
-
-
+.bg-success-green {
+  background-color: var(--green-check-2);
+}
 .extra-bold{
   font-weight: 800 !important;
 }

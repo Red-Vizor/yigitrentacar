@@ -8,29 +8,31 @@ export default function EndDate() {
         <div className="end-reservation bg-success-green py-5">
             <div className="container text-center">
                 <span className="extra-bold fs-3 green-text-color">Rezervasyonunuz Tamamlandı</span>
-                <div className="card w-50 my-5 mx-auto" >
+                <div className="card  my-5 mx-auto" >
                     <div className="card-body text-start">
                         <h5 className="card-title text-center mb-4 green-text-color bold">Rezervasyon Detayları</h5>
                         <div className="row px-5">
-                            <div className="col-6">
-                                <h6 className="bold mt-2">
+                            <div className="col-12 col-lg-6">
+                                <h6 className="bold mt-4">
                                     1. KİRALAMA | ALIŞ & İADE
                                 </h6>
+                                <p className="h7">Mercedes E200 AMG </p>
+                                <p className="h7">Dizel Otomatik</p>
                             </div>
-                            <div className="col-6">
-                                <h6 className="bold mt-2">
+                            <div className="col-12 col-lg-6">
+                                <h6 className="bold mt-4">
                                     2. ARACINIZ
                                 </h6>
                                 <p className="h7">Mercedes E200 AMG </p>
                                 <p className="h7">Dizel Otomatik</p>
                             </div>
-                            <div className="col-6 mt-2">
-                                <h6 className="bold mt-2">
+                            <div className="col-12 col-lg-6 mt-2">
+                                <h6 className="bold mt-4">
                                     3. GÜVENCE PAKETLERİ
                                 </h6>
                             </div>
-                            <div className="col-6 mt-2">
-                                <h6 className="bold mt-2">
+                            <div className="col-12 col-lg-6 mt-2">
+                                <h6 className="bold mt-4">
                                     4. EK ÜRÜNLER
                                 </h6>
                                 <p >Mini Hasar Sigortası 1500 Tl</p>

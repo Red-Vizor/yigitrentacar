@@ -173,6 +173,11 @@
 
 .modal .btn-add {
     transform: rotate(45deg);
+    display:block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid red;
 }
 
 .car-modal {

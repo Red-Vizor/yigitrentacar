@@ -56,13 +56,9 @@ export default function PackageModal() {
                                                         </div>
                                                         <div className="col d-flex">
                                                             <div className="m-auto">
-                                                                <button className="btn btn-add rounded-circle bg-orange text-white">
+                                                                <button className="btn btn-add mx-auto rounded-circle bg-orange text-white">
                                                                     +
                                                                 </button>
-
-                                                                <span className="bold ms-3 fs-6">
-                                                                    ÇIKAR
-                                                                </span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -94,13 +90,11 @@ export default function PackageModal() {
                                                         </div>
                                                         <div className="col d-flex">
                                                             <div className="m-auto">
-                                                                <button className="btn btn-add rounded-circle bg-orange text-white">
+                                                                <button className="btn btn-add mx-auto rounded-circle bg-orange text-white">
                                                                     +
                                                                 </button>
 
-                                                                <span className="bold ms-3 fs-6">
-                                                                    ÇIKAR
-                                                                </span>
+                                                                
                                                             </div>
                                                         </div>
                                                     </div>
@@ -133,13 +127,11 @@ export default function PackageModal() {
                                                         </div>
                                                         <div className="col d-flex">
                                                             <div className="m-auto">
-                                                                <button className="btn btn-add rounded-circle bg-orange text-white">
+                                                                <button className="btn btn-add mx-auto rounded-circle bg-orange text-white">
                                                                     +
                                                                 </button>
 
-                                                                <span className="bold ms-3 fs-6">
-                                                                    ÇIKAR
-                                                                </span>
+                                                                
                                                             </div>
                                                         </div>
                                                     </div>
@@ -171,13 +163,11 @@ export default function PackageModal() {
                                                         </div>
                                                         <div className="col d-flex">
                                                             <div className="m-auto">
-                                                                <button className="btn btn-add rounded-circle bg-orange text-white">
+                                                                <button className="btn btn-add mx-auto rounded-circle bg-orange text-white">
                                                                     +
                                                                 </button>
 
-                                                                <span className="bold ms-3 fs-6">
-                                                                    ÇIKAR
-                                                                </span>
+                                                                
                                                             </div>
                                                         </div>
                                                     </div>
@@ -209,13 +199,11 @@ export default function PackageModal() {
                                                         </div>
                                                         <div className="col d-flex">
                                                             <div className="m-auto">
-                                                                <button className="btn btn-add rounded-circle bg-orange text-white">
+                                                                <button className="btn btn-add mx-auto rounded-circle bg-orange text-white">
                                                                     +
                                                                 </button>
 
-                                                                <span className="bold ms-3 fs-6">
-                                                                    ÇIKAR
-                                                                </span>
+                                                                
                                                             </div>
                                                         </div>
                                                     </div>

@@ -80,6 +80,9 @@
     background-color: #FFF8F5;
     font-weight: 700;
 }
+.end-reservation .card{
+    width:50% !important;
+}
 
 @media screen and (min-width: 992px) and (max-width: 1600px) {
 
@@ -153,9 +156,24 @@
     .header-content .reservation-car-image {
         width:90% !important;
     }
+    .end-reservation .card{
+        width:75% !important;
+        text-align: center !important;
+    }
+    .end-reservation .card .row{
+        text-align: center !important;
+    }
+
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
+    .end-reservation .card{
+        width:100% !important;
+        text-align: center !important;
+    }
+    .end-reservation .card .row{
+        text-align: center !important;
+    }
     
     .package-header .package-car-image {
         width: 45%;

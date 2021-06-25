@@ -110,7 +110,7 @@ export default function Header() {
 
                                 <button type="button" class="btn btn-outline-light border-0 my-auto search-button "><i class="las la-search"></i></button>
                                 <div class="menu-button my-auto">
-                                    <button type="button" class="btn btn-outline-light border-0  menu-button " onClick={() => { dispatch(toogle(true)) }}><i class="las la-bars"></i><span className="ps-1">Menü</span></button>
+                                    <button type="button" class="btn btn-outline-light border-0 my-auto  menu-button " onClick={() => { dispatch(toogle(true)) }}><i class="las la-bars"></i><span className="ps-1">Menü</span></button>
                                 </div>
                             </div>
                         </div>

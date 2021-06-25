@@ -8,6 +8,7 @@ window.jQuery = $;
 export default function CarModal() {
 
     const dispatch = useDispatch()
+    
     return (
         <div className="modal fade" id="carModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div className="modal-dialog modal-dialog-centered car-modal rounded ">
@@ -52,11 +53,11 @@ export default function CarModal() {
                             <div className="buttons py-2 px-4 d-flex">
                                 <div className="m-auto">
                                     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span className="carousel-control-prev-icon d-flex" aria-hidden="true"><i class="las la-angle-left text-dark my-auto"></i></span>
                                         <span className="visually-hidden">Previous</span>
                                     </button>
                                     <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span className="carousel-control-next-icon d-flex" aria-hidden="true"><i class="las la-angle-right text-dark my-auto"></i></span>
                                         <span className="visually-hidden">Next</span>
                                     </button>
                                 </div>
