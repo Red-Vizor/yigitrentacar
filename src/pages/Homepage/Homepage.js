@@ -61,7 +61,7 @@ export default function Homepage() {
             <div className="container-fluid py-5">
                 <div className="container campaigns">
                     <div className="content-area pt-4 ">
-                        <Head headPosition="start" head="KAMPANYALAR" hrSize={9} />
+                        <Head headPosition="start" head="KAMPANYALAR"  hrSize="col-8 col-md-9" headSize="col-4 col-md-3"/>
                         <div className="owl-carousel owl-carousel-home owl-theme my-4">
                             <div className="item">
                                 <ListCard
@@ -98,7 +98,7 @@ export default function Homepage() {
             <div className="container-fluid py-5 bg-image" style={{ backgroundImage: "linear-gradient(rgb(250, 250, 250,0.7), rgb(250, 250, 250,0.7)), url('./assets/images/road.png')" }}>
                 <div className="container campaigns my-4">
                     <div className="content-area pt-4 ">
-                        <Head headPosition="end" head="POPÜLER LOKASYONLAR" hrSize={8} />
+                        <Head headPosition="end" head="POPÜLER LOKASYONLAR" hrSize="col-5 col-md-8" headSize="col-7 col-md-4"/>
 
                         <div className="owl-carousel owl-carousel-home owl-theme my-4">
                             <div className="item">

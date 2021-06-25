@@ -139,4 +139,8 @@
         height: 10px !important;
     }
 
+    .head-content .h5{
+        font-size:0.73rem !important;
+        margin-bottom: 0 !important;
+    }
 }

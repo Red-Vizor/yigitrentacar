@@ -1,4 +1,4 @@
-.header-top .container{
+.header-top .container {
     padding: 0 6%;
     font-size: 0.82rem !important;
 }
@@ -8,70 +8,70 @@
     margin-left: 15px;
 }
 
-.header a{
+.header a {
     font-weight: bold;
 }
 
-.search-button i{
-    font-size:1.4rem;
+.search-button i {
+    font-size: 1.4rem;
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
 }
-.menu-button{
-    font-size:1.3rem;
+
+.menu-button {
+    font-size: 1.3rem;
 }
 
-
-.header-bottom .logo:hover{
+.header-bottom .logo:hover {
     cursor: pointer;
     opacity: 1;
 }
 
-.login-dropdown-menu{
+.login-dropdown-menu {
     width: 420px;
     border: 0 !important;
-    border-radius:0 !important; 
+    border-radius: 0 !important;
     top: 125px;
     right: 25%;
 }
 
-.login-dropdown::after{
-    display:none !important;
-
-}
-.menue.mobile{
-    height:100vh !important;
-}
-.menu-button.mobile-tablet{
+.login-dropdown::after {
     display: none !important;
 }
-.menu-button.web{
+
+.menue.mobile {
+    height: 100vh !important;
+}
+
+.menu-button.mobile-tablet {
+    display: none !important;
+}
+
+.menu-button.web {
     display: block !important;
 }
 
 @media screen and (min-width: 992px) and (max-width: 1600px) {
-    .menu-button.mobile-tablet{
+    .menu-button.mobile-tablet {
         display: none !important;
     }
-    .menu-button.web{
+    .menu-button.web {
         display: block !important;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-    .menu-button.mobile-tablet{
+    .menu-button.mobile-tablet {
         display: block !important;
     }
-    .menu-button.web{
+    .menu-button.web {
         display: none !important;
     }
-
     .call-line img {
         width: 17% !important;
     }
-
     .call-line p {
         font-size: 0.7rem !important;
     }
@@ -79,47 +79,38 @@
         font-size: 0.85rem !important;
     }
     .header-bottom .logo {
-        padding:0 !important;
+        padding: 0 !important;
     }
-
-    
     .login-dropdown span {
         font-size: 0.7rem !important;
     }
-
     .menu-button span {
         font-size: 0.8rem !important;
     }
-
-    .login-dropdown .la-angle-down{
+    .login-dropdown .la-angle-down {
         display: none !important;
     }
     .total-payment {
         font-size: 1rem !important;
     }
-
-    .reservation-head .btn-outline-light{
+    .reservation-head .btn-outline-light {
         font-size: 0.8rem !important;
-       
     }
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
-    .menu-button.mobile-tablet{
+    .menu-button.mobile-tablet {
         display: block !important;
     }
-    .menu-button.web{
+    .menu-button.web {
         display: none !important;
     }
-
     .header-top {
         display: none !important;
     }
-
     .search-button {
         display: none !important;
     }
-
     .header-bottom .call-line {
         padding-left: 1.5rem !important;
         line-height: 0.5rem !important;
@@ -127,47 +118,37 @@
     .call-line img {
         width: 15% !important;
     }
-
     .call-line p {
         font-size: 0.3rem !important;
     }
-    .call-line a{     
+    .call-line a {
         font-size: 0.4rem !important;
- 
     }
-
-    .login-dropdown .la-angle-down{
+    .login-dropdown .la-angle-down {
         display: none !important;
     }
-    
     .header-bottom .btn-outline-light {
         font-size: 0.6rem !important;
         padding: 5px 5px !important;
         margin-right: 0.5rem !important;
     }
-
-    .menu-button{
+    .menu-button {
         background-color: #FFF;
         color: #000 !important;
         border-radius: 0 !important;
         padding: 0.7rem 0.4rem 0 !important;
-        
     }
-
     .header-bottom .logo {
         width: 100% !important;
         margin: 1rem 0!important;
         padding-right: 0.8rem !important;
     }
-
     .header .container-fluid {
         padding: 0 !important;
     }
-
     .header .container {
         padding: 0 !important;
     }
-
     .total-payment {
         font-size: 1rem !important;
         padding: 0.6rem 2.75rem !important;
@@ -176,8 +157,7 @@
         right: 0px !important;
         background-color: #3D3D3D;
     }
-
-    .reservation-head .btn-outline-light{
+    .reservation-head .btn-outline-light {
         font-size: 0.55rem !important;
         position: absolute;
         padding: 0.53rem 1.03rem !important;
@@ -186,7 +166,11 @@
         background-color: #5F5F5F;
         border: none !important;
         font-weight: bold !important;
-       
     }
-   
+    .header-bottom .btn-outline-light .la {
+        font-size: 1.2rem;
+    }
+    .header-bottom .la-bars {
+        margin-top: -10px !important
+    }
 }

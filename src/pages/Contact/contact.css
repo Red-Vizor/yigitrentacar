@@ -72,6 +72,8 @@
         left: 22%;
     }
     
-   
+   .contact-map{
+       height: 100px !important;
+   }
 
 }
