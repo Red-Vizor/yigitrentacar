@@ -420,7 +420,15 @@ form .form-check-input {
   cursor: pointer;
 }
 
-
+.menue.mobile .menues-area{
+  width:90%;
+  height:90vh;
+  left:50%;
+  transform: translate(-51.5%,-50%) !important;
+}
+.menue.mobile .menues-area .nav-item a{
+  font-size:1rem !important;
+}
 @media screen and (min-width: 992px) and (max-width: 1600px) {
 
 }

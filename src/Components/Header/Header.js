@@ -5,7 +5,8 @@ import { Link } from "react-router-dom"
 import { useLocation } from 'react-router-dom'
 import { updatePage } from '../../store/general/pageSlice'
 import { toogle } from '../../store/menues/menuesSlice'
-import { Menues } from '../'
+import { toogleMobile } from '../../store/menues/mobileMenuesSlice'
+import { Menues, MobileMenues } from '../'
 import LoginPopup from '../../pages/Crud/LoginPopup'
 import $ from 'jquery';
 window.jQuery = $;
@@ -42,6 +43,7 @@ export default function Header() {
         return (
             <div className="header">
                 <Menues />
+                <MobileMenues />
                 <div className="container-fluid header-top">
                     <div className="container">
                         <div className="row py-2">
@@ -109,7 +111,10 @@ export default function Header() {
                                 </div>
 
                                 <button type="button" class="btn btn-outline-light border-0 my-auto search-button "><i class="las la-search"></i></button>
-                                <div class="menu-button my-auto">
+                                <div class="menu-button mobile-tablet my-auto">
+                                    <button type="button" class="btn btn-outline-light border-0 my-auto  menu-button " onClick={() => { dispatch(toogleMobile(true)) }}><i class="las la-bars"></i><span className="ps-1">Menü</span></button>
+                                </div>
+                                <div class="menu-button web my-auto">
                                     <button type="button" class="btn btn-outline-light border-0 my-auto  menu-button " onClick={() => { dispatch(toogle(true)) }}><i class="las la-bars"></i><span className="ps-1">Menü</span></button>
                                 </div>
                             </div>
