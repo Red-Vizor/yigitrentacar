@@ -37,7 +37,7 @@ export default function DateSlide() {
                         <div className="form-card-date p-4 position-relative">
                             <div className="filter-date py-5 px-4">
                                 <p className="h5 semi-bold mb-3 ">Alış Yeri</p>
-                                <form>
+                  
                                     <div className="input-group ">
                                         <div className="dropdown">
                                             <a className="dropdown-toggle w-100 d-flex  bg-white  rounded py-3 semi-bold " href="#" style={{ color: "gray" }}>
@@ -106,8 +106,8 @@ export default function DateSlide() {
                                         </div>
                                     </div>
 
-                                    <Link to="/reservation" type="button" className="btn btn-dark btn-orange position-absolute py-2 px-5">Araçları Listele <img src="./assets/icons/rightlong.svg" width="40px" className="ms-3 my-auto" /></Link>
-                                </form>
+                                    <Link to={{ pathname:"reservation", reservationProps :{ name: "deneme"} }} className="btn btn-dark btn-orange position-absolute py-2 px-5">Araçları Listele <img src="./assets/icons/rightlong.svg" width="40px" className="ms-3 my-auto" /></Link>
+                             
                             </div>
                         </div>
                     </div>

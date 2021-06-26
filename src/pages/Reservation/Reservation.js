@@ -50,7 +50,7 @@ function changeProps(index) {
 
 
 
-export default function Reservation() {
+export default function Reservation(props) {
     const [value, setValue] = React.useState(1);
 
     const dispatch = useDispatch()
@@ -61,6 +61,7 @@ export default function Reservation() {
 
     const page = useSelector((state) => state.reservationChange.value);
 
+    console.log(props)
 
     useEffect(() => {
         setValue(page)
