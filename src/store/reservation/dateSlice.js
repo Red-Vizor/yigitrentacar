@@ -4,26 +4,32 @@ export const dateSlice = createSlice({
   name: 'date',
   initialState: {
     value: 0,
-    endDate: 1997
+    endDate: "",
+    startDate:"",
+    startTime:"12:00pm",
+    endTime:"12:00pm",
+    citySelect: "İstanbul, İzmir, Bodrum",
   },
   reducers: {
-    increment: (state) => {
-      // Redux Toolkit allows us to write "mutating" logic in reducers. It
-      // doesn't actually mutate the state because it uses the Immer library,
-      // which detects changes to a "draft state" and produces a brand new
-      // immutable state based off those changes
-      state.value += 1
+    setEndDate: (state, action) => {
+      state.endDate = action.payload
     },
-    decrement: (state) => {
-      state.value -= 1
+    setStartDate: (state, action) => {
+      state.startDate = action.payload
     },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload
+    setEndTime: (state, action) => {
+      state.endTime = action.payload
+    },
+    setStartTime: (state, action) => {
+      state.startTime = action.payload
+    },
+    setCitySelect: (state, action) => {
+      state.citySelect = action.payload
     },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = dateSlice.actions
+export const { setEndDate, setStartDate, setEndTime, setStartTime,setCitySelect} = dateSlice.actions
 
 export default dateSlice.reducer

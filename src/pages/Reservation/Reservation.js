@@ -15,6 +15,7 @@ import DateSlide from '../../Components/DateSlide'
 import { useSelector, useDispatch } from 'react-redux'
 import { changePage } from '../../store/reservation/reservationPageChangeSlice'
 
+
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
@@ -61,11 +62,14 @@ export default function Reservation(props) {
 
     const page = useSelector((state) => state.reservationChange.value);
 
-  
-
     useEffect(() => {
         setValue(page)
     }, [page]);
+
+
+    const dateValue = useSelector((state) => state.dateslice);
+
+
 
     return (
         <div className="reservation-page">
@@ -77,8 +81,8 @@ export default function Reservation(props) {
                         <Tab className="checked-reserve" label={
                             <div className="tab-button text-start py-2 ">
                                 <span className="h6 bold">1.KİRALAMA | ALIŞ & İADE </span>
-                                <p className="">Bodrum, Yalıkavak </p>
-                                <p className="h7">21.06.2021 <img src="./assets/icons/arrow-circle.svg" className="my-auto ms-1 h-50" /> 21.06.2021</p>
+                                <p className="">{dateValue.citySelect}</p>
+                                <p className="h7">{dateValue.startDate} <img src="./assets/icons/arrow-circle.svg" className="my-auto ms-1 h-50" /> {dateValue.endDate} </p>
 
                                 <a href="#" className="checked-link position-absolute">Düzenle <span><img src="./assets/icons/check-green.svg" className="check arrow-icon mt-1 ms-1" /></span></a>
                             </div>
@@ -164,7 +168,7 @@ export default function Reservation(props) {
             <TabPanel value={value} index={5}>
                 <EndDate />
             </TabPanel>
-
+            
             <PackageModal />
         </div>
     )

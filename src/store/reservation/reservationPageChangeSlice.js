@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 export const reservationPageChangeSlice = createSlice({
   name: 'reservationPageChange',
   initialState: {
-    value: 1,
+    value: 0,
   },
   reducers: {
     
