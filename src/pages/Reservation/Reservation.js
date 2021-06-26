@@ -61,7 +61,7 @@ export default function Reservation(props) {
 
     const page = useSelector((state) => state.reservationChange.value);
 
-    console.log(props)
+  
 
     useEffect(() => {
         setValue(page)
@@ -80,7 +80,7 @@ export default function Reservation(props) {
                                 <p className="">Bodrum, Yalıkavak </p>
                                 <p className="h7">21.06.2021 <img src="./assets/icons/arrow-circle.svg" className="my-auto ms-1 h-50" /> 21.06.2021</p>
 
-                                <a href="#" className="checked-link position-absolute mt-lg-3">Düzenle <span><img src="./assets/icons/check-green.svg" className="check arrow-icon mt-1 ms-1" /></span></a>
+                                <a href="#" className="checked-link position-absolute">Düzenle <span><img src="./assets/icons/check-green.svg" className="check arrow-icon mt-1 ms-1" /></span></a>
                             </div>
                         } {...changeProps(1)} />
                         <Tab label={

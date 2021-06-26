@@ -5,23 +5,29 @@ import { DateRange } from 'react-date-range'
 import * as locales from 'react-date-range/dist/locale';
 import Moment from 'moment';
 import TimeKeeper from 'react-timekeeper';
+import { useSelector, useDispatch } from 'react-redux'
 
 export default function DateSlide() {
     Moment.locale('tr')
     const [city, setCity] = useState("İstanbul, İzmir, Bodrum")
+    const sss = useSelector((state) => state.dateslice.endDate)
+
+    console.log(sss);
 
     const [timeStart, setTimeStart] = useState('12:34pm')
     const [timeEnd, setTimeEnd] = useState('12:34pm')
     const [state, setState] = useState([
         {
             startDate: new Date(),
-            endDate: null,
+            endDate: new Date(),
             key: 'selection'
         }
     ]);
     var startRentDate = Moment(state[0].startDate).format('DD MM yyy');
-
     var endRentDate = Moment(state[0].endDate).format('DD.MM.yyy');
+    
+
+
     return (
         <div className="home-slide-area">
 
@@ -106,7 +112,7 @@ export default function DateSlide() {
                                         </div>
                                     </div>
 
-                                    <Link to={{ pathname:"reservation", reservationProps :{ name: "deneme"} }} className="btn btn-dark btn-orange position-absolute py-2 px-5">Araçları Listele <img src="./assets/icons/rightlong.svg" width="40px" className="ms-3 my-auto" /></Link>
+                                    <Link to={{ pathname:"reservation", reservationProps :{ startDate: startRentDate, endDate: endRentDate, timeStart: timeStart, timeEnd: timeEnd} }} className="btn btn-dark btn-orange position-absolute py-2 px-5">Araçları Listele <img src="./assets/icons/rightlong.svg" width="40px" className="ms-3 my-auto" /></Link>
                              
                             </div>
                         </div>

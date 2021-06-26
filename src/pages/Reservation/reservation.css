@@ -35,8 +35,9 @@
 
 .reservation-tab-area .checked-link {
     color: var(--green-check-1);
-    right: 36px;
-    top: 65%;
+    right: 2%;
+    top: 53%;
+    transform: translateY(-50%)
 }
 
 .checked-reserve {
