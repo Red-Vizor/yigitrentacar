@@ -1,13 +1,17 @@
 import React from 'react'
 import './component.css'
-import { useDispatch } from 'react-redux'
+import { useDispatch,useSelector } from 'react-redux'
 import { changePage } from '../store/reservation/reservationPageChangeSlice'
 import { SRLWrapper } from "simple-react-lightbox";
 import $ from 'jquery';
 window.jQuery = $;
 export default function CarModal() {
 
+  
     const dispatch = useDispatch()
+    const dateValue = useSelector((state) => state.dateslice)
+
+    console.log(dateValue.carSelect)
 
     return (
         <div className="modal fade" id="carModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

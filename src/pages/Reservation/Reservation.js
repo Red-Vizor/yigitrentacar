@@ -77,48 +77,48 @@ export default function Reservation(props) {
             <div className="container-fluid reservation-tab-area">
                 <div className="d-flex flex-row web">
                     <button type="button" className="btn border-bottom border-right py-3 px-3 fs-3">x</button>
-                    <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" inkBarStyle={{ background: '#FF710F' }} >
+                    <Tabs value={value}  aria-label="simple tabs example" inkBarStyle={{ background: '#FF710F' }} >
                         <Tab className={page > 0 ? 'checked-reserve' : ''} label={
                             <div className="tab-button text-start py-2 ">
                                 <span className="h6 bold">1.KİRALAMA | ALIŞ & İADE </span>
                                 <p className="">{dateValue.citySelect}</p>
                                 <p className="h7">{dateValue.startDate} <img src="./assets/icons/arrow-circle.svg" className="my-auto ms-1 h-50" /> {dateValue.endDate} </p>
-                                {page > 0 ? <a href="#" className="checked-link position-absolute">Düzenle <span><img src="./assets/icons/check-green.svg" className="check arrow-icon mt-1 ms-1" /></span></a> : ''}
+                                {page > 0 ? <a href="#" onClick={() => {dispatch(changePage(0))}} className="checked-link position-absolute">Düzenle <span><img src="./assets/icons/check-green.svg" className="check arrow-icon mt-1 ms-1" /></span></a> : ''}
                             </div>
                         } {...changeProps(1)} />
                         <Tab className={page > 1 ? 'checked-reserve' : ''} label={
                             <div className="tab-button text-start py-2">
                                 <span className="h6 bold">2.ARACINIZ </span>
-                                <p className="h7 me-5">Mercedes E200 AMG  { page === 1 ? <span className="ms-4"><img src="./assets/icons/rightic.svg" className="my-auto ms-lg-3  h-25 right-tick-icon" /> <span className="bold ms-lg-1">340,37₺ </span> </span>: ''} </p>
+                                <p className="h7 me-5">Mercedes E200 AMG  { page === 1 ? <span className="ms-4"><img src="./assets/icons/rightic.svg" className="my-auto ms-auto float-right h-25 right-tick-icon" /> </span>: ''} </p>
                                 <p className="h7">Dizel Otomatik</p>
 
-                                {page > 1 ? <a href="#" className="checked-link position-absolute">Düzenle <span><img src="./assets/icons/check-green.svg" className="check arrow-icon mt-1 ms-1" /></span></a> : ''}
+                                {page > 1 ? <a href="#" onClick={() => {dispatch(changePage(1))}}  className="checked-link position-absolute">Düzenle <span><img src="./assets/icons/check-green.svg" className="check arrow-icon mt-1 ms-1" /></span></a> : ''}
                             </div>
                         } {...changeProps(1)} />
                         <Tab className={page > 2 ? 'checked-reserve' : ''} label={
                             <div className="tab-button text-start py-2">
                                 <span className="h6 bold">3. GÜVENCE PAKETLERİ </span>
-                                <p className="h7 me-5">PAKET DETAYLARINI  { page === 2 ? <span className="ms-4"><img src="./assets/icons/rightic.svg" className="my-auto ms-lg-3  h-25 right-tick-icon" /> <span className="bold ms-lg-1">340,37₺ </span> </span>: ''}  <br /> SEÇİN</p>
+                                <p className="h7 me-5">PAKET DETAYLARINI  { page === 2 ? <span className="ms-4"><img src="./assets/icons/rightic.svg" className="my-auto ms-lg-3  h-25 right-tick-icon" /></span>: ''}  <br /> SEÇİN</p>
 
-                                {page > 2 ? <a href="#" className="checked-link position-absolute">Düzenle <span><img src="./assets/icons/check-green.svg" className="check arrow-icon mt-1 ms-1" /></span></a> : ''}
+                                {page > 2 ? <a href="#" onClick={() => {dispatch(changePage(2))}}  className="checked-link position-absolute">Düzenle <span><img src="./assets/icons/check-green.svg" className="check arrow-icon mt-1 ms-1" /></span></a> : ''}
                             </div>
                         } {...changeProps(2)} />
                         <Tab className={page > 3 ? 'checked-reserve' : ''} label={
                             <div className="tab-button text-start py-2">
                                 <span className="h6 bold">4. EK ÜRÜNLER </span>
-                                <p className="h7 me-5">Bodrum, Yalıkavak  { page === 3 ? <span className="ms-4"><img src="./assets/icons/rightic.svg" className="my-auto ms-lg-3  h-25 right-tick-icon" /> <span className="bold ms-lg-1">340,37₺ </span> </span>: ''}</p>
+                                <p className="h7 me-5">Bodrum, Yalıkavak  { page === 3 ? <span className="ms-4"><img src="./assets/icons/rightic.svg" className="my-auto ms-lg-3  h-25 right-tick-icon" /></span>: ''}</p>
                                 <a className="h7 text-dark" data-bs-toggle="modal" data-bs-target="#packageModal">Tümünü göster</a>
 
-                                { page > 3 ? <a href="#" className="checked-link position-absolute">Düzenle <span><img src="./assets/icons/check-green.svg" className="check arrow-icon mt-1 ms-1" /></span></a> : ''}
+                                { page > 3 ? <a href="#" onClick={() => {dispatch(changePage(3))}}  className="checked-link position-absolute">Düzenle <span><img src="./assets/icons/check-green.svg" className="check arrow-icon mt-1 ms-1" /></span></a> : ''}
                             </div>
                         } {...changeProps(3)} />
                         <Tab className={page > 4 ? 'checked-reserve' : ''} label={
                             <div className="tab-button text-start py-2">
                                 <span className="h6 bold">5. REZERVASYON </span>
-                                <p className="h7">Bodrum, Yalıkavak  { page === 4 ? <span className="ms-4"><img src="./assets/icons/rightic.svg" className="my-auto ms-lg-3  h-25 right-tick-icon" /> <span className="bold ms-lg-1">340,37₺ </span> </span>: ''}</p>
+                                <p className="h7">Bodrum, Yalıkavak  { page === 4 ? <span className="ms-4"><img src="./assets/icons/rightic.svg" className="my-auto ms-lg-3  h-25 right-tick-icon" /></span>: ''}</p>
                                 <a className="h7 text-dark" data-bs-toggle="modal" data-bs-target="#packageModal">Tümünü göster</a>
 
-                                { page > 4 ? <a href="#" className="checked-link position-absolute">Düzenle <span><img src="./assets/icons/check-green.svg" className="check arrow-icon mt-1 ms-1" /></span></a> : ''}
+                                { page > 4 ? <a href="#" onClick={() => {dispatch(changePage(4))}}  className="checked-link position-absolute">Düzenle <span><img src="./assets/icons/check-green.svg" className="check arrow-icon mt-1 ms-1" /></span></a> : ''}
                             </div>
                         } {...changeProps(4)} />
                     </Tabs>

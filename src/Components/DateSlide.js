@@ -6,7 +6,7 @@ import Moment from 'moment';
 import TimeKeeper from 'react-timekeeper';
 import { useSelector, useDispatch } from 'react-redux'
 import { useHistory } from "react-router-dom";
-import { setEndDate, setStartDate, setEndTime, setStartTime, setCitySelect } from '../store/reservation/dateSlice'
+import { setEndDate,setDateDayCount, setStartDate, setEndTime, setStartTime, setCitySelect } from '../store/reservation/dateSlice'
 import { changePage } from '../store/reservation/reservationPageChangeSlice'
 
 export default function DateSlide() {
@@ -65,6 +65,7 @@ export default function DateSlide() {
         }
         if (dayCount >= 3 && errorValue) {
             history.push('/reservation')
+            dispatch(setDateDayCount(dayCount))
             dispatch(changePage(1))
         }
     }

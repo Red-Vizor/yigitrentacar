@@ -8,10 +8,21 @@ export const dateSlice = createSlice({
     startDate:"",
     startTime:"12:00pm",
     endTime:"12:00pm",
+    dateDayCount:0,
     citySelect: "İstanbul, İzmir, Bodrum",
+    totalAmount:0,
     carSelect: [],
   },
   reducers: {
+    calculateTotalAmount: (state, action) => {
+      state.totalAmount += action.payload
+    },
+    setCarSelect: (state, action) => {
+      state.carSelect = action.payload
+    },
+    setDateDayCount: (state, action) => {
+      state.dateDayCount = action.payload
+    },
     setEndDate: (state, action) => {
       state.endDate = action.payload
     },
@@ -31,6 +42,6 @@ export const dateSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { setEndDate, setStartDate, setEndTime, setStartTime,setCitySelect} = dateSlice.actions
+export const { setEndDate, setStartDate,setCarSelect, setEndTime, setStartTime,setCitySelect ,setDateDayCount,calculateTotalAmount} = dateSlice.actions
 
 export default dateSlice.reducer
