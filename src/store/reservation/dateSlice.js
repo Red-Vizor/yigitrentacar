@@ -9,6 +9,7 @@ export const dateSlice = createSlice({
     startTime:"12:00pm",
     endTime:"12:00pm",
     citySelect: "İstanbul, İzmir, Bodrum",
+    carSelect: [],
   },
   reducers: {
     setEndDate: (state, action) => {
