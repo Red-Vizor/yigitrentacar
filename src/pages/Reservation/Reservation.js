@@ -70,7 +70,7 @@ export default function Reservation() {
         <div className="reservation-page">
             <ReservationHead />
             <div className="container-fluid reservation-tab-area">
-                <div className="d-flex flex-row">
+                <div className="d-flex flex-row web">
                     <button type="button" className="btn border-bottom border-right py-3 px-3 fs-3">x</button>
                     <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" inkBarStyle={{ background: '#FF710F' }} >
                         <Tab className="checked-reserve" label={
@@ -107,6 +107,36 @@ export default function Reservation() {
                                 <span className="h6 bold">5. REZERVASYON </span>
                                 <p className="h7">Bodrum, Yalıkavak</p>
                                 <a className="h7 text-dark" data-bs-toggle="modal" data-bs-target="#packageModal">Tümünü göster</a>
+                            </div>
+                        } {...changeProps(4)} />
+                    </Tabs>
+                </div>
+                <div className="d-flex flex-row mobile">
+                    <button type="button" className="btn border-bottom border-right py-3 px-3 fs-3">x</button>
+                    <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" inkBarStyle={{ background: '#FF710F' }} >
+                        <Tab className="checked-reserve" label={
+                            <div className="tab-button text-start py-2 ">
+                                1
+                            </div>
+                        } {...changeProps(1)} />
+                        <Tab label={
+                            <div className="tab-button text-start py-2">
+                                2
+                            </div>
+                        } {...changeProps(1)} />
+                        <Tab label={
+                            <div className="tab-button text-start py-2">
+                                3
+                            </div>
+                        } {...changeProps(2)} />
+                        <Tab label={
+                            <div className="tab-button text-start py-2">
+                                4
+                            </div>
+                        } {...changeProps(3)} />
+                        <Tab label={
+                            <div className="tab-button text-start py-2">
+                                5
                             </div>
                         } {...changeProps(4)} />
                     </Tabs>

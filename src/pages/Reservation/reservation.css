@@ -1,60 +1,69 @@
-:root{
-    --green-check:rgb(88, 214, 140,0.20);
-    --green-check-1:rgb(88, 214, 140);
-    --orange-white: rgb(255, 246, 242,0.6);
-    
+:root {
+    --green-check: rgb(88, 214, 140, 0.20);
+    --green-check-1: rgb(88, 214, 140);
+    --orange-white: rgb(255, 246, 242, 0.6);
 }
 
-.MuiAppBar-colorPrimary{
+.MuiAppBar-colorPrimary {
     background-color: #F9F9F9F9 !important;
     box-shadow: none !important;
     color: #000000 !important;
 }
+
 .MuiBox-root {
-    padding:0 !important;
+    padding: 0 !important;
 }
-.MuiTab-root{
-    width:20% !important;
+
+.MuiTab-root {
+    width: 20% !important;
     max-width: 20% !important;
 }
-.MuiTabs-root{
-    width:100% !important;
+
+.MuiTabs-root {
+    width: 100% !important;
 }
-.MuiTab-wrapper{
+
+.MuiTab-wrapper {
     align-items: left !important;
 }
 
-.reservation-tab-area .check{
+.reservation-tab-area .check {
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
 }
-.reservation-tab-area .checked-link{
+
+.reservation-tab-area .checked-link {
     color: var(--green-check-1);
-    right:36px;
+    right: 36px;
     top: 65%;
 }
-.checked-reserve{
+
+.checked-reserve {
     background-color: var(--green-check) !important;
 }
 
-.package .package-body .table-titles{
+.package .package-body .table-titles {
     border-bottom: 2px solid #000000;
 }
-.package .accordion-button{
+
+.package .accordion-button {
     font-size: 0.8rem;
 }
-.package .accordion-button:after{
+
+.package .accordion-button:after {
     display: none !important;
 }
-.package .accordion-button:not(.collapsed){
-    background-color:var(--orange-white);
+
+.package .accordion-button:not(.collapsed) {
+    background-color: var(--orange-white);
     color: #000000;
 }
 
-.package .accordion-body{
-    background-color:var(--orange-white);
+.package .accordion-body {
+    background-color: var(--orange-white);
 }
+
 .package .btn-add {
     padding: 8px 15px !important;
 }
@@ -72,7 +81,7 @@
     padding: 20px;
 }
 
-.kisisel-bilgiler{
+.kisisel-bilgiler {
     font-weight: 700;
 }
 
@@ -80,163 +89,157 @@
     background-color: #FFF8F5;
     font-weight: 700;
 }
-.end-reservation .card{
-    width:50% !important;
+
+.end-reservation .card {
+    width: 50% !important;
+}
+
+.reservation-tab-area .web {
+    display: flex !important;
+}
+
+.reservation-tab-area .mobile {
+    display: none !important;
 }
 
 @media screen and (min-width: 992px) and (max-width: 1600px) {
-
+    .reservation-tab-area .web {
+        display: flex !important;
+    }
+    .reservation-tab-area .mobile {
+        display: none !important;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
- 
     .reservation-tab-area span {
         font-size: 0.6rem !important;
     }
-
     .reservation-tab-area .right-tick-icon {
         width: 10% !important;
         margin-left: 15px !important;
     }
-
     .reservation-tab-area .arrow-icon {
         width: 10% !important;
     }
-
     .reservation-tab-area .checked-link {
-        position:absolute;
+        position: absolute;
         right: 1px !important;
         margin-top: 0.7rem !important;
     }
-
     .package-header .package-car-image {
         width: 25%;
     }
     .package-header span {
         font-size: 1rem !important;
     }
-
-
-    .package-header .btn-orange span{
+    .package-header .btn-orange span {
         font-size: 0.7rem !important;
     }
-    
-    .package-header .btn-orange img{
+    .package-header .btn-orange img {
         width: 10% !important;
     }
-
     .table-package span {
         font-size: 1rem !important;
     }
     .accordion span {
         font-size: 0.8rem !important;
     }
-
     .accordion .accordion-body {
         font-size: 0.8rem !important;
     }
-
-    .package .btn-orange img{
+    .package .btn-orange img {
         width: 10% !important;
     }
-
-    .package .btn-orange span{
+    .package .btn-orange span {
         font-size: 0.7rem !important;
     }
-
-    .car-detail span{
+    .car-detail span {
         font-size: 0.7rem !important;
     }
-
     .header-content {
         margin: 15px 50px;
         padding: 20px;
     }
-
     .header-content .reservation-car-image {
-        width:90% !important;
+        width: 90% !important;
     }
-    .end-reservation .card{
-        width:75% !important;
+    .end-reservation .card {
+        width: 75% !important;
         text-align: center !important;
     }
-    .end-reservation .card .row{
+    .end-reservation .card .row {
         text-align: center !important;
     }
-
+    .reservation-tab-area .web {
+        display: none !important;
+    }
+    .reservation-tab-area .mobile {
+        display: flex !important;
+    }
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
-    .end-reservation .card{
-        width:100% !important;
+    .end-reservation .card {
+        width: 100% !important;
         text-align: center !important;
     }
-    .end-reservation .card .row{
+    .end-reservation .card .row {
         text-align: center !important;
     }
-    
     .package-header .package-car-image {
         width: 45%;
     }
     .package-header span {
         font-size: 1rem !important;
     }
-
     .package-header .btn-orange {
-       position: absolute;
-       top: 393px !important;
-       left: 70px !important;
+        position: absolute;
+        top: 393px !important;
+        left: 70px !important;
     }
-
-    .package-header .btn-orange img{
+    .package-header .btn-orange img {
         width: 100% !important;
         padding: 0 !important;
     }
-
-    .package .btn-orange span{
+    .package .btn-orange span {
         font-size: 0.7rem !important;
     }
-     
-
-    .package .btn-orange img{
+    .package .btn-orange img {
         width: 10% !important;
     }
-
     .table-package span {
         font-size: 0.85rem !important;
     }
     .accordion span {
         font-size: 0.7rem !important;
     }
-
     .accordion .accordion-body {
         font-size: 0.6rem !important;
     }
-
     .car-detail {
         text-align: center;
     }
-
-    .car-detail span{
+    .car-detail span {
         font-size: 0.8rem !important;
     }
-
-    .car-detail p{
+    .car-detail p {
         font-size: 0.65rem !important;
     }
-
     .header-content {
         margin: 5px 10px;
         padding: 5px;
     }
-
     .header-content .reservation-car-image {
         width: 60% !important;
     }
-
     .car-detail .reservation-date-detail {
         padding: 10px 100px;
     }
-   
-  
+    .reservation-tab-area .web {
+        display: none !important;
+    }
+    .reservation-tab-area .mobile {
+        display: flex !important;
+    }
 }
