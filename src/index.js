@@ -7,12 +7,17 @@ import store from './app/store';
 import reportWebVitals from './reportWebVitals';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
+
+import SimpleReactLightbox from 'simple-react-lightbox'
+
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
 
+    <SimpleReactLightbox>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </SimpleReactLightbox>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,6 +1,6 @@
 import React from 'react'
 import './popularlocations.css'
-
+import { SRLWrapper } from "simple-react-lightbox";
 function PopularLocationsSingle() {
     return (
         <div className="location-single">
@@ -41,21 +41,22 @@ function PopularLocationsSingle() {
                 </div>
             </div>
 
-
-            <div className="owl-carousel owl-carousel-popular owl-theme my-5">
-                <div className="item">
-                    <div className="location-owl-image bg-image" style={{ backgroundImage: "url(./assets/images/location-carousel1.png)" }}></div>
+            <SRLWrapper>
+                <div className="owl-carousel owl-carousel-popular owl-theme my-5">
+                    <div className="item">
+                        <img src="/assets/images/location-carousel1.png" height="350px" />
+                    </div>
+                    <div className="item">
+                        <img src="/assets/images/location-carousel2.png" height="350px" />
+                    </div>
+                    <div className="item">
+                        <img src="/assets/images/location-carousel3.png" height="350px" />
+                    </div>
+                    <div className="item">
+                        <img src="/assets/images/location-carousel4.png" height="350px" />
+                    </div>
                 </div>
-                <div className="item">
-                    <div className="location-owl-image bg-image" style={{ backgroundImage: "url(./assets/images/location-carousel2.png)" }}></div>
-                </div>
-                <div className="item">
-                    <div className="location-owl-image bg-image" style={{ backgroundImage: "url(./assets/images/location-carousel3.png)" }}></div>
-                </div>
-                <div className="item">
-                    <div className="location-owl-image bg-image" style={{ backgroundImage: "url(./assets/images/location-carousel4.png)" }}></div>
-                </div>
-            </div>
+            </SRLWrapper>
         </div>
     )
 }
