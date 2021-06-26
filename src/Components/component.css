@@ -1,6 +1,7 @@
 :root {
     --orange: #e8541e;
     --orange2: #FF710F;
+    --orange3: rgb(255, 113, 15,0.4);
     --dark: #000000;
     --white: #ffffff;
     --white2: #FAFAFA;
@@ -255,6 +256,25 @@
 .car-modal .area-3{
     background-color: var(--orange);
     border-radius: 30px 30px 30px 30px;
+}
+
+.react-timekeeper{
+    margin-left:  auto !important;
+    margin-right: auto !important;
+    box-shadow: none !important;
+}
+.css-16j6ljo-ClockHand, .css-1jj6dwi-ClockHand{
+    fill: var(--orange3) !important;
+}
+.css-4456cn-ClockHand{
+    stroke: var(--orange3) !important;
+}
+
+.css-xbtxlx-Meridiems, .css-wufnqa-Meridiems{
+    background:    var(--orange3) !important;
+}
+.react-timekeeper__tb-minute--active, .react-timekeeper__tb-hour--active{
+    color: var(--orange) !important;
 }
 
 @media screen and (min-width: 992px) and (max-width: 1600px) {

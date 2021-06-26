@@ -4,9 +4,14 @@ import { TimePicker } from './'
 import { DateRange } from 'react-date-range'
 import * as locales from 'react-date-range/dist/locale';
 import Moment from 'moment';
+import TimeKeeper from 'react-timekeeper';
+
 export default function DateSlide() {
     Moment.locale('tr')
     const [city, setCity] = useState("İstanbul, İzmir, Bodrum")
+
+    const [timeStart, setTimeStart] = useState('12:34pm')
+    const [timeEnd, setTimeEnd] = useState('12:34pm')
     const [state, setState] = useState([
         {
             startDate: new Date(),
@@ -36,23 +41,23 @@ export default function DateSlide() {
                                     <div className="input-group ">
                                         <div className="dropdown">
                                             <a className="dropdown-toggle w-100 d-flex  bg-white  rounded py-3 semi-bold " href="#" style={{ color: "gray" }}>
-                                                <span className="my-auto mx-auto">{ city }</span>
+                                                <span className="my-auto mx-auto">{city}</span>
                                                 <img src="./assets/icons/location.svg" className="my-auto ms-auto me-4" />
                                             </a>
                                             <ul className="dropdown-menu w-100 bg-light position-absolute rounded" role="menu" aria-labelledby="dLabel">
-                                                <li onClick={() => {setCity("İstanbul")}} className="rounded py-2 text-center semi-bold position-relative">
+                                                <li onClick={() => { setCity("İstanbul") }} className="rounded py-2 text-center semi-bold position-relative">
                                                     <a>
                                                         İstanbul
                                                         <img src="./assets/icons/location.svg" className="my-auto ms-auto me-4" />
                                                     </a>
                                                 </li>
-                                                <li  onClick={() => {setCity("İzmir")}} className="rounded py-2 text-center semi-bold position-relative">
+                                                <li onClick={() => { setCity("İzmir") }} className="rounded py-2 text-center semi-bold position-relative">
                                                     <a>
                                                         İzmir
                                                         <img src="./assets/icons/location.svg" className="my-auto ms-auto me-4" />
                                                     </a>
                                                 </li>
-                                                <li  onClick={() => {setCity("Bodrum")}} className="rounded py-2 text-center semi-bold position-relative">
+                                                <li onClick={() => { setCity("Bodrum") }} className="rounded py-2 text-center semi-bold position-relative">
                                                     <a>
                                                         Bodrum
                                                         <img src="./assets/icons/location.svg" className="my-auto ms-auto me-4" />
@@ -76,7 +81,7 @@ export default function DateSlide() {
                                             <p className="semi-bold ms-1 mb-1">Alış Saati</p>
                                             <div className="w-100 bg-white py-3 d-flex rounded position-relative">
                                                 <span className="text">
-                                                    10.30
+                                                   {timeStart}
                                                 </span>
                                                 <img src="./assets/icons/clock.svg" className="my-auto ms-auto me-1" />
                                             </div>
@@ -94,7 +99,7 @@ export default function DateSlide() {
                                             <p className="semi-bold ms-1 mb-1">İade Saati</p>
                                             <div className="w-100 bg-white py-3 d-flex rounded position-relative">
                                                 <span className="text">
-                                                    10.30
+                                                    {timeEnd}
                                                 </span>
                                                 <img src="./assets/icons/clock.svg" className="my-auto ms-auto me-1" />
                                             </div>
@@ -118,13 +123,13 @@ export default function DateSlide() {
                             <DateRange
                                 className="mx-auto"
                                 editableDateInputs={true}
-                                onChange={item => setState([item.selection])} 
+                                onChange={item => setState([item.selection])}
                                 moveRangeOnFirstSelection={false}
                                 dateDisplayFormat={"dd mm yyyy"}
                                 locale={locales["tr"]}
                                 ranges={state}
                             />
-                            
+
                         </div>
                         <div className="container px-5 d-flex justify-content-between">
                             <button type="button" className="btn btn-dark btn-orange-outline w-25  py-2 " data-bs-dismiss="modal" aria-label="Close">Bugün</button>
@@ -137,10 +142,14 @@ export default function DateSlide() {
                 <div className="modal-dialog modal-dialog-centered ">
                     <div className="modal-content py-5 px-2 w-25 mx-auto">
                         <div className="modal-body d-flex">
-                            <TimePicker />
+                            <TimeKeeper className="mx-auto"
+                                time={timeStart}
+                                onChange={(newTime) => setTimeStart(newTime.formatted12)}
+                                switchToMinuteOnHourSelect
+                            />
                         </div>
                         <div className="container px-5 d-flex justify-content-between">
-                            <button type="button" className="btn btn-dark btn-orange-outline w-25  py-2 " data-bs-dismiss="modal" aria-label="Close">Bugün</button>
+                            <button type="button" className="btn btn-dark btn-orange-outline w-25  py-2 " data-bs-dismiss="modal" aria-label="Close">Şuan</button>
                             <button type="button" className="btn btn-dark btn-orange w-25  py-2 " data-bs-dismiss="modal" aria-label="Close">Seç</button>
                         </div>
                     </div>
@@ -150,10 +159,14 @@ export default function DateSlide() {
                 <div className="modal-dialog modal-dialog-centered ">
                     <div className="modal-content py-5 px-2 w-25 mx-auto">
                         <div className="modal-body d-flex">
-                            <TimePicker />
+                            <TimeKeeper
+                                time={timeEnd}
+                                onChange={(newTime) => setTimeEnd(newTime.formatted12)}
+                                switchToMinuteOnHourSelect
+                            />
                         </div>
                         <div className="container px-5 d-flex justify-content-between">
-                            <button type="button" className="btn btn-dark btn-orange-outline w-25  py-2 " data-bs-dismiss="modal" aria-label="Close">Bugün</button>
+                            <button type="button" className="btn btn-dark btn-orange-outline w-25  py-2 " data-bs-dismiss="modal" aria-label="Close">Şuan</button>
                             <button type="button" className="btn btn-dark btn-orange w-25  py-2 " data-bs-dismiss="modal" aria-label="Close">Seç</button>
                         </div>
                     </div>

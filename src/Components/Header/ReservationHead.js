@@ -1,6 +1,5 @@
 import React from 'react'
 import './header.css'
-
 export default function ReservationHead() {
   
     return (
@@ -11,7 +10,7 @@ export default function ReservationHead() {
                             <a href="/"><img src="./assets/images/logo.png" className="w-100 mx-auto" /></a>
                         </div>
                         <div className="col-lg-8 col-md-8 col-6 d-flex py-lg-2 ">
-                            <button type="button" class="btn btn-outline-light rounded-0 my-auto py-lg-2 ms-auto">KİRALAMA KOŞULLARINI GÖRÜNTÜLE</button>
+                            <a href="/policies" target="_blank"  class="btn btn-outline-light rounded-0 my-auto py-lg-2 ms-auto">KİRALAMA KOŞULLARINI GÖRÜNTÜLE</a>
                             <div className="bg-gray d-flex text-white ms-4 px-lg-5">
                                 <p className="h5 total-payment m-auto bold px-md-3">
                                     Toplam: 99 TL

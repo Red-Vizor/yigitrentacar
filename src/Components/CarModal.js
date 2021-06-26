@@ -2,13 +2,13 @@ import React from 'react'
 import './component.css'
 import { useDispatch } from 'react-redux'
 import { changePage } from '../store/reservation/reservationPageChangeSlice'
-
+import { SRLWrapper } from "simple-react-lightbox";
 import $ from 'jquery';
 window.jQuery = $;
 export default function CarModal() {
 
     const dispatch = useDispatch()
-    
+
     return (
         <div className="modal fade" id="carModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div className="modal-dialog modal-dialog-centered car-modal rounded ">
@@ -34,21 +34,23 @@ export default function CarModal() {
                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" className="indicator-car bg-image" style={{ backgroundImage: "url(./assets/images/carphotoslider.jpg)" }} aria-label="Slide 3"></button>
                             </div>
                             <div className="carousel-inner">
-                                <div className="carousel-item active">
-                                    <img src="./assets/images/carphotoslider.jpg" className="d-block w-100" alt="..." />
-                                </div>
-                                <div className="carousel-item">
-                                    <img src="./assets/images/carphotoslider.jpg" className="d-block w-100" alt="..." />
-                                </div>
-                                <div className="carousel-item">
-                                    <img src="./assets/images/carphotoslider.jpg" className="d-block w-100" alt="..." />
-                                </div>
-                                <div className="carousel-item">
-                                    <img src="./assets/images/carphotoslider.jpg" className="d-block w-100" alt="..." />
-                                </div>
-                                <div className="carousel-item">
-                                    <img src="./assets/images/carphotoslider.jpg" className="d-block w-100" alt="..." />
-                                </div>
+                                <SRLWrapper>
+                                    <div className="carousel-item active">
+                                        <img src="./assets/images/carphotoslider.jpg" className="d-block w-100" alt="..." />
+                                    </div>
+                                    <div className="carousel-item">
+                                        <img src="./assets/images/carphotoslider.jpg" className="d-block w-100" alt="..." />
+                                    </div>
+                                    <div className="carousel-item">
+                                        <img src="./assets/images/carphotoslider.jpg" className="d-block w-100" alt="..." />
+                                    </div>
+                                    <div className="carousel-item">
+                                        <img src="./assets/images/carphotoslider.jpg" className="d-block w-100" alt="..." />
+                                    </div>
+                                    <div className="carousel-item">
+                                        <img src="./assets/images/carphotoslider.jpg" className="d-block w-100" alt="..." />
+                                    </div>
+                                </SRLWrapper>
                             </div>
                             <div className="buttons py-2 px-4 d-flex">
                                 <div className="m-auto">
