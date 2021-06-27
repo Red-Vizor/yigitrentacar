@@ -13,21 +13,12 @@ export default function PackageOne(props) {
     const dateValue = useSelector((state) => state.dateslice)
 
 
-    useEffect(() =>{
-
-        props.pack.map((item) => dispatch(setHPO(item)))
-    }, []) 
  
     const changePackage = (packageValue) => {
         dispatch(addPackageOneSelect(packageValue))
     }
-
-  
-
-
     return (
         <section className="package">
-
             <div className="package-header header-area py-4 bg-pink-powder d-flex justify-content-center">
                 <img src="./assets/images/s3.png" width="250px" className="mx-4 package-car-image" />
                 <div className="car-detail mx-lg-5 my-auto ">

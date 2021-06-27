@@ -15,7 +15,7 @@ import Box from '@material-ui/core/Box'
 import DateSlide from '../../Components/DateSlide'
 import { useSelector, useDispatch } from 'react-redux'
 import { changePage } from '../../store/reservation/reservationPageChangeSlice'
-import {setPackage1, setPackage2, calculateTotalAmount, addPackageOneSelect, addPackageTwoSelect, removePackageOneSelect, removePackageTwoSelect } from '../../store/reservation/dateSlice'
+import {setHPT, setHPO} from '../../store/reservation/dateSlice'
 
 
 function TabPanel(props) {
@@ -98,7 +98,11 @@ export default function Reservation(props) {
 
     const dateValue = useSelector((state) => state.dateslice);
 
-  
+    useEffect(() =>{
+        packageOne.map((item) => dispatch(setHPT(item)))
+        packageOne.map((item) => dispatch(setHPO(item)))
+    }, []) 
+ 
 
 
     return (

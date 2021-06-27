@@ -2,16 +2,18 @@ import React from 'react'
 import './component.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { changePage } from '../store/reservation/reservationPageChangeSlice'
-import { calculateTotalAmount, addPackageOneSelect, addPackageTwoSelect, removePackageOneSelect, removePackageTwoSelect } from '../store/reservation/dateSlice'
+import { removePackageTwoSelect } from '../store/reservation/dateSlice'
 import $ from 'jquery';
 window.jQuery = $;
 
-export default function PackageModalTwo(props) {
+export default function PackageModalOne(props) {
     const dispatch = useDispatch()
     const page = useSelector((state) => state.reservationChange.value)
     const dateValue = useSelector((state) => state.dateslice)
+
+
     const removePackage = (packageValue) => {
-            dispatch(addPackageTwoSelect(packageValue))
+            dispatch(removePackageTwoSelect(packageValue))
     }
     return (
         <div className="modal fade" id={props.modalName} tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -46,7 +48,7 @@ export default function PackageModalTwo(props) {
                                     </div>
                                 </div>
                                 <div className="accordion accordion-flush" id="accordionFlushExample">
-                                    {dateValue.packageTwo.map(item => <div className={"accordion-item item-" + item.id + "-modal2"}>
+                                    {dateValue.packageTwo.map(item => <div className={"accordion-item item-" + item.id + "-modal1"}>
                                         <h2 className="accordion-header" id="flush-headingOne">
                                             <button className="accordion-button collapsed px-0" type="button" data-bs-toggle="collapse" data-bs-target={"#flush-collapse-" + item.id} aria-expanded="false" aria-controls="flush-collapseOne">
                                                 <div className="row w-100 text-center bold">

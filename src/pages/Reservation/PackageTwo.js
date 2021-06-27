@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './reservation.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { changePage } from '../../store/reservation/reservationPageChangeSlice'
-import {calculateTotalAmount, addPackageOneSelect, addPackageTwoSelect, removePackageOneSelect, removePackageTwoSelect } from '../../store/reservation/dateSlice'
+import {addPackageTwoSelect , setHPT} from '../../store/reservation/dateSlice'
 import $ from 'jquery';
 window.jQuery = $;
 
@@ -12,26 +12,13 @@ export default function PackageTwo(props) {
     const page = useSelector((state) => state.reservationChange.value)
     const dateValue = useSelector((state) => state.dateslice)
 
-    
+
+   
     const changePackage = (packageValue) => {
-        if (props.packages === "1") {
-            dispatch(addPackageOneSelect(packageValue))
-        }
-        if (props.packages === "2") {
-            dispatch(addPackageTwoSelect(packageValue))
-        }
-
-        $('.item-' + packageValue.id + '-' + props.packages).on(function(){
-
-
-        })
-
+        dispatch(addPackageTwoSelect(packageValue))
     }
-
-
     return (
         <section className="package">
-
             <div className="package-header header-area py-4 bg-pink-powder d-flex justify-content-center">
                 <img src="./assets/images/s3.png" width="250px" className="mx-4 package-car-image" />
                 <div className="car-detail mx-lg-5 my-auto ">
@@ -78,7 +65,7 @@ export default function PackageTwo(props) {
 
                     <div className="accordion accordion-flush" id="accordionFlushExample">
 
-                        {props.pack.map(item => <div className={"accordion-item item-" + item.id + "-" + props.packages}>
+                        {dateValue.homePackageTwo.map(item => <div className={"accordion-item item-" + item.id + "-" + props.packages}>
                             <h2 className="accordion-header" id="flush-headingOne">
                                 <button className="accordion-button collapsed px-0" type="button" data-bs-toggle="collapse" data-bs-target={"#flush-collapse-" + item.id} aria-expanded="false" aria-controls="flush-collapseOne">
                                     <div className="row w-100 text-center bold">
