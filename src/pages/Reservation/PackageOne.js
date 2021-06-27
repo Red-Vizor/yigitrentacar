@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './reservation.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { changePage } from '../../store/reservation/reservationPageChangeSlice'
-import {setPackage1, setPackage2, calculateTotalAmount, addPackageOneSelect, addPackageTwoSelect, removePackageOneSelect, removePackageTwoSelect } from '../../store/reservation/dateSlice'
+import {addPackageOneSelect , setHPO} from '../../store/reservation/dateSlice'
 import $ from 'jquery';
 window.jQuery = $;
 
@@ -11,9 +11,18 @@ export default function PackageOne(props) {
     const dispatch = useDispatch()
     const page = useSelector((state) => state.reservationChange.value)
     const dateValue = useSelector((state) => state.dateslice)
+
+
+    useEffect(() =>{
+
+        props.pack.map((item) => dispatch(setHPO(item)))
+    }, []) 
+ 
     const changePackage = (packageValue) => {
         dispatch(addPackageOneSelect(packageValue))
     }
+
+  
 
 
     return (
@@ -65,7 +74,7 @@ export default function PackageOne(props) {
 
                     <div className="accordion accordion-flush" id="accordionFlushExample">
 
-                        {dateValue.package1.map(item => <div className={"accordion-item item-" + item.id + "-" + props.packages}>
+                        {dateValue.homePackageOne.map(item => <div className={"accordion-item item-" + item.id + "-" + props.packages}>
                             <h2 className="accordion-header" id="flush-headingOne">
                                 <button className="accordion-button collapsed px-0" type="button" data-bs-toggle="collapse" data-bs-target={"#flush-collapse-" + item.id} aria-expanded="false" aria-controls="flush-collapseOne">
                                     <div className="row w-100 text-center bold">

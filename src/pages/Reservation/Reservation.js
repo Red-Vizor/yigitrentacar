@@ -95,10 +95,6 @@ export default function Reservation(props) {
         setValue(page)
     }, [page]);
 
-    useEffect(() => {
-        dispatch(setPackage1(packageOne))
-    });
-
 
     const dateValue = useSelector((state) => state.dateslice);
 

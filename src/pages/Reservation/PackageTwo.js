@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './reservation.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { changePage } from '../../store/reservation/reservationPageChangeSlice'
-import {setPackage1, setPackage2, calculateTotalAmount, addPackageOneSelect, addPackageTwoSelect, removePackageOneSelect, removePackageTwoSelect } from '../../store/reservation/dateSlice'
+import {calculateTotalAmount, addPackageOneSelect, addPackageTwoSelect, removePackageOneSelect, removePackageTwoSelect } from '../../store/reservation/dateSlice'
 import $ from 'jquery';
 window.jQuery = $;
 
@@ -12,12 +12,6 @@ export default function PackageTwo(props) {
     const page = useSelector((state) => state.reservationChange.value)
     const dateValue = useSelector((state) => state.dateslice)
 
-    if(props.packages === "1"){
-        dispatch(setPackage1(props.pack))
-    }
-    else{
-        dispatch(setPackage2(props.pack))
-    }
     
     const changePackage = (packageValue) => {
         if (props.packages === "1") {

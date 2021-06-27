@@ -2,7 +2,7 @@ import React from 'react'
 import './component.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { changePage } from '../store/reservation/reservationPageChangeSlice'
-import { calculateTotalAmount, addPackageOneSelect, addPackageTwoSelect, removePackageOneSelect, removePackageTwoSelect } from '../store/reservation/dateSlice'
+import { removePackageOneSelect } from '../store/reservation/dateSlice'
 import $ from 'jquery';
 window.jQuery = $;
 
