@@ -1,17 +1,24 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './reservation.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { changePage } from '../../store/reservation/reservationPageChangeSlice'
-import { calculateTotalAmount, addPackageOneSelect, addPackageTwoSelect, removePackageOneSelect, removePackageTwoSelect } from '../../store/reservation/dateSlice'
+import {setPackage1, setPackage2, calculateTotalAmount, addPackageOneSelect, addPackageTwoSelect, removePackageOneSelect, removePackageTwoSelect } from '../../store/reservation/dateSlice'
 import $ from 'jquery';
 window.jQuery = $;
 
-export default function Package(props) {
+export default function PackageTwo(props) {
 
     const dispatch = useDispatch()
     const page = useSelector((state) => state.reservationChange.value)
     const dateValue = useSelector((state) => state.dateslice)
-    const removePackage = (packageValue) => { }
+
+    if(props.packages === "1"){
+        dispatch(setPackage1(props.pack))
+    }
+    else{
+        dispatch(setPackage2(props.pack))
+    }
+    
     const changePackage = (packageValue) => {
         if (props.packages === "1") {
             dispatch(addPackageOneSelect(packageValue))
@@ -20,7 +27,10 @@ export default function Package(props) {
             dispatch(addPackageTwoSelect(packageValue))
         }
 
-        $('.item-' + packageValue.id + '-' + props.packages).remove()
+        $('.item-' + packageValue.id + '-' + props.packages).on(function(){
+
+
+        })
 
     }
 
@@ -68,6 +78,9 @@ export default function Package(props) {
                         </div>
                     </div>
 
+                    <div className="row py-2 px-2">
+                        <a href="#" className="h7 text-dark text-end" data-bs-toggle="modal" data-bs-target={"#"+props.modalName}>Seçilenleri Göster</a>
+                    </div>
 
                     <div className="accordion accordion-flush" id="accordionFlushExample">
 
@@ -111,10 +124,6 @@ export default function Package(props) {
                     </div>
                 </div>
             </div>
-
-
-        
-
 
             <div className="container d-flex py-4">
                 <button type="button" className="btn btn-dark btn-orange my-auto ms-auto px-lg-4 py-lg-3" onClick={() => { dispatch(changePage(page + 1)) }}> <span className="bold">REZERVASYONA DEVAM ET</span> <img src="./assets/icons/rightlong.svg" width="40px" className="ms-3 my-auto" /></button>

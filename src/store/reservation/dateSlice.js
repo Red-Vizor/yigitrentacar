@@ -14,28 +14,53 @@ export const dateSlice = createSlice({
     carSelect: [],
     packageOne: [],
     packageTwo: [],
+    package1: [],
+    package2: []
   },
   reducers: {
     calculateTotalAmount: (state) => {
       state.totalAmount = 0
       state.totalAmount += state.carSelect.totalAmount
     },
+
+
     addPackageOneSelect: (state, action) => {
       var packAdd = state.packageOne.concat(action.payload)
       state.totalAmount += action.payload.price * state.dateDayCount
       state.packageOne = packAdd
     },
+
+    removePackageOneSelect: (state, action) => {
+      state.totalAmount -= action.payload.price * state.dateDayCount
+      const oldPackage = state.packageOne
+      state.packageOne = []
+      oldPackage.map(item => {
+        if (action.payload.id !== item.id) {
+          state.packageOne = [...state.packageOne, action.payload]
+        }
+      })
+    },
+
+    setPackage1: (state, action) => {
+      state.package1 = action.payload
+    },
+
+
     addPackageTwoSelect: (state, action) => {
       var packAdd = state.packageTwo.concat(action.payload)
       state.totalAmount += action.payload.price * state.dateDayCount
       state.packageTwo = packAdd
     },
-    removePackageOneSelect: (state, action) => {
-      state.packageOne = [...state.packageOne, action.payload] 
-    },
+
     removePackageTwoSelect: (state, action) => {
-      state.packageOne = [...state.packageOne, action.payload] 
+      state.packageOne = [...state.packageOne, action.payload]
     },
+  
+    setPackage2: (state, action) => {
+      state.package2 = action.payload
+    },
+
+
     setCarSelect: (state, action) => {
       state.carSelect = action.payload
     },
@@ -61,6 +86,6 @@ export const dateSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const {addPackageOneSelect,addPackageTwoSelect, removePackageOneSelect,removePackageTwoSelect, setEndDate, setStartDate, setCarSelect, setEndTime, setStartTime, setCitySelect, setDateDayCount, calculateTotalAmount } = dateSlice.actions
+export const { setPackage1, setPackage2, addPackageOneSelect, addPackageTwoSelect, removePackageOneSelect, removePackageTwoSelect, setEndDate, setStartDate, setCarSelect, setEndTime, setStartTime, setCitySelect, setDateDayCount, calculateTotalAmount } = dateSlice.actions
 
 export default dateSlice.reducer
