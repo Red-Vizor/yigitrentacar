@@ -1,13 +1,90 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { PersonalForm, CorporateForm } from '../../Components'
 
 import { useSelector, useDispatch } from 'react-redux'
-import { changePage } from '../../store/reservation/reservationPageChangeSlice'
+import PropTypes from 'prop-types';
+import AppBar from '@material-ui/core/AppBar';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 
+
+
+function TabPanelForm(props) {
+    const { children, value, index, ...other } = props;
+
+    const cities = ["Adana", "Adıyaman", "Afyon", "Ağrı", "Amasya", "Ankara", "Antalya", "Artvin", "Aydın", "Balıkesir", "Bilecik", "Bingöl", "Bitlis", "Bolu", "Burdur", "Bursa", "Çanakkale", "Çankırı", "Çorum", "Denizli", "Diyarbakır", "Edirne", "Elazığ", "Erzincan", "Erzurum", "Eskişehir", "Gaziantep", "Giresun", "Gümüşhane", "Hakkari", "Hatay", "Isparta", "İçel (Mersin)", "İstanbul", "İzmir", "Kars", "Kastamonu", "Kayseri", "Kırklareli", "Kırşehir", "Kocaeli", "Konya", "Kütahya", "Malatya", "Manisa", "Kahramanmaraş", "Mardin", "Muğla", "Muş", "Nevşehir", "Niğde", "Ordu", "Rize", "Sakarya", "Samsun", "Siirt", "Sinop", "Sivas", "Tekirdağ", "Tokat", "Trabzon", "Tunceli", "Şanlıurfa", "Uşak", "Van", "Yozgat", "Zonguldak", "Aksaray", "Bayburt", "Karaman", "Kırıkkale", "Batman", "Şırnak", "Bartın", "Ardahan", "Iğdır", "Yalova", "Karabük", "Kilis", "Osmaniye", "Düzce"
+    ]
+    return (
+        <div
+            role="tabpanel"
+            hidden={value !== index}
+            id={`wrapped-tabpanel-${index}`}
+            aria-labelledby={`wrapped-tab-${index}`}
+            {...other}
+        >
+            {value === index && (
+                <Box p={3}>
+                    <Typography>{children}</Typography>
+                </Box>
+            )}
+        </div>
+    );
+}
+
+TabPanelForm.propTypes = {
+    children: PropTypes.node,
+    index: PropTypes.any.isRequired,
+    value: PropTypes.any.isRequired,
+};
+
+function a11yProps(index) {
+    return {
+        id: `wrapped-tab-${index}`,
+        'aria-controls': `wrapped-tabpanel-${index}`,
+    };
+}
 
 export default function ReservationForm() {
+    const [allValues, setAllValues] = useState({
+        name: '',
+        surname: '',
+        birthdate: '',
+        tcnumber: '',
+        phone: '',
+        mail: '',
+        message: '',
+        invoiceName: '',
+        invoiceLastname: '',
+        invoiceTcNumber: '',
+        invoiceAdress: '',
+        invoiceCompanyName: '',
+        invoiceCompanyTaxNumber: '',
+        invoiceCompanyCarCount: '',
+        invoiceCompanyCity: '',
+        invoiceCompanyAuthName: '',
+        invoiceCompanyAuthSurname: '',
+        invoiceCompanyPhone: '',
+        invoiceCompanyMail: '',
+        invoiceCompanyDriverLisance: '',
+        invoiceCompanyMessage: ''
+     });
+
+
+     const dateValue = useSelector((state) => state.dateslice)
+    const [value, setValue] = React.useState(0);
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
+    const changeHandler = e => {
+        setAllValues({...allValues, [e.target.name]: e.target.value})
+     }
 
     const dispatch = useDispatch()
+
     return (
         <section className="reservation-form-area">
             <div className="header-area  py-4 bg-pink-powder ">
@@ -25,7 +102,7 @@ export default function ReservationForm() {
 
                         <div className="col-lg-5 col-md-5 col-12 d-flex">
                             <div className="car-detail mx-auto my-auto ">
-                                <span className="h4 bold">2021 MERCEDES CLA 180</span>
+                                <span className="h4 bold">{dateValue.carSelect}</span>
                                 <div className="row ">
                                     <div className="col-6 bold mt-3 ">
                                         <span>GÜVENCE PAKETİ</span>
@@ -34,12 +111,10 @@ export default function ReservationForm() {
                                         <span>EK ÜRÜNLER</span>
                                     </div>
                                     <div className="col-6 ">
-                                        <span>Mini Hasar Sigortası 1500 TL
-                                            Kapsamlı... <span className="bold">Tümünü Göster</span></span>
+                                        <a className="h7 text-dark" data-bs-toggle="modal" data-bs-target="#packageModalOne">Seçilenleri göster</a>
                                     </div>
                                     <div className="col-6 ">
-                                        <span>Mini Hasar Sigortası 1500 TL
-                                            Kapsamlı...  <span className="bold">Tümünü Göster</span></span>
+                                        <a className="h7 text-dark" data-bs-toggle="modal" data-bs-target="#packageModalTwo">Seçilenleri göster</a>
                                     </div>
 
                                 </div>
@@ -49,12 +124,12 @@ export default function ReservationForm() {
                             <div className="my-auto ps-lg-5 reservation-date-detail">
                                 <span className="bold h5">REZERVASYON TARİHİ</span>
                                 <div className="mt-lg-3 mt-md-2">
-                                    <span >Bodrum, Yalıkavak</span>
+                                    <span >{dateValue.citySelect}</span>
                                 </div>
                                 <div>
-                                    <span className="bold">21.06.2021 <img src="./assets/icons/arrow-circle.svg" className="my-auto ms-1" /> 21.06.2021</span>
+                                    <span className="bold">{dateValue.startDate}<img src="./assets/icons/arrow-circle.svg" className="my-auto ms-1" /> {dateValue.endDate}</span>
                                 </div>
-                                <span className="bold">340,37₺</span>
+                                <span className="bold">{dateValue.totalAmount}₺</span>
 
                             </div>
                         </div>
@@ -66,217 +141,244 @@ export default function ReservationForm() {
             <div className="rezervasyon-uyari text-center p-3">
                 <p>REZERVASYONUNUZU TAMAMLAMAK İÇİN AŞAĞIDAKİ BİLGİLERİ EKSİKSİZ TAMAMLAYINIZ.</p>
             </div>
-
-            <div className="general-form-1 personal-form">
-                <div className="rezervasyon-form container px-5 ">
-                    <div className="container mt-5 mb-5 px-5 kisisel-bilgiler">
-                        <h4 className="text-center mb-5 bold">Bireysel Üyelik Bilgileri</h4>
-                        <form className="row g-3">
-                            <div className="col-md-6">
-                                <div className="input-group mb-3">
-                                    <label for="inputEmail4" className="form-label">ADINIZ*</label>
-                                    <span className="input-group-text" id="basic-addon1">
-                                        <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
-                                    </span>
-                                    <input type="email" className="form-control" id="inputEmail4" placeholder="Adınız (ehliyetinizde yer aldığı gibi)*" />
-                                </div>
-                            </div>
-                            <div className="col-md-6">
-                                <div className="input-group mb-3">
-                                    <label for="inputPassword4" className="form-label">SOYADINIZ*</label>
-                                    <span className="input-group-text" id="basic-addon1">
-                                        <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
-                                    </span>
-                                    <input type="password" className="form-control" id="inputPassword4" placeholder="Soyadınız (ehliyetinizde yer aldığı gibi)*" />
-                                </div>
-                            </div>
-                            <div className="col-md-6">
-                                <div className="input-group mb-3">
-                                    <label for="inputEmail4" className="form-label">DOĞUM TARİHİNİZ*</label>
-                                    <span className="input-group-text" id="basic-addon1">
-                                        <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
-                                    </span>
-                                    <input type="email" className="form-control" id="inputEmail4" placeholder="GG/AA/YYYY" />
-                                </div>
-                            </div>
-                            <div className="col-md-6">
-                                <div className="input-group mb-3">
-                                    <label for="inputPassword4" className="form-label">TC veya PASAPORT NO*</label>
-                                    <span className="input-group-text" id="basic-addon1">
-                                        <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
-                                    </span>
-                                    <input type="password" className="form-control" id="inputPassword4" placeholder="T.C. No ya da Pasaport No*" />
-                                </div>
-                            </div>
-                            <div className="col-md-6">
-                                <div className="input-group mb-3">
-                                    <label for="inputEmail4" className="form-label">CEP TELEFONUNUZ*</label>
-                                    <span className="input-group-text" id="basic-addon1">
-                                        <img src="./assets/icons/phone-gray.svg" height="45%" className="my-auto px-2" />
-                                    </span>
-                                    <input type="email" className="form-control" id="inputEmail4" placeholder="Cep Telefonunuz*" />
-                                </div>
-                            </div>
-                            <div className="col-md-6">
-                                <div className="input-group mb-3">
-                                    <label for="inputPassword4" className="form-label">MAİL ADRESİNİZ*</label>
-                                    <span className="input-group-text" id="basic-addon1">
-                                        <img src="./assets/icons/@.svg" height="50%" className="my-auto px-2" />
-                                    </span>
-                                    <input type="password" className="form-control" id="inputPassword4" placeholder="Mail Adresiniz" />
-                                </div>
-                            </div>
-                            <div className="mb-3">
-                                <label for="exampleFormControlTextarea1" className="form-label">MESAJINIZ</label>
-                                <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                            </div>
-
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <div className=" general-form-1 " style={{ width: "100%" }}>
-                <div className="bg-pink-powder py-4">
-                    <div className="corporate-rental-form px-5 container " >
-
-                        <div className="container" >
-                            <h5 className="bold text-center fs-3 mt-5">FATURA BİLGİLERİ</h5>
-                        </div>
-
-                        <div className=" mt-5 mb-5 px-5 kisisel-bilgiler">
-                            <form class="g-3">
-                                <div class="input-group mb-3">
-                                    <label for="inputEmail4" class="form-label">Firma Adı</label>
-                                    <span class="input-group-text" id="basic-addon1">
-                                        <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
-                                    </span>
-                                    <input type="email" class="form-control" id="inputEmail4" placeholder="Firma Adını Giriniz" />
-                                </div>
-                                <div className="row">
-                                    <div class="col-md-6">
-                                        <div class="input-group mb-3">
-                                            <label for="inputEmail4" class="form-label">Vergi Numarası*</label>
-                                            <span class="input-group-text" id="basic-addon1">
-                                                <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
-                                            </span>
-                                            <input type="email" class="form-control" id="inputEmail4" placeholder="Vergi Numarası*" />
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="input-group mb-3">
-                                            <label for="inputPassword4" class="form-label">Araç Sayısı*</label>
-                                            <span class="input-group-text" id="basic-addon1">
-                                                <img src="./assets/icons/one.svg" height="45%" className="my-auto px-2" />
-                                            </span>
-                                            <input type="password" class="form-control" id="inputPassword4" placeholder="Araç Sayısı*" />
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="input-group mb-3">
-                                            <label for="inputState" class="form-label">İL</label>
-                                            <span class="input-group-text" id="basic-addon1">
-                                                <img src="./assets/icons/location.svg" height="50%" className="my-auto px-3" />
-                                            </span>
-                                            <select id="inputState" class="form-control">
-                                                <option selected>İL</option>
-                                                <option>...</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="input-group mb-3">
-                                            <label for="inputState" class="form-label">İlçe</label>
-                                            <span class="input-group-text" id="basic-addon1">
-                                                <img src="./assets/icons/location.svg" height="50%" className="my-auto px-3" />
-                                            </span>
-                                            <select id="inputState" class="form-control">
-                                                <option selected>İlçe Seçiniz</option>
-                                                <option>...</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="input-group mb-3">
-                                            <label for="inputEmail4" class="form-label">ADINIZ</label>
-                                            <span class="input-group-text" id="basic-addon1">
-                                                <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
-                                            </span>
-                                            <input type="email" class="form-control" id="inputEmail4" placeholder="Yetkili Kişinin Adı" />
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="input-group mb-3">
-                                            <label for="inputPassword4" class="form-label">SOYADINIZ</label>
-                                            <span class="input-group-text" id="basic-addon1">
-                                                <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
-                                            </span>
-                                            <input type="password" class="form-control" id="inputPassword4" placeholder="Yetkili Kişinin Soyadı" />
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="input-group mb-3">
-                                            <label for="inputEmail4" class="form-label">TELEFONUNUZ</label>
-                                            <span class="input-group-text" id="basic-addon1">
-                                                <img src="./assets/icons/phone-gray.svg" height="45%" className="my-auto px-2" />
-                                            </span>
-                                            <input type="email" class="form-control" id="inputEmail4" placeholder="Telefon Numarası" />
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="input-group mb-3">
-                                            <label for="inputPassword4" class="form-label">MAİL ADRESİNİZ</label>
-                                            <span class="input-group-text" id="basic-addon1">
-                                                <img src="./assets/icons/@.svg" height="50%" className="my-auto px-2" />
-                                            </span>
-                                            <input type="password" class="form-control" id="inputPassword4" placeholder="Mail Adresiniz" />
-                                        </div>
-                                    </div>
-
-                                    <div class="form-check mt-4 d-flex">
-                                        <span class="d-inline mx-auto"><input class="form-check-input " type="checkbox" value="" id="flexCheckDefault" />
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                Şoförlü kiralama ve transfer hizmeti teklifi de almak istiyorum.
-                                            </label>
+            <form onSubmit={alert("deneme")}>
+                <div className="general-form-1 personal-form">
+                    <div className="rezervasyon-form container px-5 ">
+                        <div className="container mt-5 mb-5 px-5 kisisel-bilgiler">
+                            <h4 className="text-center mb-5 bold">Bireysel Üyelik Bilgileri</h4>
+                            <div className="row g-3">
+                                <div className="col-md-6">
+                                    <div className="input-group mb-3">
+                                        <label for="inputEmail4" className="form-label">ADINIZ*</label>
+                                        <span className="input-group-text" id="basic-addon1">
+                                            <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
                                         </span>
-                                    </div>
-
-                                    <div class="mb-3 mt-4">
-                                        <label for="exampleFormControlTextarea1" class="form-label">MESAJINIZ</label>
-                                        <textarea class="form-control px-5" id="exampleFormControlTextarea1" placeholder="İLETMEK İSTEDİĞİNİZ MESAJINIZI BURAYA YAZABİLİRSİNİZ." rows="3"></textarea>
+                                        <input required name="name" type="text" className="form-control" id="name" placeholder="Adınız (ehliyetinizde yer aldığı gibi)*" />
                                     </div>
                                 </div>
-
-                            </form>
-
+                                <div className="col-md-6">
+                                    <div className="input-group mb-3">
+                                        <label for="inputPassword4" className="form-label">SOYADINIZ*</label>
+                                        <span className="input-group-text" id="basic-addon1">
+                                            <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
+                                        </span>
+                                        <input required name="surname" type="text" className="form-control" id="surname" placeholder="Soyadınız (ehliyetinizde yer aldığı gibi)*" />
+                                    </div>
+                                </div>
+                                <div className="col-md-6">
+                                    <div className="input-group mb-3">
+                                        <label for="inputEmail4" className="form-label">DOĞUM TARİHİNİZ*</label>
+                                        <span className="input-group-text" id="basic-addon1">
+                                            <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
+                                        </span>
+                                        <input required name="birthdate" type="text" className="form-control" id="birthdate" placeholder="GG/AA/YYYY" />
+                                    </div>
+                                </div>
+                                <div className="col-md-6">
+                                    <div className="input-group mb-3">
+                                        <label for="inputPassword4" className="form-label">TC veya PASAPORT NO*</label>
+                                        <span className="input-group-text" id="basic-addon1">
+                                            <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
+                                        </span>
+                                        <input required name="tcnumber" type="text" className="form-control" id="tcnumber" placeholder="T.C. No ya da Pasaport No*" />
+                                    </div>
+                                </div>
+                                <div className="col-md-6">
+                                    <div className="input-group mb-3">
+                                        <label for="inputEmail4" className="form-label">CEP TELEFONUNUZ*</label>
+                                        <span className="input-group-text" id="basic-addon1">
+                                            <img src="./assets/icons/phone-gray.svg" height="45%" className="my-auto px-2" />
+                                        </span>
+                                        <input required name="phone" type="phone" className="form-control" id="phone" placeholder="Cep Telefonunuz*" />
+                                    </div>
+                                </div>
+                                <div className="col-md-6">
+                                    <div className="input-group mb-3">
+                                        <label for="inputPassword4" className="form-label">MAİL ADRESİNİZ*</label>
+                                        <span className="input-group-text" id="basic-addon1">
+                                            <img src="./assets/icons/@.svg" height="50%" className="my-auto px-2" />
+                                        </span>
+                                        <input required name="mail" type="text" className="form-control" id="mail" placeholder="Mail Adresiniz" />
+                                    </div>
+                                </div>
+                                <div className="mb-3">
+                                    <label for="exampleFormControlTextarea1" className="form-label">MESAJINIZ</label>
+                                    <textarea name="message" className="form-control" id="message" rows="3"></textarea>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="row px-5">
-                    <div className="form-policy py-5 px-5 container w-75 mx-auto row">
-                        <p className="pb-5"> Kişisel verilerinizin korunması ve işlenmesine ilişkin aydınlatma metni için tıklayınız.</p>
-                        <div class="form-check mb-4">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                            <label class="form-check-label" for="flexCheckDefault">
-                                Aydınlatma metni kapsamında kişisel verilerimin, pazarlama süreçlerinin planlanması ve icrası amacıyla; Otokoç Otomotiv Ticaret ve Sanayi Anonim Şirketi tarafından sunulan ürün ve hizmetlerin beğenilerime,
-                                kullanım alışkanlıklarıma ve ihtiyaçlarıma göre özelleştirilmesi için işlenmesini ve bu kapsamda aşağıda belirtilen iletişim bilgilerime reklam, promosyon, kampanya ve benzeri ticari elektronik ileti gönderilmesini ve bu amaçla Şirketin hizmet aldığı tedarikçilerle paylaşılmasını kabul ediyorum.
-                            </label>
+                <div className=" general-form-1 " style={{ width: "100%" }}>
+                    <div className="bg-pink-powder py-4">
+                        <div className="corporate-rental-form px-5 container " >
+
+                            <div className="container" >
+                                <h5 className="bold text-center fs-3 mt-5">FATURA BİLGİLERİ</h5>
+                            </div>
+
+                            <AppBar position="static" className="bg-transparent" >
+                                <Tabs value={value} onChange={handleChange} className="bg-transparent" aria-label="simple tabs example">
+                                    <Tab label="Bireysel" {...a11yProps(0)} />
+                                    <Tab label="Kurumsal" {...a11yProps(1)} />
+                                </Tabs>
+                            </AppBar>
+                            <TabPanelForm value={value} index={0}>
+                                <div className="row g-3 mt-4">
+                                    <div className="col-md-6">
+                                        <div className="input-group mb-3">
+                                            <label for="inputEmail4"  className="form-label">ADINIZ*</label>
+                                            <span className="input-group-text" id="basic-addon1">
+                                                <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
+                                            </span>
+                                            <input required name="invoiceName" type="text" className="form-control" id="invoiceName" placeholder="Adınız (ehliyetinizde yer aldığı gibi)*" />
+                                        </div>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <div className="input-group mb-3">
+                                            <label for="inputPassword4" className="form-label">SOYADINIZ*</label>
+                                            <span className="input-group-text" id="basic-addon1">
+                                                <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
+                                            </span>
+                                            <input required name="invoiceLastname" type="text" className="form-control" id="invoiceLastname" placeholder="Soyadınız (ehliyetinizde yer aldığı gibi)*" />
+                                        </div>
+                                    </div>
+                                    <div className="col-md-12">
+                                        <div className="input-group mb-3">
+                                            <label for="inputPassword4" className="form-label">TC veya PASAPORT NO*</label>
+                                            <span className="input-group-text" id="basic-addon1">
+                                                <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
+                                            </span>
+                                            <input required name="invoiceTcNumber" type="text" className="form-control" id="invoiceTcNumber" placeholder="T.C. No ya da Pasaport No*" />
+                                        </div>
+                                    </div>
+                                    <div className="mb-3">
+                                        <label for="exampleFormControlTextarea1" className="form-label">Adresiniz</label>
+                                        <textarea required name="invoiceAdress" className="form-control" id="invoiceAdress" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </TabPanelForm>
+                            <TabPanelForm value={value} index={1}>
+                                <div className=" mt-5 mb-5 px-5 kisisel-bilgiler">
+                                    <div class="input-group mb-3">
+                                        <label for="inputEmail4" class="form-label">Firma Adı</label>
+                                        <span class="input-group-text" id="basic-addon1">
+                                            <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
+                                        </span>
+                                        <input required name="invoiceCompanyName" type="text" class="form-control" id="invoiceCompanyName" placeholder="Firma Adını Giriniz" />
+                                    </div>
+                                    <div className="row">
+                                        <div class="col-md-6">
+                                            <div class="input-group mb-3">
+                                                <label for="inputEmail4" class="form-label">Vergi Numarası*</label>
+                                                <span class="input-group-text" id="basic-addon1">
+                                                    <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
+                                                </span>
+                                                <input required name="invoiceCompanyTaxNumber" type="text" class="form-control" id="invoiceCompanyTaxNumber" placeholder="Vergi Numarası*" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group mb-3">
+                                                <label for="inputPassword4" class="form-label">Araç Sayısı*</label>
+                                                <span class="input-group-text" id="basic-addon1">
+                                                    <img src="./assets/icons/one.svg" height="45%" className="my-auto px-2" />
+                                                </span>
+                                                <input required name="invoiceCompanyCarCount" type="text" class="form-control" id="invoiceCompanyCarCount" placeholder="Araç Sayısı*" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group mb-3">
+                                                <label for="inputState" class="form-label">İL</label>
+                                                <span class="input-group-text" id="basic-addon1">
+                                                    <img src="./assets/icons/location.svg" height="50%" className="my-auto px-3" />
+                                                </span>
+                                                <select required name="invoiceCompanyCity" id="invoiceCompanyCity" class="form-control">
+                                                    <option selected>İL</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group mb-3">
+                                                <label for="inputEmail4" class="form-label">ADINIZ</label>
+                                                <span class="input-group-text" id="basic-addon1">
+                                                    <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
+                                                </span>
+                                                <input required name="invoiceCompanyAuthName" type="text" class="form-control" id="invoiceCompanyAuthName" placeholder="Yetkili Kişinin Adı" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group mb-3">
+                                                <label for="inputPassword4" class="form-label">SOYADINIZ</label>
+                                                <span class="input-group-text" id="basic-addon1">
+                                                    <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
+                                                </span>
+                                                <input required name="invoiceCompanyAuthSurname" type="text" class="form-control" id="invoiceCompanyAuthSurname" placeholder="Yetkili Kişinin Soyadı" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group mb-3">
+                                                <label for="inputEmail4" class="form-label">TELEFONUNUZ</label>
+                                                <span class="input-group-text" id="basic-addon1">
+                                                    <img src="./assets/icons/phone-gray.svg" height="45%" className="my-auto px-2" />
+                                                </span>
+                                                <input required name="invoiceCompanyPhone" type="text" class="form-control" id="invoiceCompanyPhone" placeholder="Telefon Numarası" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-group mb-3">
+                                                <label for="inputPassword4" class="form-label">MAİL ADRESİNİZ</label>
+                                                <span class="input-group-text" id="basic-addon1">
+                                                    <img src="./assets/icons/@.svg" height="50%" className="my-auto px-2" />
+                                                </span>
+                                                <input required name="invoiceCompanyMail" type="text" class="form-control" id="invoiceCompanyMail" placeholder="Mail Adresiniz" />
+                                            </div>
+                                        </div>
+
+                                        <div class="form-check mt-4 d-flex">
+                                            <span class="d-inline mx-auto">
+                                                <input required name="invoiceCompanyDriverLisance" class="form-check-input " type="checkbox" value="" id="invoiceCompanyDriverLisance" />
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Şoförlü kiralama ve transfer hizmeti teklifi de almak istiyorum.
+                                                </label>
+                                            </span>
+                                        </div>
+
+                                        <div class="mb-3 mt-4">
+                                            <label for="exampleFormControlTextarea1" class="form-label">MESAJINIZ</label>
+                                            <textarea class="form-control px-5" name="invoiceCompanyMessage" id="invoiceCompanyMessage" placeholder="İLETMEK İSTEDİĞİNİZ MESAJINIZI BURAYA YAZABİLİRSİNİZ." rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </TabPanelForm>
                         </div>
-                        <div class="form-check mb-4">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                            <label class="form-check-label" for="flexCheckDefault">
-                                Aydınlatma metni  kapsamında kimlik, iletişim, finansal ve kullanım alışkanlıkları verilerimin, Otokoç Otomotiv Tic. ve San. A.Ş. tarafından sunulan ürün ve hizmetlerin beğeni, kullanım alışkanlıklarıma ve ihtiyaçlarıma göre özelleştirilerek önerilmesi ve bu kapsamda iletişim bilgilerime reklam, promosyon,
-                                kampanya ve benzeri ticari elektronik ileti gönderilmesi  amacıyla Emarsys İletişim Sistemleri Tic. Ltd. Şti aracılığıyla yurt dışında mukim Emarsys eMarketing Systems AG’ye ile paylaşılmasını kabul ediyorum.
-                            </label>
+                    </div>
+
+                    <div class="row px-5">
+                        <div className="form-policy py-5 px-5 container w-75 mx-auto row">
+                            <p className="pb-5"> Kişisel verilerinizin korunması ve işlenmesine ilişkin aydınlatma metni için tıklayınız.</p>
+                            <div class="form-check mb-4">
+                                <input required name="" class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Aydınlatma metni kapsamında kişisel verilerimin, pazarlama süreçlerinin planlanması ve icrası amacıyla; Otokoç Otomotiv Ticaret ve Sanayi Anonim Şirketi tarafından sunulan ürün ve hizmetlerin beğenilerime,
+                                    kullanım alışkanlıklarıma ve ihtiyaçlarıma göre özelleştirilmesi için işlenmesini ve bu kapsamda aşağıda belirtilen iletişim bilgilerime reklam, promosyon, kampanya ve benzeri ticari elektronik ileti gönderilmesini ve bu amaçla Şirketin hizmet aldığı tedarikçilerle paylaşılmasını kabul ediyorum.
+                                </label>
+                            </div>
+                            <div class="form-check mb-4">
+                                <input required name="" class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Aydınlatma metni  kapsamında kimlik, iletişim, finansal ve kullanım alışkanlıkları verilerimin, Otokoç Otomotiv Tic. ve San. A.Ş. tarafından sunulan ürün ve hizmetlerin beğeni, kullanım alışkanlıklarıma ve ihtiyaçlarıma göre özelleştirilerek önerilmesi ve bu kapsamda iletişim bilgilerime reklam, promosyon,
+                                    kampanya ve benzeri ticari elektronik ileti gönderilmesi  amacıyla Emarsys İletişim Sistemleri Tic. Ltd. Şti aracılığıyla yurt dışında mukim Emarsys eMarketing Systems AG’ye ile paylaşılmasını kabul ediyorum.
+                                </label>
+                            </div>
+                            <button type="submit" className="btn btn-orange bold px-3 py-2 text-white mx-auto" style={{ width: "30%" }} >
+                                <span className="m-auto">REZERVASYONU TAMAMLAMA</span>
+                            </button>
                         </div>
-                        <a className="btn btn-orange bold px-3 py-2 text-white mx-auto" onClick={() => { dispatch(changePage(5)) }} style={{ width: "30%" }} >
-                            <span className="m-auto">REZERVASYONU TAMAMLAMA</span>
-                        </a>
                     </div>
                 </div>
-
-            </div>
+            </form>
 
 
 

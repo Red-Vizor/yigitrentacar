@@ -64,7 +64,7 @@ export default function Header() {
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-4  d-flex px-1">
-                                <div className="d-flex-inline mx-auto">
+                                <div className="d-flex-inline row mx-auto">
                                     <a href="#" className="my-auto" >
                                         <img src="./assets/icons/slack.svg" height="100%" className="my-auto me-2" />
                                         yigitarackiralama
@@ -72,7 +72,7 @@ export default function Header() {
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-4  d-flex px-1">
-                                <div className="d-flex-inline mx-auto">
+                                <div className="d-flex-inline row mx-auto">
                                     <a href="#" className="my-auto" >
                                         <img src="./assets/icons/email.svg" height="80%" className="my-auto me-2" />
                                         info@yigitotokiralama.com

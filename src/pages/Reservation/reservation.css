@@ -107,6 +107,10 @@
     cursor: pointer;
 }
 
+.general-form-1 .MuiAppBar-colorPrimary{
+    background-color: transparent !important;
+}
+
 @media screen and (min-width: 992px) and (max-width: 1600px) {
     .reservation-tab-area .web {
         display: flex !important;
