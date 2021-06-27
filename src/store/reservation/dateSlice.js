@@ -5,17 +5,36 @@ export const dateSlice = createSlice({
   initialState: {
     value: 0,
     endDate: "",
-    startDate:"",
-    startTime:"12:00pm",
-    endTime:"12:00pm",
-    dateDayCount:0,
+    startDate: "",
+    startTime: "12:00pm",
+    endTime: "12:00pm",
+    dateDayCount: 0,
     citySelect: "İstanbul, İzmir, Bodrum",
-    totalAmount:0,
+    totalAmount: 0,
     carSelect: [],
+    packageOne: [],
+    packageTwo: [],
   },
   reducers: {
-    calculateTotalAmount: (state, action) => {
-      state.totalAmount += action.payload
+    calculateTotalAmount: (state) => {
+      state.totalAmount = 0
+      state.totalAmount += state.carSelect.totalAmount
+    },
+    addPackageOneSelect: (state, action) => {
+      var packAdd = state.packageOne.concat(action.payload)
+      state.totalAmount += action.payload.price * state.dateDayCount
+      state.packageOne = packAdd
+    },
+    addPackageTwoSelect: (state, action) => {
+      var packAdd = state.packageTwo.concat(action.payload)
+      state.totalAmount += action.payload.price * state.dateDayCount
+      state.packageTwo = packAdd
+    },
+    removePackageOneSelect: (state, action) => {
+      state.packageOne = [...state.packageOne, action.payload] 
+    },
+    removePackageTwoSelect: (state, action) => {
+      state.packageOne = [...state.packageOne, action.payload] 
     },
     setCarSelect: (state, action) => {
       state.carSelect = action.payload
@@ -42,6 +61,6 @@ export const dateSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { setEndDate, setStartDate,setCarSelect, setEndTime, setStartTime,setCitySelect ,setDateDayCount,calculateTotalAmount} = dateSlice.actions
+export const {addPackageOneSelect,addPackageTwoSelect, removePackageOneSelect,removePackageTwoSelect, setEndDate, setStartDate, setCarSelect, setEndTime, setStartTime, setCitySelect, setDateDayCount, calculateTotalAmount } = dateSlice.actions
 
 export default dateSlice.reducer

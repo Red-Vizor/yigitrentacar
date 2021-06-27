@@ -1,13 +1,13 @@
 import React from 'react'
 import './component.css'
-import { useDispatch,useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { changePage } from '../store/reservation/reservationPageChangeSlice'
 import { SRLWrapper } from "simple-react-lightbox";
 import $ from 'jquery';
 window.jQuery = $;
 export default function CarModal() {
 
-  
+
     const dispatch = useDispatch()
     const dateValue = useSelector((state) => state.dateslice)
 
@@ -20,10 +20,10 @@ export default function CarModal() {
                     <div className="modal-header w-100 border-0 py-4">
                         <div className="mx-auto">
                             <span className="my-auto py-0 px-4 border-light border text-white semi-bold">
-                                BUSINESS
+                                {dateValue.carSelect.class}
                             </span>
                             <span className="my-auto ms-0 py-0 px-4 text-white bold">
-                                2021 MERCEDES C200 CABRINO
+                                {dateValue.carSelect.name}
                             </span>
                         </div>
                         <button type="button" className="btn-close d-none" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -91,15 +91,15 @@ export default function CarModal() {
                                 <span className="preferences d-block text-white mx-auto">
                                     <span className="preference">
                                         <img src="./assets/icons/carcard/oil.svg" className="icon my-auto ms-1" />
-                                        <span className="my-auto ms-1">Benzinli</span>
+                                        <span className="my-auto ms-1"> {dateValue.carSelect.fuel}</span>
                                     </span>
                                     <span className="preference">
                                         <img src="./assets/icons/carcard/shifter.svg" className="icon my-auto ms-2" />
-                                        <span className="my-auto ms-1">Otomatik</span>
+                                        <span className="my-auto ms-1">{dateValue.carSelect.gear}</span>
                                     </span>
                                     <span className="preference">
                                         <img src="./assets/icons/carcard/bagagge.svg" className="icon my-auto ms-2" />
-                                        <span className="my-auto ms-1">2 Çanta</span>
+                                        <span className="my-auto ms-1">{dateValue.carSelect.baggage} Çanta</span>
                                     </span>
                                 </span>
                             </div>
@@ -107,30 +107,38 @@ export default function CarModal() {
                                 <span className="preferences d-block text-white mx-auto">
                                     <span className="preference">
                                         <img src="./assets/icons/carcard/expand.svg" className="icon my-auto ms-2" />
-                                        <span className="my-auto ms-1">4 Kişi</span>
+                                        <span className="my-auto ms-1">{dateValue.carSelect.seat} Kişi</span>
                                     </span>
                                     <span className="preference">
                                         <img src="./assets/icons/carcard/shifter.svg" className="icon my-auto ms-2" />
-                                        <span className="my-auto ms-1">Otomatik</span>
+                                        <span className="my-auto ms-1">{dateValue.carSelect.gear}</span>
                                     </span>
                                     <span className="preference">
                                         <img src="./assets/icons/carcard/bagagge.svg" className="icon my-auto ms-2" />
-                                        <span className="my-auto ms-1">2 Çanta</span>
+                                        <span className="my-auto ms-1">{dateValue.carSelect.baggage} Çanta</span>
                                     </span>
 
                                 </span>
                             </div>
                         </div>
                         <div className="area-2 py-3 semi-bold text-center d-flex">
-                            <span className="m-auto"> <span>Yaş: 25+</span>   <span className="mx-3">Ehliyet Yaşı: +5</span> <span>Depozito: 3500 TL</span></span>
+                            <span className="m-auto"> <span>Yaş: {dateValue.carSelect.lisanceOwnAge}+</span>   <span className="mx-3">Ehliyet Yaşı: +{dateValue.carSelect.lisanceAge}</span> <span>Depozito: 3500 TL</span></span>
                         </div>
                         <div className="area-3 py-4 text-white">
                             <div className="w-75 ms-auto my-3">
                                 <div className="row ">
                                     <div className="col-6 d-flex">
                                         <div className="my-auto text-center">
-                                            <span><span>GÜNLÜK</span><span className="ms-4">TOPLAM</span></span> <br />
-                                            <span> <span>₺ <span className="bold">1650</span>,00</span> <span className="ms-4">₺  <span className="bold">3450</span>,00</span></span>
+                                            <div className="row p-0 m-0">
+                                                <div className="col-6 text-center">
+                                                    <span>GÜNLÜK</span> <br />
+                                                    <span>₺ <span className="bold">{dateValue.carSelect.amount}</span>,00</span>
+                                                </div>
+                                                <div className="col-6 text-center">
+                                                    <span>TOPLAM</span> <br />
+                                                    <span>₺ <span className="bold">{dateValue.carSelect.totalAmount}</span>,00</span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="col-6 d-flex">

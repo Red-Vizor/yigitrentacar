@@ -103,6 +103,10 @@
     display: none !important;
 }
 
+.add-button{
+    cursor: pointer;
+}
+
 @media screen and (min-width: 992px) and (max-width: 1600px) {
     .reservation-tab-area .web {
         display: flex !important;

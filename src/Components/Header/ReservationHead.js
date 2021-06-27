@@ -1,7 +1,10 @@
 import React from 'react'
 import './header.css'
+import { useSelector } from 'react-redux'
+
 export default function ReservationHead() {
   
+    const dateValue = useSelector((state) => state.dateslice);
     return (
             <div className="container-fluid reservation-head bg-black">
                 <div className="container py-3 reservation-head">
@@ -13,7 +16,7 @@ export default function ReservationHead() {
                             <a href="/policies" target="_blank"  class="btn btn-outline-light rounded-0 my-auto py-lg-2 ms-auto">KİRALAMA KOŞULLARINI GÖRÜNTÜLE</a>
                             <div className="bg-gray d-flex text-white ms-4 px-lg-5">
                                 <p className="h5 total-payment m-auto bold px-md-3">
-                                    Toplam: 99 TL
+                                    Toplam: {dateValue.totalAmount} TL
                                 </p>
                             </div>
                         </div>

@@ -2,23 +2,41 @@ import React from 'react'
 import './reservation.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { changePage } from '../../store/reservation/reservationPageChangeSlice'
+import { calculateTotalAmount, addPackageOneSelect, addPackageTwoSelect, removePackageOneSelect, removePackageTwoSelect } from '../../store/reservation/dateSlice'
+import $ from 'jquery';
+window.jQuery = $;
 
-export default function Package() {
+export default function Package(props) {
 
     const dispatch = useDispatch()
-    const page = useSelector((state) => state.reservationChange.value);
+    const page = useSelector((state) => state.reservationChange.value)
+    const dateValue = useSelector((state) => state.dateslice)
+    const removePackage = (packageValue) => { }
+    const changePackage = (packageValue) => {
+        if (props.packages === "1") {
+            dispatch(addPackageOneSelect(packageValue))
+        }
+        if (props.packages === "2") {
+            dispatch(addPackageTwoSelect(packageValue))
+        }
+
+        $('.item-' + packageValue.id + '-' + props.packages).remove()
+
+    }
+
 
     return (
         <section className="package">
+
             <div className="package-header header-area py-4 bg-pink-powder d-flex justify-content-center">
                 <img src="./assets/images/s3.png" width="250px" className="mx-4 package-car-image" />
                 <div className="car-detail mx-lg-5 my-auto ">
-                    <span className="h4 bold">2021 MERCEDES CLA 180</span>
-                    <p className="mt-3">Bodrum, Yalıkavak</p>
-                    <p className="bold">21.06.2021 <img src="./assets/icons/arrow-circle.svg" className="my-auto ms-1 h-50 " /> 21.06.2021</p>
-                    <p className="bold">340,37₺</p>
+                    <span className="h4 bold">{dateValue.carSelect.name}</span>
+                    <p className="mt-3">{dateValue.citySelect}</p>
+                    <p className="bold">{dateValue.startDate} <img src="./assets/icons/arrow-circle.svg" className="my-auto ms-1 h-50 " /> {dateValue.endDate}</p>
+                    <p className="bold">{dateValue.totalAmount}₺</p>
                 </div>
-                <button type="button" className="btn btn-dark btn-orange my-auto ms-4 px-lg-4 py-lg-3" onClick={() => {dispatch(changePage(page+1))}}> <span className="bold">REZERVASYONA DEVAM ET</span> <img src="./assets/icons/rightlong.svg" width="40px" className="ms--lg3 my-auto" /></button>
+                <button type="button" className="btn btn-dark btn-orange my-auto ms-4 px-lg-4 py-lg-3" onClick={() => { dispatch(changePage(page + 1)) }}> <span className="bold">REZERVASYONA DEVAM ET</span> <img src="./assets/icons/rightlong.svg" width="40px" className="ms--lg3 my-auto" /></button>
             </div>
             <div className="package-body container py-4">
                 <div className="d-flex my-4">
@@ -52,18 +70,19 @@ export default function Package() {
 
 
                     <div className="accordion accordion-flush" id="accordionFlushExample">
-                        <div className="accordion-item ">
+
+                        {props.pack.map(item => <div className={"accordion-item item-" + item.id + "-" + props.packages}>
                             <h2 className="accordion-header" id="flush-headingOne">
-                                <button className="accordion-button collapsed px-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <button className="accordion-button collapsed px-0" type="button" data-bs-toggle="collapse" data-bs-target={"#flush-collapse-" + item.id} aria-expanded="false" aria-controls="flush-collapseOne">
                                     <div className="row w-100 text-center bold">
                                         <div className="col d-flex">
                                             <span className="m-auto">
-                                                Mini Hasar Sigortası 1500 TL Kapsamlı
+                                                {item.name}
                                             </span>
                                         </div>
                                         <div className="col d-flex">
                                             <span className="m-auto">
-                                                ₺29,00 / gün
+                                                ₺{item.price},00 / gün
                                             </span>
                                         </div>
                                         <div className="col d-flex">
@@ -72,11 +91,10 @@ export default function Package() {
                                             </span>
                                         </div>
                                         <div className="col d-flex">
-                                            <div className="m-auto">
+                                            <div className="m-auto add-button" id={item.id} onClick={() => { changePackage(item) }}>
                                                 <button className="btn btn-add rounded-circle bg-orange text-white">
                                                     +
                                                 </button>
-
                                                 <span className="bold ms-3 fs-6">
                                                     EKLE
                                                 </span>
@@ -85,170 +103,21 @@ export default function Package() {
                                     </div>
                                 </button>
                             </h2>
-                            <div id="flush-collapseOne" className="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                <div className="accordion-body bold">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with.</div>
+                            <div id={"flush-collapse-" + item.id} className="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div className="accordion-body bold">{item.detail}</div>
                             </div>
-                        </div>
+                        </div>)}
 
-                        <div className="accordion-item">
-                            <h2 className="accordion-header" id="flush-headingOne">
-                                <button className="accordion-button collapsed px-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne1" aria-expanded="false" aria-controls="flush-collapseOne">
-                                    <div className="row w-100 text-center bold">
-                                        <div className="col d-flex">
-                                            <span className="m-auto">
-                                                Mini Hasar Sigortası 1500 TL Kapsamlı
-                                            </span>
-                                        </div>
-                                        <div className="col d-flex">
-                                            <span className="m-auto">
-                                                ₺29,00 / gün
-                                            </span>
-                                        </div>
-                                        <div className="col d-flex">
-                                            <span className="m-auto">
-                                                Ayrıntılar
-                                            </span>
-                                        </div>
-                                        <div className="col d-flex">
-                                            <div className="m-auto">
-                                                <button className="btn btn-add rounded-circle bg-orange text-white">
-                                                    +
-                                                </button>
-
-                                                <span className="bold ms-3 fs-6">
-                                                    EKLE
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </button>
-                            </h2>
-                            <div id="flush-collapseOne1" className="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                <div className="accordion-body bold">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with.</div>
-                            </div>
-                        </div>
-
-
-                        <div className="accordion-item">
-                            <h2 className="accordion-header" id="flush-headingOne">
-                                <button className="accordion-button collapsed px-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne2" aria-expanded="false" aria-controls="flush-collapseOne">
-                                    <div className="row w-100 text-center bold">
-                                        <div className="col d-flex">
-                                            <span className="m-auto">
-                                                Mini Hasar Sigortası 1500 TL Kapsamlı
-                                            </span>
-                                        </div>
-                                        <div className="col d-flex">
-                                            <span className="m-auto">
-                                                ₺29,00 / gün
-                                            </span>
-                                        </div>
-                                        <div className="col d-flex">
-                                            <span className="m-auto">
-                                                Ayrıntılar
-                                            </span>
-                                        </div>
-                                        <div className="col d-flex">
-                                            <div className="m-auto">
-                                                <button className="btn btn-add rounded-circle bg-orange text-white">
-                                                    +
-                                                </button>
-
-                                                <span className="bold ms-3 fs-6">
-                                                    EKLE
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </button>
-                            </h2>
-                            <div id="flush-collapseOne2" className="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                <div className="accordion-body bold">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with.</div>
-                            </div>
-                        </div>
-
-                        <div className="accordion-item">
-                            <h2 className="accordion-header" id="flush-headingOne">
-                                <button className="accordion-button collapsed px-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne3" aria-expanded="false" aria-controls="flush-collapseOne">
-                                    <div className="row w-100 text-center bold">
-                                        <div className="col d-flex">
-                                            <span className="m-auto">
-                                                Mini Hasar Sigortası 1500 TL Kapsamlı
-                                            </span>
-                                        </div>
-                                        <div className="col d-flex">
-                                            <span className="m-auto">
-                                                ₺29,00 / gün
-                                            </span>
-                                        </div>
-                                        <div className="col d-flex">
-                                            <span className="m-auto">
-                                                Ayrıntılar
-                                            </span>
-                                        </div>
-                                        <div className="col d-flex">
-                                            <div className="m-auto">
-                                                <button className="btn btn-add rounded-circle bg-orange text-white">
-                                                    +
-                                                </button>
-
-                                                <span className="bold ms-3 fs-6">
-                                                    EKLE
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </button>
-                            </h2>
-                            <div id="flush-collapseOne3" className="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                <div className="accordion-body bold">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with.</div>
-                            </div>
-                        </div>
-
-                        <div className="accordion-item">
-                            <h2 className="accordion-header" id="flush-headingOne">
-                                <button className="accordion-button collapsed px-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne4" aria-expanded="false" aria-controls="flush-collapseOne">
-                                    <div className="row w-100 text-center bold">
-                                        <div className="col d-flex">
-                                            <span className="m-auto">
-                                                Mini Hasar Sigortası 1500 TL Kapsamlı
-                                            </span>
-                                        </div>
-                                        <div className="col d-flex">
-                                            <span className="m-auto">
-                                                ₺29,00 / gün
-                                            </span>
-                                        </div>
-                                        <div className="col d-flex">
-                                            <span className="m-auto">
-                                                Ayrıntılar
-                                            </span>
-                                        </div>
-                                        <div className="col d-flex">
-                                            <div className="m-auto">
-                                                <button className="btn btn-add rounded-circle bg-orange text-white">
-                                                    +
-                                                </button>
-
-                                                <span className="bold ms-3 fs-6">
-                                                    EKLE
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </button>
-                            </h2>
-                            <div id="flush-collapseOne4" className="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                <div className="accordion-body bold">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with.</div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
 
 
+        
+
+
             <div className="container d-flex py-4">
-                <button type="button" className="btn btn-dark btn-orange my-auto ms-auto px-lg-4 py-lg-3" onClick={() => {dispatch(changePage(page+1))}}> <span className="bold">REZERVASYONA DEVAM ET</span> <img src="./assets/icons/rightlong.svg" width="40px" className="ms-3 my-auto" /></button>
+                <button type="button" className="btn btn-dark btn-orange my-auto ms-auto px-lg-4 py-lg-3" onClick={() => { dispatch(changePage(page + 1)) }}> <span className="bold">REZERVASYONA DEVAM ET</span> <img src="./assets/icons/rightlong.svg" width="40px" className="ms-3 my-auto" /></button>
             </div>
         </section>
     )
