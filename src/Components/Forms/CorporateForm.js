@@ -36,8 +36,7 @@ export default function CorporateForm(props) {
                 city: allValues2.city,
                 town: allValues2.town,
                 taxnumber: allValues2.taxnumber
-            })
-                .then(function (response) {
+            }).then(function (response) {
                     console.log(response.data)
                 })
         }
