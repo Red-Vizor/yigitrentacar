@@ -1,22 +1,22 @@
 import React from 'react'
 
-export default function OfficesCard() {
+export default function OfficesCard(props) {
     return (
         <div className="office">
-            <h4 className="extra-bold text-white mb-2 text-center">İSTANBUL</h4>
+            <h4 className="extra-bold text-white mb-2 text-center">{props.name}</h4>
 
             <div className="card office-card">
                 <p className="bold text-white mb-2 text-center">Aramak için tıklayın</p>
                 <div className="row">
                     <div className="col">
                         <div className="phone mb-2">
-                            <a> <img src="./assets/images/phone.svg" width="20px" className="me-1 my-auto" />+90 532 409 14 84</a>
+                            <a> <img src="./assets/images/phone.svg" width="20px" className="me-1 my-auto" />{props.phone}</a>
                         </div>
                         <div className="email mb-2">
                             <img src="./assets/images/email.svg" width="20px" className="me-1 my-auto" /> <a> info@yigitotokiralama.com</a>
                         </div>
                         <div className="adress mb-2">
-                            <a> <img src="./assets/images/location.svg" width="20px" className="me-1 my-auto" />Cumhuriyet Mahallesi Gürpınar Yolu Caddesi Beykent İş Merkezi B2 Blok No:347 Büyükçekmece / İSTANBUL</a>
+                            <a> <img src="./assets/images/location.svg" width="20px" className="me-1 my-auto" />{props.adress}</a>
                         </div>
                         <form>
                             <div className="row">

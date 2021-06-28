@@ -5,6 +5,7 @@ import menuesReducer from '../store/menues/menuesSlice'
 import menuesMobileReducer from '../store/menues/mobileMenuesSlice'
 import reservationPageChangeSlice from '../store/reservation/reservationPageChangeSlice'
 import dateSlice from '../store/reservation/dateSlice'
+import userSlice from '../store/user/userSlice'
 export default configureStore({
   reducer: {
       counter: counterReducer,
@@ -12,6 +13,7 @@ export default configureStore({
       menues: menuesReducer,
       mobilemenues: menuesMobileReducer,
       dateslice: dateSlice,
-      reservationChange: reservationPageChangeSlice
+      reservationChange: reservationPageChangeSlice,
+      user: userSlice
   },
 })

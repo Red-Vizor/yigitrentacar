@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import './header.css'
 import { Link } from "react-router-dom"
@@ -12,12 +12,14 @@ import $ from 'jquery';
 window.jQuery = $;
 
 export default function Header() {
-
     const location = useLocation()
     const dispatch = useDispatch()
 
     dispatch(updatePage(location.pathname))
     const page = useSelector((state) => state.page.value)
+
+    const user = useSelector((state) => state.user.user)
+
 
 
     const $menu = $('.login-dropdown-menu');
@@ -37,7 +39,6 @@ export default function Header() {
             $toogleMenu.slideUp();
         }
     });
-    
 
     if (page !== "/reservation") {
         return (
@@ -67,7 +68,7 @@ export default function Header() {
                                 <div className="d-flex-inline row mx-auto">
                                     <a href="#" className="my-auto" >
                                         <img src="./assets/icons/slack.svg" height="100%" className="my-auto me-2" />
-                                        yigitarackiralama
+                                        yigitrentacar
                                     </a>
                                 </div>
                             </div>
@@ -91,7 +92,7 @@ export default function Header() {
                                 <img src="./assets/icons/phone.svg" className="my-auto me-2 h-50" />
                                 <div className="my-auto">
                                     <p >7/24 ÇAĞRI HATTI </p>
-                                    <a href="#">+90 850 840 09 48</a>
+                                    <a href="#">+90 850 840 0 948 <span className="text-orange">(YGT)</span></a>
                                 </div>
                             </div>
 
@@ -104,7 +105,6 @@ export default function Header() {
                                     <a className="dropdown-toggle login-dropdown btn btn-outline-light rounded-0  m-auto" href="#" >
                                         <span>Üye Girişi</span> <i class="las la-user" ></i> <i class="las la-angle-down"></i>
                                     </a>
-
                                 </div>
                                 <div className="login-dropdown-menu dropdown-menu bg-light position-absolute rounded" role="menu" aria-labelledby="dLabel">
                                     <LoginPopup formWidth="100" />

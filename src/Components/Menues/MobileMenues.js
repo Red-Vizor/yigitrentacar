@@ -52,6 +52,9 @@ export default function MobileMenues() {
                                     </div>
                                 </li>
                                 <li className="nav-item">
+                                    <Link to="/about" className="nav-link" href="#" onClick={() => { closeMenu() }}>Hakkımızda</Link>
+                                </li>
+                                <li className="nav-item">
                                     <Link to="/offices" className="nav-link" href="#" onClick={() => { closeMenu() }}>Ofisler</Link>
                                 </li>
                                 <li className="nav-item">

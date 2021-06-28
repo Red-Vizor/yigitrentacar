@@ -9,16 +9,14 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import { changePage } from '../../store/reservation/reservationPageChangeSlice'
+import axios from 'axios'
 import $ from 'jquery';
 window.jQuery = $;
-
-const axios = require('axios'); 
 
 
 function TabPanelForm(props) {
     const { children, value, index, ...other } = props;
 
-   
     return (
         <div
             role="tabpanel"

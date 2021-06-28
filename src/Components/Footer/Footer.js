@@ -59,7 +59,7 @@ export default function Footer() {
                         <div className="d-flex me-auto ps-lg-5 ps-md-3 footer-mail mx-auto">
                             <a href="#" className="my-auto " >
                                 <img src="./assets/icons/slack.svg" height="70%" className="my-auto me-2 mail-img" />
-                                <span>yigitarackiralama</span>
+                                <span>yigitrentacar</span>
                             </a>
                             <img src="./assets/images/master.png" className="my-auto ms-lg-5 ms-md-3 master-img" />
                         </div>
@@ -68,27 +68,27 @@ export default function Footer() {
             </div>
 
             <div className="container-fluid c-padding py-4  footer-menu">
-                <div className="row px-lg-5">
+                <div className="row px-lg-5 text-center">
                     <div className="col-lg col-md col footer-mini-menu ">
-                        <a href="#">Araçlar</a>
+                        <a href="/cars">Araçlar</a>
                     </div>
                     <div className="col-lg col-md col footer-mini-menu">
-                        <a href="#">Kampanyalar</a>
+                        <a href="/campaigns">Kampanyalar</a>
                     </div>
                     <div className="col-lg col-md col footer-mini-menu">
-                        <a href="#">Ofisler</a>
+                        <a href="/offices">Ofisler</a>
                     </div>
                     <div className="col-lg col-md col footer-mini-menu">
-                        <a href="#">Hizmetler</a>
+                        <a href="/services">Hizmetler</a>
                     </div>
                     <div className="col-lg col-md col-4 footer-mini-menu">
-                        <a href="#">Hakkımızda</a>
+                        <a href="/about">Hakkımızda</a>
                     </div>
                     <div className="col-lg col-md col-4 footer-mini-menu">
-                        <a href="#">Kiralama Koşulları</a>
+                        <a href="/policies">Kiralama Koşulları</a>
                     </div>
                     <div className="col-lg col-md col-4 footer-mini-menu">
-                        <a href="#">İletişim</a>
+                        <a href="/contact">İletişim</a>
                     </div>
                 </div>
 
@@ -98,29 +98,47 @@ export default function Footer() {
             <div className="container-fluid c-padding py-lg-4 py-md-3 mb-4 footer-menu">
                 <div className="row px-lg-5">
                     <div className="col-lg col-md col-4 ">
-                        <SideMenu menuTitle="MENÜ" menues={["Araçlar", "Kampanyalar", "Ofisler"]} />
+                        <div className="menu text-white ">
+                            <p className="h5 mb-lg-3 bold ">Menü</p>
+                            <div className="mt-lg-2 "><a href="/cars">Araçlar</a></div>
+                            <div className="mt-lg-2 "><a href="/campaigns">Kampanyalar</a></div>
+                            <div className="mt-lg-2 "><a href="/offices">Ofisler</a></div>
+                        </div>
                     </div>
                     <div className="col-lg col-md col-4">
-                        <SideMenu menuTitle="ARAÇ SINIFI" menues={["Lüx", "Prime", "Business"]} />
+                        <div className="menu text-white ">
+                            <p className="h5 mb-lg-3 bold ">ARAÇ SINIFI</p>
+                            <div className="mt-lg-2 "><a href="/cars">Lüx</a></div>
+                            <div className="mt-lg-2 "><a href="/cars">Prime</a></div>
+                            <div className="mt-lg-2 "><a href="/cars">Business</a></div>
+                        </div>
                     </div>
                     <div className="col-lg col-md col-4">
-                        <SideMenu menuTitle="OFİSLER" menues={["İSTANBUL", "İZMİR", "BODRUM"]} />
+                        <div className="menu text-white ">
+                            <p className="h5 mb-lg-3 bold ">OFİSLER</p>
+                            <div className="mt-lg-2 "><a href="/offices">İSTANBUL</a></div>
+                            <div className="mt-lg-2 "><a href="/offices">İZMİR</a></div>
+                            <div className="mt-lg-2 "><a href="/offices">BODRUM</a></div>
+                        </div>
                     </div>
                     <div className="col-lg col-md col-12 mobile-footer-menu">
-                        <SideMenu menuTitle="KAMPANYALAR" menues={["Yaz Kampanyası", "Ağustos Ayı Kampanyası", "Enterprise Fırsatları"]} />
+                        <div className="menu text-white ">
+                            <p className="h5 mb-lg-3 bold ">KAMPANYALAR</p>
+                            <div className="mt-lg-2 "><a href="/campaings">Yaz Kampanyası</a></div>
+                            <div className="mt-lg-2 "><a href="/campaings">Ağustos Ayı Kampanyası</a></div>
+                            <div className="mt-lg-2 "><a href="/campaings">Enterprise Fırsatları</a></div>
+                        </div>
                     </div>
                     <div className="col-lg col-md col-12 mobile-footer-menu">
-                        <SideMenu menuTitle="POPÜLER LOKASYONLAR" menues={["İSTANBUL REHBERİ", "İZMİR REHBERİ", "BODRUM REHBERİ"]} />
+                        <div className="menu text-white ">
+                            <p className="h5 mb-lg-3 bold ">POPÜLER LOKASYONLAR</p>
+                            <div className="mt-lg-2 "><a href="/popularlocations">İSTANBUL REHBERİ</a></div>
+                            <div className="mt-lg-2 "><a href="/popularlocations">İZMİR REHBERİ</a></div>
+                            <div className="mt-lg-2 "><a href="/popularlocations">BODRUM REHBERİ</a></div>
+                        </div>
                     </div>
-
-
-
-
-
-
                 </div>
             </div>
-
             <div className="copyright text-center py-2 bg-gray text-white footer-bottom-text">
                 <p>©2021 Yiğit Oto Kiralama Turizm Ltd. Şti. Tüm Hakları Saklıdır. Web Design <span className="bold">Seyo Medya</span>.</p>
             </div>

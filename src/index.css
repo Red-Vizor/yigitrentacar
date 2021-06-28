@@ -106,7 +106,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .text-orange {
-  color: var(--orange)
+  color: var(--orange) !important;
 }
 
 .bg-image {
@@ -460,6 +460,10 @@ form .form-check-input {
   height: 10px !important;
   border-radius: 100%;
   background-color: var(--orange);
+}
+
+.MuiTab-wrapper{
+  font-weight: 700 !important;
 }
 
 @media screen and (min-width: 992px) and (max-width: 1600px) {

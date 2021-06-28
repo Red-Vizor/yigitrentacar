@@ -117,7 +117,6 @@ export default function CarModal() {
                                         <img src="./assets/icons/carcard/bagagge.svg" className="icon my-auto ms-2" />
                                         <span className="my-auto ms-1">{dateValue.carSelect.baggage} Çanta</span>
                                     </span>
-
                                 </span>
                             </div>
                         </div>
@@ -132,11 +131,11 @@ export default function CarModal() {
                                             <div className="row p-0 m-0">
                                                 <div className="col-6 text-center">
                                                     <span>GÜNLÜK</span> <br />
-                                                    <span>₺ <span className="bold">{dateValue.carSelect.amount}</span>,00</span>
+                                                    <span><span className="bold">₺ {dateValue.carSelect.amount}</span></span>
                                                 </div>
                                                 <div className="col-6 text-center">
                                                     <span>TOPLAM</span> <br />
-                                                    <span>₺ <span className="bold">{dateValue.carSelect.totalAmount}</span>,00</span>
+                                                    <span><span className="bold">₺ {dateValue.carSelect.totalAmount}</span></span>
                                                 </div>
                                             </div>
                                         </div>
