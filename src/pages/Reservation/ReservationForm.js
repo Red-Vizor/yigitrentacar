@@ -76,6 +76,9 @@ export default function ReservationForm() {
         invoiceCompanyMessage: '',
         dateInformation : dateValue
     });
+    const changeHandler = e => {
+        setAllValues({ ...allValues, [e.target.name]: e.target.value })
+    }
 
 
     const [value, setValue] = React.useState(0);
@@ -84,10 +87,7 @@ export default function ReservationForm() {
         setValue(newValue);
     };
 
-    const changeHandler = e => {
-        setAllValues({ ...allValues, [e.target.name]: e.target.value })
-    }
-
+    
     const dispatch = useDispatch()
 
     const sendMail= () => { 

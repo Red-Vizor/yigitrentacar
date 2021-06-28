@@ -102,7 +102,7 @@ export default function Header() {
                             <div className="col-lg-4 col-md-5  col-4 d-flex justify-content-end">
                                 <div className="login-drop my-auto">
                                     <a className="dropdown-toggle login-dropdown btn btn-outline-light rounded-0  m-auto" href="#" >
-                                        <span>{Cookies.get('user') ? Cookies.get('user').split(" ")[0] + " Hoşgeldin" : ''}</span> <i class="las la-user" ></i> <i class="las la-angle-down"></i>
+                                        <span>{Cookies.get('user') ? Cookies.get('user').split(" ")[0] + " Hoşgeldin" : 'Üye Girişi'}</span> <i class="las la-user" ></i> <i class="las la-angle-down"></i>
                                     </a>
                                 </div>
                                 {Cookies.get('user') ? '' : <div className="login-dropdown-menu dropdown-menu bg-light position-absolute rounded" role="menu" aria-labelledby="dLabel">
