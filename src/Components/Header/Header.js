@@ -8,6 +8,8 @@ import { toogle } from '../../store/menues/menuesSlice'
 import { toogleMobile } from '../../store/menues/mobileMenuesSlice'
 import { Menues, MobileMenues } from '../'
 import LoginPopup from '../../pages/Crud/LoginPopup'
+
+import Cookies from 'js-cookie'
 import $ from 'jquery';
 window.jQuery = $;
 
@@ -17,9 +19,6 @@ export default function Header() {
 
     dispatch(updatePage(location.pathname))
     const page = useSelector((state) => state.page.value)
-
-    const user = useSelector((state) => state.user.user)
-
 
 
     const $menu = $('.login-dropdown-menu');
@@ -103,12 +102,13 @@ export default function Header() {
                             <div className="col-lg-4 col-md-5  col-4 d-flex justify-content-end">
                                 <div className="login-drop my-auto">
                                     <a className="dropdown-toggle login-dropdown btn btn-outline-light rounded-0  m-auto" href="#" >
-                                        <span>Üye Girişi</span> <i class="las la-user" ></i> <i class="las la-angle-down"></i>
+                                        <span>{Cookies.get('user') ? Cookies.get('user').split(" ")[0] + " Hoşgeldin" : ''}</span> <i class="las la-user" ></i> <i class="las la-angle-down"></i>
                                     </a>
                                 </div>
-                                <div className="login-dropdown-menu dropdown-menu bg-light position-absolute rounded" role="menu" aria-labelledby="dLabel">
+                                {Cookies.get('user') ? '' : <div className="login-dropdown-menu dropdown-menu bg-light position-absolute rounded" role="menu" aria-labelledby="dLabel">
                                     <LoginPopup formWidth="100" />
-                                </div>
+                                </div>}
+
 
                                 <button type="button" class="btn btn-outline-light border-0 my-auto search-button "><i class="las la-search"></i></button>
                                 <div class="menu-button mobile-tablet my-auto">

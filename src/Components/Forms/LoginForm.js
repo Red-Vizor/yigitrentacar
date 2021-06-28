@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useSelector, useDispatch } from 'react-redux'
 import { setUser } from '../../store/user/userSlice'
+import Cookies from 'js-cookie'
 export default function LoginForm(props) {
     const [allValues, setAllValues] = useState({
         email: '',
@@ -13,25 +14,28 @@ export default function LoginForm(props) {
         setAllValues({ ...allValues, [e.target.name]: e.target.value })
     }
 
+   
+    
+
 
     const dispatch = useDispatch()
 
     const login = () => {
-        alert("deneme")
         const json = JSON.stringify(allValues)
-        axios.post('http://127.0.0.1:8000/api/giris',{ token: allValues.token , email: allValues.email , password: allValues.password})
+        axios.post('http://127.0.0.1:8000/api/giris', { token: allValues.token, email: allValues.email, password: allValues.password })
             .then(function (response) {
-                if(response.data.success === true) {
-                    dispatch(setUser(response.data))
+                if (response.data.success === true) {
+                    Cookies.set('user', response.data.name)
                 }
             })
     }
+
     return (
         <div className="general-form-1 personal-form login-form">
             <div className="rezervasyon-form px-4">
                 <div className=" mt-5 mb-5 kisisel-bilgiler">
                     <h4 className="text-center mb-3 bold">{props.title}</h4>
-                    <form onSubmit={() => {login()}} class={"login-form row mx-auto w-" + props.formWidth}>
+                    <form onSubmit={() => { login() }} class={"login-form row mx-auto w-" + props.formWidth}>
                         <div class="col-12">
                             <div class="input-group mb-2">
                                 <span class="input-group-text" id="basic-addon1">
