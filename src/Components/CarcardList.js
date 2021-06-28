@@ -1,4 +1,4 @@
-import React , {useEffect} from 'react'
+import React , {useEffect, useState} from 'react'
 import './component.css'
 import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios'
@@ -7,12 +7,11 @@ import { calculateTotalAmount, setCarSelect } from '../store/reservation/dateSli
 export default function CarcardList(props) {
     const dispatch = useDispatch()
     const dateValue = useSelector((state) => state.dateslice)
-
-    var carColors= []
+    const [carColors, setCarColors] = useState([]);
     useEffect(() => {
         axios.post('http://127.0.0.1:8000/api/renkler', { id: props.carsValues.id })
         .then(function (response) {
-            response.data.map((item) => carColors.push(item))
+            setCarColors(response.data)
         })
     },[])
     const getCarClass = (carclass) => {
@@ -159,7 +158,8 @@ export default function CarcardList(props) {
                     </span>
                     <div className="car-colors d-inline my-auto">
                         {console.log(car.colors)}
-                        {car.colors.map((item) => <p>{item.color_name}</p>)}
+                        {car.colors.map((item) =>   
+                        <input class="form-check-input" type="radio" name="color" style={{ backgroundColor: item.color_code }} onClick={() => { car.selectedColor = item.color_name }} id="flexRadioDefault1" />)}
                     </div>
                 </div>
             </div>
