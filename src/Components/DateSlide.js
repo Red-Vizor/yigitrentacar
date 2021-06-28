@@ -6,7 +6,7 @@ import Moment from 'moment';
 import TimeKeeper from 'react-timekeeper';
 import { useSelector, useDispatch } from 'react-redux'
 import { useHistory } from "react-router-dom";
-import { setEndDate,setDateDayCount, setStartDate, setEndTime, setStartTime, setCitySelect } from '../store/reservation/dateSlice'
+import { setEndDate, setDateDayCount, setStartDate, setEndTime, setStartTime, setCitySelect } from '../store/reservation/dateSlice'
 import { changePage } from '../store/reservation/reservationPageChangeSlice'
 
 export default function DateSlide() {
@@ -28,7 +28,7 @@ export default function DateSlide() {
     const [startRentDate, setStartRentDate] = useState(Moment(new Date()).format('DD.MM.yyy'))
     const [endRentDate, setEndRentDate] = useState(Moment(new Date()).format('DD.MM.yyy'))
 
-    
+
 
     useEffect(() => {
         setStartRentDate(Moment(state[0].startDate).format('DD.MM.yyy'))
@@ -38,22 +38,29 @@ export default function DateSlide() {
         dispatch(setStartTime(timeStart))
         dispatch(setStartDate(startRentDate))
         dispatch(setEndDate(endRentDate))
-    }, [timeStart, timeEnd, state, city,startRentDate, endRentDate])
+    }, [timeStart, timeEnd, state, city, startRentDate, endRentDate])
 
 
- 
+
 
 
     const goReservation = () => {
         const today = new Date()
         var errorValue = true;
-        if (today.getDate() > state[0].startDate.getDate()) {
-            alert("Geçmiş bir tarih seçtiniz")
-            errorValue = false
-        }
-
         var msDiff = state[0].endDate.getTime() - state[0].startDate.getTime()
         var dayCount = msDiff / (1000 * 60 * 60 * 24)
+
+        var dd = String(today.getDate());
+        var mm = String(today.getMonth() + 1); //January is 0!
+        var yyyy = today.getFullYear();
+        if (state[0].startDate.getDate() < dd) {
+            if ((state[0].startDate.getMonth() + 1) <= mm) {
+                if (state[0].startDate.getFullYear() <= yyyy) {
+                    alert("Geçmiş Bir Tarih Seçtiniz")
+                    errorValue = false
+                }
+            }
+        }
 
         if ((dateValue.citySelect === null || dateValue.citySelect === "" || dateValue.citySelect === "İstanbul, İzmir, Bodrum") && errorValue) {
             alert("Lütfen şehir seçin")
