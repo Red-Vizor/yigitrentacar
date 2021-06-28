@@ -1,30 +1,32 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './cars.css'
 import PropTypes from 'prop-types'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
-import { CarCard } from '../../Components/'
+import axios from 'axios'
+import { CarCardList, CarModal } from '../../Components/'
+
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
-  
+
     return (
-      <div
-        role="tabpanel"
-        hidden={value !== index}
-        id={`scrollable-auto-tabpanel-${index}`}
-        aria-labelledby={`scrollable-auto-tab-${index}`}
-        {...other}
-      >
-        {value === index && (
-          <Box p={3}>
-            <Typography>{children}</Typography>
-          </Box>
-        )}
-      </div>
+        <div
+            role="tabpanel"
+            hidden={value !== index}
+            id={`scrollable-auto-tabpanel-${index}`}
+            aria-labelledby={`scrollable-auto-tab-${index}`}
+            {...other}
+        >
+            {value === index && (
+                <Box p={3}>
+                    <Typography>{children}</Typography>
+                </Box>
+            )}
+        </div>
     );
-  }
+}
 TabPanel.propTypes = {
     children: PropTypes.node,
     index: PropTypes.any.isRequired,
@@ -41,12 +43,21 @@ function changeProps(index) {
 
 export default function Car() {
 
-    const [value, setValue] = React.useState(0);
+    const [value, setValue] = useState(0);
+    const [carsGet, setCarsGet] = useState([]);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
 
+
+
+    useEffect(() => {
+        axios.post('http://127.0.0.1:8000/api/arabalar')
+            .then(function (response) {
+                setCarsGet(response.data)
+            })
+    }, [])
 
     return (
         <section className="cars">
@@ -69,137 +80,49 @@ export default function Car() {
             <div className="car-areas ms-5 mb-5">
                 <TabPanel value={value} index={0}>
                     <div className="row">
-                        <div className="col-lg-4  col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4  col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4  col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4  col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4  col-md-6">
-                            <CarCard />
-                        </div>
+                        {carsGet.map((item) => !item.car_root_id ? <div className="col-lg-4  col-md-6">
+                            <CarCardList carsValues={item} />
+                        </div> : '')}
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={1}>
                     <div className="row">
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
+                        {carsGet.map((item) => !item.car_root_id ? item.car_class === 1 ? <div className="col-lg-4  col-md-6">
+                            <CarCardList carsValues={item} />
+                        </div> : '' : '')}
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={2}>
                     <div className="row">
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
+                        {carsGet.map((item) => !item.car_root_id ? item.car_class === 2 ? <div className="col-lg-4  col-md-6">
+                            <CarCardList carsValues={item} />
+                        </div> : '' : '')}
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={3}>
                     <div className="row">
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
+                        {carsGet.map((item) => !item.car_root_id ? item.car_class === 3 ? <div className="col-lg-4  col-md-6">
+                            <CarCardList carsValues={item} />
+                        </div> : '' : '')}
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={4}>
                     <div className="row">
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
+                        {carsGet.map((item) => !item.car_root_id ? item.car_class === 4 ? <div className="col-lg-4  col-md-6">
+                            <CarCardList carsValues={item} />
+                        </div> : '' : '')}
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={5}>
                     <div className="row">
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <CarCard />
-                        </div>
+                        {carsGet.map((item) => !item.car_root_id ? item.car_class === 5 ? <div className="col-lg-4  col-md-6">
+                            <CarCardList carsValues={item} />
+                        </div> : '' : '')}
                     </div>
                 </TabPanel>
             </div>
+
+            <CarModal />
         </section>
     )
 }

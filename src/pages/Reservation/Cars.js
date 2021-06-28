@@ -25,7 +25,6 @@ export default function Cars() {
                     <CarCard />
                 </div>
             </div>
-
             <CarModal />
         </div>
     )

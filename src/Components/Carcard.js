@@ -6,6 +6,7 @@ import { calculateTotalAmount, setCarSelect } from '../store/reservation/dateSli
 export default function Carcard() {
     const dispatch = useDispatch()
     const dateValue = useSelector((state) => state.dateslice)
+    
     const car = {
         name: "2021 MERCEDES CLA 180",
         class: "PRESTİJ",

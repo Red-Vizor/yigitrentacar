@@ -1,4 +1,5 @@
-import CarCard from './Carcard';
+import CarCard from './Carcard'
+import CarCardList from './CarcardList';
 import OfficesCard from './OfficesCard'
 import PersonalForm from './Forms/PersonalForm'
 import CorporateForm from './Forms/CorporateForm'
@@ -12,4 +13,4 @@ import MobileMenues from './Menues/MobileMenues'
 import PackageModalOne from './PackageModalOne'
 import PackageModalTwo from './PackageModalTwo'
 import CarModal from './CarModal'
-export { CarCard, CarModal, OfficesCard,MobileMenues,PersonalForm, CorporateForm, IndividualRentalForm, CorporateRentalForm, Menues, ContactForm, Accordion, PackageModalOne ,PackageModalTwo, LoginForm }
+export { CarCardList, CarCard, CarModal, OfficesCard,MobileMenues,PersonalForm, CorporateForm, IndividualRentalForm, CorporateRentalForm, Menues, ContactForm, Accordion, PackageModalOne ,PackageModalTwo, LoginForm }
