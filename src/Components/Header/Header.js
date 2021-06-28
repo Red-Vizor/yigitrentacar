@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import './header.css'
-import { Link } from "react-router-dom"
 import { useLocation } from 'react-router-dom'
 import { updatePage } from '../../store/general/pageSlice'
 import { toogle } from '../../store/menues/menuesSlice'
@@ -101,7 +100,7 @@ export default function Header() {
 
                             <div className="col-lg-4 col-md-5  col-4 d-flex justify-content-end">
                                 <div className="login-drop my-auto">
-                                    <a className="dropdown-toggle login-dropdown btn btn-outline-light rounded-0  m-auto" href="#" >
+                                    <a className="dropdown-toggle login-dropdown btn btn-outline-light rounded-0  m-auto" >
                                         <span>{Cookies.get('user') ? Cookies.get('user').split(" ")[0] + " Hoşgeldin" : 'Üye Girişi'}</span> <i class="las la-user" ></i> <i class="las la-angle-down"></i>
                                     </a>
                                 </div>

@@ -12,7 +12,6 @@ import SimpleReactLightbox from 'simple-react-lightbox'
 
 ReactDOM.render(
   <React.StrictMode>
-
     <SimpleReactLightbox>
       <Provider store={store}>
         <App />

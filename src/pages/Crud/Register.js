@@ -64,7 +64,7 @@ export default function Register() {
                 <PersonalForm />
             </TabPanel>
             <TabPanel value={value} index={1}>
-                
+                <CorporateForm />
             </TabPanel>
         </section>
     )

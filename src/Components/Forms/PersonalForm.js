@@ -15,7 +15,6 @@ export default function PersonalForm() {
         setAllValues1({ ...allValues1, [e.target.name]: e.target.value })
     }
     const register = () => {
-        alert("register")
         if (allValues1.password === allValues1.repassword) {
             axios.post('http://127.0.0.1:8000/api/kayit', { 
                 name: allValues1.name,
@@ -32,7 +31,6 @@ export default function PersonalForm() {
         else{
             alert('Girdiğiniz şifreler birbiriyle eşleşmiyor.')
         }
-
     }
 
     return (
@@ -107,7 +105,7 @@ export default function PersonalForm() {
 
                         <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label">MESAJINIZ</label>
-                            <textarea onChange={changeHandler} required name="message" class="form-control" id="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <textarea onChange={changeHandler} name="message" class="form-control" id="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
 
                         <div className="form-policy py-5 container ">
@@ -133,7 +131,7 @@ export default function PersonalForm() {
                                 </label>
                             </div>
                         </div>
-                        <button type="button" onClick={() => { register() }} className="btn btn-orange-outline bold px-4 py-2" style={{ width: "20%" }}>
+                        <button onClick={register}  className="btn btn-orange-outline bold px-4 py-2" style={{ width: "20%" }}>
                             <span className="m-auto">ÜYE OL</span>
                         </button>
                     </form>

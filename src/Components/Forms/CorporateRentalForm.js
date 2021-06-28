@@ -3,10 +3,8 @@ import React from 'react'
 function CorporateRental() {
     return (
         <div className="corporate-rental-form general-form-1 " style={{ width: "100%" }}>
-
             <div className="px-5 container" >
                 <div className=" mt-5 mb-5 px-lg-5 kisisel-bilgiler">
-
                     <form class="g-3">
                         <div class="input-group mb-3">
                             <label for="inputEmail4" class="form-label">Firma Adı</label>
