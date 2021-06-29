@@ -1,61 +1,69 @@
-import React from 'react'
+import React , {useState,useEffect} from 'react'
 import './popularlocations.css'
 import { SRLWrapper } from "simple-react-lightbox";
+import { useSelector, useDispatch } from 'react-redux'
+import Owl from './Owl'
+import { selectPopularLocation, selectPop1, selectPop2, selectPop3, selectMapPop, setImagePop } from '../../store/general/pageSlice'
+import { useHistory } from 'react-router-dom'
+
+
 function PopularLocationsSingle() {
+
+    const [owl, setOwl] = useState(false)
+
+    const page = useSelector((state) => state.page)
+
+    useEffect(() => {
+        setOwl(true)
+    },[])
     return (
         <div className="location-single">
             <div className="menu-bar container pt-3" style={{ height: "55px", fontWeight: "bold" }}>
                 <p><a href="/" className="text-dark">Anasayfa</a>   / <a href="/popularlocations" className="text-dark">Anasayfa</a>   / Lokasyon Detay</p>
             </div>
-            <div className="location-header container"
-                style={{ height: "65px", width: "750px" }}>
-                <h4>BOĞAZIN SERİN SULARINDA HUZUR DOLU BİR TUR</h4>
-
+            <div className="location-header container" style={{ height: "65px", width: "750px" }}>
+                <h4>{page.pophead}</h4>
             </div>
 
             <div className="location-single-area">
                 <div className="container ">
                     <div className="row">
                         <div className="col-lg-6">
-                            <img src="./assets/images/location1.png" className="card-img-top" alt="..." />
+                            <img src={"./assets/images/locations/" + page.imagePop + "1.jpg"} className="card-img-top" alt="..." />
                         </div>
                         <div className="col-lg-6">
                             <h4 className="bold text-center">Yiğit Ofislerinde Rixos Misafirlerine %15 İNDİRİM!</h4>
-                            <p className="bold px-lg-4">Avrupa ile Asya kıtalarını birbirinden ayıran doğal sınırlardan biri olarak kabul edilen İstanbul Boğazı, aynı zamanda uluslararası su yoludur. İstanbul boğazının kıyıları tarih boyunca pek çok uygarlıklara ev sahipliği yapmıştır.
-                                İstanbul’u ziyaret edenler için Boğaz turu mutlaka yapılması gereken bir etkinliktir. Boğaz’ın güzelliklerini, tarihi yapılarını denizden keşfederken, aynı zamanda deniz havasını solumak müthiş bir atmosfer oluşturmaktadır.
+                            <p className="px-lg-4">
+                                <h5 className="bold mb-2">Burası Neresi?</h5>
+                                {page.pop1}
                             </p>
                         </div>
                     </div>
                     <div className="row my-lg-5 my-md-3 text-continue">
                         <div className="col-lg-6 border-end px-lg-3">
-                            <p className="mb-lg-3 bold">Eminönü, Üsküdar, Kadıköy ve Bakırköy İskelelerimizden tarifeli olarak yaptığımız ve herkesin katılımına açık  olan, İstanbul Boğazının görsel zenginliği eşliğinde zamanın keyifle geçtiği tarifeli boğaz turlarımıza her zaman katılabilirsiniz. </p>
-                            <p className="bold">TURSAB ile yapılan Protokol ile belgelendirilen gemilerimizle, TURSAB bünyesinde bulunan turizm acenteleri tarafından İstanbul’a getirilen turist grupları yaklaşık %90’ı için, Boğaz Turları ve  Ada Turları düzenlenerek ülkemizin tanıtımına katkı sağlamaktayız.</p>
-
+                            <p>
+                                <h5 className="bold mb-2">Neden Gitmeliyim? </h5>
+                                {page.pop2}
+                            </p>
                         </div>
                         <div className="col-lg-6 ps-lg-5 mt-md-3">
-                            <p className="mb-lg-3 bold">Eminönü, Üsküdar, Kadıköy ve Bakırköy İskelelerimizden tarifeli olarak yaptığımız ve herkesin katılımına açık  olan, İstanbul Boğazının görsel zenginliği eşliğinde zamanın keyifle geçtiği tarifeli boğaz turlarımıza her zaman katılabilirsiniz.</p>
-                            <p className="bold mb-lg-5">TURSAB ile yapılan Protokol ile belgelendirilen gemilerimizle, TURSAB bünyesinde bulunan turizm acenteleri tarafından İstanbul’a getirilen turist grupları yaklaşık %90’ı için, Boğaz Turları ve  Ada Turları düzenlenerek ülkemizin tanıtımına katkı sağlamaktayız.</p>
+                            <p className="mb-lg-3">
+                                <h5 className="bold mb-2">Neden Gitmeliyim? </h5>
+                                {page.pop3}
+                            </p>
                         </div>
                     </div>
-
+                    <div className="row text-center text-dark py-3">
+                        <p><a href={page.mappop} className="text-dark" target="_blank">Google Haritalarda Görüntülemek İçin Tıklayın</a></p>
+                        <p>{page.workHour}</p>
+                    </div>
                 </div>
             </div>
 
+            
+
             <SRLWrapper>
-                <div className="owl-carousel owl-carousel-popular owl-theme my-5">
-                    <div className="item">
-                        <img src="/assets/images/location-carousel1.png" height="350px" />
-                    </div>
-                    <div className="item">
-                        <img src="/assets/images/location-carousel2.png" height="350px" />
-                    </div>
-                    <div className="item">
-                        <img src="/assets/images/location-carousel3.png" height="350px" />
-                    </div>
-                    <div className="item">
-                        <img src="/assets/images/location-carousel4.png" height="350px" />
-                    </div>
-                </div>
+               <Owl />
             </SRLWrapper>
         </div>
     )
