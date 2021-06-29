@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import './component.css'
 import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios'
@@ -7,33 +7,33 @@ import { calculateTotalAmount, setCarSelect } from '../store/reservation/dateSli
 export default function Carcard(props) {
     const dispatch = useDispatch()
     const dateValue = useSelector((state) => state.dateslice)
-    
+
     const [carColors, setCarColors] = useState([]);
     useEffect(() => {
-        axios.post('http://127.0.0.1:8000/api/renkler', { id: props.carsValues.id })
-        .then(function (response) {
-            setCarColors(response.data)
-        })
-    },[])
+        axios.post('http://panel.wocurrency.com/api/renkler', { id: props.carsValues.id })
+            .then(function (response) {
+                setCarColors(response.data)
+            })
+    }, [])
     const getCarClass = (carclass) => {
         switch (carclass) {
-            case 1:
+            case "1":
                 return "Ekonomik"
                 break;
 
-            case 2:
+            case "2":
                 return "Orta"
                 break;
 
-            case 3: 
+            case "3":
                 return "Prestij"
                 break;
 
-            case 4:
+            case "4":
                 return "Premium"
                 break;
 
-            case 5:
+            case "5":
                 return "Business"
                 break;
             default:
@@ -45,15 +45,15 @@ export default function Carcard(props) {
 
     const getCarFuel = (value) => {
         switch (value) {
-            case 1:
+            case "1":
                 return "Benzin"
                 break;
 
-            case 2:
+            case "2":
                 return "Dizel"
                 break;
 
-            case 3:
+            case "3":
                 return "Elektrik"
                 break;
 
@@ -64,15 +64,15 @@ export default function Carcard(props) {
     }
     const getGear = (value) => {
         switch (value) {
-            case 1:
+            case "1":
                 return "Manuel"
                 break;
 
-            case 2:
+            case "2":
                 return "Otomatik"
                 break;
 
-            case 3:
+            case "3":
                 return "Yarı Otomatik"
                 break;
 
@@ -156,13 +156,13 @@ export default function Carcard(props) {
                     </div>
                     <div className="w-50 ms-auto my-3 car-card-text">
                         <div className="row p-0 m-0">
-                            <div className="col-6 text-center">
-                                <span>GÜNLÜK</span> <br />
-                                <span>₺ <span className="bold">{car.amount}</span>,00</span>
+                            <div className="col-12 col-lg-10 text-end ms-auto">
+                                <span className="me-auto">GÜNLÜK </span>
+                                <span> ₺ <span className="bold">{car.amount}</span>,00</span>
                             </div>
-                            <div className="col-6 text-center">
-                                <span>TOPLAM</span> <br />
-                                <span>₺ <span className="bold">{car.totalAmount}</span>,00</span>
+                            <div className="col-12 col-lg-10 text-end ms-auto">
+                                <span className="me-auto">Toplam </span>
+                                <span> ₺ <span className="bold">{car.totalAmount}</span>,00</span>
                             </div>
                         </div>
                         <a className="btn float-end" onClick={() => { carSelect(); dispatch(changePage(2)) }}><span className="h6 bold">SEÇ</span> <img src="./assets/icons/carcard/buttonright.svg" className="my-auto ms-1 w-50" /> </a>
@@ -181,7 +181,7 @@ export default function Carcard(props) {
                         <a href="#" className="ms-lg-auto mt-md-1 ms-md-2" onClick={() => { carSelect() }} data-bs-toggle="modal" data-bs-target="#carModal"> <span>Tüm Özellikler</span></a>
                     </span>
                 </div>
-                <img src={"http://localhost:8000/" + props.carsValues.car_image_one} className="images position-absolute" />
+                <img src={"http://panel.wocurrency.com/" + props.carsValues.car_image_one} className="images position-absolute" />
             </div>
             <div className="colors w-50  mx-auto px-lg-4 py-2 text-center shadow-light">
                 <div className="d-flex justify-content-center">
@@ -189,8 +189,8 @@ export default function Carcard(props) {
                         RENKLER
                     </span>
                     <div className="car-colors d-inline my-auto">
-                        {car.colors.map((item) =>   
-                        <input class="form-check-input" type="radio" name="color" style={{ backgroundColor: item.color_code }} onClick={() => { car.selectedColorCar = item.car_id }} id="flexRadioDefault1" />)}
+                        {car.colors.map((item) =>
+                            <input class="form-check-input" type="radio" name="color" style={{ backgroundColor: item.color_code }} onClick={() => { car.selectedColorCar = item.car_id }} id="flexRadioDefault1" />)}
                     </div>
                 </div>
             </div>

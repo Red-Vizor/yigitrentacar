@@ -13,14 +13,14 @@ export default function CarModal() {
     const dispatch = useDispatch()
     const dateValue = useSelector((state) => state.dateslice)
     useEffect(() => {
-        axios.post('http://127.0.0.1:8000/api/resimler', { car_id: dateValue.carSelect.selectedColorCar })
+        axios.post('http://panel.wocurrency.com/api/resimler', { car_id: dateValue.carSelect.selectedColorCar })
             .then(function (response) {
                 console.log(response.data)
                 setCarImages(response.data)
             })
     }, [dateValue, colorCar])
 
-    const urlPanel = "http://localhost:8000/"
+    const urlPanel = "http://panel.wocurrency.com/"
 
     var counter = 0
     var counter1 = 0

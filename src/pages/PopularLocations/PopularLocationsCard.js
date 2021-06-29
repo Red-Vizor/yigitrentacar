@@ -10,7 +10,6 @@ function PopularLocationsCard(props) {
     const dispatch = useDispatch()
 
     const selectLocation= () =>{ 
-        alert("deneme")
         dispatch(selectPopularLocation(props.id))
         dispatch(setImagePop(props.imageName))
         dispatch(selectPop1(props.metin1))

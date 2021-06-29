@@ -23,7 +23,7 @@ export default function CorporateForm(props) {
     const registerCompany = () => {
         alert('denem')
         if (allValues2.password === allValues2.repassword) {
-            axios.post('http://127.0.0.1:8000/api/kayit', {
+            axios.post('http://panel.wocurrency.com/api/kayit', {
                 name: allValues2.name,
                 email: allValues2.email,
                 password: allValues2.password,

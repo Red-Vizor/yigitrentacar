@@ -53,6 +53,7 @@ export default function DateSlide() {
         var dd = String(today.getDate());
         var mm = String(today.getMonth() + 1); //January is 0!
         var yyyy = today.getFullYear();
+        
         if (state[0].startDate.getDate() < dd) {
             if ((state[0].startDate.getMonth() + 1) <= mm) {
                 if (state[0].startDate.getFullYear() <= yyyy) {

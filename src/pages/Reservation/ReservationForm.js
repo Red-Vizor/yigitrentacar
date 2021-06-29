@@ -408,12 +408,7 @@ export default function ReservationForm() {
                     </div>
                 </div>
             </form>
-
-
-
         </section>
-
-
     )
 
 }

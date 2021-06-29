@@ -1,21 +1,25 @@
-import React , {useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import './popularlocations.css'
 import { SRLWrapper } from "simple-react-lightbox";
 import { useSelector, useDispatch } from 'react-redux'
 import Owl from './Owl'
 import { selectPopularLocation, selectPop1, selectPop2, selectPop3, selectMapPop, setImagePop } from '../../store/general/pageSlice'
 import { useHistory } from 'react-router-dom'
-
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 function PopularLocationsSingle() {
 
-    const [owl, setOwl] = useState(false)
+   
 
     const page = useSelector((state) => state.page)
 
-    useEffect(() => {
-        setOwl(true)
-    },[])
+    const imagesses =[page.imagePop+"1.jpg",page.imagePop+"2.jpg",page.imagePop+"3.jpg",page.imagePop+"4.jpg",page.imagePop+"5.jpg"]
+
+    
+
+
     return (
         <div className="location-single">
             <div className="menu-bar container pt-3" style={{ height: "55px", fontWeight: "bold" }}>
@@ -60,10 +64,12 @@ function PopularLocationsSingle() {
                 </div>
             </div>
 
-            
+
 
             <SRLWrapper>
-               <Owl />
+                <OwlCarousel className='owl-theme' loop margin={10} nav>
+                    <img src="/assets/images/location-carousel1.png" height="350px" />  
+                </OwlCarousel>
             </SRLWrapper>
         </div>
     )

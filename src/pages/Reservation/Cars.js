@@ -6,7 +6,7 @@ import axios from 'axios'
 export default function Cars() {
     const [carsGet, setCarsGet] = useState([]);
     useEffect(() => {
-        axios.post('http://127.0.0.1:8000/api/arabalar')
+        axios.post('http://panel.wocurrency.com/api/arabalar')
             .then(function (response) {
                 setCarsGet(response.data)
             })

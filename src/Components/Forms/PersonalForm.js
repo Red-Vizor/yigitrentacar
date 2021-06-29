@@ -16,7 +16,7 @@ export default function PersonalForm() {
     }
     const register = () => {
         if (allValues1.password === allValues1.repassword) {
-            axios.post('http://127.0.0.1:8000/api/kayit', { 
+            axios.post('http://panel.wocurrency.com/api/kayit', { 
                 name: allValues1.name,
                 email: allValues1.email, 
                 password: allValues1.password,
