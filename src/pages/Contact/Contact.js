@@ -6,7 +6,7 @@ export default function Contact() {
     return (
         <section className="contact-page">
             <div className="menu-bar container pt-3" style={{ height: "55px", fontWeight: "bold" }}>
-                <p>Anasayfa /  İletişim</p>
+                <p><a href="/" className="text-dark">Anasayfa</a>   /  İletişim</p>
             </div>
 
             <div className="contact-jumbotron text-center position-relative pb-5" >

@@ -51,7 +51,7 @@ function Policies() {
     return (
         <div className="policies">
             <div className="menu-bar container pt-3" style={{ height: "55px", fontWeight: "bold" }}>
-                <p>Anasayfa /  Koşullar, Şartlar ve Politikalar</p>
+                <p><a href="/" className="text-dark">Anasayfa</a>   /  Koşullar, Şartlar ve Politikalar</p>
             </div>
 
             <div className="policies-jumbotron text-center position-relative pb-5" style={{  backgroundColor: "#CCCCCC" }}>

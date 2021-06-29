@@ -7,7 +7,7 @@ export default function Offices() {
         <section className="offices">
             <div className="menu-bar container-fluid pt-3 m" style={{ height: "55px", fontWeight: "bold" }}>
                 <div className="container">
-                    <p>Anasayfa  /  Ofisler </p>
+                    <p><a href="/" className="text-dark">Anasayfa</a>    /  Ofisler </p>
                 </div>
             </div>
             <div className="header-bar py-3 text-center text-white">

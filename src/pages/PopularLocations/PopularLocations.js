@@ -55,7 +55,7 @@ function PopularLocations() {
     return (
         <div className="popular-location-area">
             <div className="menu-bar container pt-3" style={{ height: "55px", fontWeight: "bold" }}>
-                <p>Anasayfa / Lokasyonlar</p>
+                <p><a href="/" className="text-dark">Anasayfa</a>   / Lokasyonlar</p>
             </div>
             <div className="campaigns-jumbotron position-relative"
                 style={{ height: "346px", backgroundImage: "linear-gradient(rgb(0, 0, 0, 0.3), rgb(0, 0, 0, 0.3)), url('./assets/images/jumbotron/locations-jumbotron.png')" }}>

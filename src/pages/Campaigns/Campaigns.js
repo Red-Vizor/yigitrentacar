@@ -53,7 +53,7 @@ function Campaigns() {
     return (
         <div className="campaigns">
             <div className="menu-bar container pt-3" style={{ height: "55px", fontWeight: "bold" }}>
-                <p>Anasayfa / Kampanyalar</p>
+                <p><a href="/" className="text-dark">Anasayfa</a>   / Kampanyalar</p>
             </div>
             <div className="campaigns-jumbotron position-relative mb-5 "
                 style={{ height: "346px", backgroundImage: "linear-gradient(rgb(232, 84, 30,0.4), rgb(232, 84, 30,0.4)), url('./assets/images/jumbotron/compaigns-jumbotron.png')" }}>

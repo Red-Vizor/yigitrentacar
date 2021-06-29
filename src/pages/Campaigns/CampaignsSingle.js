@@ -5,7 +5,7 @@ function CampaignsSingle() {
     return (
         <div className="campaign-single">
             <div className="menu-bar container pt-3" style={{ height: "55px", fontWeight: "bold" }}>
-                <p>Anasayfa / Kampanyalar / Kampanya Adı</p>
+                <p><a href="/" className="text-dark">Anasayfa</a>  / <a href="/campaigns" className="text-dark">Kampanyalar</a>   / Kampanya Adı</p>
             </div>
             <div className="campaigns-header container"
                 style={{ height: "65px", width: "750px" }}>

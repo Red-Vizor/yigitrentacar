@@ -5,7 +5,7 @@ function PopularLocationsSingle() {
     return (
         <div className="location-single">
             <div className="menu-bar container pt-3" style={{ height: "55px", fontWeight: "bold" }}>
-                <p>Anasayfa / Lokasyonlar / Lokasyon Detay</p>
+                <p><a href="/" className="text-dark">Anasayfa</a>   / <a href="/popularlocations" className="text-dark">Anasayfa</a>   / Lokasyon Detay</p>
             </div>
             <div className="location-header container"
                 style={{ height: "65px", width: "750px" }}>
