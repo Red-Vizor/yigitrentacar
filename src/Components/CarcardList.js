@@ -101,6 +101,7 @@ export default function CarcardList(props) {
         seat: props.carsValues.car_armchair,
         colors: carColors,
         amount: 0,
+        selectedColorCar: props.carsValues.id,
         totalAmount: 0,
         selectedColor: ""
     }
@@ -158,7 +159,7 @@ export default function CarcardList(props) {
                     </span>
                     <div className="car-colors d-inline my-auto">
                         {car.colors.map((item) =>   
-                        <input class="form-check-input" type="radio" name="color" style={{ backgroundColor: item.color_code }} onClick={() => { car.selectedColor = item }} id="flexRadioDefault1" />)}
+                        <input class="form-check-input" type="radio" name="color" style={{ backgroundColor: item.color_code }}  onClick={() => { car.selectedColorCar = item.car_id }} id="flexRadioDefault1" />)}
                     </div>
                 </div>
             </div>

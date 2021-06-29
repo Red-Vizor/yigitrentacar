@@ -13,6 +13,7 @@ export default function CarModal() {
     const dispatch = useDispatch()
     const dateValue = useSelector((state) => state.dateslice)
     useEffect(() => {
+        alert(dateValue.carSelect.selectedColorCar)
         axios.post('http://127.0.0.1:8000/api/resimler', { car_id: dateValue.carSelect.selectedColorCar })
             .then(function (response) {
                 console.log(response.data)
