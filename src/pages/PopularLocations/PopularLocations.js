@@ -72,50 +72,81 @@ function PopularLocations() {
 
 
             <div className="popular-location-cardpage ">
-            <div className="container my-5">
-                <TabPanel value={value} index={0}>
-                    <div className="row ">
-                        <div className="col-lg-6">
-                            <PopularLocationsCard imageUrl="./assets/images/location1.png" />
+                <div className="container my-5">
+                    <TabPanel value={value} index={0}>
+                        <div className="row ">
+                            <div className="col-lg-6">
+                                <PopularLocationsCard id={1} imageName="sualti" imageUrl="./assets/images/locations/sualti6.jpg" head="Bodrum Sualtı Arkeoloji Müzesi" location="Bodrum" />
+                            </div>
+                            <div className="col-lg-6">
+                                <PopularLocationsCard id={2} imageName="kus" imageUrl="./assets/images/locations/kus1.jpg" head="Bodrum Tuzla Kuş Cenneti" location="Bodrum" />
+                            </div>
+                            <div className="col-lg-6">
+                                <PopularLocationsCard id={3} imageName="zekimuren" imageUrl="./assets/images/locations/zekimuren1.jpg" head="Zeki Müren Sanat Müzesi" location="Bodrum" />
+                            </div>
+                            <div className="col-lg-6">
+                                <PopularLocationsCard id={4} imageName="ataturk" imageUrl="./assets/images/locations/ataturk1.jpg" head="Atatürk Arboretumu" location="İstanbul" />
+                            </div>
+                            <div className="col-lg-6">
+                                <PopularLocationsCard id={5} imageName="polenezkoy" imageUrl="./assets/images/locations/polenezkoy.jpg" head="Polonezköy Tabiat Parkı" location="İstanbul" />
+                            </div>
+                            <div className="col-lg-6">
+                                <PopularLocationsCard id={6} imageName="yildiz" imageUrl="./assets/images/locations/yildiz1.jpg" head="Yıldız Parkı" location="İstanbul" />
+                            </div>
+
+                            <div className="col-lg-6">
+                                <PopularLocationsCard id={7} imageName="saat" imageUrl="./assets/images/locations/saat1.jpg" head="İzmir saat kulesi" location="İzmir" />
+                            </div>
+                            <div className="col-lg-6">
+                                <PopularLocationsCard id={8} imageName="kemer" imageUrl="./assets/images/locations/kemer1.jpg" head="Kemeraltı Çarşısı" location="İzmir" />
+                            </div>
+                            <div className="col-lg-6">
+                                <PopularLocationsCard id={9} imageName="kordon" imageUrl="./assets/images/locations/kordon1.jpg" head="Kordon" location="İzmir" />
+                            </div>
                         </div>
-                        <div className="col-lg-6">
-                            <PopularLocationsCard imageUrl="./assets/images/location2.png" />
+                    </TabPanel>
+                    <TabPanel value={value} index={1}>
+                        <div className="row">
+                            <div className="col-lg-6">
+                                <PopularLocationsCard id={4} imageName="ataturk" imageUrl="./assets/images/locations/ataturk1.jpg" head="Atatürk Arboretumu" location="İstanbul" />
+                            </div>
+                            <div className="col-lg-6">
+                                <PopularLocationsCard id={5} imageName="polenezkoy" imageUrl="./assets/images/locations/polenezkoy.jpg" head="Polonezköy Tabiat Parkı" location="İstanbul" />
+                            </div>
+                            <div className="col-lg-6">
+                                <PopularLocationsCard id={6} imageName="yildiz" imageUrl="./assets/images/locations/yildiz1.jpg" head="Yıldız Parkı" location="İstanbul" />
+                            </div>
                         </div>
-                    </div>
-                </TabPanel>
-                <TabPanel value={value} index={1}>
-                    <div className="row">
-                        <div className="col-lg-6">
-                            <PopularLocationsCard imageUrl="./assets/images/location2.png" />
+                    </TabPanel>
+                    <TabPanel value={value} index={2}>
+                        <div className="row">
+                            <div className="col-lg-6">
+                                <PopularLocationsCard id={7} imageName="saat" imageUrl="./assets/images/locations/saat1.jpg" head="İzmir saat kulesi" location="İzmir" />
+                            </div>
+                            <div className="col-lg-6">
+                                <PopularLocationsCard id={8} imageName="kemer" imageUrl="./assets/images/locations/kemer1.jpg" head="Kemeraltı Çarşısı" location="İzmir" />
+                            </div>
+                            <div className="col-lg-6">
+                                <PopularLocationsCard id={9} imageName="kordon" imageUrl="./assets/images/locations/kordon1.jpg" head="Kordon" location="İzmir" />
+                            </div>
                         </div>
-                        <div className="col-lg-6">
-                            <PopularLocationsCard imageUrl="./assets/images/location1.png" />
+                    </TabPanel>
+                    <TabPanel value={value} index={3}>
+                        <div className="row">
+                            <div className="col-lg-6">
+                                <PopularLocationsCard id={1} imageName="sualti" imageUrl="./assets/images/locations/sualti6.jpg" head="Bodrum Sualtı Arkeoloji Müzesi" location="Bodrum" />
+                            </div>
+                            <div className="col-lg-6">
+                                <PopularLocationsCard id={2} imageName="kus" imageUrl="./assets/images/locations/kus1.jpg" head="Bodrum Tuzla Kuş Cenneti" location="Bodrum" />
+                            </div>
+                            <div className="col-lg-6">
+                                <PopularLocationsCard id={3} imageName="zekimuren" imageUrl="./assets/images/locations/zekimuren1.jpg" head="Zeki Müren Sanat Müzesi" location="Bodrum" />
+                            </div>
                         </div>
-                    </div>
-                </TabPanel>
-                <TabPanel value={value} index={2}>
-                    <div className="row">
-                        <div className="col-lg-6">
-                            <PopularLocationsCard imageUrl="./assets/images/location1.png" />
-                        </div>
-                        <div className="col-lg-6">
-                            <PopularLocationsCard imageUrl="./assets/images/location2.png" />
-                        </div>
-                    </div>
-                </TabPanel>
-                <TabPanel value={value} index={3}>
-                    <div className="row">
-                        <div className="col-lg-6">
-                            <PopularLocationsCard imageUrl="./assets/images/location1.png" />
-                        </div>
-                        <div className="col-lg-6">
-                            <PopularLocationsCard imageUrl="./assets/images/location2.png" />
-                        </div>
-                    </div>
-                </TabPanel>
+                    </TabPanel>
 
 
-            </div>
+                </div>
             </div>
 
         </div>

@@ -316,9 +316,25 @@
         left: -10%;
         width: 60%;
     }
+    .car-modal {
+        width: 75% !important;  
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
+    .car-modal {
+        width: 90% !important;
+        left: 50% !important;
+        transform: translateX(-51.5%) !important;
+    }
+    .car-areas {
+        padding-left: 3.5% !important;
+    }
+    .car-areas .areas{
+        padding-left: 0px !important;
+    }
     .car-card .images {
         left: -10%;
         width: 60%;

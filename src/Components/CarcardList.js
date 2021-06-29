@@ -127,10 +127,10 @@ export default function CarcardList(props) {
                     </div>
                     <div className="w-50 ms-auto my-3 car-card-text">
                         <div className="row p-0 m-0">
-                            <div className="col-6 text-center">
-                                <div className="">
+                            <div className="col-9text-center">
+                                <div className="d-flex">
                                     <span>AYLIK</span> <br />
-                                    <span>₺ <span className="bold">{car.amount}</span>,00</span>
+                                    <span> <span className="bold">₺ {car.amount}</span>,00</span>
                                 </div>
                             </div>
                         </div>

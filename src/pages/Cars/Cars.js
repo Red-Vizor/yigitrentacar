@@ -78,7 +78,7 @@ export default function Car() {
             </div>
 
             <div className="container-fluid car-areas ps-5">
-                <div className="ps-4">
+                <div className="ps-4 area">
                     <TabPanel value={value} index={0}>
                         <div className="row">
                             {carsGet.map((item) => !item.car_root_id ? <div className="col-lg-4  col-md-6">
