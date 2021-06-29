@@ -1,17 +1,29 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './component.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { changePage } from '../store/reservation/reservationPageChangeSlice'
-import { SRLWrapper } from "simple-react-lightbox";
+import { SRLWrapper } from "simple-react-lightbox"
+import axios from 'axios'
 import $ from 'jquery';
 window.jQuery = $;
 export default function CarModal() {
 
-
+    const [colorCar, setColorCar] = useState([]);
+    const [carImages, setCarImages] = useState([]);
     const dispatch = useDispatch()
     const dateValue = useSelector((state) => state.dateslice)
+    useEffect(() => {
+        axios.post('http://127.0.0.1:8000/api/resimler', { car_id: dateValue.carSelect.selectedColorCar })
+            .then(function (response) {
+                console.log(response.data)
+                setCarImages(response.data)
+            })
+    }, [dateValue, colorCar])
 
-    console.log(dateValue.carSelect)
+    const urlPanel = "http://localhost:8000/"
+
+    var counter = 0
+    var counter1 = 0
 
     return (
         <div className="modal fade" id="carModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -31,32 +43,34 @@ export default function CarModal() {
                     <div className="modal-body w-100 p-0">
                         <div id="carouselExampleIndicators" className="carousel slide position-relative" data-bs-ride="carousel">
                             <div className="carousel-indicators position-absolute">
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active indicator-car bg-image" style={{ backgroundImage: "url(./assets/images/carphotoslider.jpg)" }} aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" className="indicator-car bg-image" style={{ backgroundImage: "url(./assets/images/carphotoslider.jpg)" }} aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" className="indicator-car bg-image" style={{ backgroundImage: "url(./assets/images/carphotoslider.jpg)" }} aria-label="Slide 3"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" className="indicator-car bg-image" style={{ backgroundImage: "url(./assets/images/carphotoslider.jpg)" }} aria-label="Slide 3"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" className="indicator-car bg-image" style={{ backgroundImage: "url(./assets/images/carphotoslider.jpg)" }} aria-label="Slide 3"></button>
+
+                                {carImages.map((item) =>
+
+                                    counter === 0 ?
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={counter++} className="active indicator-car bg-image" style={{ backgroundImage: `url(` + urlPanel + item.image_url + `)` }} aria-current="true" aria-label="Slide 1"></button>
+                                        : <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={counter++} className="indicator-car bg-image" style={{ backgroundImage: `url(` + urlPanel + item.image_url + `)` }} aria-label="Slide 2"></button>
+
+
+                                )}
                             </div>
                             <div className="carousel-inner">
                                 <SRLWrapper>
-                                    <div className="carousel-item active">
-                                        <img src="./assets/images/carphotoslider.jpg" className="d-block w-100" alt="..." />
-                                    </div>
-                                    <div className="carousel-item">
-                                        <img src="./assets/images/carphotoslider.jpg" className="d-block w-100" alt="..." />
-                                    </div>
-                                    <div className="carousel-item">
-                                        <img src="./assets/images/carphotoslider.jpg" className="d-block w-100" alt="..." />
-                                    </div>
-                                    <div className="carousel-item">
-                                        <img src="./assets/images/carphotoslider.jpg" className="d-block w-100" alt="..." />
-                                    </div>
-                                    <div className="carousel-item">
-                                        <img src="./assets/images/carphotoslider.jpg" className="d-block w-100" alt="..." />
-                                    </div>
+
+                                    {carImages.map((item) =>
+
+                                        counter1 === 0 ?
+                                            <div className="carousel-item active">
+                                                <img src={urlPanel + item.image_url} className="d-block w-100" alt={counter1++} />
+                                            </div>
+                                            : <div className="carousel-item">
+                                                <img src={urlPanel + item.image_url} className="d-block w-100" alt={counter1++} />
+                                            </div>
+
+                                    )}
+
                                 </SRLWrapper>
                             </div>
-                            <div className="buttons py-2 px-4 d-flex">
+                            <div className="buttons py-2 px-4 d-flex" >
                                 <div className="m-auto">
                                     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                                         <span className="carousel-control-prev-icon d-flex" aria-hidden="true"><i class="las la-angle-left text-dark my-auto"></i></span>
@@ -78,11 +92,8 @@ export default function CarModal() {
                                         RENKLER
                                     </span>
                                     <div className="car-colors d-inline ms-2 my-auto">
-                                        <input class="form-check-input bg-black" type="radio" name="color" id="flexRadioDefault1" />
-                                        <input class="form-check-input bg-white" type="radio" name="color" id="flexRadioDefault1" />
-                                        <input class="form-check-input bg-orange" type="radio" name="color" id="flexRadioDefault1" />
-                                        <input class="form-check-input bg-primary" type="radio" name="color" id="flexRadioDefault1" />
-                                        <input class="form-check-input bg-pink" type="radio" name="color" id="flexRadioDefault1" />
+                                        {dateValue.carSelect.colors ? dateValue.carSelect.colors.map((item) =>
+                                            <input class="form-check-input" type="radio" name="color" style={{ backgroundColor: item.color_code }} onClick={() => { setColorCar(item.car_id) }} id="flexRadioDefault1" />) : ''}
                                     </div>
                                 </div>
                             </div>

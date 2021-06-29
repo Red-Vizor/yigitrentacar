@@ -1,33 +1,112 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import './component.css'
 import { useDispatch, useSelector } from 'react-redux'
+import axios from 'axios'
 import { changePage } from '../store/reservation/reservationPageChangeSlice'
 import { calculateTotalAmount, setCarSelect } from '../store/reservation/dateSlice'
-export default function Carcard() {
+export default function Carcard(props) {
     const dispatch = useDispatch()
     const dateValue = useSelector((state) => state.dateslice)
     
+    const [carColors, setCarColors] = useState([]);
+    useEffect(() => {
+        axios.post('http://127.0.0.1:8000/api/renkler', { id: props.carsValues.id })
+        .then(function (response) {
+            setCarColors(response.data)
+        })
+    },[])
+    const getCarClass = (carclass) => {
+        switch (carclass) {
+            case 1:
+                return "Ekonomik"
+                break;
+
+            case 2:
+                return "Orta"
+                break;
+
+            case 3: 
+                return "Prestij"
+                break;
+
+            case 4:
+                return "Premium"
+                break;
+
+            case 5:
+                return "Business"
+                break;
+            default:
+                return ""
+                break;
+        }
+    }
+
+
+    const getCarFuel = (value) => {
+        switch (value) {
+            case 1:
+                return "Benzin"
+                break;
+
+            case 2:
+                return "Dizel"
+                break;
+
+            case 3:
+                return "Elektrik"
+                break;
+
+            default:
+                return ""
+                break;
+        }
+    }
+    const getGear = (value) => {
+        switch (value) {
+            case 1:
+                return "Manuel"
+                break;
+
+            case 2:
+                return "Otomatik"
+                break;
+
+            case 3:
+                return "Yarı Otomatik"
+                break;
+
+            default:
+                return ""
+                break;
+        }
+    }
+
+
+
     const car = {
-        name: "2021 MERCEDES CLA 180",
-        class: "PRESTİJ",
-        price: 300,
-        threePrice: 300,
-        threeSevenPrice: 270,
-        sevenFifteenPrice: 240,
-        fiftennTwentyPrice: 200,
-        twentyThirtyPrice: 150,
-        lisanceOwnAge: 25,
-        lisanceAge: 5,
-        fuel: "Benzin",
-        baggage: 2,
-        gear: "Otomatik",
-        seat: 4,
-        colors: ['Beyaz', 'Siyah', 'Kırmızı'],
+        name: props.carsValues.car_name,
+        class: getCarClass(props.carsValues.car_class),
+        price: props.carsValues.car_price,
+        threePrice: props.carsValues.car_price_three,
+        threeSevenPrice: props.carsValues.car_price_three_seven,
+        sevenFifteenPrice: props.carsValues.car_price_seven_fifteen,
+        fiftennTwentyPrice: props.carsValues.car_price_fifteen_twenty,
+        twentyThirtyPrice: props.carsValues.car_price_twenty_thirty,
+
+        lisanceOwnAge: props.carsValues.customer_age,
+        lisanceAge: props.carsValues.customer_driver_licence_age,
+        fuel: getCarFuel(props.carsValues.car_fuel),
+        baggage: props.carsValues.car_baggage,
+        gear: getGear(props.carsValues.car_gearbox),
+        seat: props.carsValues.car_armchair,
+        colors: carColors,
         amount: 0,
         totalAmount: 0,
-        selectedColor: ""
-
+        selectedColorCar: props.carsValues.id,
+        selectedColor: []
     }
+
 
     const calCulateAmount = () => {
         if (dateValue.citySelect === "Bodrum") {
@@ -102,7 +181,7 @@ export default function Carcard() {
                         <a href="#" className="ms-lg-auto mt-md-1 ms-md-2" onClick={() => { carSelect() }} data-bs-toggle="modal" data-bs-target="#carModal"> <span>Tüm Özellikler</span></a>
                     </span>
                 </div>
-                <img src="./assets/images/s3.png" className="images position-absolute" />
+                <img src={"http://localhost:8000/" + props.carsValues.car_image_one} className="images position-absolute" />
             </div>
             <div className="colors w-50  mx-auto px-lg-4 py-2 text-center shadow-light">
                 <div className="d-flex justify-content-center">
@@ -110,11 +189,8 @@ export default function Carcard() {
                         RENKLER
                     </span>
                     <div className="car-colors d-inline my-auto">
-                        <input class="form-check-input bg-black" type="radio" name="color" onClick={() => { car.selectedColor = "Siyah" }} id="flexRadioDefault1" />
-                        <input class="form-check-input bg-white" type="radio" name="color" onClick={() => { car.selectedColor = "Beyaz" }} id="flexRadioDefault1" />
-                        <input class="form-check-input bg-orange" type="radio" name="color" onClick={() => { car.selectedColor = "Turuncu" }} id="flexRadioDefault1" />
-                        <input class="form-check-input bg-primary" type="radio" name="color" onClick={() => { car.selectedColor = "Lacivert" }} id="flexRadioDefault1" />
-                        <input class="form-check-input bg-pink" type="radio" name="color" onClick={() => { car.selectedColor = "Pembe" }} id="flexRadioDefault1" />
+                        {car.colors.map((item) =>   
+                        <input class="form-check-input" type="radio" name="color" style={{ backgroundColor: item.color_code }} onClick={() => { car.selectedColorCar = item.car_id }} id="flexRadioDefault1" />)}
                     </div>
                 </div>
             </div>

@@ -24,7 +24,7 @@ export default function CarcardList(props) {
                 return "Orta"
                 break;
 
-            case 3:
+            case 3: 
                 return "Prestij"
                 break;
 
@@ -87,11 +87,11 @@ export default function CarcardList(props) {
         name: props.carsValues.car_name,
         class: getCarClass(props.carsValues.car_class),
         price: props.carsValues.car_price,
-        threePrice: props.car_price_three,
-        threeSevenPrice: props.car_price_three_seven,
-        sevenFifteenPrice: props.car_price_seven_fifteen,
-        fiftennTwentyPrice: props.car_price_fifteen_twenty,
-        twentyThirtyPrice: props.car_price_twenty_thirty,
+        threePrice: props.carsValues.car_price_three,
+        threeSevenPrice: props.carsValues.car_price_three_seven,
+        sevenFifteenPrice: props.carsValues.car_price_seven_fifteen,
+        fiftennTwentyPrice: props.carsValues.car_price_fifteen_twenty,
+        twentyThirtyPrice: props.carsValues.car_price_twenty_thirty,
 
         lisanceOwnAge: props.carsValues.customer_age,
         lisanceAge: props.carsValues.customer_driver_licence_age,
@@ -157,7 +157,6 @@ export default function CarcardList(props) {
                         RENKLER
                     </span>
                     <div className="car-colors d-inline my-auto">
-                        {console.log(car.colors)}
                         {car.colors.map((item) =>   
                         <input class="form-check-input" type="radio" name="color" style={{ backgroundColor: item.color_code }} onClick={() => { car.selectedColor = item }} id="flexRadioDefault1" />)}
                     </div>
