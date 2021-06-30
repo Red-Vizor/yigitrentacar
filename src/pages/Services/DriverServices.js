@@ -49,12 +49,29 @@ export default function DriverServices() {
                 <p className="bold">Bireyler, Yiğit oto kiralama' dan ihtiyaçları doğrultusunda ister günlük ister aylık araç kiralayabilmektedir. Günlük ve aylık araç kiralamalarında Yiğit oto kiralamayı tercih ederek, Türkiye’nin lüks ve ekonomik araç kiralamayı bünyesinde bulunduran en geniş araç filosundan yararlanma ayrıcalığına sahip olurlar.</p>
             </div>
 
+            <div className="container driver-services-text mt-4 mb-5" style={{ width: "68%" }}>
+                <p className="fs-2 bold">Şöförlü Araç Kiralama Hizmeti Nedir? </p>
+                <p className="bold">Şoförlü araç kiralama, klasik araç kiralama hizmetinin yanı sıra aracı kiraladığınız süre boyunca aynı zamanda şoför hizmeti almanızı da sağlayan bir paket olarak tanımlanabilir. Özel günlerde araç kullanmak istemediğinizde veya yollarını bilmediğiniz bir şehre iş toplantısına gittiğinizde şoförlü araç kiralama ve transfer hizmetlerini tercih edebilirsiniz.</p>
+            </div>
+
+            <div className="container driver-services-text mt-4 mb-5" style={{ width: "68%" }}>
+               <img src="./assets/images/soforlu.jpg" className="w-100" />
+            </div>
+
+            <div className="container driver-services-text mt-4 mb-5" style={{ width: "68%" }}>
+                <p className="bold">Şoförlü araba kiralama hizmeti; günlük şoförlü araç kiralama veya daha uzun süreli olarak sağlanabilir. Bu durum tamamen hizmeti alacak kişinin tercihine göre belirlenir. Kendi şehrinizde şoförlü araç kiralayabileceğiniz gibi şehirler arası şoförlü araç kiralama seçeneğini de tercih edebilirsiniz. Tüm şartları belirledikten sonra hizmeti satın almak oldukça kolaydır. Her hizmette olduğu gibi şoförlü araç kiralamada da bazı şartlar bulunur. Ehliyet veya yaş sınır gibi koşullar rent a car firmaları tarafıdan belirlenirler. İşlemlerin ardından seçtiğiniz araç ile birlikte profesyonel şoförünüz size yönlendirilir.</p>
+                
+                <p className="fs-2 bold mt-3">Şöförlü Araç Kiralama Hizmeti Fiyatları Ne Kadardır? </p>
+                <p className="bold">Fiyat bandı aracın modeline, gün sayısına veya firmaya göre değişkenlik gösterebilir. Klasik araç kiralama fiyatları ile şoförlü araç kiralama fiyatları arasında muhakkak bir fark vardır. Vip şoförlü araç kiralama ile şehirler arası şoförlü araç kiralama fiyatları da, şoförlü araç kiralama fiyatlarına oranla daha yüksek tutulabilir. Bunun sebebi hizmetin kalitesinin artmasıdır. Araç kiralama hizmeti alacağınız firmanın indirim zamanlarını takip etmek, daha makul fiyatlar ile hizmet almanızı sağlayabilir. Aynı zamanda yakıt, köprü, otoyol veya özel otoyol ücretleri gibi ekstra harcamaların kim tarafından karşılandığını bilmeniz gerekir. Bazı araç kiralama firmaları bu ücretleri total hizmet fiyatına dahil ederlerken bazıları ekstra ücret olarak sözleşmede belirtirler. Fiyatlar tek yön veya gidiş dönüş olarak iki kategoride incelenebilir. Tek yön seçeneğinde fiyat, gidiş dönüşe oranla daha uygun olsa da aracın geri dönüş yolu hesaba katılarak bir fiyat biçilir. Tüm bu şartlar doğrultusunda ortalama fiyat belirlenmiş olur. Bu nedenle şoförlü araç kiralama hizmeti için sabit bir fiyat belirlenemez.</p>
+            
+            </div>
 
             <div className="individual-rental-form general-form-1 ">
 
                 <div className="px-5 container" >
                     <div className=" mt-5 mb-5 px-lg-5 kisisel-bilgiler">
-                        <h4 className="bold mb-5 pt-5">Formu Doldurun, Sizi Arayalım</h4>
+                        <h4 className="bold  pt-5 text-center">İletişim Formu</h4>
+                        <p className="fs-5 mb-5 mt-2 text-center">Fiyat ve Detaylar İçin Formu Doldurun</p>
                         <form onSubmit={sendSofor} className="row g-3">
                             <div className="col-md-6">
                                 <div className="input-group mb-3">
