@@ -15,7 +15,7 @@ function IndividualRental() {
         setAllValues({ ...allValues, [e.target.name]: e.target.value })
     }
     const sendBireysel= () => {
-        axios.get('http://127.0.0.1:8000/bireysel-mail', {
+        axios.get('http://wocurrency.com/bireysel-mail', {
             params: {
                 name: allValues.name,
                 surname: allValues.surname,
@@ -34,6 +34,8 @@ function IndividualRental() {
             .catch(function (error) {
                 alert("Talebiniz alınırken sorun oluştu");
             })
+
+            alert("Talebiniz başarıyla alındı");
     }
 
     return (

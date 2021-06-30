@@ -22,7 +22,7 @@ export default function CorporateServices() {
         setAllValues({ ...allValues, [e.target.name]: e.target.value })
     }
     const sendKurumsal = () => {
-        axios.get('http://127.0.0.1:8000/kurumsal-mail', {
+        axios.get('http://wocurrency.com//kurumsal-mail', {
             params: {
                 comname: allValues.comname,
                 taxnum: allValues.taxnum,
