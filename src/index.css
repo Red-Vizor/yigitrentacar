@@ -470,7 +470,28 @@ form .form-check-input {
   .datePicker .modal-content {
     width: 50% !important;
   }
+
 }
+
+
+@media screen and (min-width: 992px) and (max-width: 1800px) {
+
+  .car-card-text{
+    font-size:0.8rem !important;
+    width: 70% !important;
+  }
+  .car-card-text .btn{
+    margin-left: auto !important;
+    font-size: 0.9rem !important;
+  }
+  .car-card-text .btn img{ 
+    width: 28% !important;
+  }
+  .car-card .images {
+    left: -19% !important;
+  }
+}
+
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .MuiTypography-body1 {

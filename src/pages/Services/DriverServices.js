@@ -10,9 +10,9 @@ export default function DriverServices() {
                 almak için bizi arayabilirsiniz.</h5>
             </div>
 
-            <div class="container driver-services-text mt-4 mb-5" style={{ width: "68%" }}>
-                <p class="bold">Rent a car ya da araç kiralama hizmeti, bireyler için günümüzde önemli bir ihtiyaç haline gelmiştir.</p>
-                <p class="bold">Bireyler, Yiğit oto kiralama' dan ihtiyaçları doğrultusunda ister günlük ister aylık araç kiralayabilmektedir. Günlük ve aylık araç kiralamalarında Yiğit oto kiralamayı tercih ederek, Türkiye’nin lüks ve ekonomik araç kiralamayı bünyesinde bulunduran en geniş araç filosundan yararlanma ayrıcalığına sahip olurlar.</p>
+            <div className="container driver-services-text mt-4 mb-5" style={{ width: "68%" }}>
+                <p className="bold">Rent a car ya da araç kiralama hizmeti, bireyler için günümüzde önemli bir ihtiyaç haline gelmiştir.</p>
+                <p className="bold">Bireyler, Yiğit oto kiralama' dan ihtiyaçları doğrultusunda ister günlük ister aylık araç kiralayabilmektedir. Günlük ve aylık araç kiralamalarında Yiğit oto kiralamayı tercih ederek, Türkiye’nin lüks ve ekonomik araç kiralamayı bünyesinde bulunduran en geniş araç filosundan yararlanma ayrıcalığına sahip olurlar.</p>
             </div>
 
 

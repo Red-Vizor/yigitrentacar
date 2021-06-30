@@ -11,10 +11,11 @@ export default function OfficesCard(props) {
         setAllValues({ ...allValues, [e.target.name]: e.target.value })
     }
     const sendContact= () => {
-        const json = JSON.stringify(allValues)
-        axios.get('http://127.0.0.1:8000/contact-mail', {
+        axios.get('http://wocurrency.com/contact-mail', {
             params: {
-                json
+                namesurname: allValues.namesurname,
+                email: allValues.email,
+                message: allValues.message
             }, headers: {
                 // Overwrite Axios's automatically set Content-Type
                 'Content-Type': 'application/json'
@@ -35,7 +36,6 @@ export default function OfficesCard(props) {
     return (
         <div className="office">
             <h4 className="extra-bold text-white mb-2 text-center">{props.name}</h4>
-
             <div className="card office-card">
                 <div className="row">
                     <div className="col">

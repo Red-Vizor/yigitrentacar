@@ -8,7 +8,7 @@ export default function Carcard(props) {
     const dispatch = useDispatch()
     const dateValue = useSelector((state) => state.dateslice)
 
-    const urlSite="http://panel.wocurrency.com/"
+    const urlSite = "http://panel.wocurrency.com/"
     const [carColors, setCarColors] = useState([]);
     useEffect(() => {
         axios.post('http://panel.wocurrency.com/api/renkler', { id: props.carsValues.id })
@@ -94,7 +94,7 @@ export default function Carcard(props) {
         sevenFifteenPrice: props.carsValues.car_price_seven_fifteen,
         fiftennTwentyPrice: props.carsValues.car_price_fifteen_twenty,
         twentyThirtyPrice: props.carsValues.car_price_twenty_thirty,
-        car_image_one:urlSite + props.carsValues.car_image_one , 
+        car_image_one: urlSite + props.carsValues.car_image_one,
         lisanceOwnAge: props.carsValues.customer_age,
         lisanceAge: props.carsValues.customer_driver_licence_age,
         fuel: getCarFuel(props.carsValues.car_fuel),
@@ -166,7 +166,11 @@ export default function Carcard(props) {
                                 <span> ₺ <span className="bold">{car.totalAmount}</span>,00</span>
                             </div>
                         </div>
-                        <a className="btn float-end" onClick={() => { carSelect(); dispatch(changePage(2)) }}><span className="h6 bold">SEÇ</span> <img src="./assets/icons/carcard/buttonright.svg" className="my-auto ms-1 w-50" /> </a>
+                        <a className="btn float-end px-0" onClick={() => { carSelect(); dispatch(changePage(2)) }}>
+                            <span className="h6 ms-auto me-2 bold">SEÇ
+                            </span>
+                            <img src="./assets/icons/carcard/buttonright.svg" className="my-auto ms-auto w-50" />
+                        </a>
                     </div>
                 </div>
                 <div className="card-bottom d-flex py-3 px-4">
@@ -177,7 +181,7 @@ export default function Carcard(props) {
                         <span className="my-auto ms-1">{car.gear}</span>
                         <img src="./assets/icons/carcard/bagagge.svg" className="icon my-auto ms-2" />
                         <span className="my-auto ms-1">{car.baggage} Çanta</span>
-                        
+
                         <a href="#" className="ms-auto mt-md-1 bold" onClick={() => { carSelect() }} data-bs-toggle="modal" data-bs-target="#carModal"> <span>Tüm Özellikler</span></a>
                     </span>
                 </div>

@@ -139,7 +139,12 @@ export default function CarcardList(props) {
                                 <span className="ms-auto"> <span className="bold ms-1"> ₺ {car.threePrice}</span>,00</span>
                             </div>
                         </div>
-                        <a className="btn float-end d-flex" href="/reservation"><span className="h6 bold my-auto me-1">Reservation</span> <img src="./assets/icons/carcard/buttonright.svg" className="my-auto ms-1 w-50" /> </a>
+                        <a className="btn float-end d-flex" href="/reservation">
+                            <span className="h6 bold my-auto ms-auto">
+                                Reservation
+                            </span>
+                            <img src="./assets/icons/carcard/buttonright.svg" className="my-auto ms-auto w-50" />
+                        </a>
                     </div>
                 </div>
                 <div className="card-bottom d-flex py-3 px-4">
