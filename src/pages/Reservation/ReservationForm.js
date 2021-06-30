@@ -49,7 +49,7 @@ function a11yProps(index) {
 
 export default function ReservationForm() {
     const cities = ["Adana", "Adıyaman", "Afyon", "Ağrı", "Amasya", "Ankara", "Antalya", "Artvin", "Aydın", "Balıkesir", "Bilecik", "Bingöl", "Bitlis", "Bolu", "Burdur", "Bursa", "Çanakkale", "Çankırı", "Çorum", "Denizli", "Diyarbakır", "Edirne", "Elazığ", "Erzincan", "Erzurum", "Eskişehir", "Gaziantep", "Giresun", "Gümüşhane", "Hakkari", "Hatay", "Isparta", "İçel (Mersin)", "İstanbul", "İzmir", "Kars", "Kastamonu", "Kayseri", "Kırklareli", "Kırşehir", "Kocaeli", "Konya", "Kütahya", "Malatya", "Manisa", "Kahramanmaraş", "Mardin", "Muğla", "Muş", "Nevşehir", "Niğde", "Ordu", "Rize", "Sakarya", "Samsun", "Siirt", "Sinop", "Sivas", "Tekirdağ", "Tokat", "Trabzon", "Tunceli", "Şanlıurfa", "Uşak", "Van", "Yozgat", "Zonguldak", "Aksaray", "Bayburt", "Karaman", "Kırıkkale", "Batman", "Şırnak", "Bartın", "Ardahan", "Iğdır", "Yalova", "Karabük", "Kilis", "Osmaniye", "Düzce"
-]
+    ]
 
     const dateValue = useSelector((state) => state.dateslice)
     const [allValues, setAllValues] = useState({
@@ -74,7 +74,7 @@ export default function ReservationForm() {
         invoiceCompanyMail: '',
         invoiceCompanyDriverLisance: '',
         invoiceCompanyMessage: '',
-        dateInformation : dateValue
+        dateInformation: dateValue
     });
     const changeHandler = e => {
         setAllValues({ ...allValues, [e.target.name]: e.target.value })
@@ -87,31 +87,31 @@ export default function ReservationForm() {
         setValue(newValue);
     };
 
-    
+
     const dispatch = useDispatch()
 
-    const sendMail= () => { 
+    const sendMail = () => {
         const json = JSON.stringify(allValues)
         axios.get('http://panel.wocurrency.com/send-mail', {
             params: {
                 json
-            },headers: {
+            }, headers: {
                 // Overwrite Axios's automatically set Content-Type
                 'Content-Type': 'application/json'
-              }
-          })
-          .then(function (response) {
-            console.log(response);
-          })
-          .catch(function (error) {
-            console.log(error);
-          })
-          .then(function () {
-            
-          });  
-          alert("deneme")
-          $('.reservation-tab-area').addClass('d-none')
-          dispatch(changePage(5))
+            }
+        })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+            .then(function () {
+
+            });
+        alert("deneme")
+        $('.reservation-tab-area').addClass('d-none')
+        dispatch(changePage(5))
     }
 
     return (
@@ -126,7 +126,7 @@ export default function ReservationForm() {
                 <div className="header-content d-flex justify-content-center">
                     <div className="row">
                         <div className="col-lg-4 col-md-4 col-12 mx-auto d-flex">
-                            <img src="./assets/images/s3.png" className="mx-auto reservation-car-image w-50" />
+                            <img src={dateValue.carSelect.car_image_one} width="250px" className="mx-4 package-car-image" />
                         </div>
 
                         <div className="col-lg-5 col-md-5 col-12 d-flex">
@@ -170,7 +170,7 @@ export default function ReservationForm() {
             <div className="rezervasyon-uyari text-center p-3">
                 <p>REZERVASYONUNUZU TAMAMLAMAK İÇİN AŞAĞIDAKİ BİLGİLERİ EKSİKSİZ TAMAMLAYINIZ.</p>
             </div>
-            <form onSubmit={() => {sendMail()}}>
+            <form onSubmit={() => { sendMail() }}>
                 <div className="general-form-1 personal-form">
                     <div className="rezervasyon-form container px-5 ">
                         <div className="container mt-5 mb-5 px-5 kisisel-bilgiler">
@@ -178,11 +178,11 @@ export default function ReservationForm() {
                             <div className="row g-3">
                                 <div className="col-md-6">
                                     <div className="input-group mb-3">
-                                        <label for="inputEmail4" className="form-label" onClick={() => {alert(allValues.dateInformation.carSelect.name)}} >ADINIZ*</label>
+                                        <label for="inputEmail4" className="form-label" onClick={() => { alert(allValues.dateInformation.carSelect.name) }} >ADINIZ*</label>
                                         <span className="input-group-text" id="basic-addon1">
                                             <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
                                         </span>
-                                        <input onChange={changeHandler}   required name="name" type="text" className="form-control" id="name" placeholder="Adınız (ehliyetinizde yer aldığı gibi)*" />
+                                        <input onChange={changeHandler} required name="name" type="text" className="form-control" id="name" placeholder="Adınız (ehliyetinizde yer aldığı gibi)*" />
                                     </div>
                                 </div>
                                 <div className="col-md-6">
@@ -191,7 +191,7 @@ export default function ReservationForm() {
                                         <span className="input-group-text" id="basic-addon1">
                                             <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
                                         </span>
-                                        <input onChange={changeHandler}   required name="surname" type="text" className="form-control" id="surname" placeholder="Soyadınız (ehliyetinizde yer aldığı gibi)*" />
+                                        <input onChange={changeHandler} required name="surname" type="text" className="form-control" id="surname" placeholder="Soyadınız (ehliyetinizde yer aldığı gibi)*" />
                                     </div>
                                 </div>
                                 <div className="col-md-6">
@@ -200,7 +200,7 @@ export default function ReservationForm() {
                                         <span className="input-group-text" id="basic-addon1">
                                             <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
                                         </span>
-                                        <input onChange={changeHandler}   required name="birthdate" type="text" className="form-control" id="birthdate" placeholder="GG/AA/YYYY" />
+                                        <input onChange={changeHandler} required name="birthdate" type="text" className="form-control" id="birthdate" placeholder="GG/AA/YYYY" />
                                     </div>
                                 </div>
                                 <div className="col-md-6">
@@ -209,7 +209,7 @@ export default function ReservationForm() {
                                         <span className="input-group-text" id="basic-addon1">
                                             <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
                                         </span>
-                                        <input onChange={changeHandler}   required name="tcnumber" type="text" className="form-control" id="tcnumber" placeholder="T.C. No ya da Pasaport No*" />
+                                        <input onChange={changeHandler} required name="tcnumber" type="text" className="form-control" id="tcnumber" placeholder="T.C. No ya da Pasaport No*" />
                                     </div>
                                 </div>
                                 <div className="col-md-6">
@@ -218,7 +218,7 @@ export default function ReservationForm() {
                                         <span className="input-group-text" id="basic-addon1">
                                             <img src="./assets/icons/phone-gray.svg" height="45%" className="my-auto px-2" />
                                         </span>
-                                        <input onChange={changeHandler}   required name="phone" type="phone" className="form-control" id="phone" placeholder="Cep Telefonunuz*" />
+                                        <input onChange={changeHandler} required name="phone" type="phone" className="form-control" id="phone" placeholder="Cep Telefonunuz*" />
                                     </div>
                                 </div>
                                 <div className="col-md-6">
@@ -227,12 +227,12 @@ export default function ReservationForm() {
                                         <span className="input-group-text" id="basic-addon1">
                                             <img src="./assets/icons/@.svg" height="50%" className="my-auto px-2" />
                                         </span>
-                                        <input onChange={changeHandler}   required name="mail" type="text" className="form-control" id="mail" placeholder="Mail Adresiniz" />
+                                        <input onChange={changeHandler} required name="mail" type="text" className="form-control" id="mail" placeholder="Mail Adresiniz" />
                                     </div>
                                 </div>
                                 <div className="mb-3">
                                     <label for="exampleFormControlTextarea1" className="form-label">MESAJINIZ</label>
-                                    <textarea name="message" onChange={changeHandler}    className="form-control" id="message" rows="3"></textarea>
+                                    <textarea name="message" onChange={changeHandler} className="form-control" id="message" rows="3"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -261,7 +261,7 @@ export default function ReservationForm() {
                                             <span className="input-group-text" id="basic-addon1">
                                                 <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
                                             </span>
-                                            <input onChange={changeHandler}   required name="invoiceName" type="text" className="form-control" id="invoiceName" placeholder="Adınız (ehliyetinizde yer aldığı gibi)*" />
+                                            <input onChange={changeHandler} required name="invoiceName" type="text" className="form-control" id="invoiceName" placeholder="Adınız (ehliyetinizde yer aldığı gibi)*" />
                                         </div>
                                     </div>
                                     <div className="col-md-6">
@@ -270,7 +270,7 @@ export default function ReservationForm() {
                                             <span className="input-group-text" id="basic-addon1">
                                                 <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
                                             </span>
-                                            <input onChange={changeHandler}   required name="invoiceLastname" type="text" className="form-control" id="invoiceLastname" placeholder="Soyadınız (ehliyetinizde yer aldığı gibi)*" />
+                                            <input onChange={changeHandler} required name="invoiceLastname" type="text" className="form-control" id="invoiceLastname" placeholder="Soyadınız (ehliyetinizde yer aldığı gibi)*" />
                                         </div>
                                     </div>
                                     <div className="col-md-12">
@@ -279,7 +279,7 @@ export default function ReservationForm() {
                                             <span className="input-group-text" id="basic-addon1">
                                                 <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
                                             </span>
-                                            <input onChange={changeHandler}   required name="invoiceTcNumber" type="text" className="form-control" id="invoiceTcNumber" placeholder="T.C. No ya da Pasaport No*" />
+                                            <input onChange={changeHandler} required name="invoiceTcNumber" type="text" className="form-control" id="invoiceTcNumber" placeholder="T.C. No ya da Pasaport No*" />
                                         </div>
                                     </div>
                                     <div className="mb-3">
@@ -295,7 +295,7 @@ export default function ReservationForm() {
                                         <span class="input-group-text" id="basic-addon1">
                                             <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
                                         </span>
-                                        <input onChange={changeHandler}   required name="invoiceCompanyName" type="text" class="form-control" id="invoiceCompanyName" placeholder="Firma Adını Giriniz" />
+                                        <input onChange={changeHandler} required name="invoiceCompanyName" type="text" class="form-control" id="invoiceCompanyName" placeholder="Firma Adını Giriniz" />
                                     </div>
                                     <div className="row">
                                         <div class="col-md-6">
@@ -304,7 +304,7 @@ export default function ReservationForm() {
                                                 <span class="input-group-text" id="basic-addon1">
                                                     <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
                                                 </span>
-                                                <input onChange={changeHandler}   required name="invoiceCompanyTaxNumber" type="text" class="form-control" id="invoiceCompanyTaxNumber" placeholder="Vergi Numarası*" />
+                                                <input onChange={changeHandler} required name="invoiceCompanyTaxNumber" type="text" class="form-control" id="invoiceCompanyTaxNumber" placeholder="Vergi Numarası*" />
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -313,7 +313,7 @@ export default function ReservationForm() {
                                                 <span class="input-group-text" id="basic-addon1">
                                                     <img src="./assets/icons/one.svg" height="45%" className="my-auto px-2" />
                                                 </span>
-                                                <input onChange={changeHandler}   required name="invoiceCompanyCarCount" type="text" class="form-control" id="invoiceCompanyCarCount" placeholder="Araç Sayısı*" />
+                                                <input onChange={changeHandler} required name="invoiceCompanyCarCount" type="text" class="form-control" id="invoiceCompanyCarCount" placeholder="Araç Sayısı*" />
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -334,7 +334,7 @@ export default function ReservationForm() {
                                                 <span class="input-group-text" id="basic-addon1">
                                                     <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
                                                 </span>
-                                                <input onChange={changeHandler}   required name="invoiceCompanyAuthName" type="text" class="form-control" id="invoiceCompanyAuthName" placeholder="Yetkili Kişinin Adı" />
+                                                <input onChange={changeHandler} required name="invoiceCompanyAuthName" type="text" class="form-control" id="invoiceCompanyAuthName" placeholder="Yetkili Kişinin Adı" />
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -343,7 +343,7 @@ export default function ReservationForm() {
                                                 <span class="input-group-text" id="basic-addon1">
                                                     <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
                                                 </span>
-                                                <input onChange={changeHandler}   required name="invoiceCompanyAuthSurname" type="text" class="form-control" id="invoiceCompanyAuthSurname" placeholder="Yetkili Kişinin Soyadı" />
+                                                <input onChange={changeHandler} required name="invoiceCompanyAuthSurname" type="text" class="form-control" id="invoiceCompanyAuthSurname" placeholder="Yetkili Kişinin Soyadı" />
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -352,7 +352,7 @@ export default function ReservationForm() {
                                                 <span class="input-group-text" id="basic-addon1">
                                                     <img src="./assets/icons/phone-gray.svg" height="45%" className="my-auto px-2" />
                                                 </span>
-                                                <input onChange={changeHandler}   required name="invoiceCompanyPhone" type="text" class="form-control" id="invoiceCompanyPhone" placeholder="Telefon Numarası" />
+                                                <input onChange={changeHandler} required name="invoiceCompanyPhone" type="text" class="form-control" id="invoiceCompanyPhone" placeholder="Telefon Numarası" />
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -361,13 +361,13 @@ export default function ReservationForm() {
                                                 <span class="input-group-text" id="basic-addon1">
                                                     <img src="./assets/icons/@.svg" height="50%" className="my-auto px-2" />
                                                 </span>
-                                                <input onChange={changeHandler}   required name="invoiceCompanyMail" type="text" class="form-control" id="invoiceCompanyMail" placeholder="Mail Adresiniz" />
+                                                <input onChange={changeHandler} required name="invoiceCompanyMail" type="text" class="form-control" id="invoiceCompanyMail" placeholder="Mail Adresiniz" />
                                             </div>
                                         </div>
 
                                         <div class="form-check mt-4 d-flex">
                                             <span class="d-inline mx-auto">
-                                                <input onChange={changeHandler}   required name="invoiceCompanyDriverLisance" class="form-check-input " type="checkbox" value="" id="invoiceCompanyDriverLisance" />
+                                                <input onChange={changeHandler} required name="invoiceCompanyDriverLisance" class="form-check-input " type="checkbox" value="" id="invoiceCompanyDriverLisance" />
                                                 <label class="form-check-label" for="flexCheckDefault">
                                                     Şoförlü kiralama ve transfer hizmeti teklifi de almak istiyorum.
                                                 </label>
@@ -388,20 +388,20 @@ export default function ReservationForm() {
                         <div className="form-policy py-5 px-5 container w-75 mx-auto row">
                             <p className="pb-5"> Kişisel verilerinizin korunması ve işlenmesine ilişkin aydınlatma metni için tıklayınız.</p>
                             <div class="form-check mb-4">
-                                <input onChange={changeHandler}   required name="" class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                <input onChange={changeHandler} required name="" class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                                 <label class="form-check-label" for="flexCheckDefault">
                                     Aydınlatma metni kapsamında kişisel verilerimin, pazarlama süreçlerinin planlanması ve icrası amacıyla; Otokoç Otomotiv Ticaret ve Sanayi Anonim Şirketi tarafından sunulan ürün ve hizmetlerin beğenilerime,
                                     kullanım alışkanlıklarıma ve ihtiyaçlarıma göre özelleştirilmesi için işlenmesini ve bu kapsamda aşağıda belirtilen iletişim bilgilerime reklam, promosyon, kampanya ve benzeri ticari elektronik ileti gönderilmesini ve bu amaçla Şirketin hizmet aldığı tedarikçilerle paylaşılmasını kabul ediyorum.
                                 </label>
                             </div>
                             <div class="form-check mb-4">
-                                <input onChange={changeHandler}   required name="" class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                <input onChange={changeHandler} required name="" class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                                 <label class="form-check-label" for="flexCheckDefault">
                                     Aydınlatma metni  kapsamında kimlik, iletişim, finansal ve kullanım alışkanlıkları verilerimin, Otokoç Otomotiv Tic. ve San. A.Ş. tarafından sunulan ürün ve hizmetlerin beğeni, kullanım alışkanlıklarıma ve ihtiyaçlarıma göre özelleştirilerek önerilmesi ve bu kapsamda iletişim bilgilerime reklam, promosyon,
                                     kampanya ve benzeri ticari elektronik ileti gönderilmesi  amacıyla Emarsys İletişim Sistemleri Tic. Ltd. Şti aracılığıyla yurt dışında mukim Emarsys eMarketing Systems AG’ye ile paylaşılmasını kabul ediyorum.
                                 </label>
                             </div>
-                            <button type="button" onClick={() => {sendMail()}} className="btn btn-orange bold px-3 py-2 text-white mx-auto" style={{ width: "30%" }} >
+                            <button type="button" onClick={() => { sendMail() }} className="btn btn-orange bold px-3 py-2 text-white mx-auto" style={{ width: "30%" }} >
                                 <span className="m-auto">REZERVASYONU TAMAMLAMA</span>
                             </button>
                         </div>

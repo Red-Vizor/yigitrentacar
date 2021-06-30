@@ -106,7 +106,7 @@ export default function Homepage() {
                                     imageUrl="./assets/images/city1.jpg"
                                     title="İSTANBUL"
                                     btnText="İSTANBUL LOKASYONLAR"
-                                    adress="popularlocation"
+                                    adress="popularlocations"
                                     content="İstanbul' da mutlaka görmeniz gereken yerler." />
                             </div>
                             <div className="item">
@@ -114,7 +114,7 @@ export default function Homepage() {
                                     imageUrl="./assets/images/city2.jpg"
                                     title="İZMİR"
                                     btnText="İZMİR LOKASYONLAR"
-                                    adress="popularlocation"
+                                    adress="popularlocations"
                                     content="İzmir' de mutlaka görmeniz gereken yerler." />
                             </div>
                             <div className="item">
@@ -122,7 +122,7 @@ export default function Homepage() {
                                     imageUrl="./assets/images/city3.jpg"
                                     title="BODRUM"
                                     btnText="BODRUM LOKASYONLAR"
-                                    adress="popularlocation"
+                                    adress="popularlocations"
                                     content="Bodrum' da mutlaka görmeniz gereken yerler." />
                             </div>
                         </div>

@@ -11,14 +11,30 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 function PopularLocationsSingle() {
 
-   
+
+    const optionOwl = {
+        loop: true,
+        margin: 0.2,
+        nav: true,
+        responsive: {
+            0: {
+                items: 3,
+            },
+            600: {
+                items: 4,
+            },
+            1000: {
+                items: 5,
+            },
+        },
+    }
 
     const page = useSelector((state) => state.page)
 
-    const imagesses =[page.imagePop+"1.jpg",page.imagePop+"2.jpg",page.imagePop+"3.jpg",page.imagePop+"4.jpg",page.imagePop+"5.jpg"]
+    const imagesses = [page.imagePop + "1.jpg", page.imagePop + "2.jpg", page.imagePop + "3.jpg", page.imagePop + "4.jpg", page.imagePop + "5.jpg"]
 
-    
 
+    console.log(imagesses)
 
     return (
         <div className="location-single">
@@ -66,11 +82,15 @@ function PopularLocationsSingle() {
 
 
 
-            <SRLWrapper>
-                <OwlCarousel className='owl-theme' loop margin={10} nav>
-                    <img src="/assets/images/location-carousel1.png" height="350px" />  
-                </OwlCarousel>
-            </SRLWrapper>
+            <div className="my-4">
+                <SRLWrapper>
+                <OwlCarousel className='owl-theme ' {...optionOwl} nav>
+                    {imagesses.map((item) => <div class='item'>
+                        <img src={"/assets/images/locations/" +item } height="350px" />
+                    </div>)}
+                    </OwlCarousel>
+                </SRLWrapper>
+            </div>
         </div>
     )
 }

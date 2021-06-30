@@ -1,20 +1,34 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 export default function ContactForm() {
+
+    const [allValues, setAllValues] = useState({
+        name: '',
+        surname: '',
+        email: '',
+        phone: '',
+        message: ''
+    })
+    const changeHandler = e => {
+        setAllValues({ ...allValues, [e.target.name]: e.target.value })
+    }
+    const sendContact= () => {
+        alert('deneme')
+    }
     return (
         <div className="general-form-1">
             <div className="contact-form container px-lg-5 ">
                 <div className="container mt-5 mb-5 px-lg-5 kisisel-bilgiler">
                     <h2 className="text-center mb-5">İletişim Formunu Doldurun</h2>
                     <p className="text-center mb-5">Her türlü soru, görüş ve önerinizi iletişim formu ile bize gönderebilirsiniz.</p>
-                    <form class="row g-3">
+                    <form onSubmit={sendContact} class="row g-3">
                         <div class="col-md-6">
                             <div class="input-group mb-3">
                                 <label for="inputEmail4" class="form-label">ADINIZ*</label>
                                 <span class="input-group-text" id="basic-addon1">
                                     <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
                                 </span>
-                                <input type="email" class="form-control" id="inputEmail4" placeholder="Adınız (ehliyetinizde yer aldığı gibi)*" />
+                                <input type="text" onChange={changeHandler} required name="name" class="form-control" id="name" placeholder="Adınız (ehliyetinizde yer aldığı gibi)*" />
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -23,7 +37,7 @@ export default function ContactForm() {
                                 <span class="input-group-text" id="basic-addon1">
                                     <img src="./assets/icons/name.svg" height="45%" className="my-auto px-2" />
                                 </span>
-                                <input type="password" class="form-control" id="inputPassword4" placeholder="Soyadınız (ehliyetinizde yer aldığı gibi)*" />
+                                <input type="text" onChange={changeHandler} required name="surname" class="form-control" id="surname" placeholder="Soyadınız (ehliyetinizde yer aldığı gibi)*" />
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -32,7 +46,7 @@ export default function ContactForm() {
                                 <span class="input-group-text" id="basic-addon1">
                                     <img src="./assets/icons/phone-gray.svg" height="45%" className="my-auto px-2" />
                                 </span>
-                                <input type="email" class="form-control" id="inputEmail4" placeholder="Cep Telefonunuz" />
+                                <input type="text" onChange={changeHandler} required name="phone" class="form-control" id="phone" placeholder="Cep Telefonunuz" />
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -41,18 +55,16 @@ export default function ContactForm() {
                                 <span class="input-group-text" id="basic-addon1">
                                     <img src="./assets/icons/@.svg" height="50%" className="my-auto px-2" />
                                 </span>
-                                <input type="password" class="form-control" id="inputPassword4" placeholder="Mail Adresiniz" />
+                                <input type="email" onChange={changeHandler} required name="email" class="form-control" id="email" placeholder="Mail Adresiniz" />
                             </div>
                         </div>
-
                         <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label">MESAJINIZ</label>
-                            <textarea class="form-control px-5" id="exampleFormControlTextarea1" placeholder="İLETMEK İSTEDİĞİNİZ MESAJINIZI BURAYA YAZABİLİRSİNİZ." rows="3"></textarea>
+                            <textarea  onChange={changeHandler} required name="message" class="form-control" id="message" placeholder="İLETMEK İSTEDİĞİNİZ MESAJINIZI BURAYA YAZABİLİRSİNİZ." rows="3"></textarea>
                         </div>
-
-                        <a href="#" className="btn btn-orange-outline bold px-4 py-2 " style={{ width: "20%" }}>
+                        <button type="submit" className="btn btn-orange-outline bold px-4 py-2 " style={{ width: "20%" }}>
                             <span className="m-auto">FORMU GÖNDER</span>
-                        </a>
+                        </button>
                     </form>
                 </div>
             </div>

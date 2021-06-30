@@ -1,16 +1,29 @@
-import React from 'react'
+import React, {useState} from 'react'
+import axios from 'axios'
 
 export default function OfficesCard(props) {
+    const [allValues, setAllValues] = useState({
+        namesurname: '',
+        email: '',
+        message: ''
+    })
+    const changeHandler = e => {
+        setAllValues({ ...allValues, [e.target.name]: e.target.value })
+    }
+    const sendContact= () => {
+       
+    }
+
+
     return (
         <div className="office">
             <h4 className="extra-bold text-white mb-2 text-center">{props.name}</h4>
 
             <div className="card office-card">
-                <p className="bold text-white mb-2 text-center">Aramak için tıklayın</p>
                 <div className="row">
                     <div className="col">
                         <div className="phone mb-2">
-                            <a> <img src="./assets/images/phone.svg" width="20px" className="me-1 my-auto" />{props.phone}</a>
+                            <a href={"tel:" + props.phone}> <img src="./assets/images/phone.svg" width="20px" className="me-1 my-auto" />{props.phone}</a>
                         </div>
                         <div className="email mb-2">
                             <img src="./assets/images/email.svg" width="20px" className="me-1 my-auto" /> <a> info@yigitotokiralama.com</a>
@@ -18,18 +31,18 @@ export default function OfficesCard(props) {
                         <div className="adress mb-2">
                             <a> <img src="./assets/images/location.svg" width="20px" className="me-1 my-auto" />{props.adress}</a>
                         </div>
-                        <form>
+                        <form onSubmit={sendContact}>   
                             <div className="row">
                                 <div className="col-6 px-1">
-                                    <input type="email" class="form-control" id="inputEmail4" placeholder="Ad Soyad" />
+                                    <input type="text" onChange={changeHandler} required name="namesurname" class="form-control" id="namesurname" placeholder="Ad Soyad" />
                                 </div>
                                 <div className="col-6 px-1">
-                                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email Adresi" />
+                                    <input type="text" onChange={changeHandler} required name="email" class="form-control" id="email"  placeholder="Email Adresi" />
                                 </div>
                                 <div className="col-12 px-1 mt-2">
-                                    <textarea className="form-control border-0"></textarea>
+                                    <textarea type="text" onChange={changeHandler} required name="message" id="message"  className="form-control border-0"></textarea>
                                 </div>
-                                <button type="button" className="btn btn-dark btn-orange mx-auto mt-2 py-2 px-5my-2">Mesajı Gönder</button>
+                                <button type="submit" className="btn btn-dark btn-orange mx-auto mt-2 py-2 px-5my-2">Mesajı Gönder</button>
                             </div>
                         </form>
                     </div>

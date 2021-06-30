@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './reservation.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { changePage } from '../../store/reservation/reservationPageChangeSlice'
-import {addPackageTwoSelect , setHPT} from '../../store/reservation/dateSlice'
+import { addPackageTwoSelect, setHPT } from '../../store/reservation/dateSlice'
 import $ from 'jquery';
 window.jQuery = $;
 
@@ -13,14 +13,14 @@ export default function PackageTwo(props) {
     const dateValue = useSelector((state) => state.dateslice)
 
 
-   
+
     const changePackage = (packageValue) => {
         dispatch(addPackageTwoSelect(packageValue))
     }
     return (
         <section className="package">
             <div className="package-header header-area py-4 bg-pink-powder d-flex justify-content-center">
-                <img src="./assets/images/s3.png" width="250px" className="mx-4 package-car-image" />
+                <img src={dateValue.carSelect.car_image_one} width="250px" className="mx-4 package-car-image" />
                 <div className="car-detail mx-lg-5 my-auto ">
                     <span className="h4 bold">{dateValue.carSelect.name}</span>
                     <p className="mt-3">{dateValue.citySelect}</p>
@@ -60,7 +60,7 @@ export default function PackageTwo(props) {
                     </div>
 
                     <div className="row py-2 px-2">
-                        <a href="#" className="h7 text-dark text-end" data-bs-toggle="modal" data-bs-target={"#"+props.modalName}>Seçilenleri Göster</a>
+                        <a href="#" className="h7 text-dark text-end" data-bs-toggle="modal" data-bs-target={"#" + props.modalName}>Seçilenleri Göster</a>
                     </div>
 
                     <div className="accordion accordion-flush" id="accordionFlushExample">

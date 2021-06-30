@@ -8,6 +8,7 @@ export default function Carcard(props) {
     const dispatch = useDispatch()
     const dateValue = useSelector((state) => state.dateslice)
 
+    const urlSite="http://panel.wocurrency.com/"
     const [carColors, setCarColors] = useState([]);
     useEffect(() => {
         axios.post('http://panel.wocurrency.com/api/renkler', { id: props.carsValues.id })
@@ -93,7 +94,7 @@ export default function Carcard(props) {
         sevenFifteenPrice: props.carsValues.car_price_seven_fifteen,
         fiftennTwentyPrice: props.carsValues.car_price_fifteen_twenty,
         twentyThirtyPrice: props.carsValues.car_price_twenty_thirty,
-
+        car_image_one:urlSite + props.carsValues.car_image_one , 
         lisanceOwnAge: props.carsValues.customer_age,
         lisanceAge: props.carsValues.customer_driver_licence_age,
         fuel: getCarFuel(props.carsValues.car_fuel),
@@ -176,12 +177,11 @@ export default function Carcard(props) {
                         <span className="my-auto ms-1">{car.gear}</span>
                         <img src="./assets/icons/carcard/bagagge.svg" className="icon my-auto ms-2" />
                         <span className="my-auto ms-1">{car.baggage} Çanta</span>
-                        <img src="./assets/icons/carcard/expand.svg" className="icon my-auto ms-2" />
-                        <span className="my-auto ms-1">{car.seat} Kişi</span>
+                        
                         <a href="#" className="ms-lg-auto mt-md-1 ms-md-2" onClick={() => { carSelect() }} data-bs-toggle="modal" data-bs-target="#carModal"> <span>Tüm Özellikler</span></a>
                     </span>
                 </div>
-                <img src={"http://panel.wocurrency.com/" + props.carsValues.car_image_one} className="images position-absolute" />
+                <img src={urlSite + props.carsValues.car_image_one} className="images position-absolute" />
             </div>
             <div className="colors w-50  mx-auto px-lg-4 py-2 text-center shadow-light">
                 <div className="d-flex justify-content-center">
