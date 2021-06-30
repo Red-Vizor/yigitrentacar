@@ -3,38 +3,7 @@ import axios from 'axios'
 
 
 function CorporateRental() {
-    const [allValues, setAllValues] = useState({
-        name: '',
-        surname:'',
-        birthdate:'',
-        tcnumber: '',
-        phone: '',
-        email: '',
-    })
-    const changeHandler = e => {
-        setAllValues({ ...allValues, [e.target.name]: e.target.value })
-    }
-    const sendKurumsal= () => {
-        axios.get('http://127.0.0.1:8000/kurumsal-mail', {
-            params: {
-                name: allValues.name,
-                surname: allValues.surname,
-                birthdate: allValues.birthdate,
-                tcnumber: allValues.tcnumber,
-                phone: allValues.phone,
-                email: allValues.email
-            }, headers: {
-                // Overwrite Axios's automatically set Content-Type
-                'Content-Type': 'application/json'
-            }
-        })
-            .then(function (response) {
-                alert("Talebiniz başarıyla alındı");
-            })
-            .catch(function (error) {
-                alert("Talebiniz alınırken sorun oluştu");
-            })
-    }
+    
 
     return (
         <div className="corporate-rental-form general-form-1 " style={{ width: "100%" }}>
