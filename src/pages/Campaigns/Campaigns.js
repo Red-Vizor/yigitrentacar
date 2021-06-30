@@ -48,6 +48,7 @@ function Campaigns() {
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
+    const width = window.innerWidth;
 
 
     return (
@@ -59,47 +60,63 @@ function Campaigns() {
                 style={{ height: "346px", backgroundImage: "linear-gradient(rgb(232, 84, 30,0.4), rgb(232, 84, 30,0.4)), url('./assets/images/jumbotron/compaigns-jumbotron.png')" }}>
                 <h1>KAMPANYALAR</h1>
 
-                <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className="tab-bar shadow-light" centered >
-                    <Tab label="YİĞİT KAMPANYALARI" {...changeProps(0)} />
-                    <Tab label="YİĞİT İŞ BİRLİĞİ KAMPANYALARI" {...changeProps(1)} />
-                    <Tab label="YİĞİT KURUMSAL KAMPANYALARI" {...changeProps(2)} />
-                </Tabs>
+
+                {
+                    width < 991 ? <Tabs value={value} onChange={handleChange} orientation="vertical" aria-label="simple tabs example" className="tab-bar shadow-light tab-areas mobile-tab-bar" centered >
+                        <Tab label="YİĞİT KAMPANYALARI" {...changeProps(0)} />
+                        <Tab label="YİĞİT İŞ BİRLİĞİ KAMPANYALARI" {...changeProps(1)} />
+                        <Tab label="YİĞİT KURUMSAL KAMPANYALARI" {...changeProps(2)} />
+                    </Tabs> :
+                        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className="tab-bar shadow-light tab-areas web-tab-bar" centered >
+                            <Tab label="YİĞİT KAMPANYALARI" {...changeProps(0)} />
+                            <Tab label="YİĞİT İŞ BİRLİĞİ KAMPANYALARI" {...changeProps(1)} />
+                            <Tab label="YİĞİT KURUMSAL KAMPANYALARI" {...changeProps(2)} />
+                        </Tabs>
+                }
+
+
+
+
+
+
+
+
             </div>
 
 
             <div className="campaigns-cardpage" >
-            <div className="container" >
-                <TabPanel value={value} index={0}>
-                    <div className="row">
-                        <div className="col-lg-6">
-                            <CampaignsCard imageUrl="./assets/images/campaign-car.png" />
+                <div className="container" >
+                    <TabPanel value={value} index={0}>
+                        <div className="row">
+                            <div className="col-lg-6">
+                                <CampaignsCard imageUrl="./assets/images/campaign-car.png" />
+                            </div>
+                            <div className="col-lg-6">
+                                <CampaignsCard imageUrl="./assets/images/campaign-car.png" />
+                            </div>
                         </div>
-                        <div className="col-lg-6">
-                            <CampaignsCard imageUrl="./assets/images/campaign-car.png" />
+                    </TabPanel>
+                    <TabPanel value={value} index={1}>
+                        <div className="row">
+                            <div className="col-lg-6">
+                                <CampaignsCard imageUrl="./assets/images/campaign-car.png" />
+                            </div>
+                            <div className="col-lg-6">
+                                <CampaignsCard imageUrl="./assets/images/campaign-car.png" />
+                            </div>
                         </div>
-                    </div>
-                </TabPanel>
-                <TabPanel value={value} index={1}>
-                    <div className="row">
-                        <div className="col-lg-6">
-                            <CampaignsCard imageUrl="./assets/images/campaign-car.png" />
+                    </TabPanel>
+                    <TabPanel value={value} index={2}>
+                        <div className="row">
+                            <div className="col-lg-6">
+                                <CampaignsCard imageUrl="./assets/images/campaign-car.png" />
+                            </div>
+                            <div className="col-lg-6">
+                                <CampaignsCard imageUrl="./assets/images/campaign-car.png" />
+                            </div>
                         </div>
-                        <div className="col-lg-6">
-                            <CampaignsCard imageUrl="./assets/images/campaign-car.png" />
-                        </div>
-                    </div>
-                </TabPanel>
-                <TabPanel value={value} index={2}>
-                    <div className="row">
-                        <div className="col-lg-6">
-                            <CampaignsCard imageUrl="./assets/images/campaign-car.png" />
-                        </div>
-                        <div className="col-lg-6">
-                            <CampaignsCard imageUrl="./assets/images/campaign-car.png" />
-                        </div>
-                    </div>
-                </TabPanel>
-            </div>
+                    </TabPanel>
+                </div>
             </div>
 
 

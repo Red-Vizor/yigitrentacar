@@ -49,10 +49,8 @@ export default function Login() {
     };
 
     return (
-        <section className="register-page login-page container py-5 text-center ">
-            <div className="container  ">
-
-            <h4 className="bold">
+        <section className="register-page login-page page-login-register text-center ">
+            <h4 className="bold pt-5">
                 Giriş Yapın
             </h4>
             <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className="tab-bar my-4" centered>
@@ -60,23 +58,18 @@ export default function Login() {
                 <Tab label="KURUMSAL" {...changeProps(1)} />
             </Tabs>
 
-            <div className=" container c-padding">
-            <TabPanel value={value} index={0}>
-                <LoginForm title="Bireysel Giriş" />
-            </TabPanel>
-            <TabPanel value={value} index={1}>
-                <LoginForm title="Kurumsal Giriş" />
-            </TabPanel>
+            <div>
+                <TabPanel value={value} index={0}>
+                    <LoginForm title="Bireysel Giriş" />
+                </TabPanel>
+                <TabPanel value={value} index={1}>
+                    <LoginForm title="Kurumsal Giriş" />
+                </TabPanel>
             </div>
 
             <div className="register-text">
                 <a>Hesabınız yok mu ?</a> <br />
                 <span>Yiğit Oto Kiralamaya <a href="/register">Üye Olun</a></span>
-            </div>
-
-
-
-
             </div>
         </section>
     )

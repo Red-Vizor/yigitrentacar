@@ -12,13 +12,23 @@ export default function CarModal() {
     const [carImages, setCarImages] = useState([]);
     const dispatch = useDispatch()
     const dateValue = useSelector((state) => state.dateslice)
+
     useEffect(() => {
-        axios.post('http://panel.wocurrency.com/api/resimler', { car_id: dateValue.carSelect.selectedColorCar })
+        axios.post('http://panel.wocurrency.com/api/resimler', { car_id: colorCar})
             .then(function (response) {
                 console.log(response.data)
                 setCarImages(response.data)
             })
-    }, [dateValue, colorCar])
+    }, [colorCar])
+    useEffect(() => {
+        axios.post('http://panel.wocurrency.com/api/resimler', { car_id: dateValue.carSelect.selectedColorCar})
+            .then(function (response) {
+                console.log(response.data)
+                setCarImages(response.data)
+            })
+    }, [dateValue])
+
+    
 
     const urlPanel = "http://panel.wocurrency.com/"
 
@@ -49,8 +59,6 @@ export default function CarModal() {
                                     counter === 0 ?
                                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={counter++} className="active indicator-car bg-image" style={{ backgroundImage: `url(` + urlPanel + item.image_url + `)` }} aria-current="true" aria-label="Slide 1"></button>
                                         : <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={counter++} className="indicator-car bg-image" style={{ backgroundImage: `url(` + urlPanel + item.image_url + `)` }} aria-label="Slide 2"></button>
-
-
                                 )}
                             </div>
                             <div className="carousel-inner">

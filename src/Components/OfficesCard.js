@@ -43,7 +43,7 @@ export default function OfficesCard(props) {
                             <a href={"tel:" + props.phone}> <img src="./assets/images/phone.svg" width="20px" className="me-1 my-auto" />{props.phone}</a>
                         </div>
                         <div className="email mb-2">
-                            <img src="./assets/images/email.svg" width="20px" className="me-1 my-auto" /> <a> info@yigitotokiralama.com</a>
+                            <img src="./assets/images/email.svg" width="20px" className="me-1 my-auto" /> <a href="mailto:info@yigitotokiralama.com"> info@yigitotokiralama.com</a>
                         </div>
                         <div className="adress mb-2">
                             <a> <img src="./assets/images/location.svg" width="20px" className="me-1 my-auto" />{props.adress}</a>

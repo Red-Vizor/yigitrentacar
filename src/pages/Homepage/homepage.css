@@ -78,11 +78,21 @@
     opacity: 0.7!important
 }
 
+#alertModal .modal-content{
+    width: 40% !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+}
 @media screen and (min-width: 992px) and (max-width: 1600px) {
 
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
+    #alertModal .modal-content{
+        width: 50% !important;
+        left: 50% !important;
+        transform: translateX(-50%);
+    }
     .form-card-date .btn-orange{
         width: 60% !important;
         font-size: 1.1rem;
@@ -96,6 +106,12 @@
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
+
+    #alertModal .modal-content{
+        width: 100% !important;
+        left: 50% !important;
+        transform: translateX(-50%);
+    }
     .form-card-date .btn-orange{
         width: 65% !important;
         font-size: 1.1rem;
@@ -107,7 +123,7 @@
     }
 
     .homepage .date-slide{
-        height: 125vh !important;
+        height: 100vh !important;
        
     }
 

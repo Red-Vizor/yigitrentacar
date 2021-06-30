@@ -92,7 +92,6 @@ export default function DateSlide() {
                         <div className="form-card-date p-4 position-relative">
                             <div className="filter-date py-5 px-4">
                                 <p className="h5 semi-bold mb-3 ">Alış Yeri</p>
-
                                 <div className="input-group ">
                                     <div className="dropdown">
                                         <a className="dropdown-toggle w-100 d-flex  bg-white  rounded py-3 semi-bold " href="#" style={{ color: "gray" }}>
@@ -122,8 +121,7 @@ export default function DateSlide() {
                                     </div>
                                 </div>
                                 <div className="row text-start date-inputs-area mt-3" >
-                                    <div className="col-lg-3 date" data-bs-toggle="modal" data-bs-target="#datePicker">
-
+                                    <div className="col-lg-3 date first-date" data-bs-toggle="modal" data-bs-target="#datePicker">
                                         <p className="semi-bold ms-1 mb-1">Alış Tarihi</p>
                                         <div className="w-100 bg-white py-3 d-flex rounded position-relative">
                                             <span className="text">

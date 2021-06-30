@@ -14,7 +14,7 @@ export default function DriverServices() {
     }
 
     const sendSofor= () => {
-        axios.get('http://wocurrency.com/sofor-mail', {
+        axios.get('http://panel.wocurrency.com/sofor-mail', {
             params: {
                 name: allValues.name,
                 surname: allValues.surname,

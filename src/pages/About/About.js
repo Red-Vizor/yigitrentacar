@@ -16,7 +16,10 @@ export default function About() {
                 <div className="text-area">
                     <h5 className=" my-3 bold"> Yiğit Oto Kiralama</h5>
                     <p>
-                        Yiğit Oto Kiralama Edindiği Deneyim Ve Uzmanlık İle Müşterilerine Kısa Ve Uzun Süreli Araç Kiralama Hizmeti Vermektedir.Yiğit Oto Kiralama,Tüm Gerçek Kişilerin Ve Tüzel İşletmelerin Araç Kiralama Hizmeti İle Karşılamanın Yanısıra,Periyodik Bakım Ve Onarım,Hızlı Hasar Yönetimi,İkame Araç Hizmeti Ve Lastik Yenileme Gibi Müşterilerini Rahat Ve Konfor Sağlayıcı Ek Hizmetlerde Sunmaktadır.Uzman Kadrosu Ve Sektörde Uzun YıllardırTecrübesi Güveni İle Kiralanan Araçların Tamir Bakım İşlemleri Firma Güvencesinde Yetkili Servislerde Gerçekleştirmekte Kiralanan Araçlar Rent A Car Kasko Ve Sigortalarla Güvence Altına Alınmaktadır..Yiğit Oto Kiralama Sektöründe Otomobiller,Yat Kiralama,Hafif Ticari Araçlar Olmak Üzere Uzun Dönem de Araç Kiralama Hizmeti Sunmaktadır.Müşteri Yenilikçi Esnek Güvenli Filo Çözümleri Ve Kiralama Hizmetleri Sunan Yiğit Oto Kiralama Müşterileri İstanbul,İzmir Ve Bodrum da Hizmet Vermektedir.Her Yolda Her Zaman Yanınızdayız.Unutmayınız Kalite Asla Tesadüf Değildir.
+                        Yiğit Oto Kiralama Edindiği Deneyim Ve Uzmanlık İle Müşterilerine Kısa Ve Uzun Süreli Araç Kiralama Hizmeti Vermektedir.Yiğit Oto Kiralama,Tüm Gerçek Kişilerin Ve Tüzel İşletmelerin Araç Kiralama Hizmeti İle Karşılamanın Yanısıra,Periyodik Bakım Ve Onarım,Hızlı Hasar Yönetimi,İkame Araç Hizmeti Ve Lastik Yenileme Gibi Müşterilerini Rahat Ve Konfor Sağlayıcı Ek Hizmetlerde Sunmaktadır.
+                    </p>
+                    <p>
+                        Üstelik şuanlık <span class="bold">İstanbul, İzmir ve Bodrum </span> şubelerimiz ile hizmetinizdeyiz.
                     </p>
                 </div>
 

@@ -5,17 +5,24 @@ import DateSlide from '../../Components/DateSlide'
 import Head from '../../Components/ContentHead'
 import Car from '../../Components/CarSlider'
 import ListCard from '../../Components/ListCard'
+import $ from 'jquery';
+window.jQuery = $;
 
 export default function Homepage() {
+
+    $(window).on('load', function() {
+        $('#alertModal').modal('show');
+    });
+    
     return (
         <div className="homepage">
-               
+
             <DateSlide />
 
             <div className="container-fluid bg-black p-5">
                 <div className="container popular-cars p-3 my-4">
                     <div className="content-area bg-black pt-4 px-1">
-                        <Head headPosition="start" head="POPÜLER ARAÇLAR"  hrSize="col-5 col-md-9" headSize="col-7 col-md-3" />
+                        <Head headPosition="start" head="POPÜLER ARAÇLAR" hrSize="col-5 col-md-9" headSize="col-7 col-md-3" />
                         <div id="carouselExampleDark" className="carousel carousel-light slide" data-bs-ride="carousel">
                             <div className="carousel-indicators">
                                 <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active slide-button" aria-current="true" aria-label="Slide 1"><div className="circle-active m-auto"></div></button>
@@ -61,7 +68,7 @@ export default function Homepage() {
             <div className="container-fluid py-5">
                 <div className="container campaigns">
                     <div className="content-area pt-4 ">
-                        <Head headPosition="start" head="KAMPANYALAR"  hrSize="col-8 col-md-9" headSize="col-4 col-md-3"/>
+                        <Head headPosition="start" head="KAMPANYALAR" hrSize="col-8 col-md-9" headSize="col-4 col-md-3" />
                         <div className="owl-carousel owl-carousel-home owl-theme my-4">
                             <div className="item">
                                 <ListCard
@@ -98,7 +105,7 @@ export default function Homepage() {
             <div className="container-fluid py-5 bg-image" style={{ backgroundImage: "linear-gradient(rgb(250, 250, 250,0.7), rgb(250, 250, 250,0.7)), url('./assets/images/road.png')" }}>
                 <div className="container campaigns my-4">
                     <div className="content-area pt-4 ">
-                        <Head headPosition="end" head="POPÜLER LOKASYONLAR" hrSize="col-5 col-md-8" headSize="col-7 col-md-4"/>
+                        <Head headPosition="end" head="POPÜLER LOKASYONLAR" hrSize="col-5 col-md-8" headSize="col-7 col-md-4" />
 
                         <div className="owl-carousel owl-carousel-home owl-theme my-4">
                             <div className="item">
@@ -125,6 +132,23 @@ export default function Homepage() {
                                     adress="popularlocations"
                                     content="Bodrum' da mutlaka görmeniz gereken yerler." />
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div className="modal modal-dialog-centered  fade" id="alertModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div className="modal-dialog modal-dialog-centered ">
+                    <div className="modal-content">
+                        <div className="modal-header border-0">
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div className="modal-body row ">
+                           <img src="./assets/images/web-uyari.jpg" className="w-100  mx-auto" />
                         </div>
                     </div>
                 </div>

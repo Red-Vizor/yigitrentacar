@@ -13,7 +13,7 @@ export default function Footer() {
                     <div className="col-lg-4 col-md-4 col-12  d-flex pt-4">
                         <div className="contact-area my-auto mx-auto">
                             <div className="w-100 ">
-                                <a href="#" className="bold h6">
+                                <a href="tel:908508400948" className="bold h6">
                                     <img src="./assets/icons/phone.svg" width="30px" className="my-auto me-3 me-md-1" />
                                     <span className="my-auto">+90 850 840 09 48</span>
                                 </a>
@@ -23,7 +23,7 @@ export default function Footer() {
                     <div className="col-lg-4 col-md-4 col-12  d-flex pt-4 " >
                         <div className="contact-area my-auto pt-md-1 mx-auto">
                             <div className="w-100">
-                                <a href="#" className="bold h6 d-flex">
+                                <a href="mailto:info@yigitotokiralama.com" className="bold h6 d-flex">
                                     <img src="./assets/icons/email.svg" width="30px" className="my-auto me-3 me-md-1" />
                                     <span className="my-auto">info@yigitotokiralama.com</span>
                                 </a>

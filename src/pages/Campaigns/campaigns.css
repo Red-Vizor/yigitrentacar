@@ -116,6 +116,7 @@
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
+ 
     .campaigns .tab-bar {
         width: 100% !important;
         position: absolute;
@@ -179,9 +180,7 @@
         font-size: 0.8rem;
     }
    
-    .campaigns .tab-bar .MuiTab-root {
-        min-width: 140px !important;
-    }
+    
     
     
 }

@@ -1,4 +1,6 @@
+
 import React, {useState} from 'react'
+import axios from 'axios'
 
 export default function ContactForm() {
 
@@ -13,7 +15,26 @@ export default function ContactForm() {
         setAllValues({ ...allValues, [e.target.name]: e.target.value })
     }
     const sendContact= () => {
-        alert('deneme')
+        axios.get('http://127.0.0.1:8000/contact-page-mail', {
+            params: {
+                name: allValues.name,
+                surname: allValues.surname,
+                phone: allValues.phone,
+                email: allValues.email,
+                message: allValues.message,
+            }, headers: {
+                // Overwrite Axios's automatically set Content-Type
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(function (response) {
+                alert("Talebiniz başarıyla alındı");
+            })
+            .catch(function (error) {
+                alert("Talebiniz alınırken sorun oluştu");
+            })
+
+            alert("Talebiniz başarıyla alındı");
     }
     return (
         <div className="general-form-1">
