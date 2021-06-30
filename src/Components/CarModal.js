@@ -135,24 +135,22 @@ export default function CarModal() {
                             <span className="m-auto"> <span>Yaş: {dateValue.carSelect.lisanceOwnAge}+</span>   <span className="mx-3">Ehliyet Yaşı: +{dateValue.carSelect.lisanceAge}</span> <span>Depozito: 3500 TL</span></span>
                         </div>
                         <div className="area-3 py-4 text-white">
-                            <div className="w-75 ms-auto my-3">
-                                <div className="row ">
-                                    <div className="col-6 d-flex">
-                                        <div className="my-auto text-center">
-                                            <div className="row p-0 m-0">
-                                                <div className="col-6 text-center">
-                                                    <span>GÜNLÜK</span> <br />
-                                                    <span><span className="bold">₺ {dateValue.carSelect.amount}</span></span>
-                                                </div>
-                                                <div className="col-6 text-center">
-                                                    <span>TOPLAM</span> <br />
-                                                    <span><span className="bold">₺ {dateValue.carSelect.totalAmount}</span></span>
-                                                </div>
+                            <div className="w-100 mx-auto my-3">
+                                <div className="row mx-auto">
+                                    <div className="col-7 d-flex">
+                                        <div className="row p-0 ms-auto my-auto text-center">
+                                            <div className="col-6 text-center">
+                                                <span>GÜNLÜK</span> <br />
+                                                <span><span className="bold">₺ {dateValue.carSelect.amount}</span></span>
+                                            </div>
+                                            <div className="col-6 text-center">
+                                                <span>TOPLAM</span> <br />
+                                                <span><span className="bold">₺ {dateValue.carSelect.totalAmount}</span></span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="col-6 d-flex">
-                                        <button className="btn float-end my-auto  text-white" onClick={() => { dispatch(changePage(2)) }} data-bs-dismiss="modal" aria-label="Close" ><span className="h6 bold">SEÇ</span> <img src="./assets/icons/carcard/buttonright.svg" className="my-auto ms-1" width="40px" /> </button>
+                                    <div className="col-5 d-flex">
+                                        <button className="btn float-end my-auto me-auto text-white" onClick={() => { dispatch(changePage(2)) }} data-bs-dismiss="modal" aria-label="Close" ><span className="h6 bold">SEÇ</span> <img src="./assets/icons/carcard/buttonright.svg" className="my-auto ms-1" width="40px" /> </button>
                                     </div>
                                 </div>
                             </div>

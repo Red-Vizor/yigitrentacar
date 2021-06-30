@@ -169,7 +169,7 @@ export default function Carcard(props) {
                         <a className="btn float-end" onClick={() => { carSelect(); dispatch(changePage(2)) }}><span className="h6 bold">SEÇ</span> <img src="./assets/icons/carcard/buttonright.svg" className="my-auto ms-1 w-50" /> </a>
                     </div>
                 </div>
-                <div className="card-bottom d-flex py-3 px-lg-4">
+                <div className="card-bottom d-flex py-3 px-4">
                     <span className="w-100 d-flex text-white">
                         <img src="./assets/icons/carcard/oil.svg" className="icon my-auto ms-1" />
                         <span className="my-auto ms-1">{car.fuel}</span>
@@ -178,7 +178,7 @@ export default function Carcard(props) {
                         <img src="./assets/icons/carcard/bagagge.svg" className="icon my-auto ms-2" />
                         <span className="my-auto ms-1">{car.baggage} Çanta</span>
                         
-                        <a href="#" className="ms-lg-auto mt-md-1 ms-md-2" onClick={() => { carSelect() }} data-bs-toggle="modal" data-bs-target="#carModal"> <span>Tüm Özellikler</span></a>
+                        <a href="#" className="ms-auto mt-md-1 bold" onClick={() => { carSelect() }} data-bs-toggle="modal" data-bs-target="#carModal"> <span>Tüm Özellikler</span></a>
                     </span>
                 </div>
                 <img src={urlSite + props.carsValues.car_image_one} className="images position-absolute" />

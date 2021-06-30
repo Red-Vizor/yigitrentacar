@@ -129,7 +129,7 @@
 .car-card .images {
     bottom: 50%;
     transform: translateY(50%);
-    left: -19%;
+    left: -10%;
     width: 70%;
 }
 
@@ -272,6 +272,8 @@
     margin-right: auto !important;
     box-shadow: none !important;
 }
+
+
 
 @media screen and (min-width: 992px) and (max-width: 1600px) {}
 

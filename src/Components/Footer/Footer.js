@@ -15,7 +15,7 @@ export default function Footer() {
                             <div className="w-100 ">
                                 <a href="#" className="bold h6">
                                     <img src="./assets/icons/phone.svg" width="30px" className="my-auto me-3 me-md-1" />
-                                    <span>+90 850 840 09 48</span>
+                                    <span className="my-auto">+90 850 840 09 48</span>
                                 </a>
                             </div>
                         </div>
@@ -25,7 +25,7 @@ export default function Footer() {
                             <div className="w-100">
                                 <a href="#" className="bold h6 d-flex">
                                     <img src="./assets/icons/email.svg" width="30px" className="my-auto me-3 me-md-1" />
-                                    <span>info@yigitotokiralama.com</span>
+                                    <span className="my-auto">info@yigitotokiralama.com</span>
                                 </a>
                             </div>
                         </div>

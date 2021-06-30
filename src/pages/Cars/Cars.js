@@ -88,35 +88,35 @@ export default function Car() {
                     </TabPanel>
                     <TabPanel value={value} index={1}>
                         <div className="row">
-                            {carsGet.map((item) =>!item.root_car_id ? item.car_class === 1 ? <div className="col-lg-4  col-md-6">
+                            {carsGet.map((item) =>!item.root_car_id ? item.car_class == 1 ? <div className="col-lg-4  col-md-6">
                                 <CarCardList carsValues={item} />
                             </div> : '' : '')}
                         </div>
                     </TabPanel>
                     <TabPanel value={value} index={2}>
                         <div className="row">
-                            {carsGet.map((item) =>!item.root_car_id ? item.car_class === 2 ? <div className="col-lg-4  col-md-6">
+                            {carsGet.map((item) =>!item.root_car_id ? item.car_class == 2 ? <div className="col-lg-4  col-md-6">
                                 <CarCardList carsValues={item} />
                             </div> : '' : '')}
                         </div>
                     </TabPanel>
                     <TabPanel value={value} index={3}>
                         <div className="row">
-                            {carsGet.map((item) =>!item.root_car_id ? item.car_class === 3 ? <div className="col-lg-4  col-md-6">
+                            {carsGet.map((item) =>!item.root_car_id ? item.car_class == 3 ? <div className="col-lg-4  col-md-6">
                                 <CarCardList carsValues={item} />
                             </div> : '' : '')}
                         </div>
                     </TabPanel>
                     <TabPanel value={value} index={4}>
                         <div className="row">
-                            {carsGet.map((item) =>!item.root_car_id ? item.car_class === 4 ? <div className="col-lg-4  col-md-6">
+                            {carsGet.map((item) =>!item.root_car_id ? item.car_class == 4 ? <div className="col-lg-4  col-md-6">
                                 <CarCardList carsValues={item} />
                             </div> : '' : '')}
                         </div>
                     </TabPanel>
                     <TabPanel value={value} index={5}>
                         <div className="row">
-                            {carsGet.map((item) =>!item.root_car_id ? item.car_class === 5 ? <div className="col-lg-4  col-md-6">
+                            {carsGet.map((item) =>!item.root_car_id ? item.car_class == 5 ? <div className="col-lg-4  col-md-6">
                                 <CarCardList carsValues={item} />
                             </div> : '' : '')}
                         </div>

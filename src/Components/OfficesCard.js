@@ -11,7 +11,24 @@ export default function OfficesCard(props) {
         setAllValues({ ...allValues, [e.target.name]: e.target.value })
     }
     const sendContact= () => {
-       
+        const json = JSON.stringify(allValues)
+        axios.get('http://127.0.0.1:8000/contact-mail', {
+            params: {
+                json
+            }, headers: {
+                // Overwrite Axios's automatically set Content-Type
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+            .then(function () {
+
+            });
     }
 
 
