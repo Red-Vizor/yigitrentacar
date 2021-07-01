@@ -50,6 +50,7 @@ function PopularLocations() {
         setValue(newValue);
     };
 
+    const width = window.innerWidth;
 
     return (
         <div className="popular-location-area">
@@ -60,17 +61,27 @@ function PopularLocations() {
                 style={{ height: "346px", backgroundImage: "linear-gradient(rgb(0, 0, 0, 0.3), rgb(0, 0, 0, 0.3)), url('./assets/images/jumbotron/locations-jumbotron.png')" }}>
                 <h1>POPÜLER LOKASYONLAR</h1>
 
-                <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className="tab-bar shadow-light" centered>
-                    <Tab label="TÜM LOKASYONLAR" {...changeProps(0)} />
-                    <Tab label="İSTANBUL" {...changeProps(1)} />
-                    <Tab label="İZMİR" {...changeProps(2)} />
-                    <Tab label="BODRUM" {...changeProps(3)} />
-                </Tabs>
+
+
+                {
+                    width < 991 ? <Tabs value={value} onChange={handleChange} orientation="vertical" aria-label="simple tabs example" className="tab-bar tab-areas mobile-tab-bar" centered >
+                        <Tab label="TÜM LOKASYONLAR" {...changeProps(0)} />
+                        <Tab label="İSTANBUL" {...changeProps(1)} />
+                        <Tab label="İZMİR" {...changeProps(2)} />
+                        <Tab label="BODRUM" {...changeProps(3)} />
+                    </Tabs> :
+                        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className="tab-bar tab-areas web-tab-bar" centered >
+                            <Tab label="TÜM LOKASYONLAR" {...changeProps(0)} />
+                            <Tab label="İSTANBUL" {...changeProps(1)} />
+                            <Tab label="İZMİR" {...changeProps(2)} />
+                            <Tab label="BODRUM" {...changeProps(3)} />
+                        </Tabs>
+                }
             </div>
 
 
 
-            <div className="popular-location-cardpage ">
+            <div className="popular-location-cardpage pt-5 mt-5">
                 <div className="container my-5">
                     <TabPanel value={value} index={0}>
                         <div className="row ">

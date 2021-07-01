@@ -48,21 +48,35 @@ function Policies() {
         setValue(newValue);
     };
 
+    const width = window.innerWidth;
     return (
         <div className="policies">
             <div className="menu-bar container pt-3" style={{ height: "55px", fontWeight: "bold" }}>
                 <p><a href="/" className="text-dark">Anasayfa</a>   /  Koşullar, Şartlar ve Politikalar</p>
             </div>
 
-            <div className="policies-jumbotron text-center position-relative pb-5" style={{  backgroundColor: "#CCCCCC" }}>
+            <div className="policies-jumbotron text-center position-relative pb-5" style={{ backgroundColor: "#CCCCCC" }}>
                 <h5 className="py-5 bold">KOŞULLAR, ŞARTLAR ve POLİTİKALAR</h5>
-                <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className="tab-bar shadow-light" centered >
-                    <Tab label="GİZLİLİK POLİTİKASI" {...changeProps(0)} />
-                    <Tab label="KİRALAMA KOŞULLARI" {...changeProps(1)} />
-                    <Tab label="AYDINLATMA METNİ" {...changeProps(2)} />
-                    <Tab label="ÜYELİK SÖZLEŞMESİ" {...changeProps(3)} />
-                    <Tab label="KİŞİSEL VERİLEN KORUNMASI" {...changeProps(4)} />
-                </Tabs>
+              
+
+                <div className="py-5" style={{ marginTop:"70px" }}>
+                    {
+                        width < 991 ? <Tabs value={value} onChange={handleChange} orientation="vertical" aria-label="simple tabs example" className="tab-bar tab-areas mobile-tab-bar" centered >
+                            <Tab label="GİZLİLİK POLİTİKASI" {...changeProps(0)} />
+                            <Tab label="KİRALAMA KOŞULLARI" {...changeProps(1)} />
+                            <Tab label="AYDINLATMA METNİ" {...changeProps(2)} />
+                            <Tab label="ÜYELİK SÖZLEŞMESİ" {...changeProps(3)} />
+                            <Tab label="KİŞİSEL VERİLEN KORUNMASI" {...changeProps(4)} />
+                        </Tabs> :
+                            <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className="tab-bar tab-areas web-tab-bar" centered >
+                                <Tab label="GİZLİLİK POLİTİKASI" {...changeProps(0)} />
+                                <Tab label="KİRALAMA KOŞULLARI" {...changeProps(1)} />
+                                <Tab label="AYDINLATMA METNİ" {...changeProps(2)} />
+                                <Tab label="ÜYELİK SÖZLEŞMESİ" {...changeProps(3)} />
+                                <Tab label="KİŞİSEL VERİLEN KORUNMASI" {...changeProps(4)} />
+                            </Tabs>
+                    }
+                </div>
             </div>
 
             <section className="container policy-area my-4 ">
@@ -141,7 +155,7 @@ function Policies() {
                         </p>
                     </div>
                 </TabPanel>
-                
+
             </section>
 
 

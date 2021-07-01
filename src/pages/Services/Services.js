@@ -53,25 +53,37 @@ function Services() {
         setValue(newValue);
     };
 
+    const width = window.innerWidth;
+
     return (
         <div className="services">
             <div className="menu-bar container pt-3 my-auto" style={{ height: "55px", fontWeight: "bold" }}>
                 <p ><a href="/" className="text-dark">Anasayfa</a>   /  Hizmetler</p>
             </div>
 
-            <div className="policies-jumbotron text-center position-relative pb-5" style={{  backgroundColor: "#CCCCCC" }}>
+            <div className="policies-jumbotron text-center position-relative pb-5" style={{ backgroundColor: "#CCCCCC" }}>
                 <h4 className="py-5 bold">HİZMETLER</h4>
-                <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className="tab-bar shadow-light" centered >
-                    <Tab label="BİREYSEL KİRALAMA" {...changeProps(0)} />
-                    <Tab label="KURUMSAL KİRALAMA" {...changeProps(1)} />
-                    <Tab label="ŞÖFÖRLÜ ARAÇ KİRALAMA & TRANSFER" {...changeProps(2)} />
-                   
-                </Tabs>
+
+                <div className="py-4 mt-4">
+                    {
+                        width < 991 ? <Tabs value={value} onChange={handleChange} orientation="vertical" aria-label="simple tabs example" className="tab-bar tab-areas mobile-tab-bar" centered >
+                            <Tab label="BİREYSEL KİRALAMA" {...changeProps(0)} />
+                            <Tab label="KURUMSAL KİRALAMA" {...changeProps(1)} />
+                            <Tab label="ŞÖFÖRLÜ ARAÇ KİRALAMA & TRANSFER" {...changeProps(2)} />
+                        </Tabs> :
+                            <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className="tab-bar tab-areas web-tab-bar" centered >
+                                <Tab label="BİREYSEL KİRALAMA" {...changeProps(0)} />
+                                <Tab label="KURUMSAL KİRALAMA" {...changeProps(1)} />
+                                <Tab label="ŞÖFÖRLÜ ARAÇ KİRALAMA & TRANSFER" {...changeProps(2)} />
+                            </Tabs>
+                    }
+                </div>
             </div>
 
-            <section className="policy-area my-4 ">
+
+            <section className="policy-area my-4 pt-5">
                 <TabPanel value={value} index={0}>
-                   <PersonalServices />
+                    <PersonalServices />
                 </TabPanel>
                 <TabPanel value={value} index={1}>
                     <CorporateServices />
@@ -79,8 +91,8 @@ function Services() {
                 <TabPanel value={value} index={2}>
                     <DriverServices />
                 </TabPanel>
-               
-                
+
+
             </section>
 
 

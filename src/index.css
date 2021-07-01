@@ -199,7 +199,7 @@ p, h1, h2, h3, h4, h5, h6 {
   bottom: 0;
 }
 
-.services .tab-bar .MuiButtonBase-root {
+.tab-bar .MuiButtonBase-root {
   min-width: 33.3% !important;
   width: 500px !important;
 }
@@ -213,7 +213,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .cars .tab-bar .MuiTab-root {
-  min-width: 50px !important;
+  min-width: 200px !important;
   width: 200px !important;
 }
 
@@ -525,7 +525,7 @@ form .form-check-input {
   .mobile-tab-bar {
     background: transparent !important;
   }
-  .tab-bar .MuiTab-root {
+  .tab-bar .MuiTab-root, .tab-bar .MuiButtonBase-root {
     background-color: #FFFFFF;
     opacity: 1;
     min-width: 70% !important;
@@ -533,14 +533,14 @@ form .form-check-input {
     left: 50% !important;
     transform: translateX(-50%)
   }
-  
+
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
   .mobile-tab-bar {
     background: transparent !important;
   }
-  .tab-bar .MuiTab-root {
+  .tab-bar .MuiTab-root, .tab-bar .MuiButtonBase-root {
     background-color: #FFFFFF;
     opacity: 1;
     min-width: 70% !important;

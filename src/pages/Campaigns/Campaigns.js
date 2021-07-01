@@ -59,15 +59,13 @@ function Campaigns() {
             <div className="campaigns-jumbotron position-relative mb-5 "
                 style={{ height: "346px", backgroundImage: "linear-gradient(rgb(232, 84, 30,0.4), rgb(232, 84, 30,0.4)), url('./assets/images/jumbotron/compaigns-jumbotron.png')" }}>
                 <h1>KAMPANYALAR</h1>
-
-
                 {
-                    width < 991 ? <Tabs value={value} onChange={handleChange} orientation="vertical" aria-label="simple tabs example" className="tab-bar shadow-light tab-areas mobile-tab-bar" centered >
+                    width < 991 ? <Tabs value={value} onChange={handleChange} orientation="vertical" aria-label="simple tabs example" className="tab-bar tab-areas mobile-tab-bar" centered >
                         <Tab label="YİĞİT KAMPANYALARI" {...changeProps(0)} />
                         <Tab label="YİĞİT İŞ BİRLİĞİ KAMPANYALARI" {...changeProps(1)} />
                         <Tab label="YİĞİT KURUMSAL KAMPANYALARI" {...changeProps(2)} />
                     </Tabs> :
-                        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className="tab-bar shadow-light tab-areas web-tab-bar" centered >
+                        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className="tab-bar tab-areas web-tab-bar" centered >
                             <Tab label="YİĞİT KAMPANYALARI" {...changeProps(0)} />
                             <Tab label="YİĞİT İŞ BİRLİĞİ KAMPANYALARI" {...changeProps(1)} />
                             <Tab label="YİĞİT KURUMSAL KAMPANYALARI" {...changeProps(2)} />
@@ -75,16 +73,10 @@ function Campaigns() {
                 }
 
 
-
-
-
-
-
-
             </div>
 
 
-            <div className="campaigns-cardpage" >
+            <div className="campaigns-cardpage pt-5 mt-5" >
                 <div className="container" >
                     <TabPanel value={value} index={0}>
                         <div className="row">

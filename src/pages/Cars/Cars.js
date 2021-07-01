@@ -7,6 +7,8 @@ import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
 import axios from 'axios'
 import { CarCardList, CarModal } from '../../Components/'
+import $ from 'jquery';
+window.jQuery = $;
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -50,7 +52,9 @@ export default function Car() {
         setValue(newValue);
     };
 
-
+    $('select').on('change', function () {
+        handleChange(this.value);
+    });
 
     useEffect(() => {
         axios.post('http://panel.wocurrency.com/api/arabalar')
@@ -59,6 +63,7 @@ export default function Car() {
             })
     }, [])
 
+    const width = window.innerWidth;
     return (
         <section className="cars">
             <div className="menu-bar container pt-3" style={{ height: "55px", fontWeight: "bold" }}>
@@ -66,57 +71,69 @@ export default function Car() {
             </div>
 
             <div className="container cars-tab-menu">
-                <Tabs value={value} onChange={handleChange} aria-label="simple tabs example"
-                    scrollButtons="auto" className="tab-bar shadow-light mb-5" centered>
-                    <Tab label="Tüm Araçlar" {...changeProps(0)} />
-                    <Tab label="Ekonomik" {...changeProps(1)} />
-                    <Tab label="Orta" {...changeProps(2)} />
-                    <Tab label="Prestij" {...changeProps(3)} />
-                    <Tab label="Premium" {...changeProps(4)} />
-                    <Tab label="Business" {...changeProps(5)} />
-                </Tabs>
+
+                {
+                    width < 991 ? '' :
+                        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className="tab-bar tab-areas web-tab-bar" centered >
+                            <Tab label="Tüm Araçlar" {...changeProps(0)} />
+                            <Tab label="Ekonomik" {...changeProps(1)} />
+                            <Tab label="Orta" {...changeProps(2)} />
+                            <Tab label="Prestij" {...changeProps(3)} />
+                            <Tab label="Premium" {...changeProps(4)} />
+                            <Tab label="Business" {...changeProps(5)} />
+                        </Tabs>
+                }
+
             </div>
 
             <div className="container-fluid car-areas ps-5">
                 <div className="ps-4 area">
                     <TabPanel value={value} index={0}>
+
                         <div className="row">
-                            {carsGet.map((item) =>!item.root_car_id ? <div className="col-lg-4  col-md-6">
+                            {carsGet.map((item) => !item.root_car_id ? <div className="col-lg-4  col-md-6">
                                 <CarCardList carsValues={item} />
                             </div> : '')}
                         </div>
                     </TabPanel>
                     <TabPanel value={value} index={1}>
+
                         <div className="row">
-                            {carsGet.map((item) =>!item.root_car_id ? item.car_class == 1 ? <div className="col-lg-4  col-md-6">
+                            {carsGet.map((item) => !item.root_car_id ? item.car_class == 1 ? <div className="col-lg-4  col-md-6">
                                 <CarCardList carsValues={item} />
                             </div> : '' : '')}
                         </div>
                     </TabPanel>
                     <TabPanel value={value} index={2}>
+
                         <div className="row">
-                            {carsGet.map((item) =>!item.root_car_id ? item.car_class == 2 ? <div className="col-lg-4  col-md-6">
+                            {carsGet.map((item) => !item.root_car_id ? item.car_class == 2 ? <div className="col-lg-4  col-md-6">
                                 <CarCardList carsValues={item} />
                             </div> : '' : '')}
                         </div>
                     </TabPanel>
                     <TabPanel value={value} index={3}>
+
                         <div className="row">
-                            {carsGet.map((item) =>!item.root_car_id ? item.car_class == 3 ? <div className="col-lg-4  col-md-6">
+                            {carsGet.map((item) => !item.root_car_id ? item.car_class == 3 ? <div className="col-lg-4  col-md-6">
                                 <CarCardList carsValues={item} />
                             </div> : '' : '')}
                         </div>
                     </TabPanel>
                     <TabPanel value={value} index={4}>
+
+
+
                         <div className="row">
-                            {carsGet.map((item) =>!item.root_car_id ? item.car_class == 4 ? <div className="col-lg-4  col-md-6">
+                            {carsGet.map((item) => !item.root_car_id ? item.car_class == 4 ? <div className="col-lg-4  col-md-6">
                                 <CarCardList carsValues={item} />
                             </div> : '' : '')}
                         </div>
                     </TabPanel>
                     <TabPanel value={value} index={5}>
+
                         <div className="row">
-                            {carsGet.map((item) =>!item.root_car_id ? item.car_class == 5 ? <div className="col-lg-4  col-md-6">
+                            {carsGet.map((item) => !item.root_car_id ? item.car_class == 5 ? <div className="col-lg-4  col-md-6">
                                 <CarCardList carsValues={item} />
                             </div> : '' : '')}
                         </div>

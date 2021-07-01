@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { PersonalForm, CorporateForm } from '../../Components'
-
 import { useSelector, useDispatch } from 'react-redux'
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
@@ -68,6 +67,7 @@ export default function ReservationForm() {
         invoiceCompanyTaxNumber: '',
         invoiceCompanyCarCount: '',
         invoiceCompanyCity: '',
+        invoiceCompanyTown: '',
         invoiceCompanyAuthName: '',
         invoiceCompanyAuthSurname: '',
         invoiceCompanyPhone: '',
@@ -318,14 +318,20 @@ export default function ReservationForm() {
                                         </div>
                                         <div className="col-md-6">
                                             <div className="input-group mb-3">
-                                                <label for="inputState" className="form-label">İL</label>
+                                                <label for="inputState" className="form-label">İl</label>
                                                 <span className="input-group-text" id="basic-addon1">
                                                     <img src="./assets/icons/location.svg" height="50%" className="my-auto px-3" />
                                                 </span>
-                                                <select required name="invoiceCompanyCity" id="invoiceCompanyCity" className="form-control">
-                                                    <option selected>İL</option>
-                                                    <option>...</option>
-                                                </select>
+                                                <input onChange={changeHandler} required name="invoiceCompanyCity" type="text" className="form-control" id="invoiceCompanyCity" placeholder="İl*" />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6">
+                                            <div className="input-group mb-3">
+                                                <label for="inputState" className="form-label">İlçe</label>
+                                                <span className="input-group-text" id="basic-addon1">
+                                                    <img src="./assets/icons/location.svg" height="50%" className="my-auto px-3" />
+                                                </span>
+                                                <input onChange={changeHandler} required name="invoiceCompanyTown" type="text" className="form-control" id="invoiceCompanyTown" placeholder="İlçe*" />
                                             </div>
                                         </div>
                                         <div className="col-md-6">
