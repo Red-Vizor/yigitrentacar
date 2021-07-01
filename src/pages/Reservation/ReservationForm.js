@@ -109,7 +109,6 @@ export default function ReservationForm() {
             .then(function () {
 
             });
-        alert("deneme")
         $('.reservation-tab-area').addClass('d-none')
         dispatch(changePage(5))
     }

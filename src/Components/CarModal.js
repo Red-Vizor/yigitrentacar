@@ -29,7 +29,7 @@ export default function CarModal() {
                 console.log(response.data)
                 setCarImages(response.data)
             })
-            setColorCar(dateValue.carSelect.selectedColorCar)
+        setColorCar(dateValue.carSelect.selectedColorCar)
     }, [dateValue])
 
 
@@ -86,7 +86,7 @@ export default function CarModal() {
                                         </div>)}
                                 </OwlCarousel>
 
-                                
+
                             </div>
                             <div className="carousel-inner">
                                 <SRLWrapper>
@@ -130,36 +130,41 @@ export default function CarModal() {
                             </div>
 
                             <div class="w-100 d-flex mt-2">
-                                <span className="preferences d-block text-white mx-auto">
-                                    <span className="preference">
-                                        <img src="./assets/icons/carcard/oil.svg" className="icon my-auto ms-1" />
-                                        <span className="my-auto ms-1"> {dateValue.carSelect.fuel}</span>
-                                    </span>
-                                    <span className="preference">
-                                        <img src="./assets/icons/carcard/shifter.svg" className="icon my-auto ms-2" />
-                                        <span className="my-auto ms-1">{dateValue.carSelect.gear}</span>
-                                    </span>
-                                    <span className="preference">
-                                        <img src="./assets/icons/carcard/bagagge.svg" className="icon my-auto ms-2" />
-                                        <span className="my-auto ms-1">{dateValue.carSelect.baggage} Çanta</span>
-                                    </span>
-                                </span>
-                            </div>
-                            <div class="w-100 d-flex mt-3 mb-5">
-                                <span className="preferences d-block text-white mx-auto">
-                                    <span className="preference">
-                                        <img src="./assets/icons/carcard/expand.svg" className="icon my-auto ms-2" />
-                                        <span className="my-auto ms-1">{dateValue.carSelect.seat} Kişi</span>
-                                    </span>
-                                    <span className="preference">
-                                        <img src="./assets/icons/carcard/shifter.svg" className="icon my-auto ms-2" />
-                                        <span className="my-auto ms-1">{dateValue.carSelect.gear}</span>
-                                    </span>
-                                    <span className="preference">
-                                        <img src="./assets/icons/carcard/bagagge.svg" className="icon my-auto ms-2" />
-                                        <span className="my-auto ms-1">{dateValue.carSelect.baggage} Çanta</span>
-                                    </span>
-                                </span>
+                                <div className="row preferences mt-3 mb-5 w-100">
+                                    <div className="col-6 mb-3  d-flex px-0">
+                                        <div className="ms-auto">
+                                            <span className="preference px-3">
+                                                <img src="./assets/icons/carcard/oil.svg" className="icon my-auto mx-1" />
+                                                <span className="my-auto ms-1"> {dateValue.carSelect.fuel}</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div className="col-6  mb-3 d-flex px-0">
+                                        <div className="me-auto">
+                                            <span className="preference px-2">
+                                                <img src="./assets/icons/carcard/shifter.svg" className="icon my-auto ms-2" />
+                                                <span className="my-auto ms-1">{dateValue.carSelect.gear}</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div className="col-6  mb-3 d-flex px-0">
+                                        <div className="ms-auto">
+                                            <span className="preference">
+                                                <img src="./assets/icons/carcard/bagagge.svg" className="icon my-auto ms-1" />
+                                                <span className="my-auto ms-1">{dateValue.carSelect.baggage} Çanta</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div className="col-6 mb-3  d-flex px-0">
+                                        <div className="me-auto">
+                                            <span className="preference px-4">
+                                                <img src="./assets/icons/carcard/expand.svg" className="icon my-auto ms-1" />
+                                                <span className="my-auto ms-1">{dateValue.carSelect.seat} Kişi</span>
+                                            </span>
+
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div className="area-2 py-3 semi-bold text-center d-flex">

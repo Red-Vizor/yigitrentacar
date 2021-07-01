@@ -102,7 +102,7 @@ export default function CarcardList(props) {
         seat: props.carsValues.car_armchair,
         colors: carColors,
         amount: 0,
-        selectedColorCar: props.carsValues.id,
+        selectedColorCar: props.carsValues.id, 
         totalAmount: 0,
         selectedColor: ""
     }

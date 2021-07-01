@@ -14,10 +14,10 @@ export default function Cars() {
     return (
         <div className="cars my-4 ms-5">
             <div className="row">
-                {carsGet.map((item) => !item.root_car_id ? <div className="col-lg-4  col-md-6">
+                {carsGet.map((item) => item.car_active == 1 ? !item.root_car_id ? <div className="col-lg-4  col-md-6">
                     <CarCard carsValues={item} />
-                </div> : '')}
-              
+                </div> : '' : '')}
+
             </div>
             <CarModal />
         </div>

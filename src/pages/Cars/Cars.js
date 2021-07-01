@@ -78,15 +78,15 @@ export default function Car() {
                         <div>
                             <div className="dropdown pb-5">
                                 <button class="btn btn-light bg-white car-drop-btn dropdown-toggle semi-bold w-100 " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                   {CarClassMobile} <i class="las la-angle-down semi-bold"></i>
+                                    {CarClassMobile} <i class="las la-angle-down semi-bold"></i>
                                 </button>
                                 <ul class="dropdown-menu car-drop w-100 text-center" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item semi-bold" onClick={() => {setValue(0); setCarClassMobile('Tüm Araçlar')}}>Tüm Araçlar</a></li>
-                                    <li><a class="dropdown-item semi-bold" onClick={() => {setValue(1); setCarClassMobile('Ekonomik')}}>Ekonomik</a></li>
-                                    <li><a class="dropdown-item semi-bold " onClick={() => {setValue(2); setCarClassMobile('Orta')}}>Orta</a></li>
-                                    <li><a class="dropdown-item semi-bold" onClick={() => {setValue(3); setCarClassMobile('Prestij')}}>Prestij</a></li>
-                                    <li><a class="dropdown-item semi-bold" onClick={() => {setValue(4); setCarClassMobile('Premium')}}>Premium</a></li>
-                                    <li><a class="dropdown-item semi-bold" onClick={() => {setValue(5); setCarClassMobile('Business')}}>Business</a></li>
+                                    <li><a class="dropdown-item semi-bold" onClick={() => { setValue(0); setCarClassMobile('Tüm Araçlar') }}>Tüm Araçlar</a></li>
+                                    <li><a class="dropdown-item semi-bold" onClick={() => { setValue(1); setCarClassMobile('Ekonomik') }}>Ekonomik</a></li>
+                                    <li><a class="dropdown-item semi-bold " onClick={() => { setValue(2); setCarClassMobile('Orta') }}>Orta</a></li>
+                                    <li><a class="dropdown-item semi-bold" onClick={() => { setValue(3); setCarClassMobile('Prestij') }}>Prestij</a></li>
+                                    <li><a class="dropdown-item semi-bold" onClick={() => { setValue(4); setCarClassMobile('Premium') }}>Premium</a></li>
+                                    <li><a class="dropdown-item semi-bold" onClick={() => { setValue(5); setCarClassMobile('Business') }}>Business</a></li>
                                 </ul>
                             </div>
                         </div> :
@@ -108,44 +108,44 @@ export default function Car() {
                 <div className="ps-4 area">
                     <TabPanel value={value} index={0}>
                         <div className="row">
-                            {carsGet.map((item) => !item.root_car_id ? <div className="col-lg-4  col-md-6">
+                            {carsGet.map((item) => item.car_active == 1 ? !item.root_car_id ? <div className="col-lg-4  col-md-6">
                                 <CarCardList carsValues={item} />
-                            </div> : '')}
+                            </div> : '' : '')}
                         </div>
                     </TabPanel>
                     <TabPanel value={value} index={1}>
                         <div className="row">
-                            {carsGet.map((item) => !item.root_car_id ? item.car_class == 1 ? <div className="col-lg-4  col-md-6">
+                            {carsGet.map((item) => item.car_active == 1 ? !item.root_car_id ? item.car_class == 1 ? <div className="col-lg-4  col-md-6">
                                 <CarCardList carsValues={item} />
-                            </div> : '' : '')}
+                            </div> : '' : '' : '')}
                         </div>
                     </TabPanel>
                     <TabPanel value={value} index={2}>
                         <div className="row">
-                            {carsGet.map((item) => !item.root_car_id ? item.car_class == 2 ? <div className="col-lg-4  col-md-6">
+                            {carsGet.map((item) => item.car_active == 1 ? !item.root_car_id ? item.car_class == 2 ? <div className="col-lg-4  col-md-6">
                                 <CarCardList carsValues={item} />
-                            </div> : '' : '')}
+                            </div> : '' : '' : '')}
                         </div>
                     </TabPanel>
                     <TabPanel value={value} index={3}>
                         <div className="row">
-                            {carsGet.map((item) => !item.root_car_id ? item.car_class == 3 ? <div className="col-lg-4  col-md-6">
+                            {carsGet.map((item) => item.car_active == 1 ? !item.root_car_id ? item.car_class == 3 ? <div className="col-lg-4  col-md-6">
                                 <CarCardList carsValues={item} />
-                            </div> : '' : '')}
+                            </div> : '' : '' : '')}
                         </div>
                     </TabPanel>
                     <TabPanel value={value} index={4}>
                         <div className="row">
-                            {carsGet.map((item) => !item.root_car_id ? item.car_class == 4 ? <div className="col-lg-4  col-md-6">
+                            {carsGet.map((item) => item.car_active == 1 ? !item.root_car_id ? item.car_class == 4 ? <div className="col-lg-4  col-md-6">
                                 <CarCardList carsValues={item} />
-                            </div> : '' : '')}
+                            </div> : '' : '' : '')}
                         </div>
                     </TabPanel>
                     <TabPanel value={value} index={5}>
                         <div className="row">
-                            {carsGet.map((item) => !item.root_car_id ? item.car_class == 5 ? <div className="col-lg-4  col-md-6">
+                            {carsGet.map((item) => item.car_active == 1 ? !item.root_car_id ? item.car_class == 5 ? <div className="col-lg-4  col-md-6">
                                 <CarCardList carsValues={item} />
-                            </div> : '' : '')}
+                            </div> : '' : '' : '')}
                         </div>
                     </TabPanel>
                 </div>

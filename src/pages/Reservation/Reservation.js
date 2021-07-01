@@ -15,7 +15,7 @@ import Box from '@material-ui/core/Box'
 import DateSlide from '../../Components/DateSlide'
 import { useSelector, useDispatch } from 'react-redux'
 import { changePage } from '../../store/reservation/reservationPageChangeSlice'
-import {setHPT, setHPO} from '../../store/reservation/dateSlice'
+import { setHPT, setHPO } from '../../store/reservation/dateSlice'
 
 
 function TabPanel(props) {
@@ -57,28 +57,95 @@ export default function Reservation(props) {
 
     const packageOne = [{
         id: 1,
-        name: "Mini Hasar Sigortası 1500 TL Kapsamlı",
-        price: 50,
-        detail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with."
+        name: "İhtiyari Mali Mesuliyet Güvencesi (Orta Güvence Paketi) - EKONOMİK",
+        price: 0,
+        detail: "Günlük Yaşamda Yaşanabilinecek Trafik Kazalarında,Çarptığınız Araçtaki Hasar Kimi Zaman Trafik Sigortası Limitlerini Günlük Yaşamda Yaşanabilinecek Trafik Kazalarında,Çarptığınız Araçtaki Hasar Kimi Zaman Trafik Sigortası Limitlerini Sigortası Devreye Girip TÜRKİYE Sınırlarında Sigortalanan Kişiyi Koruma Altına Almaktadır."
     },
     {
         id: 2,
-        name: "Mini Hasar Sigortası 1500 TL Kapsamlı",
-        price: 70,
-        detail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with."
+        name: "Mini Hasar Güvence Paketi - EKONOMİK",
+        price: 0,
+        detail: "Rapor Düzenlenmesi Veya Tutanak Tutulması Mümkün Olmayan,Tek Taraflı Hasarlar İçin Müşteriye 3000 TL'ye Kadar Beyanla Onarım Hakkı Sunan Güvence Paketidir.Cam-Ayna Güvence Paketi Dahilindedir."
     },
     {
         id: 3,
-        name: "Mini Hasar Sigortası 1500 TL Kapsamlı",
-        price: 80,
-        detail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with."
+        name: "Tam Güvence Paketi - EKONOMİK",
+        price: 0,
+        detail: "İhtiyari Mali Mesuliyet Güvencesi, Mini Hasar Güvence Paketi, Ferdi Kaza Güvencesi (Hediye), Hayat Her Zaman Hoş Sürprizlerle Dolu Değildir.Ferdi Kaza Güvencesi Beklenmedik Bir Durumda Oluşabilecek Kazalarda , Sakatlık,Tedavi Masrafları,Tam Ve Kısmı Maluliyet,Günlük Hastane Tedavileri Olmak Üzere Kısmi Maluliyetleri Kapsar."
     },
     {
         id: 4,
-        name: "Mini Hasar Sigortası 1500 TL Kapsamlı",
-        price: 100,
-        detail: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with."
-    }]
+        name: "İhtiyari Mali Mesuliyet Güvencesi (Orta Güvence Paketi) - ORTA",
+        price: 0,
+        detail: "Günlük Yaşamda Yaşanabilinecek Trafik Kazalarında,Çarptığınız Araçtaki Hasar Kimi Zaman Trafik Sigortası Limitlerini Günlük Yaşamda Yaşanabilinecek Trafik Kazalarında,Çarptığınız Araçtaki Hasar Kimi Zaman Trafik Sigortası Limitlerini Sigortası Devreye Girip TÜRKİYE Sınırlarında Sigortalanan Kişiyi Koruma Altına Almaktadır."
+    },
+    {
+        id: 5,
+        name: "Mini Hasar Güvence Paketi - ORTA",
+        price: 0,
+        detail: "Rapor Düzenlenmesi Veya Tutanak Tutulması Mümkün Olmayan,Tek Taraflı Hasarlar İçin Müşteriye 3000 TL'ye Kadar Beyanla Onarım Hakkı Sunan Güvence Paketidir.Cam-Ayna Güvence Paketi Dahilindedir."
+    },
+    {
+        id: 6,
+        name: "Tam Güvence Paketi - ORTA",
+        price: 0,
+        detail: "İhtiyari Mali Mesuliyet Güvencesi, Mini Hasar Güvence Paketi, Ferdi Kaza Güvencesi (Hediye), Hayat Her Zaman Hoş Sürprizlerle Dolu Değildir.Ferdi Kaza Güvencesi Beklenmedik Bir Durumda Oluşabilecek Kazalarda , Sakatlık,Tedavi Masrafları,Tam Ve Kısmı Maluliyet,Günlük Hastane Tedavileri Olmak Üzere Kısmi Maluliyetleri Kapsar."
+    },
+    {
+        id: 7,
+        name: "İhtiyari Mali Mesuliyet Güvencesi (Orta Güvence Paketi) - PRESTİJ",
+        price: 0,
+        detail: "Günlük Yaşamda Yaşanabilinecek Trafik Kazalarında,Çarptığınız Araçtaki Hasar Kimi Zaman Trafik Sigortası Limitlerini Günlük Yaşamda Yaşanabilinecek Trafik Kazalarında,Çarptığınız Araçtaki Hasar Kimi Zaman Trafik Sigortası Limitlerini Sigortası Devreye Girip TÜRKİYE Sınırlarında Sigortalanan Kişiyi Koruma Altına Almaktadır."
+    },
+    {
+        id: 8,
+        name: "Mini Hasar Güvence Paketi - PRESTİJ",
+        price: 0,
+        detail: "Rapor Düzenlenmesi Veya Tutanak Tutulması Mümkün Olmayan,Tek Taraflı Hasarlar İçin Müşteriye 3000 TL'ye Kadar Beyanla Onarım Hakkı Sunan Güvence Paketidir.Cam-Ayna Güvence Paketi Dahilindedir."
+    },
+    {
+        id: 9,
+        name: "Tam Güvence Paketi - PRESTİJ",
+        price: 0,
+        detail: "İhtiyari Mali Mesuliyet Güvencesi, Mini Hasar Güvence Paketi, Ferdi Kaza Güvencesi (Hediye), Hayat Her Zaman Hoş Sürprizlerle Dolu Değildir.Ferdi Kaza Güvencesi Beklenmedik Bir Durumda Oluşabilecek Kazalarda , Sakatlık,Tedavi Masrafları,Tam Ve Kısmı Maluliyet,Günlük Hastane Tedavileri Olmak Üzere Kısmi Maluliyetleri Kapsar."
+    },
+    {
+        id: 10,
+        name: "İhtiyari Mali Mesuliyet Güvencesi (Orta Güvence Paketi) - PREMIUM",
+        price: 0,
+        detail: "Günlük Yaşamda Yaşanabilinecek Trafik Kazalarında,Çarptığınız Araçtaki Hasar Kimi Zaman Trafik Sigortası Limitlerini Günlük Yaşamda Yaşanabilinecek Trafik Kazalarında,Çarptığınız Araçtaki Hasar Kimi Zaman Trafik Sigortası Limitlerini Sigortası Devreye Girip TÜRKİYE Sınırlarında Sigortalanan Kişiyi Koruma Altına Almaktadır."
+    },
+    {
+        id: 11,
+        name: "Mini Hasar Güvence Paketi - PREMIUM",
+        price: 0,
+        detail: "Rapor Düzenlenmesi Veya Tutanak Tutulması Mümkün Olmayan,Tek Taraflı Hasarlar İçin Müşteriye 3000 TL'ye Kadar Beyanla Onarım Hakkı Sunan Güvence Paketidir.Cam-Ayna Güvence Paketi Dahilindedir."
+    },
+    {
+        id: 12,
+        name: "Tam Güvence Paketi - PREMIUM",
+        price: 0,
+        detail: "İhtiyari Mali Mesuliyet Güvencesi, Mini Hasar Güvence Paketi, Ferdi Kaza Güvencesi (Hediye), Hayat Her Zaman Hoş Sürprizlerle Dolu Değildir.Ferdi Kaza Güvencesi Beklenmedik Bir Durumda Oluşabilecek Kazalarda , Sakatlık,Tedavi Masrafları,Tam Ve Kısmı Maluliyet,Günlük Hastane Tedavileri Olmak Üzere Kısmi Maluliyetleri Kapsar."
+    },
+    {
+        id: 13,
+        name: "İhtiyari Mali Mesuliyet Güvencesi (Orta Güvence Paketi) - BUSINESS",
+        price: 0,
+        detail: "Günlük Yaşamda Yaşanabilinecek Trafik Kazalarında,Çarptığınız Araçtaki Hasar Kimi Zaman Trafik Sigortası Limitlerini Günlük Yaşamda Yaşanabilinecek Trafik Kazalarında,Çarptığınız Araçtaki Hasar Kimi Zaman Trafik Sigortası Limitlerini Sigortası Devreye Girip TÜRKİYE Sınırlarında Sigortalanan Kişiyi Koruma Altına Almaktadır."
+    },
+    {
+        id: 14,
+        name: "Mini Hasar Güvence Paketi - BUSINESS",
+        price: 0,
+        detail: "Rapor Düzenlenmesi Veya Tutanak Tutulması Mümkün Olmayan,Tek Taraflı Hasarlar İçin Müşteriye 3000 TL'ye Kadar Beyanla Onarım Hakkı Sunan Güvence Paketidir.Cam-Ayna Güvence Paketi Dahilindedir."
+    },
+    {
+        id: 15,
+        name: "Tam Güvence Paketi - BUSINESS",
+        price: 0,
+        detail: "İhtiyari Mali Mesuliyet Güvencesi, Mini Hasar Güvence Paketi, Ferdi Kaza Güvencesi (Hediye), Hayat Her Zaman Hoş Sürprizlerle Dolu Değildir.Ferdi Kaza Güvencesi Beklenmedik Bir Durumda Oluşabilecek Kazalarda , Sakatlık,Tedavi Masrafları,Tam Ve Kısmı Maluliyet,Günlük Hastane Tedavileri Olmak Üzere Kısmi Maluliyetleri Kapsar."
+    }
+   ]
 
 
     const [value, setValue] = React.useState(1);
@@ -98,11 +165,11 @@ export default function Reservation(props) {
 
     const dateValue = useSelector((state) => state.dateslice);
 
-    useEffect(() =>{
+    useEffect(() => {
         packageOne.map((item) => dispatch(setHPT(item)))
         packageOne.map((item) => dispatch(setHPO(item)))
-    }, []) 
- 
+    }, [])
+
 
 
     return (
@@ -196,10 +263,10 @@ export default function Reservation(props) {
                 </div>
             </TabPanel>
             <TabPanel value={value} index={2}>
-                <Package1 pack={packageOne} packages="1"  modalName="packageModalOne"/>
+                <Package1 pack={packageOne} packages="1" modalName="packageModalOne" />
             </TabPanel>
             <TabPanel value={value} index={3}>
-                <Package2 pack={packageOne} packages="2"  modalName="packageModalTwo" />
+                <Package2 pack={packageOne} packages="2" modalName="packageModalTwo" />
             </TabPanel>
             <TabPanel value={value} index={4}>
                 <ReservationForm />
