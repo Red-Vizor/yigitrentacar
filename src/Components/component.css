@@ -224,6 +224,9 @@
     border-radius: 100px !important;
 }
 
+.car-modal .owl-dots{
+    display: none !important;
+}
 .car-modal .carousel-indicators {
     top: 100%;
     z-index: 10;
@@ -233,7 +236,7 @@
 }
 
 .car-modal .carousel-indicators .indicator-car {
-    width: 20% !important;
+    width: 95% !important;
     height: 70px !important;
     border-radius: 30px;
     opacity: 1;

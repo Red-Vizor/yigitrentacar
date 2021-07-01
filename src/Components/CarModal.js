@@ -4,6 +4,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { changePage } from '../store/reservation/reservationPageChangeSlice'
 import { SRLWrapper } from "simple-react-lightbox"
 import axios from 'axios'
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 import $ from 'jquery';
 window.jQuery = $;
 export default function CarModal() {
@@ -14,26 +17,44 @@ export default function CarModal() {
     const dateValue = useSelector((state) => state.dateslice)
 
     useEffect(() => {
-        axios.post('http://panel.wocurrency.com/api/resimler', { car_id: colorCar})
+        axios.post('http://panel.wocurrency.com/api/resimler', { car_id: colorCar })
             .then(function (response) {
                 console.log(response.data)
                 setCarImages(response.data)
             })
     }, [colorCar])
     useEffect(() => {
-        axios.post('http://panel.wocurrency.com/api/resimler', { car_id: dateValue.carSelect.selectedColorCar})
+        axios.post('http://panel.wocurrency.com/api/resimler', { car_id: dateValue.carSelect.selectedColorCar })
             .then(function (response) {
                 console.log(response.data)
                 setCarImages(response.data)
             })
+            setColorCar(dateValue.carSelect.selectedColorCar)
     }, [dateValue])
 
-    
+
 
     const urlPanel = "http://panel.wocurrency.com/"
 
     var counter = 0
     var counter1 = 0
+
+
+    const optionOwl = {
+        loop: true,
+        margin: 0.2,
+        responsive: {
+            0: {
+                items: 3,
+            },
+            600: {
+                items: 4,
+            },
+            1000: {
+                items: 5,
+            },
+        },
+    }
 
     return (
         <div className="modal fade" id="carModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -54,18 +75,22 @@ export default function CarModal() {
                         <div id="carouselExampleIndicators" className="carousel slide position-relative" data-bs-ride="carousel">
                             <div className="carousel-indicators position-absolute">
 
-                                {carImages.map((item) =>
 
-                                    counter === 0 ?
-                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={counter++} className="active indicator-car bg-image" style={{ backgroundImage: `url(` + urlPanel + item.image_url + `)` }} aria-current="true" aria-label="Slide 1"></button>
-                                        : <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={counter++} className="indicator-car bg-image" style={{ backgroundImage: `url(` + urlPanel + item.image_url + `)` }} aria-label="Slide 2"></button>
-                                )}
+                                <OwlCarousel className='owl-theme ' {...optionOwl}>
+                                    {carImages.map((item) => counter === 0 ?
+                                        <div class='item'>
+                                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={counter++} className="active indicator-car bg-image" style={{ backgroundImage: `url(` + urlPanel + item.image_url + `)` }} aria-current="true" aria-label="Slide 1"></button>
+                                        </div>
+                                        : <div class='item'>
+                                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={counter++} className="indicator-car bg-image" style={{ backgroundImage: `url(` + urlPanel + item.image_url + `)` }} aria-label="Slide 2"></button>
+                                        </div>)}
+                                </OwlCarousel>
+
+                                
                             </div>
                             <div className="carousel-inner">
                                 <SRLWrapper>
-
                                     {carImages.map((item) =>
-
                                         counter1 === 0 ?
                                             <div className="carousel-item active">
                                                 <img src={urlPanel + item.image_url} className="d-block w-100" alt={counter1++} />
@@ -73,9 +98,7 @@ export default function CarModal() {
                                             : <div className="carousel-item">
                                                 <img src={urlPanel + item.image_url} className="d-block w-100" alt={counter1++} />
                                             </div>
-
                                     )}
-
                                 </SRLWrapper>
                             </div>
                             <div className="buttons py-2 px-4 d-flex" >
