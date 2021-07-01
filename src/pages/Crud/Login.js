@@ -53,7 +53,7 @@ export default function Login() {
             <h4 className="bold pt-5">
                 Giriş Yapın
             </h4>
-            <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className="tab-bar my-4" centered>
+            <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" id="loginTabBar" className="tab-bar login-tab-bar my-4" centered>
                 <Tab label="BİREYSEL" {...changeProps(0)} />
                 <Tab label="KURUMSAL" {...changeProps(1)} />
             </Tabs>

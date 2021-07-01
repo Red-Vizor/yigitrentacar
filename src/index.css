@@ -15,6 +15,7 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+
 input[type=range]::-webkit-slider-thumb {
   background: var(--orange);
 }
@@ -473,7 +474,11 @@ form .form-check-input {
   border-radius: 100%;
   background-color: var(--orange);
 }
+.popular-location-area  .tab-bar .MuiButtonBase-root {
+  width:20% !important;
+  min-width:25% !important;
 
+}
 .MuiTab-wrapper {
   font-weight: 700 !important;
 }
@@ -482,10 +487,24 @@ form .form-check-input {
   background: transparent !important;
 }
 
+.mobile-tab-bar .MuiButtonBase-root span{
+    font-weight: 900 !important;
+    font-size:0.788rem !important;
+}
+
+.personal-form .btn-orange-outline, .register-page .corporate-rental-form .btn-orange-outline {
+  left: 50% !important;
+  transform: translate(-50%) !important;
+}
+
 @media screen and (min-width: 992px) and (max-width: 1600px) {
   .datePicker .modal-content {
     width: 50% !important;
   }
+  .page-login-register{
+    padding: 0 30% !important;
+  }
+  
 }
 
 @media screen and (min-width: 992px) and (max-width: 1800px) {
@@ -503,6 +522,10 @@ form .form-check-input {
   .car-card .images {
     left: -19% !important;
   }
+  .page-login-register{
+    padding: 0 30% !important;
+  }
+  
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -533,10 +556,30 @@ form .form-check-input {
     left: 50% !important;
     transform: translateX(-50%)
   }
+   .login-page .MuiTabs-flexContainer, .register-page .MuiTabs-flexContainer{
+    left: 39% !important;
+    transform: translateX(-50%) !important;
+    position: absolute;
+  }
+  .login-page .tab-bar .MuiButtonBase-root, .register-page .tab-bar .MuiButtonBase-root {
+    width:50% !important;
+    min-width:50% !important;
+  }
 
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
+
+  .login-page .MuiTabs-flexContainer, .register-page .MuiTabs-flexContainer{
+    left: 39% !important;
+    transform: translateX(-50%) !important;
+    position: absolute;
+  }
+  .login-page .tab-bar .MuiButtonBase-root,  .register-page .tab-bar .MuiButtonBase-root {
+    width:50% !important;
+    min-width:50% !important;
+  
+  }
   .mobile-tab-bar {
     background: transparent !important;
   }

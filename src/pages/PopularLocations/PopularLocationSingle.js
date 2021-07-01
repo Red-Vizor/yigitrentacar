@@ -84,10 +84,10 @@ function PopularLocationsSingle() {
 
             <div className="my-4">
                 <SRLWrapper>
-                <OwlCarousel className='owl-theme ' {...optionOwl} nav>
-                    {imagesses.map((item) => <div class='item'>
-                        <img src={"/assets/images/locations/" +item } height="350px" />
-                    </div>)}
+                    <OwlCarousel className='owl-theme ' {...optionOwl} nav>
+                        {imagesses.map((item) => <div class='item'>
+                            <img src={"/assets/images/locations/" + item} height="350px" />
+                        </div>)}
                     </OwlCarousel>
                 </SRLWrapper>
             </div>

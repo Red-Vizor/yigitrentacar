@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
+import { useHistory } from 'react-router-dom'
+
 export default function CorporateForm(props) {
     const [allValues2, setAllValues2] = useState({
         name: '',
@@ -11,18 +13,20 @@ export default function CorporateForm(props) {
         password: '',
         repassword: '',
         taxnumber: '',
+        type: 'company',
         message: '',
         company: '',
         companycarcount: '',
         city: '',
         town: ''
     });
+    const history = useHistory()
     const changeHandler = e => {
         setAllValues2({ ...allValues2, [e.target.name]: e.target.value })
     }
     const registerCompany = () => {
         if (allValues2.password === allValues2.repassword) {
-            axios.post('http://panel.wocurrency.com/api/kayit', {
+            axios.post('http://127.0.0.1:8000/api/kayit', {
                 name: allValues2.name,
                 email: allValues2.email,
                 password: allValues2.password,
@@ -31,6 +35,7 @@ export default function CorporateForm(props) {
                 phone: allValues2.phone,
                 message: allValues2.message,
                 company: allValues2.company,
+                type: allValues2.type,
                 companycarcount: allValues2.companycarcount,
                 city: allValues2.city,
                 town: allValues2.town,
@@ -42,6 +47,8 @@ export default function CorporateForm(props) {
         else {
             alert('Girdiğiniz şifreler birbiriyle eşleşmiyor.')
         }
+        alert("Kayıt İşleminiz Başarıyla Oluşturuldu")
+        history.push("/")
     }
 
     return (
@@ -211,7 +218,7 @@ export default function CorporateForm(props) {
                                     </label>
                                 </div>
 
-                                <button type="button" onClick={registerCompany} className="btn btn-orange-outline bold px-4 py-2 " style={{ width: "20%" }}>
+                                <button type="button" onClick={registerCompany} className="btn btn-orange-outline bold px-4 py-2  w-50" style={{ width: "40%" }}>
                                     <span className="m-auto">FORMU GÖNDER</span>
                                 </button>
 

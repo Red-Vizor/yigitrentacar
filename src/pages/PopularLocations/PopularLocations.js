@@ -64,7 +64,7 @@ function PopularLocations() {
 
 
                 {
-                    width < 991 ? <Tabs value={value} onChange={handleChange} orientation="vertical" aria-label="simple tabs example" className="tab-bar tab-areas mobile-tab-bar" centered >
+                    width < 991 ? <Tabs value={value} onChange={handleChange} orientation="vertical" aria-label="simple tabs example" className="bold tab-bar tab-areas mobile-tab-bar" centered >
                         <Tab label="TÜM LOKASYONLAR" {...changeProps(0)} />
                         <Tab label="İSTANBUL" {...changeProps(1)} />
                         <Tab label="İZMİR" {...changeProps(2)} />

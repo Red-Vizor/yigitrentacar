@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import { useHistory } from 'react-router-dom'
+
 export default function PersonalForm() {
     const [allValues1, setAllValues1] = useState({
         name: '',
@@ -14,6 +16,9 @@ export default function PersonalForm() {
     const changeHandler = e => {
         setAllValues1({ ...allValues1, [e.target.name]: e.target.value })
     }
+
+    const history = useHistory()
+    
     const register = () => {
         if (allValues1.password === allValues1.repassword) {
             axios.post('http://panel.wocurrency.com/api/kayit', { 
@@ -31,6 +36,8 @@ export default function PersonalForm() {
         else{
             alert('Girdiğiniz şifreler birbiriyle eşleşmiyor.')
         }
+        alert("Kayıt İşleminiz Başarıyla Oluşturuldu")
+        history.push("/")
     }
 
     return (
@@ -131,7 +138,7 @@ export default function PersonalForm() {
                                 </label>
                             </div>
                         </div>
-                        <button onClick={register}  className="btn btn-orange-outline bold px-4 py-2" style={{ width: "20%" }}>
+                        <button onClick={register}  className="btn btn-orange-outline bold px-4 py-2 w-50" style={{ width: "40% !important" }}>
                             <span className="m-auto">ÜYE OL</span>
                         </button>
                     </form>

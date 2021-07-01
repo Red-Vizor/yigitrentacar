@@ -77,26 +77,26 @@ export default function MobileMenues() {
                         <div className="col-12 my-auto d-flex">
                             <ul className="nav flex-column mx-auto">
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#"> <img src="./assets/icons/phone.svg" width="27px" className="my-1 me-3" /> +90 850 840 09 48</a>
+                                    <a className="nav-link" href="tel:908508400948"> <img src="./assets/icons/phone.svg" width="27px" className="my-1 me-3" /> +90 850 840 09 48</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#"> <img src="./assets/icons/email.svg" width="27px" className="my-auto me-3" /> info@yigitotokiralama.com</a>
+                                    <a className="nav-link" href="mailto:info@yigitotokiralama.com"> <img src="./assets/icons/email.svg" width="27px" className="my-auto me-3" /> info@yigitotokiralama.com</a>
                                 </li>
                             </ul>
                         </div>
                         <div className="col-12  px-1 social-media my-auto">
                             <div className="d-flex-inline text-center">
-                                <a href="#" className="my-auto " >
-                                    <img src="./assets/icons/youtube.svg" width="30px" className="my-auto me-3" />
+                                <a href="https://www.youtube.com/channel/UCbx9W45x_NlM5oo-HdKn5Yg" target="_blank" className="my-auto " >
+                                    <img src="./assets/icons/youtube.svg" width="38px" className="my-auto me-3" />
                                 </a>
-                                <a href="#" className="my-auto" >
+                                <a href="https://www.instagram.com/yigitotokiralama" target="_blank" className="my-auto" >
                                     <img src="./assets/icons/twitter.svg" width="30px" className="my-auto me-3" />
                                 </a>
-                                <a href="#" className="my-auto" >
-                                    <img src="./assets/icons/instagram.svg" width="30px" className="my-auto me-3" />
+                                <a href="https://www.facebook.com/yigitcarrent" target="_blank" className="my-auto" >
+                                    <img src="./assets/icons/instagram.svg" width="28px" className="my-auto me-3" />
                                 </a>
-                                <a href="#" className="my-auto" >
-                                    <img src="./assets/icons/facebook.svg" width="18px" className="my-auto me-3" />
+                                <a href="https://twitter.com/yigitrentacar" target="_blank" className="my-auto" >
+                                    <img src="./assets/icons/facebook.svg" width="15xpx" className="my-auto me-3" />
                                 </a>
                             </div>
                         </div>

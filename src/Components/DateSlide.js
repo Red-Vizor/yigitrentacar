@@ -120,6 +120,7 @@ export default function DateSlide() {
                                         </ul>
                                     </div>
                                 </div>
+                                
                                 <div className="row text-start date-inputs-area mt-3" >
                                     <div className="col-lg-3 date first-date" data-bs-toggle="modal" data-bs-target="#datePicker">
                                         <p className="semi-bold ms-1 mb-1">Alış Tarihi</p>

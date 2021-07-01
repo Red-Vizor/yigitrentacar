@@ -40,16 +40,16 @@ export default function Footer() {
                         <div className="d-flex me-auto h-100 text-white">
                             <div className="ms-auto py-auto d-flex">
                                 <span className="h5 me-4 my-auto text-center">Bizi Takip Edin</span>
-                                <a href="#" className="my-auto h-100 d-flex">
+                                <a href="https://www.youtube.com/channel/UCbx9W45x_NlM5oo-HdKn5Yg" target="_blank" className="my-auto h-100 d-flex">
                                     <img src="./assets/icons/youtube.svg" height="80%" className="my-auto me-5" />
                                 </a>
-                                <a href="#" className="my-auto h-100 d-flex" >
+                                <a href="https://twitter.com/yigitrentacar" target="_blank" className="my-auto h-100 d-flex" >
                                     <img src="./assets/icons/twitter.svg" height="80%" className="my-auto me-5" />
                                 </a>
-                                <a href="#" className="my-auto h-100 d-flex" >
+                                <a href="https://www.instagram.com/yigitotokiralama" target="_blank" className="my-auto h-100 d-flex" >
                                     <img src="./assets/icons/instagram.svg" height="80%" className="my-auto me-5" />
                                 </a>
-                                <a href="#" className="my-auto h-100 d-flex " >
+                                <a href="https://www.facebook.com/yigitcarrent" target="_blank" className="my-auto h-100 d-flex " >
                                     <img src="./assets/icons/facebook.svg" height="80%" className="my-auto me-5" />
                                 </a>
                             </div>
