@@ -74,6 +74,7 @@ export default function ReservationForm() {
         invoiceCompanyMail: '',
         invoiceCompanyDriverLisance: '',
         invoiceCompanyMessage: '',
+        cityselect: dateValue.citySelect,
         endDate: dateValue.endDate,
         startDate: dateValue.startDate,
         startTime : dateValue.startTime,
