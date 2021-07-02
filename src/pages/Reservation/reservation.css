@@ -186,9 +186,33 @@
     .reservation-tab-area .mobile {
         display: flex !important;
     }
+    .rezervasyon-form{
+        padding: 0!important
+    }
+    .form-policy {
+        padding: 0 !important;
+    }
+    .form-policy .btn{
+       width: 100% !important;
+       margin-bottom: 20px;
+    }
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
+    .package .btn-1{
+        position:absolute !important;
+        top: -100px !important;
+    }
+    .rezervasyon-form{
+        padding: 0!important
+    }
+    .form-policy {
+        padding: 0 !important;
+    }
+    .form-policy .btn{
+       width: 100% !important;
+       margin-bottom: 20px;
+    }
     .end-reservation .card {
         width: 100% !important;
         text-align: center !important;
@@ -204,7 +228,7 @@
     }
     .package-header .btn-orange {
         position: absolute;
-        top: 393px !important;
+        top: 39.5% !important;
         left: 70px !important;
     }
     .package-header .btn-orange img {

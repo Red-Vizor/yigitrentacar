@@ -56,7 +56,7 @@ export default function Car() {
 
 
     useEffect(() => {
-        axios.post('http://panel.wocurrency.com/api/arabalar')
+        axios.post('http://panel.yigitotokiralama.com/api/arabalar')
             .then(function (response) {
                 setCarsGet(response.data)
             })

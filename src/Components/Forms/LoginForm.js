@@ -15,7 +15,7 @@ export default function LoginForm(props) {
     const history = useHistory()
 
     const login = () => {
-        axios.post('http://panel.wocurrency.com/api/giris',{
+        axios.post('http://panel.yigitotokiralama.com/api/giris',{
             email: allValues.email,
             password: allValues.password
         }).then(function (response) {

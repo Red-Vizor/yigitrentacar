@@ -17,16 +17,14 @@ export default function CarModal() {
     const dateValue = useSelector((state) => state.dateslice)
 
     useEffect(() => {
-        axios.post('http://panel.wocurrency.com/api/resimler', { car_id: colorCar })
+        axios.post('http://panel.yigitotokiralama.com/api/resimler', { car_id: colorCar })
             .then(function (response) {
-                console.log(response.data)
                 setCarImages(response.data)
             })
     }, [colorCar])
     useEffect(() => {
-        axios.post('http://panel.wocurrency.com/api/resimler', { car_id: dateValue.carSelect.selectedColorCar })
+        axios.post('http://panel.yigitotokiralama.com/api/resimler', { car_id: dateValue.carSelect.selectedColorCar })
             .then(function (response) {
-                console.log(response.data)
                 setCarImages(response.data)
             })
         setColorCar(dateValue.carSelect.selectedColorCar)
@@ -34,7 +32,7 @@ export default function CarModal() {
 
 
 
-    const urlPanel = "http://panel.wocurrency.com/"
+    const urlPanel = "http://panel.yigitotokiralama.com/"
 
     var counter = 0
     var counter1 = 0

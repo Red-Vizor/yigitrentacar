@@ -190,7 +190,7 @@ export default function Reservation(props) {
                         <Tab className={page > 1 ? 'checked-reserve' : ''} label={
                             <div className="tab-button text-start py-2">
                                 <span className="h6 bold">2.ARACINIZ </span>
-                                <p className="h7 me-5">Mercedes E200 AMG  {page === 1 ? <span className="ms-4"><img src="./assets/icons/rightic.svg" className="my-auto ms-auto float-right h-25 right-tick-icon" /> </span> : ''} </p>
+                                <p className="h7 me-5">{dateValue.carSelect.name ? dateValue.carSelect.name : 'Aracınızı Seçin'}  {page === 1 ? <span className="ms-4"><img src="./assets/icons/rightic.svg" className="my-auto ms-auto float-right h-25 right-tick-icon" /> </span> : ''} </p>
                                 <p className="h7">Dizel Otomatik</p>
 
                                 {page > 1 ? <a href="#" onClick={() => { dispatch(changePage(1)) }} className="checked-link position-absolute">Düzenle <span><img src="./assets/icons/check-green.svg" className="check arrow-icon mt-1 ms-1" /></span></a> : ''}

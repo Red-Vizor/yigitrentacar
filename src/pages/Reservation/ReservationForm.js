@@ -74,7 +74,15 @@ export default function ReservationForm() {
         invoiceCompanyMail: '',
         invoiceCompanyDriverLisance: '',
         invoiceCompanyMessage: '',
-        dateInformation: dateValue
+        endDate: dateValue.endDate,
+        startDate: dateValue.startDate,
+        startTime : dateValue.startTime,
+        endTime : dateValue.endTime,
+        dateDayCount : dateValue.dateDayCount,
+        totalAmount : dateValue.totalAmount,
+        carselect : dateValue.carSelect,
+        packageOne : dateValue.packageOne,
+        packageTwo : dateValue.packageTwo
     });
     const changeHandler = e => {
         setAllValues({ ...allValues, [e.target.name]: e.target.value })
@@ -91,14 +99,9 @@ export default function ReservationForm() {
     const dispatch = useDispatch()
 
     const sendMail = () => {
-        const json = JSON.stringify(allValues)
-        axios.get('http://panel.wocurrency.com/send-mail', {
-            params: {
-                json
-            }, headers: {
-                // Overwrite Axios's automatically set Content-Type
-                'Content-Type': 'application/json'
-            }
+        const reservationdetail = JSON.stringify(allValues)
+        axios.post('http://panel.yigitotokiralama.com/api/send-reservation', {
+                'reservationdetail' : reservationdetail
         })
             .then(function (response) {
                 console.log(response);

@@ -11,7 +11,7 @@ export default function OfficesCard(props) {
         setAllValues({ ...allValues, [e.target.name]: e.target.value })
     }
     const sendContact= () => {
-        axios.get('http://panel.wocurrency.com/contact-mail', {
+        axios.get('http://panel.yigitotokiralama.com/contact-mail', {
             params: {
                 namesurname: allValues.namesurname,
                 email: allValues.email,

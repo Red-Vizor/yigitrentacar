@@ -8,10 +8,10 @@ export default function Carcard(props) {
     const dispatch = useDispatch()
     const dateValue = useSelector((state) => state.dateslice)
 
-    const urlSite = "http://panel.wocurrency.com/"
+    const urlSite = "http://panel.yigitotokiralama.com/"
     const [carColors, setCarColors] = useState([]);
     useEffect(() => {
-        axios.post('http://panel.wocurrency.com/api/renkler', { id: props.carsValues.id })
+        axios.post('http://panel.yigitotokiralama.com/api/renkler', { id: props.carsValues.id })
             .then(function (response) {
                 setCarColors(response.data)
             })

@@ -9,7 +9,7 @@ export default function CarcardList(props) {
     const dateValue = useSelector((state) => state.dateslice)
     const [carColors, setCarColors] = useState([]);
     useEffect(() => {
-        axios.post('http://panel.wocurrency.com/api/renkler', { id: props.carsValues.id })
+        axios.post('http://panel.yigitotokiralama.com/api/renkler', { id: props.carsValues.id })
             .then(function (response) {
                 setCarColors(response.data)
             })
@@ -141,7 +141,7 @@ export default function CarcardList(props) {
                         </div>
                         <a className="btn float-end d-flex" href="/reservation">
                             <span className="h6 bold my-auto ms-auto">
-                                Reservation
+                                Rezervasyon
                             </span>
                             <img src="./assets/icons/carcard/buttonright.svg" className="my-auto ms-auto w-50" />
                         </a>
@@ -158,7 +158,7 @@ export default function CarcardList(props) {
                         <a href="#" className="ms-auto mt-md-1 bold" onClick={() => { carSelect() }} data-bs-toggle="modal" data-bs-target="#carModal"> <span>Tüm Özellikler</span></a>
                     </span>
                 </div>
-                <img src={"http://panel.wocurrency.com/" + props.carsValues.car_image_one} className="images position-absolute" />
+                <img src={"http://panel.yigitotokiralama.com/" + props.carsValues.car_image_one} className="images position-absolute" />
             </div>
             <div className="colors w-50  mx-auto px-lg-4 py-2 text-center shadow-light">
                 <div className="d-flex justify-content-center">

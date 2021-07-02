@@ -15,7 +15,7 @@ export default function ContactForm() {
         setAllValues({ ...allValues, [e.target.name]: e.target.value })
     }
     const sendContact= () => {
-        axios.get('http://127.0.0.1:8000/contact-page-mail', {
+        axios.get('http://panel.yigitotokiralama.com/contact-page-mail', {
             params: {
                 name: allValues.name,
                 surname: allValues.surname,

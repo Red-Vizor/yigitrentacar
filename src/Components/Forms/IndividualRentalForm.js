@@ -15,7 +15,7 @@ function IndividualRental() {
         setAllValues({ ...allValues, [e.target.name]: e.target.value })
     }
     const sendBireysel= () => {
-        axios.get('http://panel.wocurrency.com/bireysel-mail', {
+        axios.get('http://panel.yigitotokiralama.com/bireysel-mail', {
             params: {
                 name: allValues.name,
                 surname: allValues.surname,

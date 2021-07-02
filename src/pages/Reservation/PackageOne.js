@@ -27,7 +27,7 @@ export default function PackageOne(props) {
                     <p className="bold">{dateValue.startDate} <img src="./assets/icons/arrow-circle.svg" className="my-auto ms-1 h-50 " /> {dateValue.endDate}</p>
                     <p className="bold">{dateValue.totalAmount}₺</p>
                 </div>
-                <button type="button" className="btn btn-dark btn-orange my-auto ms-4 px-lg-4 py-lg-3" onClick={() => { dispatch(changePage(page + 1)) }}> <span className="bold">REZERVASYONA DEVAM ET</span> <img src="./assets/icons/rightlong.svg" width="40px" className="ms--lg3 my-auto" /></button>
+                <button type="button" className="btn btn-1 btn-dark btn-orange my-auto ms-4 px-lg-4 py-lg-3" onClick={() => { dispatch(changePage(page + 1)) }}> <span className="bold">REZERVASYONA DEVAM ET</span> <img src="./assets/icons/rightlong.svg" width="40px" className="ms--lg3 my-auto" /></button>
             </div>
             <div className="package-body container py-4">
                 <div className="d-flex my-4">
