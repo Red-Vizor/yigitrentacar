@@ -13,13 +13,17 @@ export default function CarModal() {
 
     const [colorCar, setColorCar] = useState([]);
     const [carImages, setCarImages] = useState([]);
+
+    const [RefreshOwl, setRefreshOwl] = useState(true)
     const dispatch = useDispatch()
     const dateValue = useSelector((state) => state.dateslice)
 
     useEffect(() => {
+        setRefreshOwl(false)
         axios.post('http://panel.yigitotokiralama.com/api/resimler', { car_id: colorCar })
             .then(function (response) {
                 setCarImages(response.data)
+                setRefreshOwl(true)
             })
     }, [colorCar])
     useEffect(() => {
@@ -72,9 +76,7 @@ export default function CarModal() {
                     <div className="modal-body w-100 p-0">
                         <div id="carouselExampleIndicators" className="carousel slide position-relative" data-bs-ride="carousel">
                             <div className="carousel-indicators position-absolute">
-
-
-                                <OwlCarousel className='owl-theme ' {...optionOwl}>
+                                {RefreshOwl ? <OwlCarousel className='owl-theme ' {...optionOwl}>
                                     {carImages.map((item) => counter === 0 ?
                                         <div class='item'>
                                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={counter++} className="active indicator-car bg-image" style={{ backgroundImage: `url(` + urlPanel + item.image_url + `)` }} aria-current="true" aria-label="Slide 1"></button>
@@ -82,9 +84,7 @@ export default function CarModal() {
                                         : <div class='item'>
                                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to={counter++} className="indicator-car bg-image" style={{ backgroundImage: `url(` + urlPanel + item.image_url + `)` }} aria-label="Slide 2"></button>
                                         </div>)}
-                                </OwlCarousel>
-
-
+                                </OwlCarousel> : ''}
                             </div>
                             <div className="carousel-inner">
                                 <SRLWrapper>
@@ -166,22 +166,38 @@ export default function CarModal() {
                             </div>
                         </div>
                         <div className="area-2 py-3 semi-bold text-center d-flex">
-                            <span className="m-auto"> <span>Yaş: {dateValue.carSelect.lisanceOwnAge}+</span>   <span className="mx-3">Ehliyet Yaşı: +{dateValue.carSelect.lisanceAge}</span> <span>Depozito: 3500 TL</span></span>
+                            <span className="m-auto"> <span>Yaş: {dateValue.carSelect.lisanceOwnAge}+</span>   <span className="mx-3">Ehliyet Yaşı: +{dateValue.carSelect.lisanceAge}</span> <span>Depozito:  ₺ {dateValue.carSelect.deposit} </span></span>
                         </div>
                         <div className="area-3 py-4 text-white">
                             <div className="w-100 mx-auto my-3">
                                 <div className="row mx-auto">
                                     <div className="col-7 d-flex">
-                                        <div className="row p-0 ms-auto my-auto text-center">
-                                            <div className="col-6 text-center">
-                                                <span>GÜNLÜK</span> <br />
-                                                <span><span className="bold">₺ {dateValue.carSelect.amount}</span></span>
-                                            </div>
-                                            <div className="col-6 text-center">
-                                                <span>TOPLAM</span> <br />
-                                                <span><span className="bold">₺ {dateValue.carSelect.totalAmount}</span></span>
-                                            </div>
-                                        </div>
+
+
+                                        {
+                                            dateValue.carSelect.pricetype ?
+                                                <div className="row  p-0 ms-auto my-auto text-center">
+                                                    <div className="col-6 text-center">
+                                                        <span>GÜNLÜK</span> <br />
+                                                        <span><span className="bold">₺ {dateValue.carSelect.threePrice}</span></span>
+                                                    </div>
+                                                    <div className="col-6 text-center">
+                                                        <span>AYLIK</span> <br />
+                                                        <span><span className="bold">₺ {dateValue.carSelect.amount}</span></span>
+                                                    </div>
+                                                </div>
+                                                :
+                                                <div className="row  p-0 ms-auto my-auto text-center">
+                                                    <div className="col-6 text-center">
+                                                        <span>GÜNLÜK</span> <br />
+                                                        <span><span className="bold">₺ {dateValue.carSelect.amount}</span></span>
+                                                    </div>
+                                                    <div className="col-6 text-center">
+                                                        <span>TOPLAM</span> <br />
+                                                        <span><span className="bold">₺ {dateValue.carSelect.totalAmount}</span></span>
+                                                    </div>
+                                                </div>
+                                        }
                                     </div>
                                     <div className="col-5 d-flex">
                                         <button className="btn float-end my-auto me-auto text-white" onClick={() => { dispatch(changePage(2)) }} data-bs-dismiss="modal" aria-label="Close" ><span className="h6 bold">SEÇ</span> <img src="./assets/icons/carcard/buttonright.svg" className="my-auto ms-1" width="40px" /> </button>

@@ -34,22 +34,22 @@ export default function Homepage() {
                             </div>
                             <div className="carousel-inner">
                                 <div className="carousel-item active" data-bs-interval="10000">
-                                    <Car />
+                                    <Car name="Mercedes CLA 180 D Amg" />
                                 </div>
                                 <div className="carousel-item" data-bs-interval="2000">
-                                    <Car />
+                                    <Car name="Mercedes E 200 d FL Edition 1 Amg"/>
                                 </div>
                                 <div className="carousel-item">
-                                    <Car />
+                                    <Car name="Mercedes G 400 d Stronger Than Time Edition"/>
                                 </div>
                                 <div className="carousel-item">
-                                    <Car />
+                                    <Car name="Mercedes-GLB-200-Amg-1.33"/>
                                 </div>
                                 <div className="carousel-item">
-                                    <Car />
+                                    <Car name="Porsche Cayenne 3.0 V6"/>
                                 </div>
                                 <div className="carousel-item">
-                                    <Car />
+                                    <Car name="Volkswagen Passat Business 1.5 Tsi DSG"/>
                                 </div>
                             </div>
                             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">

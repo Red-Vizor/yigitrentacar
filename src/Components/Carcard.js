@@ -89,6 +89,7 @@ export default function Carcard(props) {
         name: props.carsValues.car_name,
         class: getCarClass(props.carsValues.car_class),
         price: props.carsValues.car_price,
+        deposit: props.carsValues.deposit,
         threePrice: props.carsValues.car_price_three,
         threeSevenPrice: props.carsValues.car_price_three_seven,
         sevenFifteenPrice: props.carsValues.car_price_seven_fifteen,
@@ -194,7 +195,7 @@ export default function Carcard(props) {
                     </span>
                     <div className="car-colors d-inline my-auto">
                         {car.colors.map((item) =>
-                            <input class="form-check-input" type="radio" name="color" style={{ backgroundColor: item.color_code }} onClick={() => { car.selectedColorCar = item.car_id }} id="flexRadioDefault1" />)}
+                            <input class="form-check-input" type="radio" name="color" style={{ backgroundColor: item.color_code , border: "1px solid black" }} onClick={() => { car.selectedColorCar = item.car_id }} id="flexRadioDefault1" />)}
                     </div>
                 </div>
             </div>

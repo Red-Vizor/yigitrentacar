@@ -82,18 +82,16 @@ export default function CarcardList(props) {
     }
 
 
-
-    console.log(getCarClass(props.carsValues.car_class))
     const car = {
         name: props.carsValues.car_name,
         class: getCarClass(props.carsValues.car_class),
         price: props.carsValues.car_price,
+        deposit: props.carsValues.deposit,
         threePrice: props.carsValues.car_price_three,
         threeSevenPrice: props.carsValues.car_price_three_seven,
         sevenFifteenPrice: props.carsValues.car_price_seven_fifteen,
         fiftennTwentyPrice: props.carsValues.car_price_fifteen_twenty,
         twentyThirtyPrice: props.carsValues.car_price_twenty_thirty,
-
         lisanceOwnAge: props.carsValues.customer_age,
         lisanceAge: props.carsValues.customer_driver_licence_age,
         fuel: getCarFuel(props.carsValues.car_fuel),
@@ -101,6 +99,7 @@ export default function CarcardList(props) {
         gear: getGear(props.carsValues.car_gearbox),
         seat: props.carsValues.car_armchair,
         colors: carColors,
+        pricetype:true,
         amount: 0,
         selectedColorCar: props.carsValues.id, 
         totalAmount: 0,
@@ -167,7 +166,7 @@ export default function CarcardList(props) {
                     </span>
                     <div className="car-colors d-inline my-auto">
                         {car.colors.map((item) =>
-                            <input class="form-check-input" type="radio" name="color" style={{ backgroundColor: item.color_code }} onClick={() => { car.selectedColorCar = item.car_id }} id="flexRadioDefault1" />)}
+                            <input class="form-check-input" type="radio" name="color" style={{ backgroundColor: item.color_code ,border: "1px solid black" }} onClick={() => { car.selectedColorCar = item.car_id }} id="flexRadioDefault1" />)}
                     </div>
                 </div>
             </div>
