@@ -113,11 +113,11 @@ export default function Carcard(props) {
     const calCulateAmount = () => {
         if (dateValue.citySelect === "Bodrum") {
             const percentValue = 0.4;
-            car.threePrice = (car.threePrice * percentValue) + car.threePrice
-            car.threeSevenPrice = (car.threeSevenPrice * percentValue) + car.threeSevenPrice
-            car.sevenFifteenPrice = (car.sevenFifteenPrice * percentValue) + car.sevenFifteenPrice
-            car.fiftennTwentyPrice = (car.fiftennTwentyPrice * percentValue) + car.fiftennTwentyPrice
-            car.twentyThirtyPrice = (car.twentyThirtyPrice * percentValue) + car.twentyThirtyPrice
+            car.threePrice =parseInt((car.threePrice * percentValue), 10)  + parseInt(car.threePrice, 10)
+            car.threeSevenPrice = parseInt((car.threeSevenPrice * percentValue),10) + parseInt(car.threeSevenPrice,10)
+            car.sevenFifteenPrice = parseInt((car.sevenFifteenPrice * percentValue),10) + parseInt(car.sevenFifteenPrice,10)
+            car.fiftennTwentyPrice = parseInt((car.fiftennTwentyPrice * percentValue),10) + parseInt(car.fiftennTwentyPrice,10)
+            car.twentyThirtyPrice = parseInt((car.twentyThirtyPrice * percentValue),10) + parseInt(car.twentyThirtyPrice,10)
         }
         if (dateValue.dateDayCount === 3) {
             car.totalAmount = car.threePrice * dateValue.dateDayCount

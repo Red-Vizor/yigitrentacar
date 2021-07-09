@@ -497,6 +497,10 @@ form .form-check-input {
   transform: translate(-50%) !important;
 }
 
+
+
+
+
 @media screen and (min-width: 992px) and (max-width: 1600px) {
   .datePicker .modal-content {
     width: 50% !important;
@@ -529,6 +533,9 @@ form .form-check-input {
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
+  .loadingImage{
+    width: 15% !important;
+  }
   .MuiTypography-body1 {
     font-size: 0.9rem !important;
   }
@@ -569,7 +576,9 @@ form .form-check-input {
 }
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
-
+  .loadingImage{
+    width: 25% !important;
+  }
   .login-page .MuiTabs-flexContainer, .register-page .MuiTabs-flexContainer{
     left: 39% !important;
     transform: translateX(-50%) !important;
